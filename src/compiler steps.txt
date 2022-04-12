@@ -92,7 +92,8 @@ string <Module>.Microsoft.Xna.Framework.Content.Pipeline.Interop.GetEffectCompil
 	WindowsD3DXIncludeWrapper* ptr5 = &windowsD3DXIncludeWrapper; -- if includeHandler is not null, null otherwise
 
 	//Actually gets the effect compiler from unmanaged land
-	int hr = <Module>.D3DXCreateEffectCompiler(ptr2, num, ptr, (ID3DXInclude*)ptr5, (uint)(options | (CompilerOptions)131072), ppCompiler, &pBuffer); -- args ommitted for brevity
+	//Most likely this function:  https://docs.microsoft.com/en-us/windows/win32/direct3d9/id3dxeffectcompiler--compileeffect
+	int hr = <Module>.D3DXCreateEffectCompiler(ptr2, num, ptr, (ID3DXInclude*)ptr5, (uint)(options | (CompilerOptions)131072), ppCompiler, &pBuffer);
 	
 	//Performs pointer arithmetic to get a baked error string
 	errorStringFromD3DXBuffer = CompilerHelper.GetErrorStringFromD3DXBuffer(pBuffer, hr);
