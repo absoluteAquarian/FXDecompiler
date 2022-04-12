@@ -129,6 +129,11 @@ void CompilerMacro.AllocateNative(
 	*ppMacro = ptr;
 
 	
+[DllImport("", CallingConvention = CallingConvention.StdCall, SetLastError = true)]
+[MethodImpl(MethodImplOptions.Unmanaged)]
+internal unsafe static extern int D3DXCreateEffectCompiler(sbyte* P_0, uint P_1, _D3DXMACRO* P_2, ID3DXInclude* P_3, uint P_4, ID3DXEffectCompiler** P_5, ID3DXBuffer** P_6);
+
+	
 bool EffectProcessor.PostProcessEffect(
 	byte[] compiledCode,
 	ContentProcessorContext context,
