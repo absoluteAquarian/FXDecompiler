@@ -1,0 +1,196 @@
+﻿Generator.CompileEffects()
+	-- non-important code is omitted here for brevity --
+	invokes EffectImporter.Import()
+	invokes EffectProcessor.Process()
+	
+	//"fileStream" is the file being written to
+	The resulting .xnb file is written via "ContentCompiler.Compile(fileStream, compiledEffectContent, TargetPlatform.Windows, GraphicsProfile.Reach, true, Environment.CurrentDirectory, Environment.CurrentDirectory)"
+	
+	The program finishes
+	-- END DOCUMENTATION --
+	
+
+EffectContent EffectImporter.Import(
+	string filename,
+	ContentImporterContext context
+	)
+	
+	returns an EffectContent instance whose EffectCode property is the plaintext (via "File.ReadAllText(filename)") of the input effect file
+	
+
+CompiledEffectContent EffectProcessor.Process(
+	EffectContent input,
+	ContentProcessorContext context
+	)
+	
+	"WINDOWS" macro is defined
+	Invokes EffectProcessor.CompileEffect()
+	If the compilation was successful, invokes EffectProcessor.PostProcessEffect()
+	Any errors/warnings are reported
+
+	CompiledEffectContent compiledEffectContent = new CompiledEffectContent(postProcessedCode);
+	return compiledEffectContent;
+
+	
+bool EffectProcessor.CompileEffect(
+	string effectCode,
+	CompilerMacro[] preprocessorDefines,
+	CompilerIncludeHandler includeHandler,
+	CompilerOptions compilerOptions,
+	TargetPlatform targetPlatform,
+	out byte[] compiledCode,
+	out string errorsAndWarnings
+	)
+
+	Since the target platform is always Windows, invokes CompilerHelper.CompileEffectFromSourceForWindows()
+	
+
+bool CompilerHelper.CompileEffectFromSourceForWindows(
+	string effectSource,
+	CompilerMacro[] preprocessorDefines,
+	CompilerIncludeHandler includeHandler,
+	CompilerOptions options,
+	out byte[] pEffectCode,
+	out string pErrorsAndWarnings
+	)
+
+	pErrorsAndWarnings = <Module>.Microsoft.Xna.Framework.Content.Pipeline.Interop.GetEffectCompilerForWindowsFromSource(effectSource, preprocessorDefines, includeHandler, options, &ptr);
+	If "pErrorsAndWarnings" is not null or empty or contains the word "error", pEffectCode is set to null and the method returns false
+
+	//Indirectly invokes a C++ method at offset "ptr + 236"
+	int hr = ((delegate* unmanaged[Stdcall, Stdcall]<IntPtr, uint, ID3DXBuffer**, ID3DXBuffer**, int>)(int)(*(uint*)(*(int*)ptr + 236)))((nint)intPtr, (uint)options, &pBuffer, &pBuffer2);
+
+	//Converts "pBuffer" into a byte array
+	pEffectCode = GetShaderArrayFromD3DXBuffer(pBuffer);
+	
+	//GetCompilationSuccessful returns true if the input string is null, empty and does not contain the word "error" nor "failed"
+	return GetCompilationSuccessful(pErrorsAndWarnings += GetErrorStringFromD3DXBuffer(pBuffer2, hr));
+	
+	
+string <Module>.Microsoft.Xna.Framework.Content.Pipeline.Interop.GetEffectCompilerForWindowsFromSource(
+	string effectSource,
+	CompilerMacro[] preprocessorDefines,
+	CompilerIncludeHandler includeHandler,
+	CompilerOptions options,
+	ID3DXEffectCompiler** ppCompiler
+	)
+
+	_D3DXMACRO* ptr = null
+	uint dwCount = 0
+	sbyte* ptr2 = Marshal.ToStringAnsi(effectSource) if "effectSource" is not null, null otherwise
+	
+	"uint num" is calculated to be the length of "effectSource"
+	
+	invokes CompilerMacro.AllocateNative(&ptr, &dwCount, proprocessorDefines);
+	
+	// Initialization is forcibly skipped for this variable via Unsafe.SkipInit ...
+	WindowsD3DXIncludeWrapper windowsD3DXIncludeWrapper;
+
+	// ... so that it can be initialized here
+	Microsoft.Xna.Framework.Content.Pipeline.Interop.WindowsD3DXIncludeWrapper.{ctor}(&windowsD3DXIncludeWrapper, includeHandler);
+	
+	WindowsD3DXIncludeWrapper* ptr5 = &windowsD3DXIncludeWrapper; -- if includeHandler is not null, null otherwise
+
+	int hr = <Module>.D3DXCreateEffectCompiler(args); -- args ommitted for brevity
+	
+	//Performs pointer arithmetic to get a baked error string
+	errorStringFromD3DXBuffer = CompilerHelper.GetErrorStringFromD3DXBuffer(pBuffer, hr);
+	
+	//Destructor
+	Microsoft.Xna.Framework.Content.Pipeline.Interop.WindowsD3DXIncludeWrapper.{dtor}(&windowsD3DXIncludeWrapper);
+	
+	return errorStringFromD3DXBuffer;
+	
+
+void CompilerMacro.AllocateNative(
+	_D3DXMACRO** ppMacro,
+	uint* pdwNumberItems,
+	CompilerMacro[] managedArray
+	)
+
+	if ppMacro is null or pdwNumberItems is 0, return
+	if managedArray is null or its length is 0, set *ppMacro to 0 and *pdwNumberItems to 0 and return
+
+	uint num2 = managedArray.Length + 1
+	
+	//Assuming that the uint passed to the method is the type offset in the DLL
+	//Basically creates a new _D3DXMACRO instance
+	_D3DXMACRO* ptr = <Module>.@new(num2 > 536870911 ? uint.MaxValue : num2 << 3);
+	
+	If ptr is null, throws an InsufficientMemoryException
+
+	-- initblk instruction
+	Used to intialize the struct that ptr points to to 0, with "managedArray.LongLength * 8 + 8" bytes set
+	
+	If managedArray.LongLength is > 0, then use pointer arithmetic and indirect assignment to set the CompilerMacro Name and Definition properties into "ptr"
+
+	*pdwNumberItems = managedArray.Length;
+	*ppMacro = ptr;
+
+	
+bool EffectProcessor.PostProcessEffect(
+	byte[] compiledCode,
+	ContentProcessorContext context,
+	out byte[] postProcessedCode,
+	out string postProcessedErrorsAndWarnings,
+	ContentIdentity identity
+	)
+
+	EffectPostProcessor effectPostProcessor = null;
+
+	//Since the target is always windows, the following line always executes:
+	effectPostProcessor = new EffectPostProcessor(compiledCode, forXBox360: false);
+
+	If "effectPostProcessor.GetPostProcessedCode(out postProcessedCode, out postProcessedErrorsAndWarnings)" returns false, then the method returns false
+	
+	Version checking for the vertex and shader versions on "effectPostProcessor" is performed.  Failing the check throws an exception
+	If "effectPostProcessor.SeparateAlphaBlend" is set, but that's not supported, an exception is thrown
+
+	return true;
+	
+	
+bool EffectPostProcessor.GetPostProcessedCode(
+	out byte[] pPostProcessedCode,
+	out string pPostProcessedErrorsAndWarnings
+	)
+
+	pPostProcessedErrorsAndWarnings = string.Empty;
+
+	//If any of the following code throws an exception, the exception is caught and the message is assigned to pPostProcessedErrorsAndWarnings, then the method return false
+	invokes EffectPostProcessor.Parse()
+	
+	//This method handles assigning sampler state assignments to the EffectPass objects in the Techniques property
+	invokes EffectPostProcessor.PromoteSamplerStateAssignmentsToPasses()
+
+	//This effect handles writing in flags for the effect directly into the compiled bytecode
+	invokes WriteEffectFlags() on a BinaryWriter instance
+
+	postProcessedCode is assigned to the new bytecode and the method returns true
+
+
+void EffectPostProcessor.Parse()
+	
+	The magic header and various table lengths are read
+	The parameters are read into the "Parameters" property
+	The techniques are read into the "Techniques" property
+
+	The parameter and techniques are verified
+	
+	The object initializers are read into the "ObjectInitializers" property
+	The assignment initializers are read into the "AssignmentInitializers" property
+
+	
+void ContentCompiler.Compile(
+	Stream output,
+	object value,
+	TargetPlatform targetPlatform,
+	GraphicsProfile targetProfile,
+	bool compressContent,
+	string rootDirectory,
+	string referenceRelocationPath
+	)
+
+	"compressContent" is always true, so ContentCompiler.ShouldCompressContent() always runs
+	Due to the type of "value" always being "CompiledEffectContent", "compressContent" is kept as true
+
+	EffectWriter (the writer type assigned to CompiledEffectContent) just writes the bytecode to the file, after the ContentWriter metadata is written
