@@ -133,6 +133,8 @@ void CompilerMacro.AllocateNative(
 [MethodImpl(MethodImplOptions.Unmanaged)]
 internal unsafe static extern int D3DXCreateEffectCompiler(sbyte* P_0, uint P_1, _D3DXMACRO* P_2, ID3DXInclude* P_3, uint P_4, ID3DXEffectCompiler** P_5, ID3DXBuffer** P_6);
 
+	//MSDN docs:  https://docs.microsoft.com/en-us/windows/win32/direct3d9/d3dxcreateeffectcompiler
+
 	
 bool EffectProcessor.PostProcessEffect(
 	byte[] compiledCode,
