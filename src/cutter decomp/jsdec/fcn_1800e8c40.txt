@@ -1,0 +1,282 @@
+﻿uint64_t fcn_1800e8c40 (void) {
+    ecx &= 0xfff00000;
+    eax = 0x20500000;
+    if (ecx <= eax) {
+        if (ecx != eax) {
+            eax = 0x13000000;
+            if (ecx <= eax) {
+                if (ecx != eax) {
+                    eax = 0x10800000;
+                    if (ecx <= eax) {
+                        if (ecx != eax) {
+                            if (ecx != 0x10000000) {
+                                if (ecx != 0x10100000) {
+                                    if (ecx != 0x10300000) {
+                                        if (ecx != 0x10400000) {
+                                            if (ecx != 0x10500000) {
+                                                if (ecx != 0x10600000) {
+                                                    if (ecx != 0x10700000) {
+                                                        goto label_0;
+                                                    }
+                                                    rax = 0x1803850fc;
+                                                    return rax;
+                                                }
+                                                rax = 0x180385308;
+                                                return rax;
+                                            }
+                                            rax = 0x180385304;
+                                            return rax;
+                                        }
+                                        rax = 0x18038530c;
+                                        return rax;
+                                    }
+                                    rax = 0x1803850f8;
+                                    return rax;
+                                }
+                                rax = 0x1803ae568;
+                                return rax;
+                            }
+                            rax = 0x1803850dc;
+                            return rax;
+                        }
+                        rax = 0x180385158;
+                        return rax;
+                    }
+                    if (ecx != 0x10900000) {
+                        if (ecx != 0x10a00000) {
+                            if (ecx != 0x10b00000) {
+                                if (ecx != 0x10c00000) {
+                                    if (ecx != 0x11200000) {
+                                        if (ecx != 0x12000000) {
+                                            if (ecx != 0x12100000) {
+                                                goto label_0;
+                                            }
+                                            rax = 0x1803ae5d4;
+                                            return rax;
+                                        }
+                                        rax = "ineg";
+                                        return rax;
+                                    }
+                                    rax = "sqrt";
+                                    return rax;
+                                }
+                                rax = "atan";
+                                return rax;
+                            }
+                            rax = "acos";
+                            return rax;
+                        }
+                        rax = "asin";
+                        return rax;
+                    }
+                    rax = 0x18038515c;
+                    return rax;
+                }
+                rax = "itof";
+                return rax;
+            }
+            eax = 0x13800000;
+            if (ecx <= eax) {
+                if (ecx != eax) {
+                    if (ecx != 0x13100000) {
+                        if (ecx != 0x13200000) {
+                            if (ecx != 0x13300000) {
+                                if (ecx != 0x13400000) {
+                                    if (ecx != 0x13500000) {
+                                        if (ecx != 0x13600000) {
+                                            if (ecx != 0x13700000) {
+                                                goto label_0;
+                                            }
+                                            rax = "ftob";
+                                            return rax;
+                                        }
+                                        rax = "itob";
+                                        return rax;
+                                    }
+                                    rax = "btoi";
+                                    return rax;
+                                }
+                                rax = "btof";
+                                return rax;
+                            }
+                            rax = "ftou";
+                            return rax;
+                        }
+                        rax = "ftoi";
+                        return rax;
+                    }
+                    rax = "utof";
+                    return rax;
+                }
+                rax = "round";
+                return rax;
+            }
+            if (ecx != 0x13900000) {
+                if (ecx != 0x13a00000) {
+                    if (ecx != 0x20000000) {
+                        if (ecx != 0x20100000) {
+                            if (ecx != 0x20200000) {
+                                if (ecx != 0x20300000) {
+                                    if (ecx != 0x20400000) {
+                                        goto label_0;
+                                    }
+                                    rax = 0x1803850e8;
+                                    return rax;
+                                }
+                                rax = 0x1803ae754;
+                                return rax;
+                            }
+                            rax = 0x1803ae740;
+                            return rax;
+                        }
+                        rax = 0x18038510c;
+                        return rax;
+                    }
+                    rax = 0x180385108;
+                    return rax;
+                }
+                rax = "ceil";
+                return rax;
+            }
+            rax = "floor";
+            return rax;
+        }
+        rax = 0x1803850f4;
+        return rax;
+    }
+    eax = 0x21e00000;
+    if (ecx <= eax) {
+        if (ecx != eax) {
+            eax = 0x21500000;
+            if (ecx <= eax) {
+                if (ecx != eax) {
+                    if (ecx != 0x20600000) {
+                        if (ecx != 0x20800000) {
+                            if (ecx != 0x21000000) {
+                                if (ecx != 0x21100000) {
+                                    if (ecx != 0x21200000) {
+                                        if (ecx != 0x21300000) {
+                                            if (ecx != 0x21400000) {
+                                                goto label_0;
+                                            }
+                                            rax = "buge";
+                                            return rax;
+                                        }
+                                        rax = "bine";
+                                        return rax;
+                                    }
+                                    rax = "bieq";
+                                    return rax;
+                                }
+                                rax = "bige";
+                                return rax;
+                            }
+                            rax = "bilt";
+                            return rax;
+                        }
+                        rax = 0x1803ae6ec;
+                        return rax;
+                    }
+                    rax = "atan2";
+                    return rax;
+                }
+                rax = "bult";
+                return rax;
+            }
+            if (ecx != 0x21600000) {
+                if (ecx != 0x21700000) {
+                    if (ecx != 0x21900000) {
+                        if (ecx != 0x21a00000) {
+                            if (ecx != 0x21b00000) {
+                                if (ecx != 0x21c00000) {
+                                    if (ecx != 0x21d00000) {
+                                        goto label_0;
+                                    }
+                                    rax = "imin";
+                                    return rax;
+                                }
+                                rax = "umul";
+                                return rax;
+                            }
+                            rax = "umod";
+                            return rax;
+                        }
+                        rax = "udiv";
+                        return rax;
+                    }
+                    rax = "imul";
+                    return rax;
+                }
+                rax = "idiv";
+                return rax;
+            }
+            rax = "iadd";
+            return rax;
+        }
+        rax = "imax";
+        return rax;
+    }
+    eax = 0x23600000;
+    if (ecx <= eax) {
+        if (ecx != eax) {
+            if (ecx != 0x21f00000) {
+                if (ecx != 0x22000000) {
+                    if (ecx != 0x23000000) {
+                        if (ecx != 0x23100000) {
+                            if (ecx != 0x23300000) {
+                                if (ecx != 0x23400000) {
+                                    if (ecx != 0x23500000) {
+                                        goto label_0;
+                                    }
+                                    rax = "ishr";
+                                    return rax;
+                                }
+                                rax = "ishl";
+                                return rax;
+                            }
+                            rax = 0x1803ae798;
+                            return rax;
+                        }
+                        rax = 0x1803ae794;
+                        return rax;
+                    }
+                    rax = 0x1803ae790;
+                    return rax;
+                }
+                rax = "umax";
+                return rax;
+            }
+            rax = "umin";
+            return rax;
+        }
+        rax = "ushr";
+        return rax;
+    }
+    if (ecx != 0x30000000) {
+        if (ecx != 0x30100000) {
+            if (ecx != 0x50000000) {
+                if (ecx != 0x50200000) {
+                    if (ecx != 0x70e00000) {
+                        if (ecx != 0x71100000) {
+label_0:
+                            rax = "unknown";
+                            return rax;
+                        }
+                        rax = "d3ds_noiseswiz";
+                        return rax;
+                    }
+                    rax = "d3ds_dotswiz";
+                    return rax;
+                }
+                rax = "noise";
+                return rax;
+            }
+            rax = 0x1803ae810;
+            return rax;
+        }
+        rax = "movc";
+        return rax;
+    }
+    rax = 0x180385144;
+    return rax;
+}

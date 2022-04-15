@@ -1,0 +1,289 @@
+﻿int64_t fcn_180014930 (void) {
+    int64_t var_20h;
+    int64_t var_28h;
+    int64_t var_30h;
+    int64_t var_40h;
+    int64_t var_48h;
+    int64_t var_50h;
+    int64_t var_60h;
+    int64_t var_260h;
+    int64_t var_270h;
+    int64_t var_278h;
+    int64_t var_280h;
+    int64_t var_288h;
+    int64_t var_290h;
+    int64_t var_298h;
+    int64_t var_2c0h;
+    r11 = rsp;
+    rax = *(0x180426020);
+    rax ^= rsp;
+    var_260h = rax;
+    *((r11 + 0x18)) = rbx;
+    rdi = rcx;
+    *((r11 - 0x18)) = rsi;
+    esi = *((rdx + 0x14));
+    rsi += rdx;
+    *((r11 - 0x28)) = r13;
+    *((r11 - 0x30)) = r14;
+    r14 = rdx;
+    var_48h = rdx;
+    if (*((rcx + 0x18)) != 0) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        fcn_1800ecdb0 ();
+        *((rdi + 0x20))++;
+    }
+    rdx = 0x1803836f8;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = "// Available Class Types:\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = 0x1803836f8;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = "// Name                             ID CB Stride Texture Sampler\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = "// ------------------------------ ---- --------- ------- -------\n";
+    rcx = rdi;
+    rax = fcn_1800ecdb0 ();
+    ebx = 0;
+    if (*((r14 + 4)) <= ebx) {
+        goto label_2;
+    }
+    do {
+        rcx = rbx * 3;
+        edx = *((rsi + rcx*4 + 8));
+        r9d = *((rsi + rcx*4 + 6));
+        eax = *((rsi + rcx*4 + 0xa));
+        r8d = *((rsi + rcx*4));
+        rcx = rdi;
+        var_30h = eax;
+        r8 += r14;
+        var_28h = edx;
+        rdx = "// %-30s %4u %9u %7u %7u\n";
+        var_20h = r9d;
+        r9d = ebx;
+        fcn_1800ecdb0 ();
+        ebx++;
+    } while (ebx < *((r14 + 4)));
+label_2:
+    var_298h = rbp;
+    var_270h = r15;
+    if (*(r14) == 0) {
+        goto label_3;
+    }
+    ebp = *((r14 + 0x10));
+    rdx = 0x1803836f8;
+    rcx = rdi;
+    rbp += r14;
+    fcn_1800ecdb0 ();
+    rdx = "// Available Class Instances:\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = 0x1803836f8;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = "// Name                        Type CB CB Offset Texture Sampler\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = "// --------------------------- ---- -- --------- ------- -------\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    esi = 0;
+    if (*(r14) <= esi) {
+        goto label_3;
+    }
+    r15d = 0xffff;
+    do {
+        ebx = esi;
+        rcx = &var_60h;
+        rbx <<= 4;
+        edx = 0x200;
+        rbx += rbp;
+        r9d = *(rbx);
+        eax = *((rbx + 6));
+        r9 += r14;
+        if (eax != 1) {
+            r8 = "%s[%u]";
+            var_20h = eax;
+            fcn_180017fa0 ();
+        } else {
+            r8 = 0x180383698;
+            fcn_180017fa0 ();
+        }
+        r9d = *((rbx + 4));
+        r8 = &var_60h;
+        rdx = "// %-27s %4u ";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        eax = *((rbx + 8));
+        rcx = rdi;
+        if (ax != r15w) {
+            r9d = *((rbx + 0xa));
+            rdx = "%2u %9u ";
+            r8d = eax;
+            fcn_1800ecdb0 ();
+        } else {
+            rdx = " -         - ";
+            fcn_1800ecdb0 ();
+        }
+        eax = *((rbx + 0xc));
+        rcx = rdi;
+        if (ax != r15w) {
+            r8d = eax;
+            rdx = "%7u ";
+            fcn_1800ecdb0 ();
+        } else {
+            rdx = "      - ";
+            fcn_1800ecdb0 ();
+        }
+        eax = *((rbx + 0xe));
+        rcx = rdi;
+        if (ax != r15w) {
+            r8d = eax;
+            rdx = "%7u\n";
+            fcn_1800ecdb0 ();
+        } else {
+            rdx = "      -\n";
+            fcn_1800ecdb0 ();
+        }
+        esi++;
+    } while (esi < *(r14));
+label_3:
+    ebx = *((r14 + 0x18));
+    rdx = 0x1803836f8;
+    rbx += r14;
+    rcx = rdi;
+    var_50h = rbx;
+    r13d = 0;
+    fcn_1800ecdb0 ();
+    r8d = *((r14 + 0xc));
+    rdx = "// Interface slots, %u total:\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = 0x1803836f8;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = "//             Slots\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rdx = "// +----------+---------+---------------------------------------\n";
+    rcx = rdi;
+    eax = fcn_1800ecdb0 ();
+    eax = 0;
+    var_40h = eax;
+    if (*((r14 + 8)) <= eax) {
+        goto label_4;
+    }
+    var_288h = r12;
+label_1:
+    esi = eax;
+    ebp = 0;
+    rsi <<= 4;
+    rsi += rbx;
+    r15d = *((rsi + 8));
+    r12d = *((rsi + 0xc));
+    r15 += r14;
+    r12 += r14;
+    if (*((rsi + 4)) <= ebp) {
+        goto label_5;
+    }
+    ecx = *(rsi);
+label_0:
+    if (ebp == 0) {
+        r8d = r13d;
+        if (ecx > 1) {
+            r9d = rcx - 1;
+            rcx = rdi;
+            r9d += r13d;
+            rdx = "// | Type ID  |%4u-%-4u|";
+            fcn_1800ecdb0 ();
+        } else {
+            rdx = "// | Type ID  |%4u     |";
+        }
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+    } else {
+        rdx = "// | Type ID  |         |";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+    }
+    r14d = ebp;
+    ebx = ebp;
+    r14d = -r14d;
+    do {
+        if (ebx >= *((rsi + 4))) {
+            goto label_6;
+        }
+        eax = ebx;
+        rdx = "%-5u";
+        rcx = rdi;
+        r8d = *((r15 + rax*2));
+        fcn_1800ecdb0 ();
+        ebx++;
+        eax = r14 + rbx;
+    } while (eax < 8);
+label_6:
+    rdx = "\n// | Table ID |         |";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    ebx = ebp;
+    do {
+        if (ebx >= *((rsi + 4))) {
+            goto label_7;
+        }
+        eax = ebx;
+        rdx = "%-5u";
+        rcx = rdi;
+        r8d = *((r12 + rax*4));
+        fcn_1800ecdb0 ();
+        ebx++;
+        eax = rbx + r14;
+    } while (eax < 8);
+label_7:
+    rdx = 0x180383328;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    eax = *((rsi + 4));
+    ebp += 8;
+    ecx = *(rsi);
+    r13d += ecx;
+    if (ebp >= eax) {
+    }
+    ebp++;
+    if (ebp < eax) {
+        goto label_0;
+    }
+    r14 = var_48h;
+    rbx = var_50h;
+label_5:
+    rdx = "// +----------+---------+---------------------------------------\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    eax = var_40h;
+    eax++;
+    var_40h = eax;
+    if (eax < *((r14 + 8))) {
+        goto label_1;
+    }
+    r12 = var_288h;
+label_4:
+    r15 = var_270h;
+    r14 = var_278h;
+    r13 = var_280h;
+    rsi = var_290h;
+    rbx = var_2c0h;
+    if (*((rdi + 0x18)) != 0) {
+        *((rdi + 0x20))--;
+        rdx = "</font>";
+        rcx = rdi;
+        eax = fcn_1800ecdb0 ();
+    }
+    eax = 0;
+    rcx = var_260h;
+    rcx ^= rsp;
+    fcn_18026e150 ();
+    return rax;
+}

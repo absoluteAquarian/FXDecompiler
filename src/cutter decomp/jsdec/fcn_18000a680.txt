@@ -1,0 +1,39 @@
+﻿/* jsdec pseudo code output */
+/* C:\Windows\System32\D3DCompiler_47.dll @ 0x18000a680 */
+#include <stdint.h>
+ 
+int64_t fcn_18000a680 (void) {
+    edx = 0;
+    ecx--;
+    if (ecx <= 8) {
+        r8 = 0x180000000;
+        ecx = *((r8 + rcx*4 + 0xa704));
+        rcx += r8;
+        /* switch table (9 cases) at 0x18000a704 */
+        void (*rcx)() ();
+        rdx = 0x1803846dc;
+        rax = rdx;
+        return rax;
+        rdx = 0x1803846e0;
+        rax = rdx;
+        return rax;
+        rdx = 0x1803846e4;
+        rax = rdx;
+        return rax;
+        rdx = 0x1803846e8;
+        rax = rdx;
+        return rax;
+        rdx = 0x1803846ec;
+        rax = rdx;
+        return rax;
+        rdx = 0x1803846f0;
+        rax = rdx;
+        return rax;
+        rdx = 0x1803846f4;
+        rax = rdx;
+        return rax;
+        rdx = 0x1803846f8;
+    }
+    rax = rdx;
+    return rax;
+}

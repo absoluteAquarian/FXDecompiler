@@ -1,0 +1,18 @@
+﻿uint64_t fcn_1800f5da0 (void) {
+    int64_t var_20h;
+    int64_t var_28h;
+    int64_t var_30h;
+    int64_t var_50h;
+    int64_t var_54h;
+    var_50h = 0x58454853;
+    r9 = rcx + 0x40;
+    var_54h = 0x52444853;
+    rax = rcx + 0x4c;
+    var_30h = rax;
+    var_28h = r8;
+    r8d = 2;
+    var_20h = r9;
+    r9d = (int32_t) dl;
+    fcn_1800f5c30 (rcx, var_50h, rcx + 0x48);
+    return rax;
+}

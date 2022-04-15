@@ -1,0 +1,87 @@
+﻿int64_t fcn_1800eca80 (void) {
+    int64_t var_40h;
+    int64_t var_48h;
+    int64_t var_50h;
+    int64_t var_58h;
+    rax = rsp;
+    *((rax + 8)) = rbx;
+    *((rax + 0x10)) = rbp;
+    *((rax + 0x18)) = rsi;
+    *((rax + 0x20)) = rdi;
+    bpl = r9b;
+    r12d = r8d;
+    r15 = rdx;
+    r14 = rcx;
+    rdi |= 0xffffffffffffffff;
+    do {
+        rdi++;
+    } while (*((rdx + rdi)) != 0);
+    if (bpl == 0) {
+        eax = rdi + r12;
+        if (eax < edi) {
+            goto label_0;
+        }
+        edi = eax;
+    }
+    al = *(rdx);
+    rcx = r15;
+    while (al != 0) {
+        if (al == 0xa) {
+            eax = rdi + r12;
+            if (eax < edi) {
+                goto label_0;
+            }
+            edi = eax;
+        }
+        rcx++;
+        al = *(rcx);
+    }
+    eax = *(r14);
+    ecx = rax + rdi;
+    if (ecx < eax) {
+        goto label_0;
+    }
+    edx = *((r14 + 4));
+    if (edx < ecx) {
+        ecx = rdx + 0x800;
+        ecx += edi;
+        rax = o_malloc ();
+        rbx = rax;
+        if (rax == 0) {
+            goto label_0;
+        }
+        r8d = *(r14);
+        memcpy (rax, *((r14 + 8)), r8);
+        rcx = *((r14 + 8));
+        o_free ();
+        eax = rdi + 0x800;
+        *((r14 + 8)) = rbx;
+        *((r14 + 4)) += eax;
+        eax = *(r14);
+    }
+    esi = *(r14);
+    rsi += *((r14 + 8));
+    if (bpl == 0) {
+        r8 = r12;
+        memset (rsi, rdx, 0x20);
+        rsi += r12;
+    }
+    al = *(r15);
+    while (al != 0) {
+        *(rsi) = al;
+        rsi++;
+        if (*(r15) == 0xa) {
+            r8 = r12;
+            memset (rsi, rdx, 0x20);
+            rsi += r12;
+        }
+        al = *((r15 + 1));
+        r15++;
+    }
+    *(r14) += edi;
+label_0:
+    rbx = var_40h;
+    rsi = var_50h;
+    rdi = var_58h;
+    return rax;
+}

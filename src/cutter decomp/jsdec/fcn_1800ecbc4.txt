@@ -1,0 +1,36 @@
+﻿uint64_t fcn_1800ecbc4 (void) {
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    rbx = rcx;
+    edi = r8d;
+    ecx = *(rcx);
+    r8d = *((rbx + 4));
+    eax = rcx + rdi;
+    if (r8d < eax) {
+        ecx = rdi + 0x800;
+        ecx += r8d;
+        rax = o_malloc ();
+        rsi = rax;
+        if (rax == 0) {
+            goto label_0;
+        }
+        r8d = *(rbx);
+        memcpy (rax, *((rbx + 8)), r8);
+        rcx = *((rbx + 8));
+        o_free ();
+        ecx = *(rbx);
+        *((rbx + 4)) += eax;
+        *((rbx + 8)) = rsi;
+    }
+    rcx += *((rbx + 8));
+    memcpy (rdi + 0x800, rbp, rdi);
+    *(rbx) += edi;
+label_0:
+    rbx = var_8h;
+    rsi = var_18h;
+    return rax;
+}

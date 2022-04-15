@@ -1,0 +1,52 @@
+﻿uint64_t fcn_1800790f0 (void) {
+    int64_t var_8h;
+    var_8h = rbx;
+    ebx = 0;
+    rax = rdx - 1;
+    r9d = 0x7ffffffe;
+    r10d = ebx;
+    r11d = 0x80070057;
+    if (rax > r9) {
+        r10d = r11d;
+    }
+    if (r10d < 0) {
+        goto label_0;
+    }
+    if (rdx == 0) {
+        goto label_1;
+    }
+    r9 -= rdx;
+    r8 -= rcx;
+    do {
+        rax = r9 + rdx;
+        if (rax == 0) {
+            goto label_1;
+        }
+        eax = *((r8 + rcx));
+        if (al == 0) {
+            goto label_1;
+        }
+        *(rcx) = al;
+        rcx++;
+        rdx--;
+    } while (rdx != 0);
+label_1:
+    rax = rcx - 1;
+    if (rdx != 0) {
+        rax = rcx;
+    }
+    *(rax) = bl;
+    eax = 0x8007007a;
+    if (rdx != 0) {
+        eax = ebx;
+    }
+    rbx = var_8h;
+    return rax;
+label_0:
+    eax = r10d;
+    if (rdx != 0) {
+        *(rcx) = bl;
+    }
+    rbx = var_8h;
+    return rax;
+}

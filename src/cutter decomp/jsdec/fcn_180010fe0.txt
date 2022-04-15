@@ -1,0 +1,678 @@
+﻿int64_t fcn_180010fe0 (void) {
+    int64_t var_20h;
+    int64_t var_a0h;
+    int64_t var_a8h;
+    int64_t var_b0h;
+    int64_t var_d0h;
+    int64_t var_d8h;
+    int64_t var_e0h;
+    do {
+label_0:
+        rax = rsp;
+        rbp = rax - 0x5f;
+        *((rax + 8)) = rsi;
+        *((rax + 0x10)) = rdi;
+        rdi = rcx;
+        *((rax + 0x18)) = r12;
+        r12 = rdx;
+        *((rax - 0x18)) = r13;
+        r13d = 0;
+        *((rax - 0x20)) = r14;
+        rax = r8;
+        rdx = r8;
+        rsi = (int64_t) r9d;
+        r8 = rbp - 9;
+        *((rbp + 7)) = r13;
+        *((rbp - 0x21)) = r13;
+        *((rbp - 0x39)) = r13;
+        *((rbp - 9)) = r13;
+        *((rbp + 0x1f)) = r13;
+        eax = fcn_180010f00 ();
+        r14 = *((rbp - 9));
+        ebx = eax;
+        if (eax < 0) {
+            goto label_1;
+        }
+        rax = *(r14);
+        rdx = rbp + 0x27;
+        rcx = r14;
+        rax = *((rax + 0x88));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        if (eax != 0) {
+            rdx = 0x180383328;
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+            if (*((rdi + 0x18)) != r13b) {
+                r8 = *(str.a0a0a0);
+                rdx = "<font color = \"#%s\">";
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+                *((rdi + 0x20))++;
+            }
+            rdx = "// <internal error> unable to get type length from PDB\n";
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+            if (*((rdi + 0x18)) != r13b) {
+                *((rdi + 0x20))--;
+                rdx = "</font>";
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+            }
+            ebx = 0x80004005;
+            goto label_1;
+        }
+        var_a0h = r15;
+        r15d = esi;
+        if (r15 >= *((rbp + 0x27))) {
+            rdx = "// <internal error> offset overruns length for type in PDB\n";
+            rcx = rdi;
+            fcn_180007890 ();
+            ebx = 0x80004005;
+            goto label_2;
+        }
+        rax = *(r14);
+        rdx = rbp + 0xf;
+        rcx = r14;
+        rax = *((rax + 0x20));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        ebx = eax;
+        if (eax < 0) {
+            goto label_2;
+        }
+        eax = *((rbp + 0xf));
+        eax += 0xfffffff9;
+        if (eax > 0x1d) {
+            goto label_3;
+        }
+        rdx = 0x180000000;
+        eax = *((rdx + rax + 0x119f0));
+        ecx = *((rdx + rax*4 + 0x119d0));
+        rcx += rdx;
+        /* switch table (30 cases) at 0x1800119d0 */
+        void (*rcx)() ();
+        rax = *(r14);
+        rdx = rbp - 0x39;
+        rcx = r14;
+        rax = *((rax + 0x40));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        rcx = rdi;
+        if (eax != 0) {
+            rdx = "// <internal error> unable to get sub-variable type from PDB\n";
+            fcn_180007890 ();
+            ebx = 0x80004005;
+            goto label_2;
+        }
+        r8 = *((rbp - 0x39));
+        r9d = esi;
+        rdx = r12;
+        eax = fcn_180010fe0 ();
+    } while (1);
+    ebx = eax;
+    goto label_2;
+    rax = *(r14);
+    rcx = rbp + 7;
+    r9d = 0;
+    r8d = 0;
+    edx = 0;
+    rcx = r14;
+    rax = *((rax + 0x2a8));
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t) (rcx);
+    if (eax != 0) {
+        rdx = "// <internal error> could not get UDT children in PDB\n";
+        rcx = rdi;
+        fcn_180007890 ();
+        ebx = 0x80004005;
+        goto label_2;
+    }
+    rcx = *((rbp + 7));
+    r9 = rbp - 0x15;
+    r8 = rbp - 0x21;
+    edx = 1;
+    rax = *(rcx);
+    rax = *((rax + 0x30));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    ebx = eax;
+    if (eax < 0) {
+        goto label_2;
+    }
+    do {
+        if (ebx != 0) {
+            goto label_4;
+        }
+        if (*((rbp - 0x15)) != 1) {
+            goto label_4;
+        }
+        rcx = *((rbp - 0x21));
+        rdx = rbp - 0x11;
+        rax = *(rcx);
+        rax = *((rax + 0x20));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        ebx = eax;
+        if (eax < 0) {
+            goto label_2;
+        }
+        if (*((rbp - 0x11)) != 5) {
+            rcx = *((rbp - 0x21));
+            rdx = rbp - 9;
+            rax = *(rcx);
+            rax = *((rax + 0x80));
+            eax = uint64_t (*case.0x180337eae.0)() ();
+            if (eax != 0) {
+                goto label_5;
+            }
+            rcx = *((rbp - 0x21));
+            rdx = rbp - 0x39;
+            rax = *(rcx);
+            rax = *((rax + 0x40));
+            eax = uint64_t (*case.0x180337eae.0)() ();
+            rcx = rdi;
+            if (eax != 0) {
+                goto label_6;
+            }
+            rdx = *((rbp - 0x39));
+            r8 = rbp - 0x39;
+            eax = fcn_180010f00 ();
+            ebx = eax;
+            if (eax < 0) {
+                goto label_2;
+            }
+            rcx = *((rbp - 0x39));
+            rdx = rbp - 0x29;
+            rax = *(rcx);
+            rax = *((rax + 0x88));
+            eax = uint64_t (*case.0x180337eae.0)() ();
+            if (eax != 0) {
+                goto label_7;
+            }
+            rdx = *((rbp - 9));
+            if (esi < edx) {
+                goto label_8;
+            }
+            rcx = rdx;
+            rcx += *((rbp - 0x29));
+            if (rsi < rcx) {
+                goto label_9;
+            }
+        }
+label_8:
+        rcx = *((rbp - 0x21));
+        if (rcx != 0) {
+            rax = *(rcx);
+            rax = *((rax + 0x10));
+            uint64_t (*case.0x180337eae.0)() ();
+            *((rbp - 0x21)) = r13;
+        }
+        rcx = *((rbp - 0x39));
+        if (rcx != 0) {
+            rax = *(rcx);
+            rax = *((rax + 0x10));
+            uint64_t (*case.0x180337eae.0)() ();
+            *((rbp - 0x39)) = r13;
+        }
+        rcx = *((rbp + 7));
+        r9 = rbp - 0x15;
+        r8 = rbp - 0x21;
+        edx = 1;
+        rax = *(rcx);
+        rax = *((rax + 0x30));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        ebx = eax;
+    } while (eax >= 0);
+    goto label_2;
+label_9:
+    if (*((rbp - 0x11)) != 0x12) {
+        rcx = *((rbp - 0x21));
+        rdx = rbp + 0x1f;
+        rax = *(rcx);
+        rax = *((rax + 0x28));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        ebx = eax;
+        if (eax < 0) {
+            goto label_2;
+        }
+        r8 = *((rbp + 0x1f));
+        rdx = 0x180385cec;
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        edx = *((rbp - 9));
+    }
+    r8 = *((rbp - 0x39));
+    esi -= edx;
+    r9d = esi;
+    rdx = r12;
+    rcx = rdi;
+    eax = fcn_180010fe0 ();
+    goto label_0;
+    ebx = eax;
+    goto label_2;
+label_7:
+    rdx = 0x180383328;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    if (*((rdi + 0x18)) != r13b) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        *((rdi + 0x20))++;
+    }
+    rdx = "// <internal error> could not get UDT child length in PDB\n";
+    goto label_10;
+label_6:
+    rdx = 0x180383328;
+    fcn_1800ecdb0 ();
+    if (*((rdi + 0x18)) != r13b) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        *((rdi + 0x20))++;
+    }
+    rdx = "// <internal error> could not get UDT child type in PDB\n";
+    goto label_10;
+label_5:
+    rdx = 0x180383328;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    if (*((rdi + 0x18)) != r13b) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        *((rdi + 0x20))++;
+    }
+    rdx = "// <internal error> could not get UDT child offset in PDB\n";
+    goto label_10;
+label_4:
+    rdx = 0x180383328;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    if (*((rdi + 0x18)) != r13b) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        *((rdi + 0x20))++;
+    }
+    rdx = "// <internal error> could not get find UDT child with correct offset in PDB\n";
+label_10:
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    if (*((rdi + 0x18)) != r13b) {
+        *((rdi + 0x20))--;
+        rdx = "</font>";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+    }
+    ebx = 0x80004005;
+    goto label_2;
+    rax = *(r14);
+    rdx = rbp - 0x39;
+    rcx = r14;
+    rax = *((rax + 0x40));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    rcx = rdi;
+    if (eax != 0) {
+        rdx = "// <internal error> unable to get array element type from PDB\n";
+        fcn_180007890 ();
+        ebx = 0x80004005;
+    } else {
+        rdx = *((rbp - 0x39));
+        r8 = rbp - 0x39;
+        eax = fcn_180010f00 ();
+        ebx = eax;
+        if (eax < 0) {
+            goto label_2;
+        }
+        rax = *(r14);
+        rdx = rbp - 0x31;
+        rcx = r14;
+        rax = *((rax + 0x4f0));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        if (eax != 0) {
+            rcx = *((rbp - 0x39));
+            rdx = rbp - 0x29;
+            rax = *(rcx);
+            rax = *((rax + 0x88));
+            eax = uint64_t (*case.0x180337eae.0)() ();
+            if (eax == 0) {
+                rcx = *((rbp - 0x29));
+                eax = 0xffffffff;
+                if (rcx <= rax) {
+                    *((rbp - 0x31)) = ecx;
+                }
+                *((rbp - 0x31)) = r13d;
+            } else {
+            } else {
+                ecx = *((rbp - 0x31));
+            }
+            if (ecx != 0) {
+                goto label_11;
+            }
+        }
+        rdx = "// <internal error> could not get array element stride from PDB\n";
+        rcx = rdi;
+        fcn_180007890 ();
+        ebx = 0x80004005;
+        goto label_2;
+label_11:
+        edx = 0;
+        eax = esi;
+        eax = edx:eax / ecx;
+        edx = edx:eax % ecx;
+        rdx = "[%u]";
+        rcx = rdi;
+        r8d = eax;
+        fcn_1800ecdb0 ();
+        r8 = *((rbp - 0x39));
+        edx = 0;
+        eax = esi;
+        rcx = rdi;
+        eax = *(edx:eax) / rbp - 0x31;
+        edx = *(edx:eax) % rbp - 0x31;
+        rdx = r12;
+        eax *= *((rbp - 0x31));
+        esi -= eax;
+        r9d = esi;
+        eax = fcn_180010fe0 ();
+        goto label_0;
+        ebx = eax;
+        goto label_2;
+        rax = *(r14);
+        rdx = rbp - 0x39;
+        rcx = r14;
+        rax = *((rax + 0x40));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        rcx = rdi;
+        if (eax != 0) {
+            rdx = "// <internal error> unable to get vector element type from PDB\n";
+            fcn_180007890 ();
+            ebx = 0x80004005;
+        } else {
+            rdx = *((rbp - 0x39));
+            r8 = rbp - 0x39;
+            eax = fcn_180010f00 ();
+            ebx = eax;
+            if (eax < 0) {
+                goto label_2;
+            }
+            rcx = *((rbp - 0x39));
+            rdx = rbp - 0x29;
+            rax = *(rcx);
+            rax = *((rax + 0x88));
+            eax = uint64_t (*case.0x180337eae.0)() ();
+            if (eax == 0) {
+                rax = *((rbp - 0x29));
+                ecx = 0xfffffffe;
+                rax--;
+                if (rax <= rcx) {
+                    rax = *(r14);
+                    rdx = rbp - 0x19;
+                    rcx = r14;
+                    rax = *((rax + 0x188));
+                    eax = uint64_t (*case.0x180337eae.0)() ();
+                    if (eax == 0) {
+                        r9d = *((rbp - 0x19));
+                        if (r9d == 0) {
+                            goto label_12;
+                        }
+                        r8 = *((rbp - 0x29));
+                        edx = 0;
+                        eax = esi;
+                        eax = edx:eax / r8d;
+                        edx = edx:eax % r8d;
+                        ecx = eax;
+                        rcx *= r8;
+                        if (r15 == rcx) {
+                            if (eax >= r9d) {
+                                goto label_13;
+                            }
+                            if (eax > 3) {
+                                goto label_13;
+                            }
+                            rcx = 0x180000000;
+                            r8d = *((rax + rcx + 0x387418));
+                            rdx = 0x180385e74;
+                            rcx = rdi;
+                            fcn_1800ecdb0 ();
+                            goto label_2;
+                        }
+label_13:
+                        rdx = "// <internal error> invalid vector member\n";
+                        rcx = rdi;
+                        fcn_180007890 ();
+                        ebx = 0x80004005;
+                        goto label_2;
+                    }
+label_12:
+                    rdx = "// <internal error> could not get vector length from PDB\n";
+                    rcx = rdi;
+                    fcn_180007890 ();
+                    ebx = 0x80004005;
+                }
+            } else {
+                rdx = "// <internal error> could not get vector element length from PDB\n";
+                rcx = rdi;
+                fcn_180007890 ();
+                ebx = 0x80004005;
+                goto label_2;
+                rax = *(r14);
+                rdx = rbp - 0x39;
+                rcx = r14;
+                rax = *((rax + 0x40));
+                eax = uint64_t (*case.0x180337eae.0)() ();
+                rcx = rdi;
+                if (eax != 0) {
+                    rdx = "// <internal error> unable to get matrix element type from PDB\n";
+                    fcn_180007890 ();
+                    ebx = 0x80004005;
+                } else {
+                    rdx = *((rbp - 0x39));
+                    r8 = rbp - 0x39;
+                    eax = fcn_180010f00 ();
+                    ebx = eax;
+                    if (eax < 0) {
+                        goto label_2;
+                    }
+                    rcx = *((rbp - 0x39));
+                    rdx = rbp - 0x29;
+                    rax = *(rcx);
+                    rax = *((rax + 0x88));
+                    eax = uint64_t (*case.0x180337eae.0)() ();
+                    if (eax == 0) {
+                        rax = *((rbp - 0x29));
+                        ecx = 0xfffffffe;
+                        rax--;
+                        if (rax <= rcx) {
+                            rax = *(r14);
+                            rdx = rbp - 0x19;
+                            rcx = r14;
+                            rax = *((rax + 0x500));
+                            eax = uint64_t (*case.0x180337eae.0)() ();
+                            if (eax == 0) {
+                                if (*((rbp - 0x19)) == r13d) {
+                                    goto label_14;
+                                }
+                                rax = *(r14);
+                                rdx = rbp - 1;
+                                rcx = r14;
+                                rax = *((rax + 0x4f8));
+                                eax = uint64_t (*case.0x180337eae.0)() ();
+                                if (eax == 0) {
+                                    if (*((rbp - 1)) == r13d) {
+                                        goto label_15;
+                                    }
+                                    rax = *(r14);
+                                    rdx = rbp + 0x13;
+                                    rcx = r14;
+                                    rax = *((rax + 0x508));
+                                    eax = uint64_t (*case.0x180337eae.0)() ();
+                                    if (eax != 0) {
+                                        rdx = "// <internal error> could not get matrix row-major flag from PDB\n";
+                                        rcx = rdi;
+                                        fcn_180007890 ();
+                                        ebx = 0x80004005;
+                                        goto label_2;
+                                    }
+                                    rax = *(r14);
+                                    rdx = rbp - 0x31;
+                                    rcx = r14;
+                                    rax = *((rax + 0x4f0));
+                                    eax = uint64_t (*case.0x180337eae.0)() ();
+                                    if (eax != 0) {
+                                        rdx = "// <internal error> could not get matrix major stride from PDB\n";
+                                        rcx = rdi;
+                                        fcn_180007890 ();
+                                        ebx = 0x80004005;
+                                        goto label_2;
+                                    }
+                                    r11d = *((rbp - 0x19));
+                                    if (r11d <= 4) {
+                                        r15d = *((rbp - 1));
+                                        if (r15d > 4) {
+                                            goto label_16;
+                                        }
+                                        edx = 0;
+                                        eax = esi;
+                                        eax = *(edx:eax) / rbp - 0x31;
+                                        edx = *(edx:eax) % rbp - 0x31;
+                                        edx = 0;
+                                        if (*((rbp + 0x13)) != r13d) {
+                                            ecx = eax;
+                                            r10d = eax;
+                                            ecx *= *((rbp - 0x31));
+                                            esi -= ecx;
+                                            eax = esi;
+                                            eax = *(edx:eax) / rbp - 0x29;
+                                            edx = *(edx:eax) % rbp - 0x29;
+                                            r9d = eax;
+                                        } else {
+                                            r9d = eax;
+                                            eax *= *((rbp - 0x31));
+                                            esi -= eax;
+                                            eax = esi;
+                                            eax = *(edx:eax) / rbp - 0x29;
+                                            edx = *(edx:eax) % rbp - 0x29;
+                                            r10d = eax;
+                                        }
+                                        if (r9d >= r11d) {
+                                            goto label_16;
+                                        }
+                                        if (r10d >= r15d) {
+                                            goto label_16;
+                                        }
+                                        r8d = r10d;
+                                        rdx = "._m%u%u";
+                                        rcx = rdi;
+                                        fcn_1800ecdb0 ();
+                                        goto label_2;
+                                    }
+label_16:
+                                    rdx = "// <internal error> invalid matrix member\n";
+                                    rcx = rdi;
+                                    fcn_180007890 ();
+                                    ebx = 0x80004005;
+                                    goto label_2;
+                                }
+label_15:
+                                rdx = "// <internal error> could not get matrix rows from PDB\n";
+                                rcx = rdi;
+                                fcn_180007890 ();
+                                ebx = 0x80004005;
+                                goto label_2;
+                            }
+label_14:
+                            rdx = "// <internal error> could not get matrix columns from PDB\n";
+                            rcx = rdi;
+                            fcn_180007890 ();
+                            ebx = 0x80004005;
+                        }
+                    } else {
+                        rdx = "// <internal error> could not get matrix element length from PDB\n";
+                        rcx = rdi;
+                        fcn_180007890 ();
+                        ebx = 0x80004005;
+                        goto label_2;
+                        rax = *(r14);
+                        rdx = rbp + 0x17;
+                        rcx = r14;
+                        rax = *((rax + 0x530));
+                        eax = uint64_t (*case.0x180337eae.0)() ();
+                        if (eax != 0) {
+                            rdx = "// <internal error> unable to get HLSL type kind from PDB\n";
+                            rcx = rdi;
+                            fcn_180007890 ();
+                            ebx = 0x80004005;
+                        } else {
+                            r8d = *((rbp + 0x17));
+                            if (r8d != 0x200) {
+                                r9d = esi;
+                                rdx = "<unknown HLSL built-in %u offset %u>";
+                                rcx = rdi;
+                                fcn_1800ecdb0 ();
+                            } else {
+                                esi >>= 2;
+                                rcx = 0x180000000;
+                                eax = 3;
+                                rdx = 0x180385e74;
+                                if (esi > eax) {
+                                    esi = eax;
+                                }
+                                r8d = *((rsi + rcx + 0x387418));
+                                rcx = rdi;
+                                fcn_1800ecdb0 ();
+                                goto label_2;
+label_3:
+                                rdx = "// <internal error> unexpected data kind in PDB\n";
+                                rcx = rdi;
+                                fcn_180007890 ();
+                                ebx = 0x80004001;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+label_2:
+    r15 = var_a0h;
+label_1:
+    rcx = *((rbp - 0x21));
+    r12 = var_e0h;
+    rdi = var_d8h;
+    rsi = var_d0h;
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+        *((rbp - 0x21)) = r13;
+    }
+    rcx = *((rbp + 7));
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+        *((rbp + 7)) = r13;
+    }
+    rcx = *((rbp - 0x39));
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+        *((rbp - 0x39)) = r13;
+    }
+    r13 = var_b0h;
+    if (r14 != 0) {
+        rax = *(r14);
+        rcx = r14;
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+    }
+    rcx = *((rbp + 0x1f));
+    r14 = var_a8h;
+    if (rcx != 0) {
+        fcn_18026f760 ();
+    }
+    eax = ebx;
+    return rax;
+}

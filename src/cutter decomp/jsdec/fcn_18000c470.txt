@@ -1,0 +1,114 @@
+﻿int64_t fcn_18000c470 (void) {
+    if (edx <= 0x2a) {
+        rax = (int64_t) edx;
+        r8 = 0x180000000;
+        edx = *((r8 + rax*4 + 0xc65c));
+        rdx += r8;
+        /* switch table (43 cases) at 0x18000c65c */
+        void (*rdx)() ();
+        rax = "rvoldm";
+        return rax;
+        rax = 0x180384ab0;
+        return rax;
+        rax = 0x180384ab4;
+        return rax;
+        rax = "xyzw";
+        return rax;
+        rax = 0x180384ab8;
+        return rax;
+        rax = 0x180384abc;
+        return rax;
+        rdx = 0x180383a88;
+        rax = 0x180383a84;
+        if (*((rcx + 0x24)) != 0) {
+            rax = rdx;
+        }
+        return rax;
+        rax = 0x180384ac0;
+        return rax;
+        rdx = 0x180383a6c;
+        rax = 0x180383a68;
+        if (*((rcx + 0x24)) != 0) {
+            rax = rdx;
+        }
+        return rax;
+        rdx = 0x180383a64;
+        rax = 0x180383a60;
+        if (*((rcx + 0x24)) != 0) {
+            rax = rdx;
+        }
+        return rax;
+        rax = 0x180384ac4;
+        return rax;
+        rax = "label";
+        return rax;
+        rax = "vPrim";
+        return rax;
+        rax = "oDepth";
+        return rax;
+        rax = "oDepthGE";
+        return rax;
+        rax = "oDepthLE";
+        return rax;
+        rax = "null";
+        return rax;
+        rax = "rasterizer";
+        return rax;
+        rax = "oMask";
+        return rax;
+        rax = "oStencilRef";
+        return rax;
+        rax = 0x180384b24;
+        return rax;
+        rax = 0x180384b28;
+        return rax;
+        rax = 0x180384b2c;
+        return rax;
+        rax = 0x180384b30;
+        return rax;
+        rax = 0x180384b34;
+        return rax;
+        rax = "vOutputControlPointID";
+        return rax;
+        rax = "vForkInstanceID";
+        return rax;
+        rax = "vJoinInstanceID";
+        return rax;
+        rax = "vicp";
+        return rax;
+        rax = "vocp";
+        return rax;
+        rax = 0x180384b80;
+        return rax;
+        rax = "vDomain";
+        return rax;
+        rax = "this";
+        return rax;
+        rdx = 0x180383a80;
+        rax = "uUsS";
+        if (*((rcx + 0x24)) != 0) {
+            rax = rdx;
+        }
+        return rax;
+        rax = 0x180384b98;
+        return rax;
+        rax = "vThreadID";
+        return rax;
+        rax = "vThreadGroupID";
+        return rax;
+        rax = "vThreadIDInGroup";
+        return rax;
+        rax = "vThreadIDInGroupFlattened";
+        return rax;
+        rax = "vCoverage";
+        return rax;
+        rax = "vInnerCoverage";
+        return rax;
+        rax = "vGSInstanceID";
+        return rax;
+        rax = "vCycleCounter";
+        return rax;
+    }
+    rax = "<unknown register type>";
+    return rax;
+}

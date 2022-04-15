@@ -1,0 +1,39 @@
+﻿uint64_t loc_18026e1e0 (void) {
+    int64_t var_38h;
+    int64_t var_8h;
+    ecx = 0x17;
+    eax = IsProcessorFeaturePresent (rcx);
+    if (eax != 0) {
+        ecx = 2;
+        eax = syscall_29h (eax, ebx, ecx, edx, esi, edi, edp);
+    }
+    rcx = 0x180426890;
+    fcn_18026e3ec ();
+    rax = var_38h;
+    *(0x180426988) = rax;
+    rax = &var_38h;
+    rax += 8;
+    *(0x180426928) = rax;
+    rax = *(0x180426988);
+    *(0x180426800) = rax;
+    rax = var_8h;
+    *(0x180426910) = rax;
+    *(0x1804267f0) = 0xc0000409;
+    *(0x1804267f4) = 1;
+    *(0x180426808) = 1;
+    eax = 8;
+    rax *= 0;
+    rcx = 0x180426810;
+    *((rcx + rax)) = 2;
+    eax = 8;
+    rax *= 0;
+    rcx = *(0x180426020);
+    *((rsp + rax + 0x20)) = rcx;
+    eax = 8;
+    rax *= 1;
+    rcx = *(0x180426028);
+    *((rsp + rax + 0x20)) = rcx;
+    rcx = section__rdata;
+    fcn_18026e178 ();
+    return rax;
+}

@@ -1,0 +1,22 @@
+﻿int64_t fcn_1800ed40c (void) {
+    rax = *(rcx);
+    r8 = rcx;
+    if (rax != 0) {
+        if (*((rcx + 8)) == 0) {
+            goto label_0;
+        }
+        if (*((rax + 0x1c)) <= edx) {
+            goto label_0;
+        }
+        __asm ("lfence");
+        rax = *((r8 + 8));
+        ecx = edx;
+        edx = *((rax + rcx*4));
+        rax = *(r8);
+        eax = *((rdx + rax + 4));
+        return rax;
+    }
+label_0:
+    eax = 0;
+    return rax;
+}

@@ -1,0 +1,81 @@
+﻿uint64_t fcn_18000a560 (int64_t arg_60h, int64_t arg_68h, uintmax_t arg_70h) {
+    int64_t var_20h_2;
+    int64_t var_40h;
+    int64_t var_10h;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_10h = rbx;
+    var_18h = rbp;
+    var_20h = rsi;
+    rdi = rcx;
+    ebp &= 3;
+    r9d >>= 2;
+    if (arg_70h != 0) {
+        if (r8 != 0) {
+            r9 = r8;
+            r8 = rdx;
+            rdx = "%s%s";
+            fcn_1800ecdb0 ();
+            goto label_0;
+        }
+        r8 = rdx;
+        rdx = 0x180383698;
+    } else {
+        if (r8 != 0) {
+            var_20h_2 = r8;
+            r8 = rdx;
+            rdx = "%s%d%s";
+            fcn_1800ecdb0 ();
+            goto label_0;
+        }
+        r8 = rdx;
+        rdx = "%s%d";
+    }
+    fcn_1800ecdb0 ();
+label_0:
+    ebx = (int32_t) arg_68h;
+    esi = arg_60h;
+    if (bl == 0) {
+        if (esi != 4) {
+            goto label_1;
+        }
+        if (ebp == 0) {
+            goto label_2;
+        }
+    }
+label_1:
+    rdx = 0x1803833e0;
+    var_40h = r14;
+    rcx = rdi;
+    rax = fcn_1800ecdb0 ();
+    if (bl != 0) {
+        goto label_3;
+    }
+    ebx = 0;
+    if (esi == 0) {
+        goto label_4;
+    }
+    r14 = "xyzw";
+    do {
+        eax = rbx + rbp;
+        rcx = rdi;
+        eax &= 3;
+        rdx = 0x1803845f0;
+        r8d = *((rax + r14));
+        fcn_1800ecdb0 ();
+        ebx++;
+    } while (ebx < esi);
+    goto label_4;
+label_3:
+    r14 = "xyzw";
+    rcx = rdi;
+    r8d = *((rbp + r14));
+    rdx = 0x1803845f0;
+    fcn_1800ecdb0 ();
+label_4:
+    r14 = var_40h;
+label_2:
+    rbx = var_10h;
+    rsi = var_20h;
+    return rax;
+}

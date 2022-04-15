@@ -68,10 +68,20 @@
     <Compile Include="src\Program.cs" />
     <Compile Include="src\Decompressor.cs" />
     <Content Include="lib\**" />
+    <Content Include="src\compiler steps.txt" />
+    <Content Include="src\cutter decomp\call tree.txt" />
+    <Content Include="src\cutter decomp\jsdec\*.txt" />
     <Content Include="src\LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
     <None Include="App.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\cutter decomp\Ghidra\" />
+    <Folder Include="src\snowman decomp\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

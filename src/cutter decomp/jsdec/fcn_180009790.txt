@@ -1,0 +1,399 @@
+﻿uint64_t fcn_180009790 (int64_t arg_50h, int64_t arg_58h, uintmax_t arg_60h) {
+    int64_t var_40h;
+    int64_t var_38h;
+    const char * var_34h;
+    uintmax_t var_30h;
+    int64_t var_2ch;
+    int64_t var_28h;
+    int64_t var_27h;
+    uintmax_t var_24h;
+    uintmax_t var_20h;
+    int64_t var_48h;
+    int64_t var_49h;
+    int64_t var_4ah;
+    int64_t var_4bh;
+    int64_t var_sp_20h;
+    int64_t var_sp_28h;
+    int64_t var_60h;
+    int64_t var_68h;
+    int64_t var_a0h;
+    int64_t var_18h;
+    var_18h = r8;
+    rdi = rdx;
+    r13d = r9d;
+    rdx = 0x1803836f8;
+    rsi = r8;
+    rbx = rcx;
+    fcn_1800ecdb0 ();
+    r8 = rdi;
+    rdx = "// %s signature:\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    rdx = 0x1803836f8;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    rdx = "// Name                 Index   Mask Register SysValue  Format   Used\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    rdx = "// -------------------- ----- ------ -------- -------- ------- ------\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (r13d == 0) {
+        r8 = rdi;
+        rdx = "// no %s\n";
+        rcx = rbx;
+        eax = fcn_1800ecdb0 ();
+        eax = 0;
+        return eax;
+    }
+    r9 = arg_50h;
+    eax = 0;
+    var_a0h = r12;
+    edi = eax;
+    r12b = 0;
+    var_68h = r14;
+    arg_58h = eax;
+    if (r13d == 0) {
+        goto label_0;
+    }
+    r14d = rax + 1;
+    do {
+        eax = 0;
+        r8 = &var_40h;
+        __asm ("xorps xmm0, xmm0");
+        rax = r9;
+        edx = edi;
+        rcx = rsi;
+        __asm ("movups xmmword [var_40h], xmm0");
+        __asm ("movups xmmword [var_30h], xmm0");
+        eax = uint64_t (*case.0x180337eae.0)(uint64_t) (rax);
+        r9 = arg_50h;
+        r12d = (int32_t) r12b;
+        if (var_24h > 0) {
+            r12d = r14d;
+        }
+        edi++;
+    } while (edi < r13d);
+    eax = 0;
+    if (r13d == 0) {
+        goto label_0;
+    }
+    r14d = rax + 0x78;
+    r15d = rax + 0x79;
+    rdi = 0x2020202020202020;
+    do {
+        edx = eax;
+        r8 = &var_40h;
+        rax = r9;
+        rcx = rsi;
+        uint64_t (*case.0x180337eae.0)(uint64_t) (r15);
+        rdx = 0x180383854;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        rcx = rbx;
+        if (r12b != 0) {
+            r8d = var_24h;
+            rdx = "m%u:";
+            fcn_1800ecdb0 ();
+            rdx = "%-17s";
+            rcx = rbx;
+        } else {
+            rdx = "%-20s";
+        }
+        r8 = var_40h;
+        fcn_1800ecdb0 ();
+        r8d = var_38h;
+        rdx = " %5u";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        eax = (int32_t) var_28h;
+        ecx = 0x7a;
+        var_48h = edi;
+        esi = (int32_t) var_49h;
+        edi = (int32_t) dil;
+        if ((al & 1) != 0) {
+            edi = r14d;
+        }
+        r14d = (int32_t) var_4ah;
+        if ((al & 2) != 0) {
+            esi = r15d;
+        }
+        r15d = (int32_t) var_4bh;
+        if ((al & 4) != 0) {
+            r14d = ecx;
+        }
+        eax = 0x77;
+        if ((al & 8) != 0) {
+            r15d = eax;
+        }
+        if (var_34h == 0xffffffff) {
+            rcx = var_40h;
+            rdx = "SV_Depth";
+            eax = o_stricmp ();
+            if (eax == 0) {
+                rdx = "    N/A";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                rdx = "   oDepth";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                goto label_1;
+            }
+            if (var_34h == 0xffffffff) {
+                rcx = var_40h;
+                rdx = "SV_DepthGreaterEqual";
+                eax = o_stricmp ();
+                if (eax == 0) {
+                    rdx = "    N/A";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    rdx = " oDepthGE";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    goto label_1;
+                }
+                if (var_34h != 0xffffffff) {
+                    goto label_2;
+                }
+                rcx = var_40h;
+                rdx = "SV_DepthLessEqual";
+                eax = o_stricmp ();
+                if (eax == 0) {
+                    rdx = "    N/A";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    rdx = " oDepthLE";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    goto label_1;
+                }
+                if (var_34h != 0xffffffff) {
+                    goto label_2;
+                }
+                rcx = var_40h;
+                rdx = "SV_Coverage";
+                eax = o_stricmp ();
+                if (eax == 0) {
+                    rdx = "    N/A";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    rdx = "    oMask";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    goto label_1;
+                }
+                if (var_34h != 0xffffffff) {
+                    goto label_2;
+                }
+                rcx = var_40h;
+                rdx = "SV_StencilRef";
+                eax = o_stricmp ();
+                if (eax == 0) {
+                    rdx = "    N/A";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    rdx = "    oStencilRef";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    goto label_1;
+                }
+                if (var_34h != 0xffffffff) {
+                    goto label_2;
+                }
+                rdx = "    N/A";
+                ecx = (int32_t) r14b;
+                eax = (int32_t) r15b;
+                var_sp_28h = eax;
+                var_sp_20h = ecx;
+                rcx = rbx;
+                r9d = (int32_t) sil;
+                r8d = (int32_t) dil;
+                if (var_30h == 7) {
+                    fcn_1800ecdb0 ();
+                    rdx = "   primID";
+                    goto label_3;
+                }
+                fcn_1800ecdb0 ();
+                rdx = "  special";
+            }
+        } else {
+label_2:
+            eax = (int32_t) r15b;
+            rdx = "   %c%c%c%c";
+            ecx = (int32_t) r14b;
+            var_sp_28h = eax;
+            var_sp_20h = ecx;
+            rcx = rbx;
+            r9d = (int32_t) sil;
+            r8d = (int32_t) dil;
+            fcn_1800ecdb0 ();
+            rdx = " %8u";
+        }
+label_3:
+        r8d = var_34h;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+label_1:
+        eax = var_30h;
+        r8 = "NONE";
+        eax--;
+        if (eax <= 0x45) {
+            rdi = 0x180000000;
+            rax = (int64_t) eax;
+            eax = *((rdi + rax + 0x9e50));
+            ecx = *((rdi + rax*4 + 0x9df0));
+            rcx += rdi;
+            /* switch table (70 cases) at 0x180009df0 */
+            void (*rcx)() ();
+            r8 = "CLIPDST";
+            goto label_4;
+            r8 = "CULLDST";
+            goto label_4;
+            r8 = 0x180384390;
+            goto label_4;
+            r8 = "RTINDEX";
+            goto label_4;
+            r8 = "VPINDEX";
+            goto label_4;
+            r8 = "VERTID";
+            goto label_4;
+            r8 = "PRIMID";
+            goto label_4;
+            r8 = "INSTID";
+            goto label_4;
+            r8 = "FFACE";
+            goto label_4;
+            r8 = "SAMPLE";
+            goto label_4;
+            r8 = "TARGET";
+            goto label_4;
+            r8 = "DEPTH";
+            goto label_4;
+            r8 = "DEPTHGE";
+            goto label_4;
+            r8 = "DEPTHLE";
+            goto label_4;
+            r8 = "COVERAGE";
+            goto label_4;
+            r8 = "INNERCOV";
+            goto label_4;
+            r8 = "STENCILREF";
+            goto label_4;
+            r8 = "QUADEDGE";
+            goto label_4;
+            r8 = "QUADINT";
+            goto label_4;
+            r8 = "TRIEDGE";
+            goto label_4;
+            r8 = "TRIINT";
+            goto label_4;
+            r8 = "LINEDET";
+            goto label_4;
+            r8 = "LINEDEN";
+        }
+label_4:
+        rdx = " %8s";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        ecx = var_2ch;
+        r8 = "unknown";
+        ecx--;
+        if (ecx != 0) {
+            ecx--;
+            if (ecx != 0) {
+                if (ecx != 1) {
+                    goto label_5;
+                }
+                ecx = var_20h;
+                ecx--;
+                if (ecx != 0) {
+                    if (ecx != 1) {
+                        r8 = "float";
+                        goto label_5;
+                    }
+                    r8 = "min2_8f";
+                    goto label_5;
+                }
+                r8 = "min16f";
+                goto label_5;
+            }
+            r8 = 0x1803833f4;
+            rax = "min16i";
+        } else {
+            r8 = "uint";
+            rax = "min16u";
+        }
+        if (var_20h == 5) {
+            r8 = rax;
+        }
+label_5:
+        rdx = " %7s";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        rdi = 0x2020202020202020;
+        ecx = (int32_t) var_27h;
+        r14d = 0x78;
+        eax = (int32_t) cl;
+        var_48h = edi;
+        r9d = (int32_t) var_49h;
+        al = ~al;
+        r8d = (int32_t) al;
+        r15d = 0x79;
+        if (arg_60h != 0) {
+            r8d = ecx;
+        }
+        edx = (int32_t) dil;
+        ecx = (int32_t) var_4ah;
+        eax = 0x7a;
+        r10d = 0x77;
+        if ((r8b & 1) != 0) {
+            edx = r14d;
+        }
+        if ((r8b & 2) != 0) {
+            r9d = r15d;
+        }
+        if ((r8b & 4) != 0) {
+            ecx = eax;
+        }
+        eax = (int32_t) var_4bh;
+        if ((r8b & 8) != 0) {
+            eax = r10d;
+        }
+        if (var_34h == 0xffffffff) {
+            rax = "    YES";
+            rdx = "     NO";
+            rcx = rbx;
+            if (r8b != 0) {
+                rdx = rax;
+            }
+            al = fcn_1800ecdb0 ();
+        } else {
+            ecx = (int32_t) cl;
+            eax = (int32_t) al;
+            var_sp_28h = eax;
+            var_sp_20h = ecx;
+            rcx = rbx;
+            r8d = (int32_t) dl;
+            rdx = "   %c%c%c%c";
+            r9d = (int32_t) r9b;
+            fcn_1800ecdb0 ();
+        }
+        rdx = 0x180383328;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        eax = arg_58h;
+        r9 = arg_50h;
+        eax++;
+        rsi = var_18h;
+        arg_58h = eax;
+    } while (eax < r13d);
+    r15 = var_60h;
+label_0:
+    rdx = 0x1803836f8;
+    rcx = rbx;
+    eax = fcn_1800ecdb0 ();
+    r14 = var_68h;
+    eax = 0;
+    r12 = var_a0h;
+    return rax;
+}

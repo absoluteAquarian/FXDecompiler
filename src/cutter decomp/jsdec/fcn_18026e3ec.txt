@@ -1,0 +1,33 @@
+﻿uint64_t fcn_18026e3ec (void) {
+    PCONTEXT ContextRecord;
+    PVOID * HandlerData;
+    PULONG_PTR EstablisherFrame;
+    PKNONVOLATILE_CONTEXT_POINTERS ContextPointers;
+    PULONG_PTR ImageBase;
+    ULONG var_68h;
+    ULONG HandlerType;
+    rbx = rcx;
+    RtlCaptureContext (rdi, rsi, rbx);
+    rsi = *((rbx + 0xf8));
+    edi = 0;
+    do {
+        r8d = 0;
+        rdx = &ImageBase;
+        rcx = rsi;
+        rax = RtlLookupFunctionEntry ();
+        if (rax == 0) {
+            goto label_0;
+        }
+        ContextPointers = 0;
+        rcx = &var_68h;
+        rdx = ImageBase;
+        r9 = rax;
+        r8 = rsi;
+        rcx = &HandlerType;
+        ecx = 0;
+        RtlVirtualUnwind (rcx, rcx, rbx);
+        edi++;
+    } while (edi < 2);
+label_0:
+    return rax;
+}

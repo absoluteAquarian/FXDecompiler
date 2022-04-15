@@ -1,0 +1,41 @@
+﻿int32_t fcn_18000ae50 (void) {
+    int64_t var_10h;
+    var_10h = edx;
+    r8d = edx;
+    edx = *(0x180427990);
+    eax = r8d;
+    eax &= 0x7f800000;
+    if (r8d != 0x80000000) {
+        if (eax != 0x7f800000) {
+            if (eax != 0) {
+                goto label_0;
+            }
+        }
+        if (dl != 0) {
+            goto label_1;
+        }
+        if (r8d == 0x80000000) {
+            goto label_1;
+        }
+        eax = r8d;
+        edx:eax = (int64_t) eax;
+        eax ^= edx;
+        eax -= edx;
+        if (eax > 0x2710) {
+            goto label_1;
+        }
+        rdx = 0x18038475c;
+        void (*0x1800ecdb0)() ();
+    }
+label_0:
+    if (dl == 0) {
+        xmm2 = var_10h;
+        rdx = 0x180384750;
+        __asm ("cvtps2pd xmm2, xmm2");
+        r8 = xmm2;
+        void (*0x1800ecdb0)() ();
+    }
+label_1:
+    rdx = "0x%08x";
+    return void (*0x1800ecdb0)() ();
+}

@@ -1,0 +1,330 @@
+﻿uint64_t fcn_180010400 (void) {
+    int64_t var_8h;
+    int64_t var_10h;
+    var_8h = rbx;
+    var_10h = rsi;
+    rdi = r8;
+    esi = r9d;
+    r8d = edx;
+    rbx = rcx;
+    rdx = 0x180383b28;
+    fcn_1800ecdb0 ();
+    if (esi == 1) {
+        goto label_2;
+    }
+    if (esi == 2) {
+        goto label_3;
+    }
+    if (esi == 3) {
+        goto label_4;
+    }
+    eax = rsi - 0x13;
+    if (eax > 1) {
+        goto label_5;
+    }
+    ecx = *((rdi + 8));
+    eax = *((rdi + 4));
+    if (ecx == eax) {
+        rdx = 0x180385910;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.00ffff);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        r8d = *((rdi + 4));
+        rdx = 0x180385918;
+        rcx = rbx;
+        eax = fcn_1800ecdb0 ();
+        goto label_6;
+    }
+    if (eax == 0) {
+        if (ecx >= 0xffffffff) {
+            if (*((rdi + 0x10)) >= 0x7fffffff) {
+                if (*((rdi + 0xc)) <= 0x80000000) {
+                    goto label_5;
+                }
+            }
+label_0:
+            rdx = 0x180385914;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (*((rbx + 0x18)) != 0) {
+                r8 = *(str.00ffff);
+                rdx = "<font color = \"#%s\">";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                *((rbx + 0x20))++;
+            }
+            r8d = *((rdi + 0xc));
+            rdx = 0x18038475c;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (*((rbx + 0x18)) != 0) {
+                *((rbx + 0x20))--;
+                rdx = "</font>";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+            }
+            rdx = 0x180383dbc;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (*((rbx + 0x18)) != 0) {
+                r8 = *(str.00ffff);
+                rdx = "<font color = \"#%s\">";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                *((rbx + 0x20))++;
+            }
+            r8d = *((rdi + 0x10));
+            rdx = 0x18038475c;
+        }
+    } else {
+label_1:
+        rdx = 0x180385914;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.00ffff);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        r8d = *((rdi + 4));
+        rdx = 0x180385918;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+        rdx = 0x180383dbc;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.00ffff);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        r8d = *((rdi + 8));
+        rdx = 0x180385918;
+    }
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) == 0) {
+        goto label_7;
+    }
+    *((rbx + 0x20))--;
+    rdx = "</font>";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    do {
+label_7:
+        rdx = 0x180384914;
+        goto label_8;
+label_4:
+        eax = *((rdi + 4));
+        if (*((rdi + 8)) != eax) {
+            if (*((rdi + 0x1c)) != 0) {
+                rdx = 0x18038591c;
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                if (*((rbx + 0x18)) != 0) {
+                    r8 = *(str.ffff40);
+                    rdx = "<font color = \"#%s\">";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    *((rbx + 0x20))++;
+                }
+                rdx = 0x180385920;
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                if (*((rbx + 0x18)) == 0) {
+                    goto label_9;
+                }
+                *((rbx + 0x20))--;
+                rdx = "</font>";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+            }
+label_9:
+            if (*((rdi + 0x20)) == 0) {
+                goto label_10;
+            }
+            rdx = 0x18038591c;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (*((rbx + 0x18)) != 0) {
+                r8 = *(str.ffff40);
+                rdx = "<font color = \"#%s\">";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                *((rbx + 0x20))++;
+            }
+            rdx = 0x180385924;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (*((rbx + 0x18)) == 0) {
+                goto label_10;
+            }
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+label_10:
+        eax = *((rdi + 4));
+        if (*((rdi + 8)) == eax) {
+            rdx = 0x180385910;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (*((rbx + 0x18)) != 0) {
+                r8 = *(str.00ffff);
+                rdx = "<font color = \"#%s\">";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                *((rbx + 0x20))++;
+            }
+            xmm2 = *((rdi + 0x14));
+            rdx = 0x180385928;
+            __asm ("cvtps2pd xmm2, xmm2");
+            rcx = rbx;
+            r8 = xmm2;
+            fcn_1800ecdb0 ();
+            goto label_6;
+        }
+        if (*((rdi + 0x1c)) != 0) {
+            goto label_5;
+        }
+        xmm0 = *((rdi + 0x14));
+        __asm ("comiss xmm0, xmmword [0x1803ef4c8]");
+        if (*((rdi + 0x1c)) <= 0) {
+            xmm0 = *(0x1803ef418);
+            __asm ("comiss xmm0, xmmword [rdi + 0x18]");
+            if (*((rdi + 0x1c)) <= 0) {
+                goto label_5;
+            }
+        }
+        rdx = 0x180385914;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.00ffff);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        xmm2 = *((rdi + 0x14));
+        rdx = 0x180385928;
+        __asm ("cvtps2pd xmm2, xmm2");
+        rcx = rbx;
+        r8 = xmm2;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+        rdx = 0x180383dbc;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.00ffff);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        xmm2 = *((rdi + 0x18));
+        rdx = 0x180385928;
+        __asm ("cvtps2pd xmm2, xmm2");
+        rcx = rbx;
+        r8 = xmm2;
+        fcn_1800ecdb0 ();
+    } while (*((rbx + 0x18)) == 0);
+    *((rbx + 0x20))--;
+    rdx = "</font>";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    rdx = 0x180384914;
+    goto label_8;
+label_3:
+    ecx = *((rdi + 0x10));
+    eax = *((rdi + 0xc));
+    if (ecx == eax) {
+        rdx = 0x180385910;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.00ffff);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        r8d = *((rdi + 0xc));
+        rdx = 0x18038475c;
+        rcx = rbx;
+        eax = fcn_1800ecdb0 ();
+        goto label_6;
+    }
+    if (ecx < 0x7fffffff) {
+        goto label_0;
+    }
+    if (eax > 0x80000000) {
+        goto label_0;
+    }
+    if (*((rdi + 4)) != 0) {
+        goto label_1;
+    }
+    if (*((rdi + 8)) < 0xffffffff) {
+        goto label_1;
+label_2:
+        if (*((rdi + 4)) == 0) {
+            if (*((rdi + 8)) != 0) {
+                goto label_5;
+            }
+        }
+        rdx = 0x180385910;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.00ffff);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        rax = "true";
+        r8 = "false";
+        rcx = rbx;
+        if (*((rdi + 4)) != 0) {
+            r8 = rax;
+        }
+        rdx = 0x180383698;
+        fcn_1800ecdb0 ();
+label_6:
+        if (*((rbx + 0x18)) == 0) {
+            goto label_5;
+        }
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+label_8:
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+label_5:
+    rbx = var_8h;
+    rsi = var_10h;
+    return rax;
+}

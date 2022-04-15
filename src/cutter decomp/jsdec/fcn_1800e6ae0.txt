@@ -1,0 +1,79 @@
+﻿int64_t fcn_1800e6ae0 (int64_t arg_f0h, int64_t arg_f8h) {
+    int64_t var_20h;
+    int64_t var_28h;
+    int64_t var_30h;
+    int64_t var_40h;
+    uintmax_t var_b0h;
+    int64_t var_b8h;
+    int64_t var_d0h;
+    int64_t var_d8h;
+    int64_t var_e0h;
+    rax = rsp;
+    *((rax + 8)) = rbp;
+    __asm ("xorps xmm0, xmm0");
+    *((rax + 0x10)) = rsi;
+    rsi = arg_f8h;
+    r8 = rcx;
+    ecx = 0;
+    *((rax + 0x18)) = rdi;
+    __asm ("movdqa xmmword [rax - 0x68], xmm0");
+    *((rax - 0x58)) = rcx;
+    *((rax - 0x10)) = rcx;
+    if (rsi == 0) {
+        ebx = 0x8876086c;
+    } else {
+        var_30h = 1;
+        *(rsi) = rcx;
+        var_28h = 1;
+        var_20h = r9;
+        r9 = rdx;
+        eax = fcn_1800f59d0 (var_40h, rdx, r8);
+        ebx = eax;
+        if (eax >= 0) {
+            ecx = 0x188;
+            rax = fcn_18026dcec (rcx);
+            if (rax != 0) {
+                rcx = rax;
+                rax = fcn_1800e2770 ();
+                rdi = rax;
+                if (rax != 0) {
+                    r9 = arg_f0h;
+                    rdx = &var_40h;
+                    r8d = ebp;
+                    rcx = rax;
+                    eax = fcn_1800e3350 ();
+                    if (eax < 0) {
+                        ebx = 0x80070057;
+                    } else {
+                        *(rsi) = rdi;
+                        rcx = rdi;
+                        rax = *(rdi);
+                        rax = *((rax + 8));
+                        uint64_t (*case.0x180337eae.0)() ();
+                    }
+                    rax = *(rdi);
+                    rcx = rdi;
+                    rax = *((rax + 0x10));
+                    uint64_t (*case.0x180337eae.0)() ();
+                }
+            } else {
+                ebx = 0x8007000e;
+            }
+        }
+        rcx = var_b8h;
+    }
+    rdi = var_e0h;
+    rsi = var_d8h;
+    if (var_b0h != 0) {
+        if (rcx == 0) {
+            goto label_0;
+        }
+        rax = *(rcx);
+        edx = 1;
+        rax = *(rax);
+        uint64_t (*case.0x180337eae.0)() ();
+    }
+label_0:
+    eax = ebx;
+    return rax;
+}

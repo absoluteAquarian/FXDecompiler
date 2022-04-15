@@ -1,0 +1,128 @@
+﻿int64_t fcn_180019970 (void) {
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    rdi = r8;
+    rsi = r9;
+    r8d = 0;
+    r15d = edx;
+    r14 = rcx;
+    r11 = *((rdi + 0x10));
+    r10 = r11 + 4;
+    if (r10 < r11) {
+        goto label_3;
+    }
+    if (r10 > *((rdi + 8))) {
+        goto label_3;
+    }
+    rax = *(rdi);
+    *((rdi + 0x10)) = r10;
+    ecx = *((r11 + rax));
+    if (ecx == 0) {
+        goto label_3;
+    }
+    eax = ecx;
+    rcx = *((r9 + 8));
+    if (rax >= rcx) {
+        goto label_3;
+    }
+    rdx = *(r9);
+    *((r9 + 0x10)) = rax;
+    r9 = rdx + rax;
+    if (*(r9) == r8b) {
+        goto label_4;
+    }
+    do {
+        if (rax > rcx) {
+            goto label_5;
+        }
+        rax++;
+    } while (*((rdx + rax)) != r8b);
+label_4:
+    r8 = r9;
+    *((rsi + 0x10)) = rax;
+    ebx = 0;
+label_1:
+    if (ebx < 0) {
+        goto label_6;
+    }
+    rcx = r14;
+    if (r15d <= 1) {
+        goto label_7;
+    }
+    rdx = " = { \"%s\";
+    fcn_1800ecdb0 ();
+label_0:
+    rdx = *((rdi + 0x10));
+    r9d = 0;
+    rcx = rdx + 4;
+    if (rcx < rdx) {
+        goto label_3;
+    }
+    if (rcx > *((rdi + 8))) {
+        goto label_3;
+    }
+    rax = *(rdi);
+    *((rdi + 0x10)) = rcx;
+    ecx = *((rdx + rax));
+    if (ecx == 0) {
+        goto label_3;
+    }
+    eax = ecx;
+    rcx = *((rsi + 8));
+    if (rax >= rcx) {
+        goto label_3;
+    }
+    rdx = *(rsi);
+    r8 = rdx + rax;
+    *((rsi + 0x10)) = rax;
+    if (*(r8) == r9b) {
+        goto label_8;
+    }
+    do {
+        if (rax > rcx) {
+            goto label_9;
+        }
+        rax++;
+    } while (*((rdx + rax)) != r9b);
+label_8:
+    r9 = r8;
+    *((rsi + 0x10)) = rax;
+    ebx = 0;
+label_2:
+    if (ebx < 0) {
+        goto label_6;
+    }
+    r8 = r9;
+    rdx = ", \"%s\";
+    rcx = r14;
+    fcn_1800ecdb0 ();
+    ebp++;
+    if (ebp < r15d) {
+        goto label_0;
+    }
+    rdx = 0x180386bd4;
+    rcx = r14;
+    fcn_1800ecdb0 ();
+    goto label_6;
+label_5:
+    ebx = 0x80004005;
+    goto label_1;
+label_9:
+    ebx = 0x80004005;
+    goto label_2;
+label_7:
+    rdx = " = \"%s\";
+    fcn_1800ecdb0 ();
+    goto label_6;
+label_3:
+    ebx = 0x80004005;
+label_6:
+    eax = ebx;
+    rbx = var_8h;
+    rsi = var_18h;
+    return rax;
+}

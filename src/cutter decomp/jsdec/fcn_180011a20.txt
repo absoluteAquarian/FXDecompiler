@@ -1,0 +1,127 @@
+﻿uint64_t fcn_180011a20 (int64_t arg_60h) {
+    int64_t var_20h_2;
+    int64_t var_28h;
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    var_20h = rdi;
+    ebp = 0;
+    r14d = r8d;
+    esi = 0;
+    edi = r9d;
+    rbx = rcx;
+    if (*((rcx + 0x18)) != sil) {
+        r8 = *(str.e0e0e0);
+        rdx = "<font color = \"#%s\">";
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+    edx = r14d;
+    rcx = rbx;
+    rax = fcn_18000c470 ();
+    rdx = arg_60h;
+    r8 = rax;
+    if (edi != 0) {
+        esi = *(rdx);
+        ebp >>= 4;
+        esi >>= 2;
+        esi &= 3;
+    }
+    if (r14d <= 0x2a) {
+        rax = r14;
+        r14 = 0x180000000;
+        eax = *((r14 + rax + 0x11c28));
+        ecx = *((r14 + rax*4 + 0x11c14));
+        rcx += r14;
+        /* switch table (43 cases) at 0x180011c14 */
+        void (*rcx)() ();
+        if (edi == 2) {
+            eax = *((rsi + r14 + 0x387418));
+            rcx = rbx;
+            r9d = *((rdx + 4));
+            rdx = "%s[%u][%u].%c";
+            var_28h = eax;
+            var_20h_2 = ebp;
+            fcn_1800ecdb0 ();
+        } else {
+            if (edi != 1) {
+                goto label_0;
+            }
+            rdx = "%s%u.%c";
+            goto label_1;
+            if (edi != 1) {
+                goto label_0;
+            }
+            r9d = *(rdx);
+            rcx = rbx;
+            rdx = "%s%u";
+            fcn_1800ecdb0 ();
+            goto label_2;
+            rdx = 0x180383698;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (edi != 1) {
+                goto label_2;
+            }
+            r8d = *((rsi + r14 + 0x387418));
+            rdx = 0x180385e74;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            goto label_2;
+            if (edi != 1) {
+                goto label_0;
+            }
+            rdx = "%s[%u].%c";
+label_1:
+            eax = *((rsi + r14 + 0x387418));
+            r9d = ebp;
+            rcx = rbx;
+            var_20h_2 = eax;
+            fcn_1800ecdb0 ();
+        }
+label_2:
+        if (*((rbx + 0x18)) != 0) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            eax = fcn_1800ecdb0 ();
+        }
+        eax = 0;
+    } else {
+        if (*((rbx + 0x18)) != 0) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+        rdx = 0x180383328;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.a0a0a0);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        rdx = "// <internal error> unexpected register type in PDB\n";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+label_0:
+        eax = 0x80004005;
+    }
+    rbx = var_8h;
+    rsi = var_18h;
+    rdi = var_20h;
+    return rax;
+}

@@ -1,0 +1,264 @@
+﻿int64_t fcn_180007dc0 (void) {
+    uintmax_t var_30h;
+    int64_t var_2ch;
+    uintmax_t var_28h;
+    int64_t var_20h;
+    int64_t var_18h;
+    int64_t var_bp_10h;
+    int64_t var_40h;
+    int64_t var_48h;
+    int64_t var_sp_20h;
+    int64_t var_90h;
+    int64_t var_10h;
+    var_10h = rbx;
+    rax = *(r8);
+    rbx = rdx;
+    r14 = rcx;
+    rdx = &var_2ch;
+    r12d = 0;
+    rcx = r8;
+    rsi = r8;
+    rax = *((rax + 0x18));
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t, uint64_t, uint64_t, uint64_t, uint64_t) (r14, r12, rdi, r12, r12);
+    edi = eax;
+    if (eax < 0) {
+        goto label_4;
+    }
+    r9d = *((r14 + 0x30f4));
+    edx = r12d;
+    if (r9d == 0) {
+        goto label_5;
+    }
+    r11d = var_2ch;
+    while (edx < r9d) {
+        rax = *((r14 + 0x30e8));
+        ecx = edx;
+        r8 = rax + rcx*4;
+        goto label_6;
+        r8 = r12;
+label_6:
+        if (r11d == *(r8)) {
+            goto label_7;
+        }
+        edx++;
+    }
+label_5:
+    rax = *(rsi);
+    rcx = &var_18h;
+    r9d = 0;
+    r8d = 0;
+    rcx = rsi;
+    rax = *((rax + 0x2b0));
+    edx = r9 + 7;
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t) (rcx);
+    edi = eax;
+    if (eax < 0) {
+        goto label_4;
+    }
+    rcx = var_18h;
+    r9 = &var_30h;
+    r8 = &var_20h;
+    edx = 1;
+    rax = *(rcx);
+    rax = *((rax + 0x30));
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t) (r15);
+    if (eax != 0) {
+        goto label_8;
+    }
+    r15 = 0x53c8eaedea6e7f17;
+    do {
+        if (var_30h != 1) {
+            goto label_8;
+        }
+        rcx = var_20h;
+        rdx = &var_28h;
+        rax = *(rcx);
+        rax = *((rax + 0x528));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        if (eax == 0) {
+            if (var_28h != r12d) {
+                goto label_1;
+            }
+        }
+        rcx = var_20h;
+        rdx = &var_48h;
+        rax = *(rcx);
+        rax = *((rax + 0x4b8));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        if (eax == 0) {
+            rcx = var_20h;
+            rdx = &var_bp_10h;
+            rax = *(rcx);
+            rax = *((rax + 0x4c8));
+            eax = uint64_t (*case.0x180337eae.0)() ();
+            if (eax == 0) {
+                goto label_9;
+            }
+            rdx = 0x180383328;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (*((rbx + 0x18)) != r12b) {
+                r8 = *(str.a0a0a0);
+                rdx = "<font color = \"#%s\">";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                *((rbx + 0x20))++;
+            }
+            rdx = "// <internal error> could not get live range length for variable from PDB\n";
+label_0:
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            if (*((rbx + 0x18)) == r12b) {
+                goto label_1;
+            }
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+label_1:
+        rcx = var_20h;
+        if (rcx != 0) {
+            rax = *(rcx);
+            rax = *((rax + 0x10));
+            uint64_t (*case.0x180337eae.0)() ();
+label_3:
+            var_20h = r12;
+        }
+        rcx = var_18h;
+        r9 = &var_30h;
+        r8 = &var_20h;
+        edx = 1;
+        rax = *(rcx);
+        rax = *((rax + 0x30));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+    } while (eax == 0);
+label_8:
+    r15d = var_2ch;
+    rbx = r14 + 0x30e8;
+    r14d = *((rbx + 0xc));
+    eax = *((rbx + 0xc));
+    eax = ~eax;
+    if (eax >= 1) {
+        goto label_10;
+    }
+    edi = 0x80070216;
+    goto label_11;
+label_7:
+    eax = 0;
+    goto label_12;
+label_9:
+    rcx = var_20h;
+    rdx = &var_40h;
+    rax = *(rcx);
+    rax = *((rax + 0x18));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    if (eax != 0) {
+        rdx = 0x180383328;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != r12b) {
+            r8 = *(str.a0a0a0);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        rdx = "// <internal error> could not get variable index ID from PDB\n";
+        goto label_0;
+    }
+    ecx = var_48h;
+    rax = r15;
+    rdx:rax = rax * rcx;
+    eax = ecx;
+    rdi = r12;
+    rax -= rdx;
+    rax >>= 1;
+    rax += rdx;
+    rax >>= 0xa;
+    rax *= 0x607;
+    rcx -= rax;
+    rsi = r14 + rcx*8;
+    rax = *((rsi + 0xb0));
+    if (rax == 0) {
+        goto label_13;
+    }
+    ecx = var_40h;
+label_2:
+    if (*(rax) == ecx) {
+        goto label_1;
+    }
+    rdi = rax;
+    rax = *((rax + 0x18));
+    if (rax != 0) {
+        goto label_2;
+    }
+label_13:
+    ecx = 0x20;
+    rax = fcn_18026dcec (rcx);
+    if (rax != 0) {
+        *((rax + 0x10)) = r12;
+        ecx = var_40h;
+        *(rax) = ecx;
+        ecx = var_48h;
+        *((rax + 4)) = ecx;
+        rcx = var_bp_10h;
+        *((rax + 8)) = rcx;
+        rcx = var_20h;
+        *((rax + 0x10)) = rcx;
+        *((rax + 0x18)) = r12;
+        if (rdi == 0) {
+            *((rsi + 0xb0)) = rax;
+            goto label_3;
+        }
+        *((rdi + 0x18)) = rax;
+        goto label_3;
+    }
+    edi = 0x8007000e;
+    goto label_14;
+label_10:
+    esi = r14 + 1;
+    if (esi > *((rbx + 8))) {
+        if (*((rbx + 0x11)) == r12b) {
+            edi = 0x8007000e;
+            goto label_11;
+        }
+        edx = esi;
+        rcx = rbx;
+        eax = fcn_180017b50 ();
+        edi = eax;
+        if (eax != 0) {
+            goto label_15;
+        }
+    }
+    *((rbx + 0xc)) = esi;
+    edi = r12d;
+label_15:
+    if (edi == 0) {
+        rax = *(rbx);
+        edi = r12d;
+        *((rax + r14*4)) = r15d;
+label_11:
+    }
+    __asm ("cmovns edi, r12d");
+label_14:
+    r15 = var_90h;
+label_4:
+    rcx = var_20h;
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+        var_20h = r12;
+    }
+    rcx = var_18h;
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+    }
+    eax = edi;
+label_12:
+    rbx = var_10h;
+    return rax;
+}

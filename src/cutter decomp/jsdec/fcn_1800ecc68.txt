@@ -1,0 +1,106 @@
+﻿uint32_t fcn_1800ecc68 (void) {
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    edi = *(rcx);
+    ebp = 0;
+    r14d = edx;
+    rsi = rcx;
+    if (edi == 0) {
+        goto label_1;
+    }
+    ebx = rdi - 1;
+    if (ebx == 0) {
+        goto label_2;
+    }
+    rcx = *((rcx + 8));
+    do {
+        if (*((rbx + rcx)) == 0xa) {
+            goto label_2;
+        }
+        ebp++;
+        ebx += 0xffffffff;
+    } while (ebx != 0);
+    goto label_2;
+label_0:
+    edi -= ebx;
+    r15d = ebx;
+    if (edi >= 0x10) {
+        rcx = *((rsi + 8));
+        rdx = "<font color = \"#";
+        rcx += r15;
+        r8d = 0x10;
+        eax = strncmp ();
+        if (eax == 0) {
+            goto label_3;
+        }
+    }
+    if (edi >= 7) {
+        rcx = *((rsi + 8));
+        rdx = "</font>";
+        rcx += r15;
+        r8d = 7;
+        eax = strncmp ();
+        if (eax == 0) {
+            goto label_3;
+        }
+    }
+    if (edi < 4) {
+        goto label_4;
+    }
+    rcx = *((rsi + 8));
+    rdx = "<!--";
+    rcx += r15;
+    r8d = 4;
+    eax = strncmp ();
+    if (eax != 0) {
+        goto label_4;
+    }
+label_3:
+    ecx = ebx;
+    if (ebx >= *(rsi)) {
+        goto label_5;
+    }
+    rdx = *((rsi + 8));
+    do {
+        if (*((rbx + rdx)) == 0x3e) {
+            goto label_5;
+        }
+        ebx++;
+    } while (ebx < *(rsi));
+label_5:
+    ecx -= ebx;
+    ebp--;
+    ebp += ecx;
+label_4:
+    edi = *(rsi);
+    ebx++;
+label_2:
+    if (ebx < edi) {
+        goto label_0;
+    }
+label_1:
+    if (ebp >= r14d) {
+        goto label_6;
+    }
+    r14d -= ebp;
+    ebx = r14d;
+    do {
+        ecx = *(rsi);
+        eax = rcx + 1;
+        if (eax >= ecx) {
+            r8d = 1;
+            rdx = 0x1803845f4;
+            rcx = rsi;
+            fcn_1800ecbc4 ();
+        }
+        rbx--;
+    } while (rbx != 0);
+label_6:
+    rbx = var_8h;
+    rsi = var_18h;
+    return eax;
+}

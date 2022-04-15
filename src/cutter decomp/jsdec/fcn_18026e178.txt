@@ -1,0 +1,18 @@
+﻿uint64_t fcn_18026e178 (void) {
+    rbx = rcx;
+    eax = IsDebuggerPresent (rbx);
+    ecx = 1;
+    *(0x180426d60) = eax;
+    fcn_18026ea18 ();
+    ecx = 0;
+    SetUnhandledExceptionFilter ();
+    rcx = rbx;
+    UnhandledExceptionFilter ();
+    if (*(0x180426d60) == 0) {
+        ecx = 1;
+        fcn_18026ea18 ();
+    }
+    rax = GetCurrentProcess ();
+    rcx = rax;
+    edx = 0xc0000409;
+}

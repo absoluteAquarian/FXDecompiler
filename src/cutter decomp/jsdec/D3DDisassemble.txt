@@ -1,0 +1,18 @@
+﻿int64_t D3DDisassemble (int64_t arg_80h, int64_t arg4, int64_t arg3, int64_t arg1, int64_t arg2) {
+    int64_t var_20h;
+    int64_t var_28h;
+    int64_t var_38h;
+    int64_t var_40h;
+    r9 = arg4;
+    r8 = arg3;
+    rcx = arg1;
+    rdx = arg2;
+    rax = arg_80h;
+    r10d = 0;
+    var_40h = rax;
+    var_38h = r10;
+    var_28h = rax;
+    var_20h = r10;
+    fcn_180015f80 (0xffffffff, rdx, r8, r9);
+    return rax;
+}

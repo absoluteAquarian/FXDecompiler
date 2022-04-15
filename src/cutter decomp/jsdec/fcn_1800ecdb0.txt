@@ -1,0 +1,49 @@
+﻿int64_t fcn_1800ecdb0 (void) {
+    int64_t var_20h;
+    int64_t var_21fh;
+    int64_t var_220h;
+    r11 = rsp;
+    *((r11 + 0x10)) = rdx;
+    *((r11 + 0x18)) = r8;
+    *((r11 + 0x20)) = r9;
+    rax = *(0x180426020);
+    rax ^= rsp;
+    var_220h = rax;
+    rbx = rcx;
+    r9 = r11 + 0x18;
+    r8 = rdx;
+    rcx = &var_20h;
+    edi = 0x1ff;
+    edx = 0x1ff;
+    eax = fcn_18026f188 ();
+    edx = 0;
+    if (eax < 0) {
+        goto label_0;
+    }
+    rcx = (int64_t) eax;
+    if (rcx > rdi) {
+        goto label_0;
+    }
+    eax = (int32_t) var_21fh;
+    if (rcx == rdi) {
+        eax = edx;
+    }
+    r8 |= 0xffffffffffffffff;
+    var_21fh = al;
+    rax = &var_20h;
+    do {
+        r8++;
+    } while (*((rax + r8)) != dl);
+    edx = *(rbx);
+    eax = rdx + r8;
+    if (eax >= edx) {
+        rdx = &var_20h;
+        rcx = rbx;
+        fcn_1800ecbc4 ();
+    }
+label_0:
+    rcx = var_220h;
+    rcx ^= rsp;
+    fcn_18026e150 ();
+    return rax;
+}

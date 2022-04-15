@@ -1,0 +1,4 @@
+﻿uint64_t fcn_18026dcdc (void) {
+    rax = 0x1804267d0;
+    return rax;
+}

@@ -1,0 +1,70 @@
+﻿uint64_t fcn_180015c10 (void) {
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    var_20h = rdi;
+    rdi = rcx;
+    rbx = r8;
+    rcx = *(r8);
+    esi = edx;
+    if (rcx == 0) {
+        ecx = *(rdi);
+        rdx = rbx;
+        ecx++;
+        eax = fcn_1800f01e0 (rcx, rdx, r8, r9);
+        if (eax < 0) {
+            goto label_0;
+        }
+        rcx = *(rbx);
+        rax = *(rcx);
+        rax = *((rax + 0x18));
+        rax = uint64_t (*case.0x180337eae.0)() ();
+        r8d = *(rdi);
+        rcx = rax;
+        rbx = rax;
+        memcpy (rcx, *((rdi + 8)), r8);
+        eax = *(rdi);
+        *((rax + rbx)) = 0;
+    } else {
+        rax = *(rcx);
+        rax = *((rax + 0x18));
+        rax = uint64_t (*case.0x180337eae.0)() ();
+        rcx = *(rbx);
+        r14 = rax;
+        rdx = *(rcx);
+        rax = *((rdx + 0x20));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        ecx = *(rdi);
+        rdx = rbx;
+        ecx += eax;
+        eax = fcn_1800f01e0 (rcx, rdx, r8, r9);
+        if (eax < 0) {
+            goto label_0;
+        }
+        rcx = *(rbx);
+        rdx = *(rcx);
+        rax = *((rdx + 0x18));
+        rax = uint64_t (*case.0x180337eae.0)() ();
+        r8d = ebp;
+        rcx = rax;
+        rbx = rax;
+        memcpy (rcx, r14, r8);
+        r8d = *(rdi);
+        ecx = rbp - 1;
+        rcx += rbx;
+        memcpy (rcx, *((rdi + 8)), r8);
+        ecx = *(rdi);
+        ecx += ebp;
+        *((rcx + rbx)) = 0;
+    }
+    eax = esi;
+label_0:
+    rbx = var_8h;
+    rsi = var_18h;
+    rdi = var_20h;
+    return rax;
+}

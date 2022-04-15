@@ -1,0 +1,52 @@
+﻿int64_t fcn_180010f00 (void) {
+    int64_t var_8h;
+    uintmax_t var_48h;
+    int64_t var_58h;
+    var_8h = rbx;
+    rax = *(rdx);
+    rdi = rdx;
+    rdx = &var_48h;
+    rcx = rdi;
+    rsi = r8;
+    rax = *((rax + 0x20));
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t, uint64_t, uint64_t, uint64_t) (rdi, rsi, rbp, 0);
+    ebx = eax;
+    if (eax >= 0) {
+        if (var_48h == 0x11) {
+            rcx = *(rdi);
+            rdx = &var_58h;
+            rax = *((rcx + 0x40));
+            rcx = rdi;
+            eax = uint64_t (*case.0x180337eae.0)() ();
+            if (eax != 0) {
+                rdx = "// <internal error> unable to get typedef type from PDB\n";
+                rcx = rbp;
+                fcn_180007890 ();
+                ebx = 0x80004005;
+                goto label_0;
+            }
+            rax = var_58h;
+            *(rsi) = rax;
+            eax = ebx;
+            rbx = var_8h;
+            return rax;
+        }
+        rax = *(rsi);
+        rcx = rdi;
+        *(rsi) = rdi;
+        rax = *(rdi);
+        rax = *((rax + 8));
+        eax = uint64_t (*case.0x180337eae.0)(uint64_t) (rax);
+        ebx = eax;
+    }
+label_0:
+    rcx = var_58h;
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+    }
+    eax = ebx;
+    rbx = var_8h;
+    return rax;
+}

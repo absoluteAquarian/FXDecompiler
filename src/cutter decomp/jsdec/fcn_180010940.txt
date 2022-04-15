@@ -1,0 +1,384 @@
+﻿int64_t fcn_180010940 (void) {
+    int64_t var_80h;
+    int64_t var_bp_78h;
+    int64_t var_bp_70h;
+    int64_t var_68h;
+    int64_t var_bp_60h;
+    int64_t var_bp_58h;
+    int64_t var_bp_50h;
+    int64_t var_bp_48h;
+    void * s1;
+    int64_t var_1e0h;
+    int64_t var_sp_20h;
+    int64_t var_28h;
+    uintmax_t var_30h;
+    uintmax_t var_31h;
+    uintmax_t var_34h;
+    const char * var_38h;
+    int64_t var_3ch;
+    uintmax_t var_40h;
+    int64_t var_48h;
+    int64_t var_50h;
+    const void ** var_58h;
+    const void * s2;
+    int64_t var_sp_68h;
+    int64_t var_70h;
+    int64_t var_78h;
+    int64_t var_2f0h;
+    int64_t var_2f8h;
+    int64_t var_300h;
+    int64_t var_308h;
+    int64_t var_348h;
+    rbp = rsp - 0x210;
+    rax = *(0x180426020);
+    rax ^= rsp;
+    var_1e0h = rax;
+    rsi = *((rdx + 0x60));
+    rdi = rcx;
+    edx = r8 + 1;
+    r11d = *((rsi + 0x1c));
+    r10d = *(rsi);
+    r9d = *((rsi + 0x20));
+    r10 += rsi;
+    r9 += r10;
+    if (edx >= r11d) {
+        edx = r11d;
+    }
+    if (edx == 0) {
+        goto label_2;
+    }
+    do {
+        edx--;
+        eax = edx;
+        rcx = rax * 0x18c;
+        if (*((rcx + r9)) <= r8d) {
+            goto label_3;
+        }
+    } while (edx != 0);
+label_2:
+    edx = r8d;
+label_3:
+    if (edx >= r11d) {
+        goto label_4;
+    }
+    eax = edx;
+    rcx = rax * 0x18c;
+    rcx += r9;
+    var_48h = rcx;
+    if (*(rcx) != r8d) {
+        goto label_4;
+    }
+    eax = *((rsi + 0x38));
+    r8b = 0;
+    rax += r10;
+    var_348h = rbx;
+    ebx = *((rsi + 0x28));
+    var_58h = rax;
+    rbx += r10;
+    eax = *((rsi + 0x48));
+    rax += r10;
+    var_300h = r13;
+    var_50h = rax;
+    r13d = 0;
+    eax = *((rsi + 0x50));
+    rax += r10;
+    var_2f8h = r14;
+    r14d = *((rcx + 8));
+    s2 = rax;
+    eax = *((rsi + 0x4c));
+    rax += r10;
+    var_68h = 0xffffffffffffffff;
+    var_70h = rax;
+    var_bp_60h = 0xffffffffffffffff;
+    var_bp_58h = 0xffffffffffffffff;
+    var_bp_50h = 0xffffffffffffffff;
+    var_78h = 0xffffffffffffffff;
+    var_80h = 0xffffffffffffffff;
+    var_bp_78h = 0xffffffffffffffff;
+    var_bp_70h = 0xffffffffffffffff;
+    var_34h = 0;
+    var_40h = r13;
+    if (r14d > 2) {
+        rdx = "\n// <internal error> too many instruction outputs in debug info\n";
+        rcx = rdi;
+        fcn_180007890 ();
+        goto label_5;
+    }
+    r11d = r13d;
+    if (r14d == 0) {
+        goto label_5;
+    }
+label_0:
+    edx = r11d;
+    r9 = rdx * 0xb4;
+    r9 += rcx;
+    if (*((r9 + 0x10)) == 0xffffffff) {
+        goto label_6;
+    }
+    ecx = *((r9 + 0xb8));
+    al = (ecx != 0xffffffff) ? 1 : 0;
+    *((rsp + rdx + 0x34)) = al;
+    eax = *((r9 + 0xbc));
+    r9 += 0x28;
+    ecx = rax + rcx*4;
+    *((rsp + rdx*4 + 0x40)) = ecx;
+    edx = r13d;
+    do {
+        eax = *(r9);
+        if (eax != 0xffffffff) {
+            if (eax >= *((rsi + 0x24))) {
+                goto label_7;
+            }
+            rax *= 3;
+            r10d = *((rbx + rax*8 + 0x10));
+            r8 = rbx + rax*8;
+            if (r10d >= *((rsi + 0x44))) {
+                goto label_8;
+            }
+            eax = rdx + r11*4;
+            ecx = eax;
+            *((rbp + rax*4 - 0x68)) = r10d;
+            eax = *((r8 + 0x14));
+            *((rsp + rcx*4 + 0x78)) = eax;
+            eax = *((r8 + 4));
+            r8b = 1;
+            *((rbp + rcx*4 - 0x48)) = eax;
+        }
+        edx++;
+        r9 += 0x24;
+    } while (edx < 4);
+    rcx = var_48h;
+label_6:
+    r11d++;
+    if (r11d < r14d) {
+        goto label_0;
+    }
+    if (r8b == 0) {
+        goto label_5;
+    }
+    ebx = 0xffffffff;
+    var_308h = r12;
+    var_3ch = ebx;
+    var_38h = ebx;
+    var_2f0h = r15;
+    var_30h = r13b;
+    var_31h = r13b;
+    if (*((rdi + 0x18)) != r13b) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        *((rdi + 0x20))++;
+    }
+    rdx = "  // ";
+    rcx = rdi;
+    rax = fcn_1800ecdb0 ();
+    r15 = r13;
+    do {
+        r12d = *((rbp + r15 - 0x68));
+        if (r12d != 0xffffffff) {
+            if (ebx == r12d) {
+                eax = (int32_t) var_30h;
+                ebx = r13d;
+                rbx >>= 2;
+                r14d = r13d;
+                if (al != *((rsp + rbx + 0x34))) {
+                    goto label_9;
+                }
+                eax = var_38h;
+                if (eax != *((rsp + rbx*4 + 0x40))) {
+                    goto label_9;
+                }
+                rdx = 0x180383dbc;
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+                rax = rbx * 5;
+                r14d &= 3;
+                r14 += rax;
+                rax = r14*8 + 0xa;
+                rax += r14;
+                goto label_10;
+label_8:
+                rdx = "\n// <internal error> incorrect variable offset in debug info\n";
+                rcx = rdi;
+                fcn_180007890 ();
+                goto label_5;
+label_7:
+                rdx = 0x180383328;
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+                if (*((rdi + 0x18)) != r13b) {
+                    r8 = *(str.a0a0a0);
+                    rdx = "<font color = \"#%s\">";
+                    rcx = rdi;
+                    fcn_1800ecdb0 ();
+                    *((rdi + 0x20))++;
+                }
+                rdx = "\n// <internal error> incorrect scalar offset in debug info\n";
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+                if (*((rdi + 0x18)) == r13b) {
+                    goto label_5;
+                }
+                *((rdi + 0x20))--;
+                rdx = "</font>";
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+                goto label_5;
+            }
+label_9:
+            if (var_31h != 0) {
+                rdx = 0x1803854a4;
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+            }
+            rcx = r12;
+            r14d = r13d;
+            r14 >>= 2;
+            var_3ch = ecx;
+            rcx *= 0x2c;
+            eax = *((rsp + r14 + 0x34));
+            var_30h = al;
+            eax = *((rsp + r14*4 + 0x40));
+            var_38h = *((rsp + r14*4 + 0x40));
+            rax = var_50h;
+            rax += rcx;
+            var_31h = 1;
+            r12d = r13d;
+            var_sp_68h = rax;
+            ecx = *(rax);
+            if (ecx >= *((rsi + 0x34))) {
+                goto label_11;
+            }
+            rdx = var_58h;
+            rcx *= 5;
+            r8d = 0x1ff;
+            ebx = *((rdx + rcx*4 + 0xc));
+            edx = *((rdx + rcx*4 + 0x10));
+            rcx = &s1;
+            if (ebx < r8d) {
+                r8d = ebx;
+            }
+            rdx += s2;
+            memcpy (rcx, rdx, r8);
+            eax = 0x1ff;
+            if (ebx < eax) {
+                eax = ebx;
+            }
+            if (eax >= 0x200) {
+                goto label_12;
+            }
+            r8 = &s1;
+            *((rbp + rax - 0x20)) = 0;
+            if (var_30h != 0) {
+                rcx = var_70h;
+                rax = var_sp_68h;
+                r9d = var_38h;
+                r9d >>= 2;
+                eax = *((rax + 0x20));
+                rax >>= 2;
+                edx = *((rcx + rax*4));
+                rcx = "xyzw";
+                eax = var_38h;
+                eax &= 3;
+                ecx = *((rax + rcx));
+                if (edx <= 4) {
+                    var_sp_20h = ecx;
+                    rdx = "%s[r%u.%c]<";
+                    rcx = rdi;
+                    fcn_1800ecdb0 ();
+                } else {
+                    eax = rdx + 3;
+                }
+                eax >>= 2;
+                rdx = "%s[r%u.%c/%u]<";
+                var_28h = eax;
+                var_sp_20h = ecx;
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+            } else {
+                rdx = 0x180385aa8;
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+            }
+            rax = r14 * 5;
+            r12d &= 3;
+            rax += r12;
+            rax *= 9;
+            rax = rax + 0xa;
+label_10:
+            rcx = var_48h;
+            r9d = *((rbp + r15 - 0x48));
+            edx = *((rsp + r15 + 0x78));
+            r8 = rcx + rax*4;
+            rcx = rdi;
+            fcn_180010400 ();
+            ebx = var_3ch;
+        }
+        r13d++;
+        r15 += 4;
+    } while (r13d < 8);
+    if (var_31h == 0) {
+        goto label_13;
+    }
+    rdx = 0x1803854bc;
+    do {
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+label_13:
+        if (*((rdi + 0x18)) != 0) {
+            *((rdi + 0x20))--;
+            rdx = "</font>";
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+        }
+        r12 = var_308h;
+        r15 = var_2f0h;
+label_5:
+        r13 = var_300h;
+        rbx = var_348h;
+        r14 = var_2f8h;
+label_1:
+        rcx = var_1e0h;
+        rcx ^= rsp;
+        fcn_18026e150 ();
+        return rax;
+label_11:
+        rdx = 0x180383328;
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        if (*((rdi + 0x18)) != 0) {
+            r8 = *(str.a0a0a0);
+            rdx = "<font color = \"#%s\">";
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+            *((rdi + 0x20))++;
+        }
+        rdx = "\n// <internal error> incorrect token offset in debug info\n";
+    } while (1);
+label_4:
+    rdx = 0x180383328;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    if (*((rdi + 0x18)) != 0) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        *((rdi + 0x20))++;
+    }
+    rdx = "\n// <internal error> incorrect instruction offset in debug info\n";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    if (*((rdi + 0x18)) == 0) {
+        goto label_1;
+    }
+    *((rdi + 0x20))--;
+    rdx = "</font>";
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    goto label_1;
+label_12:
+    fcn_18026e2b8 ();
+    __asm ("int3");
+}

@@ -1,0 +1,5 @@
+﻿void fcn_18026f760 (void) {
+    if (rcx != 0) {
+        rcx += 0xfffffffffffffffc;
+    }
+}

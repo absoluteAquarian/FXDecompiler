@@ -1,0 +1,30 @@
+﻿uint32_t fcn_180018000 (int64_t arg_50h) {
+    int64_t var_8h;
+    var_8h = rbx;
+    rbx = rdx - 1;
+    r8 = r9;
+    r9 = arg_50h;
+    rdx = rbx;
+    rdi = rcx;
+    eax = fcn_18026f188 ();
+    if (eax >= 0) {
+        rdx = (int64_t) eax;
+        if (rdx > rbx) {
+            goto label_0;
+        }
+        if (rdx == rbx) {
+            eax = 0;
+            *((rbx + rdi)) = al;
+            rbx = var_8h;
+            return eax;
+        }
+        eax = 0;
+        rbx = var_8h;
+        return eax;
+    }
+label_0:
+    *((rbx + rdi)) = 0;
+    eax = 0x8007007a;
+    rbx = var_8h;
+    return eax;
+}

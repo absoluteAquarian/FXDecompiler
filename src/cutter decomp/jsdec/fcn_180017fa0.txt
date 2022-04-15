@@ -1,0 +1,25 @@
+﻿uint64_t fcn_180017fa0 (void) {
+    int64_t var_20h_2;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_18h = r8;
+    var_20h = r9;
+    r9d = 0;
+    rax = rdx - 1;
+    r10d = 0x80070057;
+    if (rax > 0x7ffffffe) {
+        r9d = r10d;
+    }
+    if (r9d >= 0) {
+        rax = &var_20h;
+        r9 = r8;
+        var_20h_2 = rax;
+        fcn_180018000 (rcx);
+        return rax;
+    }
+    eax = r9d;
+    if (rdx != 0) {
+        *(rcx) = 0;
+    }
+    return rax;
+}

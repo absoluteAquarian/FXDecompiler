@@ -1,0 +1,98 @@
+﻿uint64_t fcn_1800e7d10 (void) {
+    int64_t var_30h;
+    int64_t var_38h;
+    int64_t var_18h;
+    var_18h = rbx;
+    eax = *((rcx + 0xc));
+    rbx = rcx;
+    esi = edx;
+    ecx = rax + rsi;
+    if (ecx < eax) {
+        *((rbx + 0x10)) = 0x8007000e;
+        eax = 0;
+        rbx = var_18h;
+        return eax;
+    }
+    edx = *((rbx + 8));
+    var_30h = rbp;
+    var_38h = rdi;
+    if (ecx > edx) {
+        edi = rdx + rdx;
+        if (edi <= ecx) {
+            edi = ecx;
+        }
+        ecx = 0x10;
+        if (edi < ecx) {
+            edi = ecx;
+        }
+        if (edi < edx) {
+            goto label_0;
+        }
+        if (edi < eax) {
+            goto label_0;
+        }
+        if (edi >= 0x1c71c71) {
+            goto label_0;
+        }
+        rcx = rdi * 9;
+        rcx <<= 4;
+        rax = fcn_18026dd38 ();
+        if (rax == 0) {
+            goto label_0;
+        }
+        rdx = *(rbx);
+        if (rdx != 0) {
+            r8 <<= 4;
+            memcpy (rax, *((rbx + 0xc)), rcx + rcx*8);
+            rcx = *(rbx);
+            fcn_18026dd2c ();
+        }
+        eax = *((rbx + 0xc));
+        *(rbx) = rbp;
+        *((rbx + 8)) = edi;
+    }
+    ecx = eax;
+    rax = rcx * 9;
+    rax <<= 4;
+    rax += *(rbx);
+    if (esi == 0) {
+        goto label_1;
+    }
+    rcx = rax + 0x38;
+    rdx = rsi;
+    r10 = 0x1803570d0;
+    r9d = 0;
+    do {
+        *((rcx - 0x38)) = r10;
+        __asm ("xorps xmm0, xmm0");
+        *((rcx + 4)) = r9;
+        r8d = 0;
+        *((rcx - 8)) = r9;
+        *(rcx) = r9d;
+        *((rcx + 0x1c)) = r9;
+        *((rcx + 0x10)) = r9;
+        *((rcx + 0x18)) = r9d;
+        *((rcx + 0x44)) = r9;
+        *((rcx + 0x38)) = r9;
+        *((rcx + 0x40)) = r9d;
+        __asm ("movups xmmword [rcx - 0x30], xmm0");
+        __asm ("movups xmmword [rcx - 0x20], xmm0");
+        *((rcx - 0x10)) = r8;
+        *((rcx + 0x28)) = r9;
+        *((rcx + 0x30)) = r9;
+        rcx = rcx + 0x90;
+        rdx--;
+    } while (rdx != 0);
+    ecx = *((rbx + 0xc));
+label_1:
+    ecx += esi;
+    *((rbx + 0xc)) = ecx;
+    do {
+        rdi = var_38h;
+        rbx = var_18h;
+        return rax;
+label_0:
+        *((rbx + 0x10)) = 0x8007000e;
+        eax = 0;
+    } while (1);
+}

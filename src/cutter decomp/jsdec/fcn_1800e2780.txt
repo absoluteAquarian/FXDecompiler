@@ -1,0 +1,93 @@
+﻿int64_t fcn_1800e2870 (void) {
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    rbx = rcx;
+    rcx = *((rcx + 0x20));
+    fcn_18026dd2c ();
+    ebp = 0;
+    esi = ebp;
+    *((rbx + 0x20)) = rbp;
+    if (*((rbx + 0x11c)) <= ebp) {
+        goto label_0;
+    }
+    do {
+        rcx = *((rbx + 0x110));
+        eax = esi;
+        rdi = rax * 3;
+        rdi += rdi;
+        rcx = *((rcx + rdi*8));
+        fcn_18026dd2c ();
+        rax = *((rbx + 0x110));
+        esi++;
+        *((rax + rdi*8)) = rbp;
+    } while (esi < *((rbx + 0x11c)));
+label_0:
+    esi = ebp;
+    if (*((rbx + 0x134)) <= ebp) {
+        goto label_1;
+    }
+    do {
+        eax = esi;
+        rcx = rax * 5;
+        rdi = rcx*8;
+        rcx = *((rbx + 0x128));
+        rcx = *((rdi + rcx));
+        fcn_18026dd2c ();
+        rax = *((rbx + 0x128));
+        esi++;
+        *((rdi + rax)) = rbp;
+    } while (esi < *((rbx + 0x134)));
+label_1:
+    esi = ebp;
+    if (*((rbx + 0x14c)) <= ebp) {
+        goto label_2;
+    }
+    do {
+        eax = esi;
+        rcx = rax * 5;
+        rdi = rcx*8;
+        rcx = *((rbx + 0x140));
+        rcx = *((rcx + rdi));
+        fcn_18026dd2c ();
+        rax = *((rbx + 0x140));
+        esi++;
+        *((rdi + rax)) = rbp;
+    } while (esi < *((rbx + 0x14c)));
+label_2:
+    esi = ebp;
+    if (*((rbx + 0x164)) <= ebp) {
+        goto label_3;
+    }
+    do {
+        eax = esi;
+        rcx = rax * 5;
+        rdi = rcx*8;
+        rcx = *((rbx + 0x158));
+        rcx = *((rdi + rcx));
+        fcn_18026dd2c ();
+        rax = *((rbx + 0x158));
+        esi++;
+        *((rdi + rax)) = rbp;
+    } while (esi < *((rbx + 0x164)));
+label_3:
+    r8d = 0xa0;
+    eax = memset (rbx + 0x18, rdx, 0);
+    rsi = var_18h;
+    eax = 0;
+    *((rbx + 0xbc)) = rbp;
+    *((rbx + 0xc4)) = rbp;
+    *((rbx + 0xcc)) = ebp;
+    *((rbx + 0xb8)) = ebp;
+    *((rbx + 0xd4)) = rbp;
+    *((rbx + 0xdc)) = ebp;
+    *((rbx + 0xe0)) = rax;
+    *((rbx + 0xe8)) = eax;
+    *((rbx + 0xf0)) = rbp;
+    *((rbx + 0xc)) = ebp;
+    rbx = var_8h;
+    return rax;
+}

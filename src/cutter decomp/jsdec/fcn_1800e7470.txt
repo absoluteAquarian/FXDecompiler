@@ -1,0 +1,200 @@
+﻿int64_t fcn_1800e7470 (void) {
+    int64_t var_10h;
+    int64_t var_18h;
+    var_10h = rbx;
+    var_18h = rbp;
+    r8 = *(rcx);
+    r14 = rcx;
+    r11 = *(r8);
+    if (r11 == 0) {
+        goto label_1;
+    }
+    rbx = *((r8 + 8));
+    if (rbx == 0) {
+        goto label_1;
+    }
+    r10d = *((r11 + 0x1c));
+    edx = 0;
+    if (r10d == 0) {
+        goto label_1;
+    }
+    do {
+        eax = *((rbx + rdx*4));
+        if (*((rax + r11)) == 0x4842494c) {
+            goto label_2;
+        }
+        edx++;
+    } while (edx < r10d);
+    goto label_1;
+label_2:
+    if (edx == 0xffffffff) {
+        goto label_1;
+    }
+    if (r10d > edx) {
+        __asm ("lfence");
+        rax = *((r8 + 8));
+        rbp = *(r8);
+        r8 = *(r14);
+        rbp += 8;
+        ecx = *((rax + rdx*4));
+        rbp += rcx;
+    } else {
+        ebp = 0;
+    }
+    rax = *(r8);
+    if (rax != 0) {
+        if (*((r8 + 8)) != 0) {
+            if (*((rax + 0x1c)) <= edx) {
+                goto label_3;
+            }
+            __asm ("lfence");
+            rax = *((r8 + 8));
+            ecx = *((rax + rdx*4));
+            rax = *(r8);
+            edx = *((rcx + rax + 4));
+        }
+    } else {
+label_3:
+        edx = 0;
+    }
+    ebx = edx;
+    rbx += rbp;
+    *((r14 + 0x20)) = rbp;
+    if (rbp == 0) {
+        goto label_1;
+    }
+    rax = rbp + 0x14;
+    if (rax < rbp) {
+        goto label_1;
+    }
+    if (rbp > rbx) {
+        goto label_1;
+    }
+    if (rax > rbx) {
+        goto label_1;
+    }
+    r12d = *((rbp + 0x10));
+    edi = *((rbp + 0xc));
+    r12 += rbp;
+    rax = r12 + rdi*8;
+    if (rax < r12) {
+        goto label_1;
+    }
+    if (r12 > rbx) {
+        goto label_1;
+    }
+    if (rax > rbx) {
+        goto label_1;
+    }
+    if (edi > *((r14 + 0x10))) {
+        if (*((r14 + 0x19)) == 0) {
+            edx = 0x8007000e;
+            goto label_4;
+        }
+        edx = edi;
+        rcx = r14 + 8;
+        eax = fcn_1800229a0 ();
+        edx = eax;
+        if (eax != 0) {
+            if (eax < 0) {
+                goto label_4;
+            }
+        }
+    } else {
+        *((r14 + 0x14)) = edi;
+        edx = 0;
+    }
+    rax = *((r14 + 0x20));
+    ecx = *((rax + 4));
+    rcx += rbp;
+    if (rcx >= rbx) {
+        goto label_1;
+    }
+    do {
+        if (*(rcx) == 0) {
+            goto label_5;
+        }
+        rcx++;
+    } while (rcx < rbx);
+    goto label_1;
+label_5:
+    rax = *(r14);
+    rcx = *(rax);
+    if (rcx != 0) {
+        r15d = *((rcx + 0x1c));
+    } else {
+        r15d = 0;
+    }
+    r9d = 0;
+    r10d = 0;
+    if (r15d == 0) {
+        goto label_6;
+    }
+    edi = 0;
+label_0:
+    rax = *(r14);
+    rcx = *(rax);
+    if (rcx == 0) {
+        goto label_7;
+    }
+    r8 = *((rax + 8));
+    if (r8 == 0) {
+        goto label_7;
+    }
+    if (*((rcx + 0x1c)) <= r10d) {
+        goto label_7;
+    }
+    eax = *((r8 + rdi));
+    if (*((rax + rcx)) != 0x4642494c) {
+        goto label_7;
+    }
+    rax = *((r14 + 0x20));
+    if (r9d >= *((rax + 0xc))) {
+        goto label_8;
+    }
+    if (r9d < *((r14 + 0x14))) {
+        rax = *((r14 + 8));
+        rcx = rax + r9*8;
+    } else {
+        ecx = 0;
+    }
+    *((rcx + 4)) = r10d;
+    r11d = *((r12 + r9*8 + 4));
+    rax = r11 + rbp;
+    if (rax >= rbx) {
+        goto label_1;
+    }
+    do {
+        if (*(rax) == 0) {
+            goto label_9;
+        }
+        rax++;
+    } while (rax < rbx);
+    goto label_1;
+label_9:
+    if (r9d < *((r14 + 0x14))) {
+        rax = *((r14 + 8));
+        rcx = rax + r9*8;
+    } else {
+        ecx = 0;
+    }
+    *(rcx) = r11d;
+label_8:
+    r9d++;
+label_7:
+    r10d++;
+    rdi += 4;
+    if (r10d < r15d) {
+        goto label_0;
+    }
+label_6:
+    rax = *((r14 + 0x20));
+    if (r9d != *((rax + 0xc))) {
+label_1:
+        edx = 0x80004005;
+    }
+label_4:
+    rbx = var_10h;
+    eax = edx;
+    return rax;
+}

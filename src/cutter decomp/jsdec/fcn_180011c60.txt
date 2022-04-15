@@ -1,0 +1,225 @@
+﻿int64_t fcn_180011c60 (void) {
+    int64_t var_50h;
+    int64_t var_4ch;
+    uintmax_t var_48h;
+    uintmax_t var_40h;
+    uintmax_t var_38h;
+    uintmax_t var_34h;
+    int64_t var_30h;
+    int64_t var_28h;
+    int64_t var_20h;
+    int64_t var_1ch;
+    int64_t var_18h;
+    int64_t var_10h;
+    int64_t var_sp_20h;
+    rax = *(0x180426020);
+    rax ^= rsp;
+    rax = *(r8);
+    r15 = rdx;
+    rdi = rcx;
+    rdx = &var_38h;
+    r12d = 0;
+    rcx = r8;
+    r14 = r9;
+    rax = *((rax + 0x50));
+    rsi = r8;
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t) (r15, r14, r12, rax, r12, r12);
+    ebx = eax;
+    if (eax >= 0) {
+        if (eax != 0) {
+            rdx = 0x180383328;
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+            if (*((rdi + 0x18)) != r12b) {
+                r8 = *(str.a0a0a0);
+                rdx = "<font color = \"#%s\">";
+                rcx = rdi;
+                fcn_1800ecdb0 ();
+                *((rdi + 0x20))++;
+            }
+            rdx = "// <internal error> could not get location type from PDB\n";
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+            if (*((rdi + 0x18)) == r12b) {
+                goto label_0;
+            }
+            *((rdi + 0x20))--;
+            rdx = "</font>";
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+        } else {
+            rax = *(rsi);
+            rdx = &var_48h;
+            rcx = rsi;
+            rax = *((rax + 0x3d8));
+            eax = uint64_t (*case.0x180337eae.0)() ();
+            ecx = var_48h;
+            if (eax != 0) {
+                ecx = r12d;
+            }
+            var_48h = ecx;
+            if (var_38h != 5) {
+                rdx = "// <internal error> unexpected location type in PDB\n";
+                rcx = rdi;
+                fcn_180007890 ();
+            } else {
+                rax = *(rsi);
+                rdx = &var_4ch;
+                rcx = rsi;
+                rax = *((rax + 0x538));
+                eax = uint64_t (*case.0x180337eae.0)() ();
+                if (eax != 0) {
+                    rdx = "// <internal error> could not get register type from PDB\n";
+                } else {
+                    rax = *(rsi);
+                    rdx = &var_50h;
+                    rcx = rsi;
+                    rax = *((rax + 0x598));
+                    eax = uint64_t (*case.0x180337eae.0)() ();
+                    if (eax == 0) {
+                        ecx = var_50h;
+                        if (ecx > 2) {
+                            goto label_1;
+                        }
+                        if (ecx != 0) {
+                            rax = *(rsi);
+                            r9 = &var_20h;
+                            edx = ecx;
+                            r8 = &var_34h;
+                            rcx = rsi;
+                            rax = *((rax + 0x510));
+                            eax = uint64_t (*case.0x180337eae.0)() ();
+                            if (eax != 0) {
+                                rdx = "// <internal error> could not get register index values from PDB\n";
+                                goto label_2;
+                            }
+                            ecx = var_50h;
+                            if (var_34h != ecx) {
+                                goto label_3;
+                            }
+                        }
+                        r8d = var_4ch;
+                        if (r14 != 0) {
+                            if (*(r14) == r8d) {
+                                if (ecx != 0) {
+                                    eax = *((r14 + 4));
+                                    eax ^= var_20h;
+                                    if ((eax & 0xfffffff0) != 0) {
+                                        goto label_4;
+                                    }
+                                }
+                                if (ecx > 1) {
+                                    eax = var_1ch;
+                                    if (*((r14 + 8)) != eax) {
+                                        goto label_4;
+                                    }
+                                }
+                                if (ecx <= 2) {
+                                    goto label_5;
+                                }
+                                eax = var_18h;
+                                if (*((r14 + 0xc)) == eax) {
+                                    goto label_5;
+                                }
+                            }
+label_4:
+                            rdx = "\n//   ";
+                            rcx = rdi;
+                            fcn_1800ecdb0 ();
+                            eax = var_20h;
+                            r8d = var_4ch;
+                            ecx = var_50h;
+                            *((r14 + 4)) = eax;
+                            eax = var_1ch;
+                            *((r14 + 8)) = eax;
+                            eax = var_18h;
+                            *((r14 + 0xc)) = eax;
+                            *(r14) = r8d;
+                        }
+label_5:
+                        rax = &var_20h;
+                        r9d = ecx;
+                        var_sp_20h = rax;
+                        eax = fcn_180011a20 (rdi);
+                        ebx = eax;
+                        if (eax < 0) {
+                            goto label_0;
+                        }
+                        rax = *(rsi);
+                        rdx = &var_40h;
+                        rcx = rsi;
+                        rax = *((rax + 0x28));
+                        eax = uint64_t (*case.0x180337eae.0)() ();
+                        ebx = eax;
+                        if (eax < 0) {
+                            goto label_0;
+                        }
+                        rcx = rdi;
+                        if (var_40h == r12) {
+                            rdx = "<internal error> unable to get variable name from PDB\n";
+                            goto label_6;
+                        }
+                        rdx = " <- ";
+                        fcn_1800ecdb0 ();
+                        r8 = var_40h;
+                        rdx = 0x1803862e8;
+                        rcx = rdi;
+                        fcn_1800ecdb0 ();
+                        if (var_48h == r12d) {
+                            goto label_0;
+                        }
+                        rax = *(rsi);
+                        rdx = &var_30h;
+                        rcx = rsi;
+                        rax = *((rax + 0x4d0));
+                        eax = uint64_t (*case.0x180337eae.0)() ();
+                        if (eax != 0) {
+                            rdx = "<internal error> unable to get variable subfield offset from PDB\n";
+                            goto label_2;
+                        }
+                        rax = *(rsi);
+                        rdx = &var_28h;
+                        rcx = rsi;
+                        rax = *((rax + 0x40));
+                        eax = uint64_t (*case.0x180337eae.0)() ();
+                        rcx = rdi;
+                        if (eax != 0) {
+                            rdx = "<internal error> unable to get variable type from PDB\n";
+                            goto label_6;
+                        }
+                        r9d = var_30h;
+                        rdx = r15;
+                        r8 = var_28h;
+                        eax = fcn_180010fe0 ();
+                        ebx = eax;
+                        goto label_0;
+                    }
+label_1:
+                    rdx = "// <internal error> could not get register index count from PDB\n";
+                }
+label_2:
+                rcx = rdi;
+label_6:
+                fcn_180007890 ();
+label_3:
+                ebx = 0x80004005;
+            }
+        }
+    }
+label_0:
+    rcx = var_40h;
+    if (rcx != 0) {
+        fcn_18026f760 ();
+    }
+    rcx = var_28h;
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+    }
+    eax = ebx;
+    rcx = var_10h;
+    rcx ^= rsp;
+    fcn_18026e150 ();
+    return rax;
+}

@@ -1,0 +1,165 @@
+﻿int64_t fcn_180019220 (uintmax_t arg_50h) {
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    var_20h = rdi;
+    rsi = r9;
+    rdi = rdx;
+    rbx = rcx;
+    if (*((rcx + 0x18)) != 0) {
+        r8 = *(str.00ffff);
+        rdx = "<font color = \"#%s\">";
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+    r14b = 0;
+    if (rsi == 0) {
+        goto label_0;
+    }
+    ecx = 0;
+    if (*(rsi) == rcx) {
+        goto label_0;
+    }
+    edx = *((rdi + 4));
+    r8d = ecx;
+    rax = rsi;
+    do {
+        if (edx == *((rax + 8))) {
+            goto label_1;
+        }
+        ecx++;
+        eax = ecx;
+        rax <<= 4;
+        rax += rsi;
+        r8d = ecx;
+    } while (*(rax) != 0);
+    goto label_0;
+label_1:
+    r8 += r8;
+    rdx = 0x180383698;
+    rcx = rbx;
+    r8 = *((rsi + r8*8));
+    fcn_1800ecdb0 ();
+    eax = *((rbx + 0x18));
+    r14b = 1;
+    if (al != 0) {
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        eax = *((rbx + 0x18));
+        if (al == 0) {
+            goto label_2;
+        }
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+label_2:
+    rdx = " /* ";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+label_0:
+    if (arg_50h != 0) {
+        r8d = *((rdi + 4));
+        rdx = "0x%08x";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    } else {
+        rdx = *(rdi);
+        if (edx > 5) {
+            goto label_3;
+        }
+        r8 = 0x180000000;
+        ecx = *((r8 + rdx*4 + 0x1948c));
+        rcx += r8;
+        /* switch table (6 cases) at 0x18001948c */
+        void (*rcx)() ();
+        rdx = "##Internal error##";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        goto label_3;
+        xmm2 = *((rdi + 4));
+        rdx = "%.9g";
+        __asm ("cvtps2pd xmm2, xmm2");
+        rcx = rbx;
+        r8 = xmm2;
+        fcn_1800ecdb0 ();
+        goto label_3;
+        if (ebp == 0x14) {
+            r8d = *((rdi + 4));
+            rdx = "0x%02x";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        } else {
+            r8d = *((rdi + 4));
+            eax = *((rdi + 4));
+            edx:eax = (int64_t) eax;
+            eax ^= edx;
+            eax -= edx;
+            rdx = "0x%08x";
+            if (eax <= 0x2710) {
+                rdx = 0x18038475c;
+            }
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            goto label_3;
+            if (ebp == 0x14) {
+                r8d = *((rdi + 4));
+                rdx = "0x%02x";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+            } else {
+                if (edx == 3) {
+                    r8d = *((rdi + 4));
+                    if (r8d >= 0) {
+                        if (r8d <= 0x2710) {
+                            goto label_4;
+                        }
+                    }
+                    rdx = "0x%08x";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                } else {
+label_4:
+                    r8d = *((rdi + 4));
+                    rdx = 0x180383b28;
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    goto label_3;
+                    rax = "true";
+                    r8 = "false";
+                    rcx = rbx;
+                    if (*((rdi + 4)) != 0) {
+                        r8 = rax;
+                    }
+                    rdx = 0x180383698;
+                    fcn_1800ecdb0 ();
+                }
+            }
+        }
+    }
+label_3:
+    if (r14b != 0) {
+        rdx = 0x180387d84;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+    if (*((rbx + 0x18)) != 0) {
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+        rcx = rbx;
+        eax = fcn_1800ecdb0 ();
+    }
+    rbx = var_8h;
+    eax = 0;
+    rsi = var_18h;
+    rdi = var_20h;
+    return rax;
+}

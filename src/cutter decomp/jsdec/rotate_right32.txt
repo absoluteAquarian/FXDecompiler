@@ -1,0 +1,5 @@
+﻿uint32_t rotate_right32 (uint32_t value, uint32_t count) {
+    const uint32_t mask = (CHAR_BIT * sizeof (value)) - 1;
+    count &= mask;
+    return (value >> count) | (value << (-count & mask));
+}

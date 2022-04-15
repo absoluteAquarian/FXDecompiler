@@ -1,0 +1,67 @@
+﻿int64_t fcn_180019820 (int64_t arg_50h, int64_t arg_58h, int64_t arg_60h) {
+    int64_t var_8h;
+    int64_t var_10h;
+    var_8h = rbx;
+    var_10h = rsi;
+    edx = rdx*4;
+    rsi = r9;
+    rbx = r8;
+    rdi = rcx;
+    fcn_1800ecc68 ();
+    r8 = rbx;
+    rdx = 0x180383698;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    rbx = arg_50h;
+    r8d = *((rbx + 8));
+    if (r8d > 1) {
+        rdx = "[%u]";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+    }
+    if (rsi != 0) {
+        r8 = rsi;
+        rdx = " : %s";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+    }
+    ecx = arg_60h;
+    if (ecx != 0xffffffff) {
+        if (*((rbx + 4)) != 2) {
+            eax = ecx;
+            rdx = 0x180000000;
+            rax >>= 2;
+            eax &= 3;
+            ecx >>= 4;
+            r8d = ecx;
+            r9d = *((rax + rdx + 0x3844a0));
+            rdx = " : packoffset(c%u.%c)";
+        } else {
+            eax = arg_58h;
+            r8d = 0x78;
+            eax += 0xfffffff7;
+            if (eax <= 0xe) {
+                rax = (int64_t) eax;
+                rdx = 0x180000000;
+                eax = *((rdx + rax*4 + 0x1992c));
+                rax += rdx;
+                /* switch table (15 cases) at 0x18001992c */
+                void (*rax)() ();
+                r8d = 0x74;
+                goto label_0;
+                r8d = 0x62;
+                goto label_0;
+                r8d = 0x73;
+            }
+label_0:
+            r9d = ecx;
+            rdx = " : register(%c%u)";
+        }
+        rcx = rdi;
+        eax = fcn_1800ecdb0 ();
+    }
+    rbx = var_8h;
+    eax = 0;
+    rsi = var_10h;
+    return rax;
+}

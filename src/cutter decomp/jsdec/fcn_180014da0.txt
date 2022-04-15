@@ -1,0 +1,146 @@
+﻿int64_t fcn_180014da0 (int64_t arg_60h) {
+    int64_t var_20h_2;
+    int64_t var_40h;
+    int64_t var_10h;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_10h = rbx;
+    var_18h = rbp;
+    var_20h = rsi;
+    r10 = *((rdx + 0x20));
+    rsi = arg_60h;
+    edi = r8d;
+    rbx = rcx;
+    if (r10 == 0) {
+        goto label_0;
+    }
+    r11 = *((rdx + 0x28));
+    if (r11 == 0) {
+        goto label_0;
+    }
+    r8d = *(rsi);
+    r9d = *((r10 + 0x1c));
+    if (r8d >= r9d) {
+        goto label_0;
+    }
+    do {
+        eax = r8d;
+        ecx = *((r11 + rax*4));
+        if (*((rcx + r10)) == edi) {
+            goto label_1;
+        }
+        r8d++;
+    } while (r8d < r9d);
+label_0:
+    r8d = 0xffffffff;
+label_1:
+    *(rsi) = r8d;
+    if (r8d == 0xffffffff) {
+        eax = 1;
+    } else {
+        if (r10 != 0) {
+            if (*((rdx + 0x28)) != 0) {
+                if (*((r10 + 0x1c)) <= r8d) {
+                    goto label_2;
+                }
+                __asm ("lfence");
+                r9 = *((rdx + 0x28));
+                rcx = *((rdx + 0x20));
+                eax = r8d;
+                rdi = rcx + 8;
+                r10 = rax*4;
+                eax = *((r10 + r9));
+                rdi += rax;
+                if (rdi == 0) {
+                    goto label_2;
+                }
+                if (rcx != 0) {
+                    if (r9 != 0) {
+                        if (*((rcx + 0x1c)) <= r8d) {
+                            goto label_3;
+                        }
+                        __asm ("lfence");
+                        rax = *((rdx + 0x28));
+                        ecx = *((r10 + rax));
+                        rax = *((rdx + 0x20));
+                        esi = *((rcx + rax + 4));
+                    }
+                } else {
+label_3:
+                    esi = 0;
+                }
+                if (*((rbx + 0x18)) != 0) {
+                    r8 = *(str.a0a0a0);
+                    rdx = "<font color = \"#%s\">";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    *((rbx + 0x20))++;
+                }
+                r8 = rdi;
+                rdx = rdi;
+                rcx = rbx;
+                eax = fcn_1800092b0 ();
+                if (eax < 0) {
+                    goto label_4;
+                }
+                ecx = *((rbx + 0x18));
+                var_40h = r14;
+                if (cl != 0) {
+                    *((rbx + 0x20))--;
+                    rdx = "</font>";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    ecx = *((rbx + 0x18));
+                }
+                eax = *((rdi + 0xc));
+                esi -= eax;
+                r14 = rdi + rax;
+                eax = esi;
+                rax += 3;
+                rax >>= 2;
+                rdi = r14 + rax*4;
+                if (cl != 0) {
+                    r8 = *(str.a0a0a0);
+                    rdx = "<font color = \"#%s\">";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    *((rbx + 0x20))++;
+                }
+                rdx = 0x1803836f8;
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                r8 = rbp;
+                rdx = "// %s shader bytecode:\n";
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                rdx = 0x1803836f8;
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                r9 = r14;
+                var_20h_2 = rdi;
+                r8d = 0;
+                edx = 0;
+                rcx = rbx;
+                eax = fcn_18000d810 ();
+                r14 = var_40h;
+                if (eax < 0) {
+                    goto label_4;
+                }
+                if (*((rbx + 0x18)) != 0) {
+                    *((rbx + 0x20))--;
+                    rdx = "</font>";
+                    rcx = rbx;
+                    eax = fcn_1800ecdb0 ();
+                }
+                eax = 0;
+            }
+        } else {
+label_2:
+            eax = 0x80004005;
+        }
+    }
+label_4:
+    rbx = var_10h;
+    rsi = var_20h;
+    return rax;
+}

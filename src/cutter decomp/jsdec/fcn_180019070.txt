@@ -1,0 +1,128 @@
+﻿uint32_t fcn_180019070 (void) {
+    int64_t var_20h;
+    int64_t var_30h;
+    int64_t var_38h;
+    int64_t var_40h;
+    ebx = 0;
+    __asm ("xorps xmm0, xmm0");
+    var_40h = rbx;
+    r14 = rcx;
+    __asm ("movdqu xmmword [var_30h], xmm0");
+    if (rdx == 0) {
+        goto label_0;
+    }
+    r9d = 0;
+    var_20h = rbx;
+    eax = fcn_1800ed1b0 (var_30h);
+    if (eax < 0) {
+        goto label_0;
+    }
+    r8 = var_30h;
+    if (r8 == 0) {
+        goto label_1;
+    }
+    r10 = var_38h;
+    if (r10 == 0) {
+        goto label_1;
+    }
+    r9d = *((r8 + 0x1c));
+    rsi = r8 + 0x1c;
+    ecx = ebx;
+    if (r9d == 0) {
+        goto label_1;
+    }
+    rdx = r10;
+    do {
+        eax = *(rdx);
+        if (*((rax + r8)) == 0x434c5846) {
+            goto label_2;
+        }
+        ecx++;
+        rdx += 4;
+    } while (ecx < r9d);
+    do {
+label_1:
+        rdx = "Error: Effects expression assembly not found!";
+        goto label_3;
+label_2:
+    } while (ecx == 0xffffffff);
+    if (r9d > ecx) {
+        eax = ecx;
+        rbp = r8 + 8;
+        ecx = *((r10 + rax*4));
+        rbp += rcx;
+    } else {
+    }
+    ecx = ebx;
+    rdx = r10;
+    do {
+        eax = *(rdx);
+        if (*((rax + r8)) == 0x42415443) {
+            goto label_4;
+        }
+        ecx++;
+        rdx += 4;
+    } while (ecx < r9d);
+    rdx = "Error: Error getting Effects expression constant table.";
+    goto label_3;
+label_4:
+    if (ecx == 0xffffffff) {
+        rdx = "Error: Error getting Effects expression constant table.";
+        goto label_3;
+    }
+    edx = ecx;
+    if (r9d > ecx) {
+        eax = *((r10 + rdx*4));
+        rdi = r8 + 8;
+        rdi += rax;
+    } else {
+        rdi = rbx;
+    }
+    if (r9d > ecx) {
+        __asm ("lfence");
+        r10 = var_38h;
+        r8 = var_30h;
+        eax = *((r10 + rdx*4));
+        r11d = *((rax + r8 + 4));
+    } else {
+        r11d = ebx;
+    }
+    r9d = *(rsi);
+    ecx = ebx;
+    if (r9d == 0) {
+        goto label_5;
+    }
+    rdx = r10;
+    do {
+        eax = *(rdx);
+        if (*((rax + r8)) == 0x34494c43) {
+            goto label_6;
+        }
+        ecx++;
+        rdx += 4;
+    } while (ecx < r9d);
+    do {
+label_5:
+        rdx = "Error: Error getting Effects expression literal block.";
+        goto label_3;
+label_6:
+    } while (ecx == 0xffffffff);
+    if (r9d > ecx) {
+        eax = ecx;
+        rbx = r8 + 8;
+        ecx = *((r10 + rax*4));
+        rbx += rcx;
+    }
+    r9 = rdi;
+    var_20h = r11d;
+    r8 = rbx;
+    fcn_180018e50 (r14, rbp);
+    return eax;
+label_0:
+    rdx = "Error: Effects expression assembly in invalid format!";
+label_3:
+    rcx = r14;
+    fcn_1800ecdb0 ();
+    eax = 1;
+    return eax;
+}

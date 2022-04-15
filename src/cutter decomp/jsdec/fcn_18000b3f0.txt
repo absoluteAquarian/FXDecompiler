@@ -1,0 +1,74 @@
+﻿void fcn_18000b3f0 (void) {
+    int64_t var_8h;
+    int64_t var_10h;
+    var_8h = rbx;
+    var_10h = rsi;
+    esi = r8d;
+    edi = edx;
+    rbx = rcx;
+    if (r8d != 0xff) {
+        if (edx != r8d) {
+            goto label_0;
+        }
+    }
+    if (edi != 0) {
+label_0:
+        if (*((rcx + 0x18)) != 0) {
+            r8 = *(str.a0a0a0);
+            rdx = "<font color = \"#%s\">";
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        rdx = 0x180384868;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        ecx = edi;
+        ecx--;
+        if (ecx != 0) {
+            ecx--;
+            if (ecx != 0) {
+                ecx -= 2;
+                if (ecx != 0) {
+                    if (ecx != 1) {
+                        rdx = 0x180384860;
+                    } else {
+                        rdx = "min16u";
+                    }
+                } else {
+                    rdx = "min16i";
+                }
+            } else {
+                rdx = "min2_8f";
+            }
+        } else {
+            rdx = "min16f";
+        }
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (esi != 0xff) {
+            if (edi == esi) {
+                goto label_1;
+            }
+            rdx = " as ";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            edx = esi;
+            rcx = rbx;
+            fcn_18000b390 ();
+        }
+label_1:
+        rdx = 0x1803836fc;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) == 0) {
+            goto label_2;
+        }
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+label_2:
+    rbx = var_8h;
+    rsi = var_10h;
+}

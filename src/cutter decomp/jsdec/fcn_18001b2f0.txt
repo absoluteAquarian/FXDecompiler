@@ -1,0 +1,187 @@
+﻿uint64_t fcn_18001b2f0 (int64_t arg_90h, int64_t arg_98h, int64_t arg_a0h) {
+    int64_t var_20h;
+    int64_t var_28h;
+    int64_t var_40h;
+    int64_t var_70h;
+    int64_t var_78h;
+    int64_t var_80h;
+    rdi = rcx;
+    r15d = 0;
+    ecx = r9d;
+    r12d = r15d;
+    ecx -= 2;
+    if (ecx != 0) {
+        ecx--;
+        if (ecx != 0) {
+            if (ecx != 1) {
+                if (*((r8 + 4)) == 2) {
+                    if (r9d != 0x15) {
+                        goto label_0;
+                    }
+                    r14d = r15 + 4;
+                    goto label_1;
+                }
+label_0:
+                eax = 0x80004005;
+                return eax;
+            }
+            r14d = 3;
+            r14d = 1;
+        } else {
+        } else {
+            r14d = 2;
+        }
+    }
+label_1:
+    var_70h = rbx;
+    var_78h = rbp;
+    var_80h = rsi;
+    if (ebp <= 1) {
+        goto label_2;
+    }
+    eax = *(rdi);
+    rbx = 0x180387eec;
+    ecx = rax + 2;
+    if (ecx < eax) {
+        goto label_3;
+    }
+    edx = *((rdi + 4));
+    if (edx < ecx) {
+        ecx = rdx + 0x802;
+        rax = o_malloc ();
+        rsi = rax;
+        if (rax == 0) {
+            goto label_3;
+        }
+        r8d = *(rdi);
+        memcpy (rax, *((rdi + 8)), r8);
+        rcx = *((rdi + 8));
+        o_free ();
+        *((rdi + 4)) += 0x802;
+        *((rdi + 8)) = rsi;
+        eax = *(rdi);
+    }
+    rax += *((rdi + 8));
+    cl = 0xa;
+    do {
+        *(rax) = cl;
+        rbx = rbx + 1;
+        ecx = *(rbx);
+        rax = rax + 1;
+    } while (cl != 0);
+    *(rdi) += 2;
+label_3:
+    r12d = 1;
+label_2:
+    rdx = 0x180383328;
+    var_40h = r13;
+    rcx = rdi;
+    fcn_1800ecdb0 ();
+    ebx = r15d;
+    if (ebp == 0) {
+        goto label_4;
+    }
+    rsi = arg_98h;
+    r13 = arg_a0h;
+    do {
+        if (ebx != 0) {
+            rdx = 0x180387ef0;
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+        }
+        rdx = *((rsi + 0x10));
+        rcx = rdx + 4;
+        if (rcx < rdx) {
+            goto label_5;
+        }
+        if (rcx > *((rsi + 8))) {
+            goto label_5;
+        }
+        rax = *(rsi);
+        r9d = r14d;
+        *((rsi + 0x10)) = rcx;
+        var_28h = r13;
+        var_20h = rsi;
+        r8d = *((rdx + rax));
+        edx = r12d;
+        eax = fcn_18001a750 (rdi, rdx);
+        r15d = eax;
+        if (eax < 0) {
+            goto label_6;
+        }
+        ebx++;
+    } while (ebx < ebp);
+label_4:
+    if (ebp <= 1) {
+        goto label_7;
+    }
+    r14d = r12*4 - 4;
+    al = 0xa;
+    rbp = 0x180387338;
+    esi = r14 + 2;
+    rcx = rbp;
+    do {
+        if (al == 0xa) {
+            eax = r14 + rsi;
+            if (eax < esi) {
+                goto label_7;
+            }
+            esi = eax;
+        }
+        eax = *((rcx + 1));
+        rcx++;
+    } while (al != 0);
+    eax = *(rdi);
+    ecx = rax + rsi;
+    if (ecx < eax) {
+        goto label_7;
+    }
+    edx = *((rdi + 4));
+    if (edx < ecx) {
+        ecx = rdx + 0x800;
+        ecx += esi;
+        rax = o_malloc ();
+        rbx = rax;
+        if (rax == 0) {
+            goto label_7;
+        }
+        r8d = *(rdi);
+        memcpy (rax, *((rdi + 8)), r8);
+        rcx = *((rdi + 8));
+        o_free ();
+        eax = rsi + 0x800;
+        *((rdi + 8)) = rbx;
+        *((rdi + 4)) += eax;
+        eax = *(rdi);
+    }
+    ebx = *(rdi);
+    rbx += *((rdi + 8));
+    r8d = r14d;
+    r12d = r14d;
+    memset (rbx, rdx, 0x20);
+    rbx += r12;
+    al = 0xa;
+    do {
+        *(rbx) = al;
+        rbx++;
+        if (*(rbp) == 0xa) {
+            r8 = r12;
+            memset (rbx, rdx, 0x20);
+            rbx += r12;
+        }
+        eax = *((rbp + 1));
+        rbp++;
+    } while (al != 0);
+    *(rdi) += esi;
+label_7:
+    eax = r15d;
+    do {
+label_6:
+        r13 = var_40h;
+        rbx = var_70h;
+        rsi = var_80h;
+        return rax;
+label_5:
+        eax = 0x80004005;
+    } while (1);
+}

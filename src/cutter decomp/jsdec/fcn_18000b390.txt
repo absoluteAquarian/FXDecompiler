@@ -1,0 +1,23 @@
+﻿void fcn_18000b390 (void) {
+    edx--;
+    if (edx != 0) {
+        edx--;
+        if (edx != 0) {
+            edx -= 2;
+            if (edx != 0) {
+                if (edx != 1) {
+                    rdx = 0x180384860;
+                    void (*0x1800ecdb0)() ();
+                }
+                rdx = "min16u";
+                void (*0x1800ecdb0)() ();
+            }
+            rdx = "min16i";
+            void (*0x1800ecdb0)() ();
+        }
+        rdx = "min2_8f";
+        void (*0x1800ecdb0)() ();
+    }
+    rdx = "min16f";
+    return void (*0x1800ecdb0)() ();
+}

@@ -1,0 +1,127 @@
+﻿uint64_t fcn_180015a50 (int64_t arg_50h, int64_t arg_58h, int64_t arg_60h) {
+    int64_t var_30h;
+    int64_t var_38h;
+    rbx = rcx;
+    if (r8 != 0) {
+        eax = 0xffffffff;
+        if (r9 > rax) {
+            goto label_0;
+        }
+        rcx = arg_60h;
+        if (rcx != 0) {
+            goto label_1;
+        }
+    }
+label_0:
+    eax = 0x8876086c;
+    return eax;
+label_1:
+    eax = arg_58h;
+    eax = ~eax;
+    var_38h = rdi;
+    edi = arg_50h;
+    if ((edi & eax) != 0) {
+        rdi = var_38h;
+        eax = 0x8876086c;
+        return eax;
+    }
+    *(rcx) = 0;
+    rcx = "D3DCOMPILER_DISASSEMBLY_FORCE_HEX_LITERALS";
+    rax = o_getenv ();
+    if (rax == 0) {
+        if (dil >= 0) {
+            goto label_2;
+        }
+    }
+    al = 1;
+label_2:
+    *(0x180427990) = al;
+    edx = 0;
+    eax = (int32_t) dil;
+    al &= 1;
+    *((rbx + 0x18)) = al;
+    eax = edi;
+    eax >>= 1;
+    ecx = rdx + 4;
+    al &= 1;
+    *((rbx + 0x19)) = al;
+    eax = edi;
+    eax >>= 2;
+    al &= 1;
+    *((rbx + 0x1a)) = al;
+    eax = edi;
+    eax >>= 3;
+    al &= 1;
+    *((rbx + 0x1b)) = al;
+    eax = edi;
+    eax >>= 5;
+    al &= 1;
+    *((rbx + 0x1c)) = al;
+    eax = edi;
+    eax >>= 4;
+    al &= 1;
+    edi >>= 6;
+    dil &= 1;
+    *((rbx + 0x1d)) = al;
+    *((rbx + 0x1e)) = dil;
+    rax = o_setlocale ();
+    rdi = rax;
+    if (*(rax) == 0x43) {
+        if (*((rax + 1)) == 0) {
+            goto label_3;
+        }
+    }
+    r8d = 0x7fffffff;
+    rcx = rdi;
+    edx = r8d;
+    do {
+        if (*(rcx) == 0) {
+            goto label_4;
+        }
+        rcx++;
+        rdx--;
+    } while (rdx != 0);
+label_4:
+    if (rdx != 0) {
+        r8 -= rdx;
+    } else {
+        r8d = 0;
+    }
+    var_30h = rsi;
+    if (rdx != 0) {
+        rsi = r8 + 1;
+        rcx = rsi;
+        rax = o_malloc ();
+        *((rbx + 0x10)) = rax;
+        if (rax != 0) {
+            r8 = rdi;
+            rdx = rsi;
+            rcx = rax;
+            eax = fcn_1800790f0 ();
+            if (eax < 0) {
+                goto label_5;
+            }
+            rdx = 0x1803af518;
+            ecx = 4;
+            o_setlocale ();
+        }
+    } else {
+label_5:
+        rcx = *((rbx + 0x10));
+        o_free ();
+        *((rbx + 0x10)) = 0;
+    }
+    rsi = var_30h;
+label_3:
+    if (*((rbx + 0x18)) != 0) {
+        rdx = "<pre>";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        rdx = "<body bgcolor=\"#000000\">";
+        rcx = rbx;
+        eax = fcn_1800ecdb0 ();
+    }
+    rdi = var_38h;
+    eax = 0;
+    return rax;
+}

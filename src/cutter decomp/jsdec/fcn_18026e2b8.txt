@@ -1,0 +1,4 @@
+﻿void fcn_18026e2b8 (void) {
+    ecx = 8;
+    fcn_18026e2d4 ();
+}

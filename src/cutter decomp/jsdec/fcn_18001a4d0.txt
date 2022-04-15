@@ -1,0 +1,188 @@
+﻿uint64_t fcn_18001a4d0 (void) {
+    int64_t var_20h;
+    int64_t var_50h;
+    int64_t var_58h;
+    int64_t var_60h;
+    int64_t var_68h;
+    r14 = r8;
+    r13d = edx;
+    r8d = *(r8);
+    edx++;
+    rdi = r9;
+    rsi = rcx;
+    eax = fcn_18001a2e0 ();
+    if (eax < 0) {
+        goto label_4;
+    }
+    var_50h = rbx;
+    var_58h = rbp;
+    if (*((r14 + 0x14)) <= 0) {
+        goto label_5;
+    }
+    ebx = 0;
+label_0:
+    ecx = *((r14 + rbx*4 + 4));
+    if (ecx == 0) {
+        goto label_6;
+    }
+    eax = ecx;
+    rcx = *((rdi + 8));
+    if (rax >= rcx) {
+        goto label_7;
+    }
+    rdx = *(rdi);
+    r8 = rdx + rax;
+    *((rdi + 0x10)) = rax;
+    if (*(r8) == 0) {
+        goto label_8;
+    }
+    do {
+        if (rax > rcx) {
+            goto label_9;
+        }
+        rax++;
+    } while (*((rdx + rax)) != 0);
+label_8:
+    *((rdi + 0x10)) = rax;
+    eax = 0;
+label_1:
+    if (eax < 0) {
+        goto label_10;
+    }
+    rdx = 0x180383328;
+    rcx = rsi;
+    fcn_1800ecdb0 ();
+    edx = r13*4;
+    rcx = rsi;
+    fcn_1800ecc68 ();
+    r9 = rbp;
+    rdx = "/* Stream %u out decl: \"%s\" */";
+    r8d = ebx;
+    rcx = rsi;
+    fcn_1800ecdb0 ();
+label_6:
+    ebx++;
+    if (ebx < *((r14 + 0x14))) {
+        goto label_0;
+    }
+    rdx = 0x180383328;
+    rcx = rsi;
+    fcn_1800ecdb0 ();
+    edx = r13*4;
+    rcx = rsi;
+    fcn_1800ecc68 ();
+    r8d = *((r14 + 0x18));
+    rdx = "/* Stream %u to rasterizer */";
+    rcx = rsi;
+    fcn_1800ecdb0 ();
+label_5:
+    eax = *((r14 + 0x1c));
+    var_68h = r12;
+    var_20h = r15;
+    if (eax == 0) {
+        goto label_11;
+    }
+    ecx = *((r14 + 0x20));
+    r8 = *((rdi + 8));
+    if (rcx >= r8) {
+        goto label_12;
+    }
+    rdx = rcx + rax*8;
+    *((rdi + 0x10)) = rcx;
+    if (rdx >= rcx) {
+        if (rdx > r8) {
+            goto label_13;
+        }
+        r12 = *(rdi);
+        r12 += rcx;
+        *((rdi + 0x10)) = rdx;
+        eax = 0;
+        goto label_14;
+label_9:
+        eax = 0x80004005;
+        goto label_1;
+label_7:
+        eax = 0x80004005;
+        goto label_10;
+    }
+label_13:
+    r12 = var_60h;
+    eax = 0x80004005;
+label_14:
+    if (eax < 0) {
+        goto label_15;
+    }
+    ebx = 0;
+    if (*((r14 + 0x1c)) <= ebx) {
+        goto label_11;
+    }
+label_2:
+    eax = *((r12 + rbx*8));
+    r15 = r12 + rbx*8;
+    if (eax == 0) {
+        goto label_12;
+    }
+    rcx = *((rdi + 8));
+    if (rax >= rcx) {
+        goto label_12;
+    }
+    rdx = *(rdi);
+    r8 = rdx + rax;
+    *((rdi + 0x10)) = rax;
+    if (*(r8) == 0) {
+        goto label_16;
+    }
+    do {
+        if (rax > rcx) {
+            goto label_17;
+        }
+        rax++;
+    } while (*((rdx + rax)) != 0);
+label_16:
+    *((rdi + 0x10)) = rax;
+    eax = 0;
+label_3:
+    if (eax < 0) {
+        goto label_15;
+    }
+    rdx = 0x180383328;
+    rcx = rsi;
+    fcn_1800ecdb0 ();
+    edx = r13*4;
+    rcx = rsi;
+    fcn_1800ecc68 ();
+    r9 = rbp;
+    rdx = "/* Interface parameter %u bound to: %s";
+    r8d = ebx;
+    rcx = rsi;
+    fcn_1800ecdb0 ();
+    r8d = *((r15 + 4));
+    if (r8d != 0xffffffff) {
+        rdx = "[%u]";
+        rcx = rsi;
+        fcn_1800ecdb0 ();
+    }
+    rdx = 0x180387d84;
+    rcx = rsi;
+    eax = fcn_1800ecdb0 ();
+    ebx++;
+    if (ebx < *((r14 + 0x1c))) {
+        goto label_2;
+    }
+label_11:
+    eax = 0;
+    do {
+label_15:
+        r12 = var_68h;
+        r15 = var_20h;
+label_10:
+        rbx = var_50h;
+label_4:
+        return rax;
+label_17:
+        eax = 0x80004005;
+        goto label_3;
+label_12:
+        eax = 0x80004005;
+    } while (1);
+}

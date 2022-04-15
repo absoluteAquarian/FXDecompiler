@@ -1,0 +1,333 @@
+﻿int64_t fcn_18001c3f0 (void) {
+    int64_t var_79h;
+    int64_t var_71h;
+    int64_t var_69h;
+    int64_t var_61h;
+    int64_t var_59h;
+    int64_t var_49h;
+    int64_t var_39h;
+    int64_t var_29h;
+    int64_t var_19h;
+    int64_t var_9h;
+    int64_t var_1h;
+    int64_t var_3h;
+    int64_t var_13h;
+    int64_t var_17h;
+    int64_t var_20h;
+    int64_t var_28h;
+    int64_t var_30h;
+    uintmax_t var_38h;
+    int64_t var_18h;
+    var_18h = rbx;
+    rbp = rsp - 0x27;
+    rax = *(0x180426020);
+    rax ^= rsp;
+    var_17h = rax;
+    r8d = *((rdx + 8));
+    r13b = 0;
+    r14 = *(rdx);
+    r12d = 0;
+    r15d = 0x4c;
+    var_30h = r14;
+    var_38h = r8;
+    r10 = rdx;
+    rbx = rcx;
+    if (r8 < r15) {
+        goto label_2;
+    }
+    __asm ("movups xmm1, xmmword [r14 + 0x10]");
+    rdi = &var_49h;
+    eax = 0;
+    __asm ("xorps xmm0, xmm0");
+    var_13h = eax;
+    eax = *((r14 + 0x48));
+    rdx = 0x180358dac;
+    __asm ("movups xmmword [var_3h], xmm0");
+    ecx = 0;
+    var_1h = eax;
+    __asm ("movups xmm0, xmmword [r14]");
+    eax = 0;
+    var_39h = xmm1;
+    __asm ("movups xmm1, xmmword [r14 + 0x30]");
+    var_49h = xmm0;
+    __asm ("movups xmm0, xmmword [r14 + 0x20]");
+    r9d = var_49h;
+    var_19h = xmm1;
+    var_29h = xmm0;
+    xmm0 = *((r14 + 0x40));
+    var_9h = *((r14 + 0x40));
+    do {
+        if (*(rdx) == r9d) {
+            goto label_3;
+        }
+        eax++;
+        rdx += 0x10;
+    } while (eax < 3);
+    goto label_4;
+label_3:
+    rax += rax;
+    rdx = str_fx_4_0;
+    r12 = *((rdx + rax*8));
+    if (*((rdx + rax*8 + 8)) == 0x46580500) {
+        r15d = 0x60;
+        r13b = 1;
+        if (r8 == 0) {
+            goto label_2;
+        }
+        if (r8 >= r15) {
+            rdi = r14;
+        }
+        ecx -= ecx;
+        ecx &= 0x80004005;
+        if (r8 < r15) {
+            goto label_5;
+        }
+    }
+    if (r12 == 0) {
+        if (ecx < 0) {
+            goto label_5;
+        }
+    }
+label_4:
+    if (*((rdi + 0x10)) == 0) {
+        if (*((rdi + 0x14)) == 0) {
+            if (*((rdi + 0x18)) != 0) {
+                goto label_6;
+            }
+            sil = 0;
+        }
+    } else {
+label_6:
+        sil = 1;
+    }
+    r8 = *((r10 + 0x80));
+    if (r8 != 0) {
+        rdx = 0x180383698;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+    rdx = 0x1803836f8;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    r8 = r12;
+    rdx = "// FX Version: %s\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (r13b == 0) {
+        rax = "true";
+        r8 = "false";
+        rcx = rbx;
+        if (sil != 0) {
+            r8 = rax;
+        }
+        rdx = "// Child effect (requires effect pool): %s\n";
+        fcn_1800ecdb0 ();
+    }
+    ecx = *((rdi + 0x20));
+    edx = rcx + r15;
+    if (rdx > var_38h) {
+        goto label_2;
+    }
+    eax = r15d;
+    rsi = "local";
+    rax += r14;
+    var_79h = rdx;
+    var_71h = rax;
+    var_69h = rcx;
+    var_61h = 0;
+    r9d = *((rdi + 4));
+    if (r9d != 0) {
+        var_28h = 1;
+        r8 = &var_71h;
+        var_20h = rsi;
+        eax = fcn_18001a070 (rbx, var_30h);
+        ecx = eax;
+        if (eax < 0) {
+            goto label_5;
+        }
+    }
+    eax = *((rdi + 0xc));
+    if (eax != 0) {
+        var_28h = eax;
+        r8 = &var_71h;
+        r9 = rsi;
+        var_20h = 0;
+        eax = fcn_18001b8b0 (rbx, var_30h);
+        ecx = eax;
+        if (eax < 0) {
+            goto label_5;
+        }
+    }
+    r9d = *((rdi + 0x54));
+    if (r9d != 0) {
+        r8 = &var_71h;
+        rcx = rbx;
+        rdx = &var_30h;
+        eax = fcn_18001bcf0 ();
+        ecx = eax;
+        if (eax < 0) {
+            goto label_5;
+        }
+    }
+    r9d = *((rdi + 0x10));
+    rsi = "shared";
+    if (r9d != 0) {
+        var_28h = 0;
+        r8 = &var_71h;
+        var_20h = rsi;
+        eax = fcn_18001a070 (rbx, var_30h);
+        ecx = eax;
+        if (eax < 0) {
+            goto label_5;
+        }
+    }
+    eax = *((rdi + 0x18));
+    if (eax != 0) {
+        var_28h = eax;
+        r8 = &var_71h;
+        r9 = rsi;
+        var_20h = 1;
+        eax = fcn_18001b8b0 (rbx, var_30h);
+        ecx = eax;
+        if (eax < 0) {
+            goto label_5;
+        }
+    }
+    if (r15d < 0x60) {
+        goto label_7;
+    }
+    r14d = *((rdi + 0x4c));
+    ecx = 0;
+    if (r14d == 0) {
+        goto label_5;
+    }
+    rdx = 0x1803836f8;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    r8d = r14d;
+    rdx = "// %u groups(s)\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    rdx = 0x1803836f8;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    edi = 0;
+    if (r14d == 0) {
+        goto label_8;
+    }
+    r15 = var_59h;
+label_0:
+    rdx = var_79h;
+    rcx = rdx + 8;
+    if (rcx < rdx) {
+        goto label_2;
+    }
+    if (rcx > var_38h) {
+        goto label_2;
+    }
+    rsi = var_30h;
+    rsi += rdx;
+    var_79h = rcx;
+    if (*((rbx + 0x18)) != 0) {
+        r8 = *(str.ffff40);
+        rdx = "<font color = \"#%s\">";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+    rdx = "fxgroup";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) != 0) {
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+    eax = *(rsi);
+    if (eax == 0) {
+        goto label_9;
+    }
+    rdx = var_69h;
+    if (rax >= rdx) {
+        goto label_2;
+    }
+    rcx = var_71h;
+    r8 = rax + rcx;
+    var_61h = rax;
+    if (*(r8) == 0) {
+        goto label_10;
+    }
+    do {
+        if (rax > rdx) {
+            goto label_11;
+        }
+        rax++;
+    } while (*((rax + rcx)) != 0);
+label_10:
+    r15 = r8;
+    var_61h = rax;
+    ecx = 0;
+label_1:
+    if (ecx < 0) {
+        goto label_5;
+    }
+    r8 = r15;
+    rdx = 0x180383708;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+label_9:
+    r9 = &var_71h;
+    edx = 0;
+    r8 = &var_30h;
+    rcx = rbx;
+    eax = fcn_180019b10 ();
+    ecx = eax;
+    if (eax < 0) {
+        goto label_5;
+    }
+    rdx = 0x180387368;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    eax = *((rsi + 4));
+    r9 = &var_71h;
+    r8 = &var_30h;
+    var_20h = eax;
+    edx = 1;
+    eax = fcn_18001c040 (rbx);
+    ecx = eax;
+    if (eax < 0) {
+        goto label_5;
+    }
+    rdx = 0x180387414;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    edi++;
+    if (edi < r14d) {
+        goto label_0;
+    }
+label_8:
+    ecx = 0;
+    goto label_5;
+label_11:
+    ecx = 0x80004005;
+    goto label_1;
+label_7:
+    eax = *((rdi + 0x1c));
+    r9 = &var_71h;
+    r8 = &var_30h;
+    var_20h = eax;
+    edx = 0;
+    eax = fcn_18001c040 (rbx);
+    ecx = eax;
+    goto label_5;
+label_2:
+    ecx = 0x80004005;
+label_5:
+    eax = 0x80004005;
+    rcx = var_17h;
+    rcx ^= rsp;
+    fcn_18026e150 ();
+    rbx = var_18h;
+    return rax;
+}

@@ -1,0 +1,23 @@
+﻿uint64_t fcn_18026e464 (void) {
+    int64_t var_20h_2;
+    int64_t var_28h;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_18h = r8;
+    var_20h = r9;
+    rsi = r8;
+    rbp = &var_20h;
+    rbx = rdx;
+    rdi = rcx;
+    rax = fcn_18026dcdc ();
+    var_28h = rbp;
+    r9 = rsi;
+    var_20h_2 = 0;
+    r8 = rbx;
+    rdx = rdi;
+    rcx = *(rax);
+    eax = _o_stdio_common_vsprintf_s ();
+    ecx |= 0xffffffff;
+    __asm ("cmovs eax, ecx");
+    return rax;
+}

@@ -1,0 +1,20 @@
+﻿uint64_t fcn_18026dcec (int64_t arg1) {
+    int64_t var_8h;
+    rcx = arg1;
+    var_8h = rbx;
+    rdi = rcx;
+    while (rax == 0) {
+        rcx = rdi;
+        eax = _o_callnewh ();
+        if (eax == 0) {
+            goto label_0;
+        }
+        rcx = rdi;
+        rax = _o_malloc ();
+        rbx = rax;
+    }
+label_0:
+    rax = rbx;
+    rbx = var_8h;
+    return rax;
+}

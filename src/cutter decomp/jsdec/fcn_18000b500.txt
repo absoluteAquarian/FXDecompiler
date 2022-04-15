@@ -1,0 +1,190 @@
+﻿int32_t fcn_18000b500 (int64_t arg_70h) {
+    int64_t var_20h;
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    do {
+        var_8h = rbx;
+        var_10h = rbp;
+        var_18h = rsi;
+        rsi = arg_70h;
+        edi = edx;
+        eax = edx;
+        edi &= 0x7ff;
+        eax &= 0xf0001800;
+        r15d = r8d;
+        r14d = edx;
+        rbx = rcx;
+        if (eax <= 0xb0000800) {
+            if (eax != 0xb0000800) {
+                if (eax <= 0x90001000) {
+                    if (eax != 0x90001000) {
+                        if (eax != 0x80000000) {
+                            if (eax != 0x80000800) {
+                                if (eax != 0x90000000) {
+                                    if (eax != 0x90000800) {
+                                        goto label_0;
+                                    }
+                                    rdx = "oDepth";
+                                    fcn_1800ecdb0 ();
+                                    goto label_1;
+                                }
+                                rdx = 0x18038488c;
+                                goto label_2;
+                            }
+                            rdx = "oC%u";
+                            goto label_2;
+                        }
+                        r8d = edi;
+                        rdx = 0x180384888;
+                        fcn_1800ecdb0 ();
+                        if (*(rsi) >= edi) {
+                            goto label_1;
+                        }
+                        *(rsi) = edi;
+                        goto label_1;
+                    }
+                    eax = edi;
+                    if (edi != 0) {
+                        if (eax != 1) {
+                            rdx = 0x180384900;
+                            goto label_2;
+                        }
+                        rdx = "vFace";
+                        fcn_1800ecdb0 ();
+                        goto label_1;
+                    }
+                    rdx = "vPos";
+                    eax = fcn_1800ecdb0 ();
+                    goto label_1;
+                }
+                if (eax != 0xa0000000) {
+                    if (eax != 0xa0000800) {
+                        if (eax != 0xa0001000) {
+                            if (eax == 0xb0000000) {
+                                eax = ebp;
+                                eax &= 0xffff0000;
+                                if (eax != 0xfffe0000) {
+                                    rdx = 0x180384898;
+                                    if (eax != 0x4c560000) {
+                                        goto label_2;
+                                    }
+                                }
+                                rdx = 0x180384894;
+                                rdx = 0x180384904;
+                                rdx = 0x1803848e4;
+                                rdx = 0x180384890;
+                                r8d = rdi + 0x800;
+                                rdx = 0x180384890;
+                            } else {
+                            } else {
+                            } else {
+                            } else {
+                            } else {
+                            }
+                        }
+                    }
+                }
+                if (eax <= 0xd0000800) {
+                    if (eax != 0xd0000800) {
+                        if (eax != 0xb0001000) {
+                            if (eax != 0xc0000000) {
+                                if (eax != 0xc0000800) {
+                                    if (eax != 0xd0000000) {
+                                        goto label_0;
+                                    }
+                                    rdx = "oD%u";
+                                    goto label_2;
+                                }
+                                r8d = rdi + 0x1000;
+                                rdx = 0x180384890;
+                                goto label_3;
+                            }
+                            eax = edi;
+                            if (edi != 0) {
+                                eax--;
+                                if (eax != 0) {
+                                    if (eax != 1) {
+                                        rdx = "oX%u";
+                                        goto label_2;
+                                    }
+                                    rdx = "oPts";
+                                    fcn_1800ecdb0 ();
+                                    goto label_1;
+                                }
+                                rdx = "oFog";
+                                fcn_1800ecdb0 ();
+                                goto label_1;
+                            }
+                            rdx = "oPos";
+                            eax = fcn_1800ecdb0 ();
+                            goto label_1;
+                        }
+                        rdx = 0x180384908;
+                        goto label_2;
+                    }
+                    r8d = rdi + 0x1800;
+                    rdx = 0x180384890;
+                    goto label_3;
+                }
+                if (eax == 0xe0000000) {
+                    goto label_4;
+                }
+                if (eax == 0xe0000800) {
+                    goto label_5;
+                }
+                if (eax == 0xf0000000) {
+                    goto label_6;
+                }
+                if (eax == 0xf0000800) {
+                    goto label_7;
+                }
+label_0:
+                rdx = 0x18038490c;
+                goto label_2;
+label_7:
+                rdx = 0x1803848ec;
+                fcn_1800ecdb0 ();
+                goto label_1;
+label_6:
+                rdx = 0x1803848d0;
+                goto label_2;
+label_5:
+                rdx = 0x1803848e8;
+                goto label_2;
+label_4:
+                rdx = "oT%u";
+                if (bp < 0x300) {
+                    goto label_2;
+                }
+                rdx = 0x1803848cc;
+            }
+label_2:
+            r8d = edi;
+        }
+label_3:
+        fcn_1800ecdb0 ();
+label_1:
+        if (((r14d >> 0xd) & 1) >= 0) {
+            goto label_8;
+        }
+        rdx = 0x180384910;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        r9d = ebp;
+        var_20h = rsi;
+        r8d = 0;
+        edx = r15d;
+        fcn_18000b500 (rbx);
+    } while (1);
+    edx = r15d;
+    rcx = rbx;
+    fcn_18000b270 ();
+    rdx = 0x180384914;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+label_8:
+    rbx = var_8h;
+    rsi = var_18h;
+    return eax;
+}

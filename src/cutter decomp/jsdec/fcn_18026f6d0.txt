@@ -1,0 +1,35 @@
+﻿uint64_t fcn_18026f6d0 (void) {
+    int64_t var_30h;
+    int64_t var_38h;
+    int64_t var_18h;
+    int64_t var_48h;
+    var_18h = rbp;
+    rsi = r8;
+    r8 = &var_48h;
+    rdx = 0x18037c2c0;
+    eax = fcn_18026f780 ();
+    if (eax >= 0) {
+        rdi = var_48h;
+        rax = *(rdi);
+        rbx = *((rax + 0x18));
+        rcx = *((rax + 0x18));
+        uint64_t (*fcn.18026ec10)(uint64_t, uint64_t) (rbx, rdi);
+        r9 = rsi;
+        r8 = rbp;
+        edx = 0;
+        rcx = rdi;
+        eax = void (*rbx)() ();
+        rdi = var_48h;
+        esi = eax;
+        rdx = *(rdi);
+        rbx = *((rdx + 0x10));
+        rcx = *((rdx + 0x10));
+        uint64_t (*fcn.18026ec10)() ();
+        rcx = rdi;
+        void (*rbx)() ();
+        rdi = var_38h;
+        eax = esi;
+        rbx = var_30h;
+    }
+    return rax;
+}

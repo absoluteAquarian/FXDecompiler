@@ -1,0 +1,226 @@
+﻿int64_t fcn_18000b800 (int64_t arg_a0h, int64_t arg_a8h, uintmax_t arg_b0h, int64_t arg_b8h) {
+    int64_t var_20h;
+    int64_t var_28h;
+    int64_t var_30h;
+    int64_t var_38h;
+    int64_t var_40h;
+    int64_t var_50h;
+    int64_t var_58h;
+    int64_t var_60h;
+    int64_t var_68h;
+    int64_t var_80h;
+    int64_t var_88h;
+    int64_t var_90h;
+    int64_t var_98h;
+label_0:
+    rax = rsp;
+    *((rax + 0x20)) = r9;
+    *((rax + 8)) = rbp;
+    rbx = rcx;
+    *((rax + 0x10)) = rsi;
+    rsi = rdx;
+    *((rax + 0x18)) = rdi;
+    rdx = "//   ";
+    *((rax - 0x10)) = r12;
+    *((rax - 0x18)) = r13;
+    *((rax - 0x20)) = r14;
+    *((rax - 0x28)) = r15;
+    r12d = r8d;
+    rax = fcn_1800ecdb0 ();
+    r15d = arg_a8h;
+    if (r15d == 0) {
+        goto label_1;
+    }
+    edi = r15d;
+    do {
+        rdx = "    ";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        rdi--;
+    } while (rdi != 0);
+label_1:
+    r14 = arg_a0h;
+    dl = 1;
+    ecx = *((r14 + 2));
+    rax = fcn_180008170 ();
+    r13 = arg_b8h;
+    ecx = 5;
+    if (*(r13) == 0) {
+        if (arg_b0h == 0) {
+            goto label_2;
+        }
+        if (cx != *(r14)) {
+            goto label_2;
+        }
+    }
+    rdx = 0x180383328;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    rdx = "//   ";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (r15d == 0) {
+        goto label_2;
+    }
+    rdi = r15;
+    do {
+        rdx = "    ";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        rdi--;
+    } while (rdi != 0);
+label_2:
+    ecx = *(r14);
+    eax = 5;
+    var_40h = 0;
+    al = (ax == cx) ? 1 : 0;
+    *(r13) = al;
+    if (ecx > 5) {
+        goto label_3;
+    }
+    rdx = 0x180000000;
+    ecx = *((rdx + rcx*4 + 0xbb4c));
+    rcx += rdx;
+    /* switch table (6 cases) at 0x18000bb4c */
+    void (*rcx)() ();
+    r8 = rbp;
+    rdx = 0x180383698;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    goto label_3;
+    r9d = *((r14 + 6));
+    rdx = "%s%u";
+    r8 = rbp;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    goto label_3;
+    eax = *((r14 + 6));
+    rdx = "row_major %s%ux%u";
+    r9d = *((r14 + 4));
+    r8 = rbp;
+    rcx = rbx;
+    var_20h = eax;
+    fcn_1800ecdb0 ();
+    goto label_3;
+    eax = *((r14 + 6));
+    rdx = "%s%ux%u";
+    r9d = *((r14 + 4));
+    r8 = rbp;
+    rcx = rbx;
+    var_20h = eax;
+    fcn_1800ecdb0 ();
+    goto label_3;
+    rdx = "struct\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    rdx = "//   ";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (r15d == 0) {
+        goto label_4;
+    }
+    rdi = r15;
+    do {
+        rdx = "    ";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        rdi--;
+    } while (rdi != 0);
+label_4:
+    rdx = 0x1803836e0;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    edi = *((r14 + 0xc));
+    ecx = 0;
+    rdi += rsi;
+    r13d = ecx;
+    if (cx >= *((r14 + 0xa))) {
+        goto label_5;
+    }
+    rbp = rdi + 8;
+    do {
+        if (rdi < rsi) {
+            goto label_6;
+        }
+        if (rbp < rdi) {
+            goto label_6;
+        }
+        rax = rsi + r12;
+        if (rbp >= rax) {
+            goto label_6;
+        }
+        eax = *(rdi);
+        if (eax != 0) {
+            r9 = rsi + rax;
+            if (eax < r12d) {
+                goto label_7;
+            }
+        }
+        r9 = rcx;
+label_7:
+        ecx = *((rbp - 4));
+        rdx = &var_40h;
+        var_38h = rdx;
+        eax = r15 + 1;
+        rcx += rsi;
+        var_30h = r13d;
+        var_28h = eax;
+        r8d = r12d;
+        var_20h = rcx;
+        fcn_18000b800 (rbx, rsi, r8, r9);
+        goto label_0;
+        eax = *((r14 + 0xa));
+        rdi += 8;
+        rbp += 8;
+        r13d++;
+        ecx = 0;
+    } while (r13d < eax);
+    goto label_5;
+label_6:
+    rdx = "<invalid member offset>\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+label_5:
+    rdx = 0x1803836f8;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    rdx = "//   ";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (r15d == 0) {
+        goto label_8;
+    }
+    rdi = r15;
+    do {
+        rdx = "    ";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        rdi--;
+    } while (rdi != 0);
+label_8:
+    rdx = 0x1803836fc;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+label_3:
+    r8 = var_98h;
+    rdx = 0x180383708;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    eax = *((r14 + 8));
+    r15 = var_50h;
+    r14 = var_58h;
+    r13 = var_60h;
+    r12 = var_68h;
+    rdi = var_90h;
+    rsi = var_88h;
+    if (eax > 1) {
+        r8d = eax;
+        rdx = "[%u]";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+    rdx = 0x180384934;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    return rax;
+}

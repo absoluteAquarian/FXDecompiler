@@ -1,0 +1,324 @@
+﻿uint64_t fcn_18001b8b0 (uintmax_t arg_50h, const char * arg_58h) {
+    int64_t var_40h;
+    int64_t var_3ch;
+    int64_t var_38h;
+    int64_t var_30h;
+    int64_t var_28h;
+    int64_t var_20h;
+    int64_t var_bp_18h;
+    int64_t var_bp_10h;
+    int64_t var_fh;
+    int64_t var_eh;
+    int64_t var_ah;
+    int64_t var_bp_8h;
+    int64_t var_4h;
+    int64_t var_sp_20h;
+    int64_t var_sp_28h;
+    int64_t var_sp_30h;
+    int64_t var_80h;
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    var_8h = rbx;
+    var_10h = rsi;
+    var_18h = rdi;
+    r12 = rdx;
+    esi = 0;
+    rdx = 0x1803836f8;
+    edi = esi;
+    rbx = r9;
+    r14 = r8;
+    r13 = rcx;
+    fcn_1800ecdb0 ();
+    r9 = rbx;
+    rdx = "// %u %s object(s)\n";
+    ebx = arg_58h;
+    rcx = r13;
+    r8d = ebx;
+    fcn_1800ecdb0 ();
+    rdx = 0x1803836f8;
+    rcx = r13;
+    fcn_1800ecdb0 ();
+    var_40h = esi;
+    if (ebx == 0) {
+        goto label_2;
+    }
+label_1:
+    rdx = *((r12 + 0x10));
+    __asm ("xorps xmm0, xmm0");
+    eax = *((r13 + 0x18));
+    r15 = rsi;
+    var_bp_10h = al;
+    eax = *((r13 + 0x19));
+    rcx = rdx + 0x10;
+    var_38h = rsi;
+    var_28h = 0;
+    var_eh = 0;
+    var_ah = 0;
+    var_bp_8h = esi;
+    var_4h = 0;
+    var_fh = al;
+    __asm ("movdqu xmmword [var_20h], xmm0");
+    if (rcx < rdx) {
+        goto label_3;
+    }
+    if (rcx > *((r12 + 8))) {
+        goto label_3;
+    }
+    rbx = *(r12);
+    rax = &var_3ch;
+    rbx += rdx;
+    var_sp_28h = rax;
+    *((r12 + 0x10)) = rcx;
+    rax = &var_38h;
+    r9 = r14;
+    var_sp_20h = rax;
+    edx = 0;
+    r8d = *((rbx + 4));
+    eax = fcn_1800194b0 (r13, rdx);
+    edi = eax;
+    if (eax < 0) {
+        goto label_4;
+    }
+    eax = *(rbx);
+    if (eax == 0) {
+        goto label_5;
+    }
+    rdx = *((r14 + 8));
+    if (rax >= rdx) {
+        goto label_5;
+    }
+    rcx = *(r14);
+    r8 = rcx + rax;
+    *((r14 + 0x10)) = rax;
+    if (*(r8) == 0) {
+        goto label_6;
+    }
+    do {
+        if (rax > rdx) {
+            goto label_7;
+        }
+        rax++;
+    } while (*((rcx + rax)) != 0);
+label_6:
+    r10 = r8;
+    var_30h = r8;
+    *((r14 + 0x10)) = rax;
+    edi = esi;
+label_0:
+    if (edi < 0) {
+        goto label_4;
+    }
+    eax = *((rbx + 8));
+    if (eax == 0) {
+        goto label_8;
+    }
+    if (rax >= rdx) {
+        goto label_5;
+    }
+    r8 = rcx + rax;
+    *((r14 + 0x10)) = rax;
+    if (*(r8) == 0) {
+        goto label_9;
+    }
+    do {
+        if (rax > rdx) {
+            goto label_10;
+        }
+        rax++;
+    } while (*((rcx + rax)) != 0);
+label_9:
+    r15 = r8;
+    *((r14 + 0x10)) = rax;
+    edi = esi;
+    do {
+        if (edi < 0) {
+            goto label_4;
+        }
+label_8:
+        eax = *((rbx + 0xc));
+        r9 = r15;
+        rbx = (int64_t) var_3ch;
+        r8 = r10;
+        rsi = var_38h;
+        var_sp_30h = eax;
+        var_sp_28h = ebx;
+        var_sp_20h = rsi;
+        eax = fcn_180019820 (r13, rdx, 2);
+        edi = eax;
+        if (eax < 0) {
+            goto label_4;
+        }
+        if (arg_50h != 0) {
+            goto label_11;
+        }
+        edx = *((rsi + 8));
+        eax = 1;
+        ecx = *((rsi + 4));
+        if (edx < 1) {
+            edx = eax;
+        }
+        if (ecx != 2) {
+            goto label_5;
+        }
+        eax = rbx - 2;
+        if (eax > ecx) {
+            if (ebx != 0x15) {
+                goto label_12;
+            }
+        }
+        var_sp_30h = r14;
+        var_sp_28h = r12;
+        r9d = ebx;
+        var_sp_20h = edx;
+        eax = fcn_18001b2f0 (var_28h, rdx, rsi);
+        edi = eax;
+        if (eax < 0) {
+            goto label_4;
+        }
+        goto label_13;
+label_7:
+        r10 = var_30h;
+        edi = 0x80004005;
+        goto label_0;
+label_10:
+        edi = 0x80004005;
+    } while (1);
+label_12:
+    if (ecx == 2) {
+        eax = rbx - 5;
+        if (eax > 3) {
+            eax = rbx - 0x19;
+            if (eax > 5) {
+                goto label_14;
+            }
+        }
+        var_sp_30h = r14;
+        var_sp_28h = r12;
+        r9d = ebx;
+        var_sp_20h = edx;
+        eax = fcn_18001b5a0 (var_28h, rdx, r8);
+        edi = eax;
+        if (eax < 0) {
+            goto label_4;
+        }
+        goto label_13;
+label_14:
+        if (ecx != 2) {
+            goto label_5;
+        }
+        if (ebx == 1) {
+            r9 = r14;
+            rcx = &var_28h;
+            r8 = r12;
+            eax = fcn_180019970 ();
+            edi = eax;
+            if (eax < 0) {
+                goto label_4;
+            }
+        } else {
+            if (ecx != 2) {
+                goto label_5;
+            }
+            if (ebx <= 0x27) {
+                rdx = 0xa000c3fe00;
+                if (((rdx >> rbx) & 1) < 0) {
+                    goto label_13;
+                }
+            }
+            if (ecx != 2) {
+                goto label_5;
+            }
+            if (ebx <= 0x2c) {
+                rdx = 0x1f5f80000000;
+                if (((rdx >> rbx) & 1) < 0) {
+                    goto label_13;
+                }
+            }
+            if (ecx != 2) {
+                goto label_5;
+            }
+            if (ebx == 0x13) {
+                goto label_13;
+            }
+            if (ecx != ecx) {
+                goto label_5;
+            }
+            if (ebx != 0x14) {
+                goto label_5;
+            }
+        }
+label_13:
+        r9 = r14;
+        r8 = r12;
+        edx = 0;
+        rcx = r13;
+        eax = fcn_180019b10 ();
+        edi = eax;
+        if (eax < 0) {
+            goto label_4;
+        }
+label_11:
+        rdx = 0x1803833e0;
+        rcx = &var_28h;
+        fcn_1800ecdb0 ();
+        ecx = var_28h;
+        r9b = 1;
+        rax = var_20h;
+        ecx--;
+        r8d = 0;
+        *((rcx + rax)) = 0;
+        rcx = r13;
+        rdx = var_20h;
+        fcn_1800eca80 ();
+        rdx = 0x180384934;
+        rcx = r13;
+        fcn_1800ecdb0 ();
+        rdx = var_bp_18h;
+        if (rdx != 0) {
+            ecx = 4;
+            o_setlocale ();
+            rcx = var_bp_18h;
+            o_free ();
+        }
+        rcx = var_20h;
+        o_free ();
+        r8d = var_40h;
+        r8d++;
+        var_40h = r8d;
+        if (r8d >= arg_58h) {
+            goto label_2;
+        }
+        esi = 0;
+        goto label_1;
+    }
+label_5:
+    edi = 0x80004005;
+label_4:
+    rdx = var_bp_18h;
+    if (rdx != 0) {
+        ecx = 4;
+        o_setlocale ();
+        rcx = var_bp_18h;
+        o_free ();
+    }
+    rcx = var_20h;
+    o_free ();
+    goto label_15;
+label_3:
+    ecx = 0;
+    edi = 0x80004005;
+    o_free ();
+    goto label_15;
+label_2:
+    rdx = 0x180383328;
+    rcx = r13;
+    fcn_1800ecdb0 ();
+label_15:
+    r11 = &var_80h;
+    eax = edi;
+    rbx = *((r11 + 0x30));
+    rsi = *((r11 + 0x38));
+    rdi = *((r11 + 0x40));
+    return rax;
+}

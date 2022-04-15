@@ -1,0 +1,30 @@
+﻿int32_t fcn_18000b1f0 (void) {
+    if (edx != 0) {
+        edx--;
+        if (edx != 0) {
+            edx--;
+            if (edx != 0) {
+                if (edx != 1) {
+                    eax = 0x80004005;
+                    return eax;
+                }
+                rdx = 0x18038485c;
+                eax = fcn_1800ecdb0 ();
+                eax = 0;
+                return eax;
+            }
+            rdx = 0x180384858;
+            eax = fcn_1800ecdb0 ();
+            eax = 0;
+            return eax;
+        }
+        rdx = 0x180384854;
+        eax = fcn_1800ecdb0 ();
+        eax = 0;
+        return eax;
+    }
+    rdx = "xyzw";
+    eax = fcn_1800ecdb0 ();
+    eax = 0;
+    return eax;
+}

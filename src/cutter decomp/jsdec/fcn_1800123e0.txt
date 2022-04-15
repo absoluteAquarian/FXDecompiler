@@ -1,0 +1,62 @@
+﻿int64_t fcn_1800123e0 (void) {
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    rdi = rdx;
+    rsi = rcx;
+    rdx = 0x180384c9c;
+    fcn_1800ecdb0 ();
+    ebx = 0;
+    rbp = 0x180000000;
+    do {
+        eax = *(rdi);
+        eax--;
+        if (eax <= 8) {
+            rax = (int64_t) eax;
+            ecx = *((rbp + rax*4 + 0x124dc));
+            rcx += rbp;
+            /* switch table (9 cases) at 0x1800124dc */
+            void (*rcx)() ();
+            r8 = "mixed";
+            goto label_0;
+            r8 = "unorm";
+            goto label_0;
+            r8 = "snorm";
+            goto label_0;
+            r8 = "float";
+            goto label_0;
+            r8 = "sint";
+            goto label_0;
+            r8 = "uint";
+            goto label_0;
+            r8 = "double";
+            goto label_0;
+            r8 = "<continued>";
+            goto label_0;
+            r8 = "<unused>";
+        } else {
+            r8 = "<unknown resource return type>";
+        }
+label_0:
+        rdx = 0x180383698;
+        rcx = rsi;
+        fcn_1800ecdb0 ();
+        if (ebx < 3) {
+            rdx = 0x180383dbc;
+            rcx = rsi;
+            fcn_1800ecdb0 ();
+        }
+        ebx++;
+        rdi += 4;
+    } while (ebx < 4);
+    rdx = 0x18038472c;
+    rcx = rsi;
+    eax = fcn_1800ecdb0 ();
+    rbx = var_8h;
+    eax = 0;
+    rsi = var_18h;
+    return rax;
+}

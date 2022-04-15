@@ -1,0 +1,10 @@
+﻿void fcn_18026e150 (void) {
+    int64_t var_38h;
+    int64_t var_8h;
+    __asm ("bnd jne 0x18026e16c");
+    rcx = rotate_left64 (rcx, 0x10);
+    __asm ("bnd jne 0x18026e168");
+    __asm ("bnd ret");
+    rcx = rotate_right64 (rcx, 0x10);
+    return void (*0x18026e1e0)() ();
+}

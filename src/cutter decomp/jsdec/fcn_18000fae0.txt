@@ -1,0 +1,552 @@
+﻿int64_t fcn_18000fae0 (void) {
+    LPWSTR lpMultiByteStr;
+    int32_t cbMultiByte;
+    LPCCH lpDefaultChar;
+    LPBOOL lpUsedDefaultChar;
+    int64_t var_40h;
+    uintmax_t var_48h;
+    uintmax_t var_4ch;
+    int64_t var_50h;
+    int64_t var_58h;
+    int64_t var_60h;
+    int64_t var_sp_68h;
+    uintmax_t var_6ch;
+    int64_t var_sp_70h;
+    int64_t var_6f0h;
+    int64_t var_700h;
+    uintmax_t var_708h;
+    int32_t var_710h;
+    r11 = rsp;
+    rbp = r11 - 0x628;
+    rax = *(0x180426020);
+    rax ^= rsp;
+    *((rbp + 0x5e0)) = rax;
+    rax = *((rbp + 0x650));
+    __asm ("xorps xmm0, xmm0");
+    *((r11 + 0x18)) = rbx;
+    rbx = rcx;
+    *((r11 - 0x10)) = rsi;
+    *((r11 - 0x18)) = rdi;
+    edi = 0;
+    *((r11 - 0x20)) = r12;
+    r12 = *((rbp + 0x658));
+    *((r11 - 0x28)) = r13;
+    r13 = rdx;
+    *((rbp - 0x78)) = rax;
+    rax = *((rbp + 0x660));
+    *((rbp - 0x68)) = r8;
+    r8 = *((rdx + 0x60));
+    *((r11 - 0x30)) = r14;
+    *((r11 - 0x38)) = r15;
+    r15d = edi;
+    *((rbp - 0x70)) = rax;
+    eax = 0xffffffff;
+    var_40h = rdi;
+    var_60h = rdi;
+    var_50h = rdi;
+    var_58h = rdi;
+    __asm ("movups xmmword [var_sp_68h], xmm0");
+    if (r8 == 0) {
+        goto label_2;
+    }
+    edi = *((r8 + 0x1c));
+    edx = r9 + 1;
+    r11d = *(r8);
+    r10d = *((r8 + 0x20));
+    r11 += r8;
+    r10 += r11;
+    if (edx >= edi) {
+        edx = edi;
+    }
+    if (edx == 0) {
+        goto label_3;
+    }
+    do {
+        edx += eax;
+        eax = edx;
+        rcx = rax * 0x18c;
+        if (*((rcx + r10)) <= r9d) {
+            goto label_4;
+        }
+        eax = 0xffffffff;
+    } while (edx != 0);
+label_3:
+    edx = r9d;
+label_4:
+    if (edx >= edi) {
+        goto label_5;
+    }
+    eax = edx;
+    rdx = rax * 0x18c;
+    if (*((rdx + r10)) != r9d) {
+        goto label_5;
+    }
+    eax = *((rdx + r10 + 0x174));
+    if (eax >= *((r8 + 0x34))) {
+        rdx = "// <internal error> incorrect token offset in debug info\n";
+        rcx = rbx;
+        fcn_180007890 ();
+        void (*0x180010338)() ();
+    }
+    ecx = *((r8 + 0x38));
+    rdx = rax * 5;
+    r14d = *((r8 + 0x50));
+    rcx += r11;
+    eax = *((rcx + rdx*4));
+    rsi = rcx + rdx*4;
+    r14 += r11;
+    ecx = 0xffffffff;
+    if (eax == ecx) {
+        goto label_6;
+    }
+    if (eax >= *((r8 + 0x14))) {
+        rdx = "// <internal error> incorrect file offset in debug info\n";
+        rcx = rbx;
+        rax = fcn_180007890 ();
+        void (*0x180010338)() ();
+    }
+    edi = *((r8 + 0x18));
+    rax <<= 4;
+    rax += r11;
+    rdi += rax;
+    if (*((rdi + 4)) >= 0x104) {
+        rdx = "// <internal error> file name too long in debug info\n";
+        rcx = rbx;
+        fcn_180007890 ();
+        void (*0x180010338)() ();
+    }
+    r8d = 0x208;
+    memset (rbp - 0x30, rdx, 0);
+    r8d = *(rdi);
+    rax = rbp - 0x30;
+    r9d = *((rdi + 4));
+    r8 += r14;
+    edx = 0;
+    ecx = 0xfde9;
+    eax = MultiByteToWideChar (0x104, rax);
+    if (eax == 0) {
+        void (*0x180010338)() ();
+    }
+    r15 = rbp - 0x30;
+label_6:
+    __asm ("movups xmm0, xmmword [rsi]");
+    edi = 0;
+    __asm ("movups xmmword [var_sp_68h], xmm0");
+label_2:
+    if (*((r13 + 0xa8)) == 0) {
+        goto label_7;
+    }
+    __asm ("xorps xmm0, xmm0");
+    rdx = &var_58h;
+    eax = 0;
+    rcx = r13;
+    __asm ("movups xmmword [var_700h], xmm0");
+    var_710h = eax;
+    __asm ("movups xmmword [var_6f0h], xmm0");
+    eax = fcn_18000f990 ();
+    if (eax < 0) {
+        void (*0x180010338)() ();
+    }
+    rcx = var_58h;
+    r9 = &var_48h;
+    r8 = &var_40h;
+    edx = 1;
+    sil = 0;
+    r14b = 1;
+    rax = *(rcx);
+    rax = *((rax + 0x30));
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t) (edi);
+    if (eax < 0) {
+        goto label_8;
+    }
+    edi = *((rbp - 0x5c));
+label_0:
+    if (var_48h != 0) {
+        goto label_9;
+    }
+    if (sil != 0) {
+        goto label_10;
+    }
+    if (r14b == 0) {
+        goto label_11;
+    }
+    rcx = var_58h;
+    r14b = 0;
+    rax = *(rcx);
+    rax = *((rax + 0x40));
+    uint64_t (*case.0x180337eae.0)() ();
+    goto label_12;
+label_5:
+    rdx = 0x180383328;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) != r15b) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+    rdx = "// <internal error> incorrect instruction offset in debug info\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) == r15b) {
+label_1:
+        void (*0x180010338)() ();
+    }
+    *((rbx + 0x20))--;
+    rdx = "</font>";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    void (*0x180010338)() ();
+label_9:
+    rcx = var_40h;
+    rdx = &var_4ch;
+    rax = *(rcx);
+    rax = *((rax + 0x78));
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t) (0);
+    if (eax < 0) {
+        goto label_13;
+    }
+    if (var_4ch == 0) {
+        if (r14b == 0) {
+            goto label_14;
+        }
+        rcx = var_40h;
+        if (rcx == 0) {
+            goto label_12;
+        }
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+        var_40h = 0;
+        goto label_12;
+    }
+label_14:
+    rcx = var_40h;
+    rdx = rbp - 0x80;
+    esi = 0xffffffff;
+    *((rbp - 0x80)) = esi;
+    rax = *(rcx);
+    rax = *((rax + 0x50));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    if (eax < 0) {
+        goto label_15;
+    }
+    rcx = var_40h;
+    rdx = &var_700h;
+    rax = *(rcx);
+    rax = *((rax + 0x70));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    if (eax < 0) {
+        goto label_16;
+    }
+    rcx = var_40h;
+    rdx = rbp - 0x4c;
+    rax = *(rcx);
+    rax = *((rax + 0x28));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    if (eax < 0) {
+        goto label_17;
+    }
+    rcx = var_40h;
+    rdx = &var_708h;
+    rax = *(rcx);
+    rax = *((rax + 0x38));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    if (eax < 0) {
+        goto label_18;
+    }
+    rcx = var_40h;
+    rdx = &var_60h;
+    rax = *(rcx);
+    rax = *((rax + 0x20));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    if (eax < 0) {
+        goto label_19;
+    }
+    rcx = var_50h;
+    fcn_18026f760 ();
+    rcx = var_60h;
+    rdx = &var_50h;
+    rax = *(rcx);
+    rax = *((rax + 0x20));
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t) (0);
+    if (eax < 0) {
+        goto label_20;
+    }
+    rax = var_50h;
+    rdi = 0xffffffffffffffff;
+    do {
+        rdi++;
+    } while (*((rax + rdi*2)) != 0);
+    if (rdi >= rsi) {
+        void (*0x180010338)() ();
+    }
+    rcx = var_60h;
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+        var_60h = 0;
+    }
+    rcx = var_40h;
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+        var_40h = 0;
+    }
+    sil = 1;
+    if (var_4ch != 0) {
+        goto label_10;
+    }
+label_12:
+    rcx = var_58h;
+    r9 = &var_48h;
+    r8 = &var_40h;
+    edx = 1;
+    rax = *(rcx);
+    rax = *((rax + 0x30));
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t) (0);
+    if (eax >= 0) {
+        goto label_0;
+    }
+label_8:
+    rdx = 0x180383328;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) != 0) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+    rdx = "// <internal error> unable to iterate instruction in PDB\n";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    goto label_1;
+label_11:
+    rdx = "// <internal error> unable to find instruction in PDB\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_10:
+    if (*((r13 + 0x60)) == 0) {
+        goto label_21;
+    }
+    eax = *((rbp - 0x4c));
+    if (var_6ch != eax) {
+        rdx = "// <internal error> line mismatch in debug info\n";
+        rcx = rbx;
+        fcn_180007890 ();
+    }
+    eax = var_sp_70h;
+    eax++;
+    if (eax != var_708h) {
+        rdx = "// <internal error> column mismatch in debug info\n";
+        rcx = rbx;
+        fcn_180007890 ();
+        void (*0x180010338)() ();
+    }
+    ecx = edi;
+    rax = 0xffffffffffffffff;
+    do {
+        rax++;
+    } while (*((r15 + rax*2)) != 0);
+    if (rcx != rax) {
+        rdx = "// <internal error> filename length mismatch in debug info\n";
+        rcx = rbx;
+        rax = fcn_180007890 ();
+        void (*0x180010338)() ();
+    }
+    edx = 0x103;
+    if (edi < edx) {
+        rdx = rcx;
+    }
+    rcx = var_50h;
+    if (rdx == 0) {
+        goto label_21;
+    }
+    r15 -= rcx;
+    do {
+        eax = *(rcx);
+        if (*((r15 + rcx)) != ax) {
+            goto label_22;
+        }
+        rcx += 2;
+        rdx--;
+    } while (rdx != 0);
+label_21:
+    __asm ("movups xmm0, xmmword [var_700h]");
+    r15 = var_50h;
+    __asm ("movups xmmword [var_sp_68h], xmm0");
+    goto label_23;
+label_22:
+    rdx = "// <internal error> filename mismatch in debug info\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_20:
+    rdx = "// <internal error> unable to get file name from PDB\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_19:
+    rdx = "// <internal error> unable to get source file info from PDB\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_18:
+    rdx = "// <internal error> unable to get column number from PDB\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_17:
+    rdx = "// <internal error> unable to get line number from PDB\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_16:
+    rdx = "// <internal error> unable to get file id from PDB\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_15:
+    rdx = "// <internal error> unable to instruction offset from PDB\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_13:
+    rdx = "// <internal error> unable to get statement flag from PDB\n";
+    rcx = rbx;
+    fcn_180007890 ();
+    void (*0x180010338)() ();
+label_7:
+    if (*((r13 + 0x50)) != 0) {
+        void (*0x180010338)() ();
+    }
+label_23:
+    rax = *((rbp - 0x68));
+    esi = var_sp_68h;
+    if (*(rax) == 0x2c) {
+        if (*((rax + 0xc)) == 0x11) {
+            goto label_24;
+        }
+    }
+    r14 = *((rbp - 0x78));
+    if (esi != *(r14)) {
+        goto label_25;
+    }
+    rax = var_sp_68h;
+    rax >>= 0x20;
+    if (eax == *(r12)) {
+        void (*0x180010338)() ();
+    }
+    rdx = 0x180383328;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) != 0) {
+        r8 = *(str.ffff40);
+        rdx = "<font color = \"#%s\">";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+    rdx = "#line ";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    eax = *((rbx + 0x18));
+    if (al != 0) {
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        eax = *((rbx + 0x18));
+        if (al == 0) {
+            goto label_26;
+        }
+        r8 = *(str.00ffff);
+        rdx = "<font color = \"#%s\">";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+label_26:
+    edi = var_6ch;
+    rdx = 0x1803850a4;
+    r8d = edi;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) != 0) {
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+    rax = *((rbp - 0x70));
+    *(rax) = edi;
+    goto label_27;
+label_24:
+    r14 = *((rbp - 0x78));
+label_25:
+    edi = var_6ch;
+    eax = 0xffffffff;
+    if (esi != eax) {
+        rdx = 0x180383328;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            r8 = *(str.ffff40);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        rdx = "#line ";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        eax = *((rbx + 0x18));
+        if (al != 0) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            eax = *((rbx + 0x18));
+            if (al == 0) {
+                goto label_28;
+            }
+            r8 = *(str.00ffff);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            eax = fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+label_28:
+        eax = 0;
+        r9d = 0xffffffff;
+        r8 = r15;
+        edx = 0;
+        rax = rbp + 0x1e0;
+        ecx = 0xfde9;
+        WideCharToMultiByte (rax, rax, 0x400, rax);
+        r9 = rbp + 0x1e0;
+        *((rbp + 0x5df)) = 0;
+        r8d = edi;
+        rdx = "%u \"%s\"\n";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != 0) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+        rax = *((rbp - 0x70));
+        *(rax) = edi;
+    }
+    *(r14) = esi;
+label_27:
+    *(r12) = edi;
+}

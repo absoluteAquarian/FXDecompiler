@@ -1,0 +1,199 @@
+﻿int64_t fcn_18000d550 (void) {
+    int64_t var_20h;
+    int64_t var_30h;
+    int64_t var_38h;
+    int64_t var_50h;
+    int64_t var_58h;
+    int64_t var_60h;
+    int64_t var_68h;
+    rbx = rcx;
+    if (rdx == 0) {
+        goto label_1;
+    }
+    if (r8 < 4) {
+        goto label_1;
+    }
+    r10d = *(rdx);
+    eax = *(rdx);
+    eax &= 0xffff0000;
+    if (eax != 0x7ffe0000) {
+        if (eax == 0x46580000) {
+            goto label_2;
+        }
+        if (eax == 0x4c500000) {
+            goto label_2;
+        }
+        if (eax == 0x4c560000) {
+            goto label_2;
+        }
+        if (eax == 0x54580000) {
+            goto label_2;
+        }
+        if (eax == 0x7fff0000) {
+            goto label_2;
+        }
+        if (eax == 0xfffe0000) {
+            goto label_2;
+        }
+        if (eax != 0xffff0000) {
+            goto label_1;
+        }
+    }
+label_2:
+    rcx = r8 - 4;
+    rdx += 4;
+    if (rcx < 4) {
+        goto label_1;
+    }
+    do {
+        r8d = *(rdx);
+        rcx -= 4;
+        if (r8d >= 0) {
+            r9d = (int32_t) r8w;
+            if (r9d == 0xffff) {
+                goto label_1;
+            }
+            if (r9d == 0xfffe) {
+                r8d >>= 0x10;
+                rax = rcx;
+                r8d &= 0x7fff;
+                rax >>= 2;
+                r9d = r8d;
+                if (rax < r9) {
+                    goto label_1;
+                }
+                if (r8d > 1) {
+                    if (*((rdx + 4)) == 0x53455250) {
+                        goto label_3;
+                    }
+                }
+                rax = r8*4;
+                rdx += rax;
+                rcx -= rax;
+            } else {
+                if (r10w >= 0x200) {
+                    r8d >>= 0x18;
+                    rax = rcx;
+                    r8d &= 0xf;
+                    rax >>= 2;
+                    r9d = r8d;
+                    if (rax < r9) {
+                        goto label_1;
+                    }
+                    rax = r8*4;
+                    rdx += rax;
+                    rcx -= rax;
+                } else {
+                    if (r9d != 0x51) {
+                        goto label_4;
+                    }
+                    rax = rcx;
+                    rax &= 0xfffffffffffffffc;
+                    if (rax < 0x14) {
+                        goto label_1;
+                    }
+                    rdx += 0x14;
+                    rcx -= 0x14;
+                }
+            }
+        }
+label_4:
+        rdx += 4;
+    } while (rcx >= 4);
+label_1:
+    eax = 0;
+    return rax;
+label_3:
+    var_50h = rbp;
+    eax = r8*4 - 4;
+    var_68h = rsi;
+    r9 = &var_60h;
+    rsi = rdx + 8;
+    var_38h = rdi;
+    var_30h = r14;
+    r8d = 0x434c5846;
+    r14d = 0;
+    edx = eax;
+    var_20h = r14;
+    eax = fcn_18000a3c0 (rsi);
+    edi = eax;
+    if (eax < 0) {
+        goto label_5;
+    }
+    if (eax == 1) {
+        goto label_5;
+    }
+    r9 = &var_58h;
+    var_20h = r14;
+    r8d = 0x54494c43;
+    edx = ebp;
+    eax = fcn_18000a3c0 (rsi);
+    edi = eax;
+    if (eax >= 0) {
+        goto label_6;
+    }
+    rdx = "Error: Error getting texture shader literal block.";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+label_0:
+    eax = edi;
+    do {
+        rdi = var_38h;
+        rsi = var_68h;
+        r14 = var_30h;
+        return rax;
+label_6:
+        if (*((rbx + 0x18)) != r14b) {
+            r8 = *(str.a0a0a0);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+        r9 = rbp;
+        r8 = rsi;
+        edx = 0;
+        rcx = rbx;
+        fcn_18000bb70 ();
+        eax = *((rbx + 0x18));
+        if (al != 0) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            eax = *((rbx + 0x18));
+            if (al == 0) {
+                goto label_7;
+            }
+            r8 = *(str.ffff40);
+            rdx = "<font color = \"#%s\">";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+            *((rbx + 0x20))++;
+        }
+label_7:
+        rdx = "    preshader\n";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        if (*((rbx + 0x18)) != r14b) {
+            *((rbx + 0x20))--;
+            rdx = "</font>";
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+        r8 = var_58h;
+        r9d = 0;
+        rdx = var_60h;
+        rcx = rbx;
+        fcn_18000aef0 ();
+    } while (1);
+label_5:
+    rdx = "Error: Texture shader assembly not found!";
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    eax = 0x80004005;
+    if (edi == 1) {
+        edi = eax;
+    }
+    goto label_0;
+}

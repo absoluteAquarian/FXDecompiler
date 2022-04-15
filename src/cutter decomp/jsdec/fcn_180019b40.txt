@@ -1,0 +1,116 @@
+﻿int64_t fcn_1800194b0 (int64_t arg_60h, int64_t arg_68h) {
+    int64_t var_40h;
+    int64_t var_48h;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_18h = rbx;
+    var_20h = rsi;
+    r15 = arg_68h;
+    r12d = 0;
+    var_40h = rbp;
+    rsi = r9;
+    rdi = rcx;
+    *(r15) = r12d;
+    if (edx == 0) {
+        goto label_0;
+    }
+    ebx = edx;
+    do {
+        rdx = "    ";
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        rbx--;
+    } while (rbx != 0);
+label_0:
+    rcx = *((rsi + 8));
+    r8 = rbp;
+    if (r8 >= rcx) {
+        eax = 0x80004005;
+        goto label_1;
+    }
+    rdx = r8 + 0x18;
+    var_48h = r14;
+    *((rsi + 0x10)) = r8;
+    ebx = 0x80004005;
+    if (rdx >= r8) {
+        if (rdx <= rcx) {
+            r14 = *(rsi);
+            r14 += r8;
+            *((rsi + 0x10)) = rdx;
+            eax = 0;
+        }
+    } else {
+        r14 = arg_68h;
+        eax = ebx;
+        rdx = r8;
+    }
+    if (eax < 0) {
+        goto label_2;
+    }
+    if (*((r14 + 4)) == 2) {
+        r8 = rdx + 4;
+        if (r8 < rdx) {
+            goto label_3;
+        }
+        if (r8 > rcx) {
+            goto label_3;
+        }
+        rax = *(rsi);
+        *((rsi + 0x10)) = r8;
+        eax = *((rdx + rax));
+        *(r15) = eax;
+    }
+    eax = *(r14);
+    if (eax == 0) {
+        goto label_3;
+    }
+    if (rax >= rcx) {
+        goto label_3;
+    }
+    rdx = *(rsi);
+    r8 = rdx + rax;
+    *((rsi + 0x10)) = rax;
+    if (*(r8) == r12b) {
+        goto label_4;
+    }
+    do {
+        if (rax > rcx) {
+            goto label_5;
+        }
+        rax++;
+    } while (*((rdx + rax)) != r12b);
+label_4:
+    r12 = r8;
+    *((rsi + 0x10)) = rax;
+    ebx = 0;
+label_5:
+    if (ebx >= 0) {
+        if (*((rdi + 0x18)) != 0) {
+            r8 = *(str.ffff40);
+            rdx = "<font color = \"#%s\">";
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+            *((rdi + 0x20))++;
+        }
+        r8 = r12;
+        rdx = 0x180387d88;
+        rcx = rdi;
+        fcn_1800ecdb0 ();
+        if (*((rdi + 0x18)) != 0) {
+            *((rdi + 0x20))--;
+            rdx = "</font>";
+            rcx = rdi;
+            fcn_1800ecdb0 ();
+        }
+        rax = arg_60h;
+        *(rax) = r14;
+    }
+label_3:
+    eax = ebx;
+label_2:
+    r14 = var_48h;
+label_1:
+    rbx = var_18h;
+    rsi = var_20h;
+    return rax;
+}

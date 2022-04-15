@@ -1,0 +1,132 @@
+﻿int64_t fcn_1800f5c30 (int64_t arg_38h, int64_t arg_40h, int64_t arg_48h) {
+    int64_t var_8h;
+    int64_t var_10h;
+    int64_t var_18h;
+    int64_t var_20h;
+    var_8h = rbx;
+    var_10h = rbp;
+    var_18h = rsi;
+    var_20h = rdi;
+    edi = 0;
+    r15d = (int32_t) r9b;
+    r14 = rdx;
+    rbx = rcx;
+    esi = edi;
+    if (r8d == 0) {
+        goto label_2;
+    }
+    r10 = *((rcx + 0x20));
+label_0:
+    if (r10 == 0) {
+        goto label_3;
+    }
+    r9 = *((rbx + 0x28));
+    if (r9 == 0) {
+        goto label_3;
+    }
+    r8d = *((r10 + 0x1c));
+    eax = edi;
+    if (r8d == 0) {
+        goto label_3;
+    }
+    r11d = *(r14);
+    do {
+        ecx = eax;
+        edx = *((r9 + rcx*4));
+        if (*((rdx + r10)) == r11d) {
+            goto label_4;
+        }
+        eax++;
+    } while (eax < r8d);
+label_3:
+    eax = 0xffffffff;
+label_1:
+    esi++;
+    r14 += 4;
+    if (esi < ebp) {
+        goto label_0;
+    }
+    if (eax == 0xffffffff) {
+        goto label_2;
+    }
+    do {
+        if (r10 == 0) {
+            goto label_5;
+        }
+        rcx = *((rbx + 0x28));
+        if (rcx == 0) {
+            goto label_5;
+        }
+        if (*((r10 + 0x1c)) <= eax) {
+            goto label_5;
+        }
+        r8d = eax;
+        rdx = r10 + 8;
+        ecx = *((rcx + r8*4));
+        rdx += rcx;
+        goto label_6;
+label_4:
+    } while (eax != 0xffffffff);
+    goto label_1;
+label_5:
+    rdx = rdi;
+    r8d = eax;
+label_6:
+    rcx = arg_38h;
+    *(rcx) = rdx;
+    rcx = *((rbx + 0x20));
+    if (rcx != 0) {
+        if (*((rbx + 0x28)) != rdi) {
+            if (*((rcx + 0x1c)) <= eax) {
+                goto label_7;
+            }
+            __asm ("lfence");
+            rcx = *((rbx + 0x28));
+            edx = *((rcx + r8*4));
+            rcx = *((rbx + 0x20));
+            r9d = *((rdx + rcx + 4));
+        }
+    } else {
+label_7:
+        r9d = edi;
+    }
+    rcx = arg_40h;
+    *(rcx) = r9d;
+    rcx = *((rbx + 0x20));
+    if (rcx != 0) {
+        if (*((rbx + 0x28)) == rdi) {
+            goto label_8;
+        }
+        if (*((rcx + 0x1c)) <= eax) {
+            goto label_8;
+        }
+        __asm ("lfence");
+        rax = *((rbx + 0x28));
+        ecx = *((rax + r8*4));
+        rax = *((rbx + 0x20));
+        edi = *((rcx + rax));
+    }
+label_8:
+    rax = arg_48h;
+    *(rax) = edi;
+    eax = 0;
+    goto label_9;
+label_2:
+    rax = arg_38h;
+    ecx = 0x80004005;
+    *(rax) = rdi;
+    rax = arg_40h;
+    *(rax) = edi;
+    rax = arg_48h;
+    *(rax) = edi;
+    eax = 1;
+    if (r15b != 0) {
+        eax = ecx;
+    }
+label_9:
+    rbx = var_8h;
+    rsi = var_18h;
+    rdi = var_20h;
+    r14 = r15;
+    return rax;
+}

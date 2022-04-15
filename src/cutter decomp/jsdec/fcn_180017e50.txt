@@ -1,0 +1,20 @@
+﻿int32_t fcn_180017e50 (void) {
+    eax = *(rcx);
+    rbx = rcx;
+    if (eax == 0x35) {
+        rcx = *((rcx + 0x818));
+        eax = o_free ();
+        if (*((rbx + 0x810)) != 4) {
+            goto label_0;
+        }
+        rcx = *((rbx + 0x838));
+    }
+    if (eax == 0x91) {
+        rcx = *((rcx + 0x818));
+    }
+    if (eax == 0x92) {
+        rcx = *((rcx + 0x820));
+    }
+label_0:
+    return eax;
+}

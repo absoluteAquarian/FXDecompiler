@@ -1,0 +1,23 @@
+﻿void fcn_180337f00 (void) {
+    int64_t var_8h;
+    int64_t var_18h;
+    *(rsp) = r10;
+    var_8h = r11;
+    r11 = 0;
+    r10 = &var_18h;
+    r10 -= rax;
+    if (r10 < 0) {
+        r10 = r11;
+    }
+    r11 = *(gs:0x10);
+    __asm ("bnd jae 0x180337f42");
+    r10w &= 0xf000;
+    do {
+        r11 = r11 - 0x1000;
+        *(r11) = 0;
+        __asm ("bnd jne 0x180337f31");
+    } while (1);
+    r10 = *(rsp);
+    r11 = var_8h;
+    __asm ("bnd ret");
+}

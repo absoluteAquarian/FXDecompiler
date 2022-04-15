@@ -1,0 +1,18 @@
+﻿int32_t fcn_1800ee8ec (void) {
+    int64_t var_20h;
+    int64_t var_30h;
+    int64_t var_40h;
+    var_40h = 0;
+    __asm ("xorps xmm0, xmm0");
+    __asm ("movdqu xmmword [var_30h], xmm0");
+    if (rcx == 0) {
+        eax = 0x80004005;
+    } else {
+        r8d = *((rcx + 0x18));
+        r9b = 1;
+        var_20h = rdx;
+        rdx = rcx;
+        fcn_1800ed1b0 (var_30h);
+    }
+    return eax;
+}

@@ -1,0 +1,25 @@
+﻿void fcn_180007890 (void) {
+    int64_t var_8h;
+    var_8h = rbx;
+    rdi = rdx;
+    rbx = rcx;
+    rdx = 0x180383328;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) != 0) {
+        r8 = *(str.a0a0a0);
+        rdx = "<font color = \"#%s\">";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        *((rbx + 0x20))++;
+    }
+    rdx = rdi;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+    if (*((rbx + 0x18)) != 0) {
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+    rbx = var_8h;
+}

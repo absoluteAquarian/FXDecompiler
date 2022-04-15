@@ -1,0 +1,236 @@
+﻿int64_t fcn_180011f80 (void) {
+    int64_t var_20h;
+    int64_t var_30h;
+    int64_t var_38h;
+    int64_t var_80h;
+    int64_t var_88h;
+    uintmax_t var_90h;
+    r11 = rsp;
+    *((r11 + 0x18)) = r8d;
+    rdi = *((rdx + 0xa8));
+    r14 = r9;
+    *((r11 - 0x48)) = 0;
+    *((r11 + 0x10)) = 0;
+    rbx = rcx;
+    sil = 1;
+    if (rdi == 0) {
+        goto label_0;
+    }
+    r9d = *((rdx + 0x3100));
+    rcx = r11 - 0x48;
+    rax = *(rdi);
+    edx = 0;
+    *((r11 - 0x58)) = rcx;
+    rcx = rdi;
+    *((r11 + 8)) = r15;
+    rax = *((rax + 0xf0));
+    r8d = rdx + 1;
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    if (eax < 0) {
+        goto label_1;
+    }
+    rcx = var_30h;
+    r9 = &var_90h;
+    r8 = &var_88h;
+    edx = 1;
+    rax = *(rcx);
+    rax = *((rax + 0x30));
+    eax = uint64_t (*case.0x180337eae.0)() ();
+    if (eax == 0) {
+        if (var_90h == 1) {
+            goto label_2;
+        }
+    }
+    rax = *(rdi);
+    rcx = &var_88h;
+    r8d = *((rbp + 0x3100));
+    r9d = 5;
+    rcx = rdi;
+    rax = *((rax + 0x68));
+    edx = r9 - 4;
+    eax = uint64_t (*case.0x180337eae.0)(uint64_t) (rcx);
+    if (eax < 0) {
+        goto label_1;
+    }
+    if (eax != 0) {
+        rdx = "// <internal error> could not find inner most frame in PDB\n";
+        rcx = rbx;
+        fcn_180007890 ();
+        goto label_1;
+    }
+label_2:
+    r8 = var_88h;
+    if (r8 == 0) {
+        goto label_3;
+    }
+    do {
+        rdx = rbx;
+        rcx = rbp;
+        eax = fcn_180007dc0 ();
+        if (eax < 0) {
+            goto label_1;
+        }
+        rcx = var_88h;
+        rdx = &var_38h;
+        rax = *(rcx);
+        rax = *((rax + 0x30));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        edi = eax;
+        if (eax < 0) {
+            goto label_1;
+        }
+        r8 = var_88h;
+        if (r8 != 0) {
+            rcx = *(r8);
+            rax = *((rcx + 0x10));
+            rcx = r8;
+            uint64_t (*case.0x180337eae.0)() ();
+            r8d = 0;
+            var_88h = r8;
+        }
+        if (edi == 1) {
+            goto label_3;
+        }
+        r8 = var_38h;
+        var_88h = var_38h;
+    } while (r8 != 0);
+label_3:
+    __asm ("movdqa xmm0, xmmword [0x1803ef5b0]");
+    __asm ("movups xmmword [var_38h], xmm0");
+    if (r14 == 0) {
+        r15d = *((rbp + 0x3100));
+    } else {
+        r15d = *((rbp + 0x3104));
+    }
+    ecx = *((rbp + 0x3104));
+    rax = 0x53c8eaedea6e7f17;
+    rdx:rax = rax * rcx;
+    eax = r15d;
+    rax -= rdx;
+    rax >>= 1;
+    rax += rdx;
+    rax >>= 0xa;
+    rax *= 0x607;
+    rcx -= rax;
+    rdi = *((rbp + rcx*8 + 0xb0));
+    if (rdi == 0) {
+        goto label_4;
+    }
+    do {
+        if (r15d == *((rdi + 4))) {
+            if (r14 == 0) {
+                if (sil != 0) {
+                    if (*((rbx + 0x18)) != r14b) {
+                        r8 = *(str.a0a0a0);
+                        rdx = "<font color = \"#%s\">";
+                        rcx = rbx;
+                        fcn_1800ecdb0 ();
+                        *((rbx + 0x20))++;
+                    }
+                    rdx = 0x1803836f8;
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    sil = 0;
+                    rdx = "// Initial variable locations:";
+                } else {
+                    rdx = 0x1803863d0;
+                }
+                rcx = rbx;
+                fcn_1800ecdb0 ();
+                r8 = *((rdi + 0x10));
+                r9 = &var_38h;
+                rdx = rbp;
+                rcx = rbx;
+                eax = fcn_180011c60 ();
+                if (eax < 0) {
+                    goto label_5;
+                }
+            } else {
+                if (sil != 0) {
+                    if (*((rbx + 0x18)) != 0) {
+                        r8 = *(str.a0a0a0);
+                        rdx = "<font color = \"#%s\">";
+                        rcx = rbx;
+                        fcn_1800ecdb0 ();
+                        *((rbx + 0x20))++;
+                    }
+                    rdx = "  // ";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    eax = *(r14);
+                    if (eax != 4) {
+                        if (eax == 6) {
+                            goto label_6;
+                        }
+                        if (eax == 0x12) {
+                            goto label_6;
+                        }
+                        if (eax != 0x78) {
+                            goto label_7;
+                        }
+                    }
+                    rdx = "Post-call locations: ";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+label_7:
+                    sil = 0;
+                    goto label_8;
+label_6:
+                    rdx = "Prior locations: ";
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                    sil = 0;
+                } else {
+                    rdx = 0x1803863d0;
+                    rcx = rbx;
+                    fcn_1800ecdb0 ();
+                }
+label_8:
+                r8 = *((rdi + 0x10));
+                r9d = 0;
+                rdx = rbp;
+                rcx = rbx;
+                eax = fcn_180011c60 ();
+                if (eax < 0) {
+                    goto label_9;
+                }
+            }
+        }
+        rdi = *((rdi + 0x18));
+    } while (rdi != 0);
+    if (sil == 0) {
+label_9:
+        if (r14 == 0) {
+label_5:
+            rdx = 0x180386408;
+            rcx = rbx;
+            fcn_1800ecdb0 ();
+        }
+        if (*((rbx + 0x18)) == 0) {
+            goto label_1;
+        }
+        *((rbx + 0x20))--;
+        rdx = "</font>";
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+    }
+label_1:
+    r8 = var_88h;
+label_4:
+    r15 = var_80h;
+    if (r8 != 0) {
+        rax = *(r8);
+        rcx = r8;
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+        var_88h = 0;
+    }
+    rcx = var_30h;
+    if (rcx != 0) {
+        rax = *(rcx);
+        rax = *((rax + 0x10));
+        uint64_t (*case.0x180337eae.0)() ();
+    }
+label_0:
+    return rax;
+}

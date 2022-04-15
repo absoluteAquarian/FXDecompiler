@@ -1,0 +1,46 @@
+﻿uint64_t fcn_1800f01e0 (uintmax_t arg1, uintmax_t arg2) {
+    int64_t var_8h;
+    int64_t var_10h;
+    rcx = arg1;
+    rdx = arg2;
+    var_8h = rbx;
+    var_10h = rsi;
+    rsi = rcx;
+    rdi = rdx;
+    ecx = 0x20;
+    rax = fcn_18026dcec (rcx);
+    rbx = rax;
+    if (rax != 0) {
+        *((rbx + 0x18)) = 0;
+        rax = 0x180357378;
+        *((rbx + 0x10)) = 0;
+        *(rbx) = rax;
+        *((rbx + 8)) = 1;
+    } else {
+        ebx = 0;
+    }
+    if (rbx == 0) {
+        eax = 0x8007000e;
+    } else {
+        rax = *(rbx);
+        rdx = rsi;
+        rcx = rbx;
+        rax = *((rax + 0x30));
+        eax = uint64_t (*case.0x180337eae.0)() ();
+        esi = eax;
+        if (eax < 0) {
+            r8 = *(rbx);
+            edx = 1;
+            rcx = rbx;
+            rax = *((r8 + 0x28));
+            uint64_t (*case.0x180337eae.0)() ();
+            eax = esi;
+        } else {
+            *(rdi) = rbx;
+            eax = 0;
+        }
+    }
+    rbx = var_8h;
+    rsi = var_10h;
+    return rax;
+}
