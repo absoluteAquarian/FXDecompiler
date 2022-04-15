@@ -1,6 +1,6 @@
 # FXDecompiler
 An application written in C# for decompiling HLSL shader files compiled by [fxcompiler.exe](https://cdn.discordapp.com/attachments/271236615823687680/459821438405181470/fxcompiler.zip).  
-This application was written with decompiling Terraria/tModLoader shaders in mind, though it should still work for any DirectX 3D 9 shaders.  
+This application was written with decompiling Terraria/tModLoader shaders in mind, though it should still work for any XNA shaders.  
 (See the [Expert Shader Guide](https://github.com/tModLoader/tModLoader/wiki/Expert-Shader-Guide) for reference.)
 
 This project also serves as a Reverse Engineering of the `C:/Windows/System32/D3DCompiler_47.dll` (DirectX 3D) library file for C++.  
