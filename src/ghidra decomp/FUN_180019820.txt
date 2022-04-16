@@ -1,0 +1,54 @@
+﻿
+undefined8
+FUN_180019820(uint *param_1,int param_2,undefined8 param_3,longlong param_4,longlong param_5,
+             undefined4 param_6,uint param_7)
+
+{
+  char *pcVar1;
+  ulonglong uVar2;
+  longlong lVar3;
+  
+  lVar3 = param_4;
+  FUN_1800ecc68(param_1,param_2 * 4);
+  FUN_1800ecdb0(param_1,&DAT_180383698,param_3,lVar3);
+  if (1 < *(uint *)(param_5 + 8)) {
+    FUN_1800ecdb0(param_1,&DAT_18038370c,(ulonglong)*(uint *)(param_5 + 8),lVar3);
+  }
+  if (param_4 != 0) {
+    FUN_1800ecdb0(param_1," : %s",param_4,lVar3);
+  }
+  if (param_7 != 0xffffffff) {
+    if (*(int *)(param_5 + 4) == 2) {
+      uVar2 = 0x78;
+      switch(param_6) {
+      case 9:
+      case 10:
+      case 0xb:
+      case 0xc:
+      case 0xd:
+      case 0xe:
+      case 0xf:
+      case 0x10:
+      case 0x11:
+      case 0x16:
+      case 0x17:
+        uVar2 = 0x74;
+        break;
+      case 0x12:
+        uVar2 = 0x62;
+        break;
+      case 0x15:
+        uVar2 = 0x73;
+      }
+      pcVar1 = " : register(%c%u)";
+    }
+    else {
+      uVar2 = (ulonglong)(param_7 >> 4);
+      param_7 = (uint)(char)(&DAT_1803844a0)[param_7 >> 2 & 3];
+      pcVar1 = " : packoffset(c%u.%c)";
+    }
+    FUN_1800ecdb0(param_1,pcVar1,uVar2,(ulonglong)param_7);
+  }
+  return 0;
+}
+

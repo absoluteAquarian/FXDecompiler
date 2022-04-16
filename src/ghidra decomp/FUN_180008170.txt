@@ -1,0 +1,105 @@
+﻿
+char * FUN_180008170(undefined4 param_1,char param_2)
+
+{
+  char *pcVar1;
+  
+  switch(param_1) {
+  case 0:
+    return "void";
+  case 1:
+    return "bool";
+  case 2:
+    return "int";
+  case 3:
+    return "float";
+  case 4:
+    return "string";
+  case 5:
+    return "Texture";
+  case 6:
+    return "Texture1D";
+  case 7:
+    return "Texture2D";
+  case 8:
+    return "Texture3D";
+  case 9:
+    return "TextureCube";
+  case 10:
+    break;
+  case 0xb:
+    return "sampler1D";
+  case 0xc:
+    return "sampler2D";
+  case 0xd:
+    return "sampler3D";
+  case 0xe:
+    return "samplerCUBE";
+  case 0xf:
+    return "PixelShader";
+  case 0x10:
+    return "VertexShader";
+  case 0x11:
+    return "pixelfragment";
+  case 0x12:
+    return "vertexfragment";
+  case 0x13:
+    return "uint";
+  case 0x14:
+    return "byte";
+  case 0x15:
+    return "GeometryShader";
+  case 0x16:
+    return "RasterizerState";
+  case 0x17:
+    return "DepthStencilState";
+  case 0x18:
+    return "BlendState";
+  case 0x19:
+    return "Buffer";
+  default:
+    return "UNKNOWN";
+  case 0x1c:
+    return "Texture1DArray";
+  case 0x1d:
+    return "Texture2DArray";
+  case 0x1e:
+    return "RenderTargetView";
+  case 0x1f:
+    return "DepthStencilView";
+  case 0x20:
+    return "Texture2DMS";
+  case 0x21:
+    return "Texture2DMSArray";
+  case 0x22:
+    return "TextureCubeArray";
+  case 0x23:
+    return "HullShader";
+  case 0x24:
+    return "DomainShader";
+  case 0x25:
+    return "interface";
+  case 0x26:
+    return "ComputeShader";
+  case 0x27:
+    return "double";
+  case 0x34:
+    return "min8float";
+  case 0x35:
+    return "min10float";
+  case 0x36:
+    return "min16float";
+  case 0x37:
+    return "min12int";
+  case 0x38:
+    return "min16int";
+  case 0x39:
+    return "min16uint";
+  }
+  pcVar1 = "SamplerState";
+  if (param_2 != '\0') {
+    pcVar1 = "sampler";
+  }
+  return pcVar1;
+}
+

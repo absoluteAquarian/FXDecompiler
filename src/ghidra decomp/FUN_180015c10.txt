@@ -1,0 +1,36 @@
+﻿
+/* WARNING: Function: _guard_dispatch_icall replaced with injection: guard_dispatch_icall */
+
+int FUN_180015c10(uint *param_1,int param_2,longlong **param_3)
+
+{
+  int iVar1;
+  uint uVar2;
+  void *pvVar3;
+  void *_Dst;
+  
+  if (*param_3 == (longlong *)0x0) {
+    iVar1 = FUN_1800f01e0((ulonglong)(*param_1 + 1),param_3);
+    if (-1 < iVar1) {
+      pvVar3 = (void *)(**(code **)(**param_3 + 0x18))();
+      memcpy(pvVar3,*(void **)(param_1 + 2),(ulonglong)*param_1);
+      *(undefined *)((ulonglong)*param_1 + (longlong)pvVar3) = 0;
+      iVar1 = param_2;
+    }
+  }
+  else {
+    pvVar3 = (void *)(**(code **)(**param_3 + 0x18))();
+    uVar2 = (**(code **)(**param_3 + 0x20))();
+    iVar1 = FUN_1800f01e0((ulonglong)(*param_1 + uVar2),param_3);
+    if (-1 < iVar1) {
+      _Dst = (void *)(**(code **)(**param_3 + 0x18))();
+      memcpy(_Dst,pvVar3,(ulonglong)uVar2);
+      memcpy((void *)((ulonglong)(uVar2 - 1) + (longlong)_Dst),*(void **)(param_1 + 2),
+             (ulonglong)*param_1);
+      *(undefined *)((ulonglong)(*param_1 + uVar2) + (longlong)_Dst) = 0;
+      iVar1 = param_2;
+    }
+  }
+  return iVar1;
+}
+

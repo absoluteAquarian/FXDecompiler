@@ -1,0 +1,151 @@
+﻿
+/* WARNING: Function: _guard_dispatch_icall replaced with injection: guard_dispatch_icall */
+/* WARNING: Removing unreachable block (ram,0x0001800122e1) */
+
+void FUN_180011f80(uint *param_1,longlong param_2,uint param_3,int *param_4)
+
+{
+  longlong *plVar1;
+  bool bVar2;
+  int iVar3;
+  int *piVar4;
+  longlong lVar5;
+  char *pcVar6;
+  char *pcVar7;
+  uint *puVar8;
+  uint uVar9;
+  bool bVar10;
+  longlong *local_res10;
+  uint local_res18 [4];
+  uint local_40;
+  undefined4 uStack60;
+  undefined4 uStack56;
+  undefined4 uStack52;
+  
+  plVar1 = *(longlong **)(param_2 + 0xa8);
+  local_res10 = (longlong *)0x0;
+  bVar2 = true;
+  if (plVar1 == (longlong *)0x0) {
+    return;
+  }
+  local_res18[0] = param_3;
+  iVar3 = (**(code **)(*plVar1 + 0xf0))();
+  if (iVar3 < 0) goto LAB_1800122ae;
+  puVar8 = local_res18;
+  iVar3 = (**(code **)(lRam0000000000000000 + 0x30))();
+  if ((iVar3 != 0) || (local_res18[0] != 1)) {
+    pcVar7 = (char *)(ulonglong)*(uint *)(param_2 + 0x3100);
+    puVar8 = (uint *)0x5;
+    iVar3 = (**(code **)(*plVar1 + 0x68))();
+    if (iVar3 < 0) goto LAB_1800122ae;
+    if (iVar3 != 0) {
+      FUN_180007890(param_1,"// <internal error> could not find inner most frame in PDB\n",pcVar7,
+                    puVar8);
+      goto LAB_1800122ae;
+    }
+  }
+  bVar10 = false;
+  while (bVar10) {
+    piVar4 = FUN_180007dc0(param_2,param_1,local_res10);
+    if (((int)piVar4 < 0) || (iVar3 = (**(code **)(*local_res10 + 0x30))(), iVar3 < 0))
+    goto LAB_1800122ae;
+    if (local_res10 != (longlong *)0x0) {
+      (**(code **)(*local_res10 + 0x10))();
+      local_res10 = (longlong *)0x0;
+    }
+    if (iVar3 == 1) break;
+    local_res10 = (longlong *)CONCAT44(uStack60,local_40);
+    bVar10 = local_res10 != (longlong *)0x0;
+  }
+  local_40 = 0xffffffff;
+  uStack60 = 0xffffffff;
+  uStack56 = 0xffffffff;
+  uStack52 = 0xffffffff;
+  if (param_4 == (int *)0x0) {
+    uVar9 = *(uint *)(param_2 + 0x3100);
+  }
+  else {
+    uVar9 = *(uint *)(param_2 + 0x3104);
+  }
+  lVar5 = SUB168(ZEXT816(0x53c8eaedea6e7f17) * ZEXT816((ulonglong)uVar9) >> 0x40,0);
+  lVar5 = *(longlong *)
+           (param_2 + 0xb0 +
+           ((ulonglong)uVar9 + (((ulonglong)uVar9 - lVar5 >> 1) + lVar5 >> 10) * -0x607) * 8);
+  pcVar7 = (char *)local_res10;
+  if (lVar5 != 0) {
+    do {
+      if (uVar9 == *(uint *)(lVar5 + 4)) {
+        if (param_4 == (int *)0x0) {
+          if (bVar2) {
+            if (*(char *)(param_1 + 6) != '\0') {
+              pcVar7 = "a0a0a0";
+              FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",puVar8);
+              param_1[8] = param_1[8] + 1;
+            }
+            FUN_1800ecdb0(param_1,&DAT_1803836f8,pcVar7,puVar8);
+            bVar2 = false;
+            pcVar6 = "// Initial variable locations:";
+          }
+          else {
+            pcVar6 = "; ";
+          }
+          FUN_1800ecdb0(param_1,pcVar6,pcVar7,puVar8);
+          pcVar7 = *(char **)(lVar5 + 0x10);
+          puVar8 = &local_40;
+          iVar3 = FUN_180011c60(param_1,param_2,(longlong *)pcVar7,puVar8);
+          if (iVar3 < 0) goto LAB_18001227f;
+        }
+        else {
+          if (bVar2) {
+            if (*(char *)(param_1 + 6) != '\0') {
+              pcVar7 = "a0a0a0";
+              FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",puVar8);
+              param_1[8] = param_1[8] + 1;
+            }
+            FUN_1800ecdb0(param_1,"  // ",pcVar7,puVar8);
+            iVar3 = *param_4;
+            if (iVar3 == 4) {
+LAB_18001221b:
+              FUN_1800ecdb0(param_1,"Post-call locations: ",pcVar7,puVar8);
+            }
+            else {
+              if ((iVar3 == 6) || (iVar3 == 0x12)) {
+                FUN_1800ecdb0(param_1,"Prior locations: ",pcVar7,puVar8);
+                bVar2 = false;
+                goto LAB_180012252;
+              }
+              if (iVar3 == 0x78) goto LAB_18001221b;
+            }
+            bVar2 = false;
+          }
+          else {
+            FUN_1800ecdb0(param_1,&DAT_1803863d0,pcVar7,puVar8);
+          }
+LAB_180012252:
+          pcVar7 = *(char **)(lVar5 + 0x10);
+          puVar8 = (uint *)0x0;
+          iVar3 = FUN_180011c60(param_1,param_2,(longlong *)pcVar7,(uint *)0x0);
+          if (iVar3 < 0) goto LAB_18001227a;
+        }
+      }
+      lVar5 = *(longlong *)(lVar5 + 0x18);
+    } while (lVar5 != 0);
+    if (!bVar2) {
+LAB_18001227a:
+      if (param_4 == (int *)0x0) {
+LAB_18001227f:
+        FUN_1800ecdb0(param_1,&DAT_180386408,pcVar7,puVar8);
+      }
+      if (*(char *)(param_1 + 6) != '\0') {
+        param_1[8] = param_1[8] - 1;
+        FUN_1800ecdb0(param_1,"</font>",pcVar7,puVar8);
+      }
+    }
+  }
+LAB_1800122ae:
+  if (local_res10 != (longlong *)0x0) {
+    (**(code **)(*local_res10 + 0x10))();
+  }
+  return;
+}
+

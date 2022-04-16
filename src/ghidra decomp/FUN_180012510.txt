@@ -1,0 +1,43 @@
+﻿
+undefined8 FUN_180012510(uint *param_1,uint param_2,char *param_3,undefined8 param_4)
+
+{
+  if ((param_2 >> 0x10 & 1) != 0) {
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_3 = "ffff40";
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    FUN_1800ecdb0(param_1,&DAT_1803864f4,param_3,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_1[8] = param_1[8] - 1;
+      FUN_1800ecdb0(param_1,"</font>",param_3,param_4);
+    }
+  }
+  if ((param_2 >> 0x17 & 1) != 0) {
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_3 = "ffff40";
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    FUN_1800ecdb0(param_1,&DAT_1803864fc,param_3,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_1[8] = param_1[8] - 1;
+      FUN_1800ecdb0(param_1,"</font>",param_3,param_4);
+    }
+  }
+  if ((param_2 >> 0x11 & 1) != 0) {
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_3 = "ffff40";
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    FUN_1800ecdb0(param_1,&DAT_180386504,param_3,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_1[8] = param_1[8] - 1;
+      FUN_1800ecdb0(param_1,"</font>",param_3,param_4);
+    }
+  }
+  return 0;
+}
+

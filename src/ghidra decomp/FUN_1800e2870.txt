@@ -1,0 +1,63 @@
+﻿
+void FUN_1800e2870(longlong param_1)
+
+{
+  longlong lVar1;
+  ulonglong uVar2;
+  uint uVar3;
+  ulonglong uVar4;
+  
+  _o_free(*(undefined8 *)(param_1 + 0x20));
+  uVar2 = 0;
+  *(undefined8 *)(param_1 + 0x20) = 0;
+  uVar4 = uVar2;
+  if (*(int *)(param_1 + 0x11c) != 0) {
+    do {
+      _o_free(*(undefined8 *)(*(longlong *)(param_1 + 0x110) + uVar4 * 0x30));
+      uVar3 = (int)uVar4 + 1;
+      *(undefined8 *)(*(longlong *)(param_1 + 0x110) + uVar4 * 0x30) = 0;
+      uVar4 = (ulonglong)uVar3;
+    } while (uVar3 < *(uint *)(param_1 + 0x11c));
+  }
+  uVar4 = uVar2;
+  if (*(int *)(param_1 + 0x134) != 0) {
+    do {
+      _o_free(*(undefined8 *)(uVar4 * 0x28 + *(longlong *)(param_1 + 0x128)));
+      uVar3 = (int)uVar4 + 1;
+      *(undefined8 *)(uVar4 * 0x28 + *(longlong *)(param_1 + 0x128)) = 0;
+      uVar4 = (ulonglong)uVar3;
+    } while (uVar3 < *(uint *)(param_1 + 0x134));
+  }
+  uVar4 = uVar2;
+  if (*(int *)(param_1 + 0x14c) != 0) {
+    do {
+      lVar1 = uVar4 * 0x28;
+      _o_free(*(undefined8 *)(*(longlong *)(param_1 + 0x140) + lVar1));
+      uVar3 = (int)uVar4 + 1;
+      uVar4 = (ulonglong)uVar3;
+      *(undefined8 *)(lVar1 + *(longlong *)(param_1 + 0x140)) = 0;
+    } while (uVar3 < *(uint *)(param_1 + 0x14c));
+  }
+  if (*(int *)(param_1 + 0x164) != 0) {
+    do {
+      lVar1 = uVar2 * 0x28;
+      _o_free(*(undefined8 *)(lVar1 + *(longlong *)(param_1 + 0x158)));
+      uVar3 = (int)uVar2 + 1;
+      uVar2 = (ulonglong)uVar3;
+      *(undefined8 *)(lVar1 + *(longlong *)(param_1 + 0x158)) = 0;
+    } while (uVar3 < *(uint *)(param_1 + 0x164));
+  }
+  memset((void *)(param_1 + 0x18),0,0xa0);
+  *(undefined8 *)(param_1 + 0xbc) = 0;
+  *(undefined8 *)(param_1 + 0xc4) = 0;
+  *(undefined4 *)(param_1 + 0xcc) = 0;
+  *(undefined4 *)(param_1 + 0xb8) = 0;
+  *(undefined8 *)(param_1 + 0xd4) = 0;
+  *(undefined4 *)(param_1 + 0xdc) = 0;
+  *(undefined8 *)(param_1 + 0xe0) = 0;
+  *(undefined4 *)(param_1 + 0xe8) = 0;
+  *(undefined8 *)(param_1 + 0xf0) = 0;
+  *(undefined4 *)(param_1 + 0xc) = 0;
+  return;
+}
+

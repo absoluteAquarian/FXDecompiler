@@ -1,0 +1,12 @@
+﻿
+void D3DDisassemble(uint *param_1,undefined *param_2,uint param_3,uint *param_4,longlong **param_5)
+
+{
+  undefined8 in_stack_ffffffffffffffd8;
+  
+                    /* 0x7180  11  D3DDisassemble */
+  FUN_180015f80(param_1,param_2,param_3,param_4,0,0xffffffff,in_stack_ffffffffffffffd8,
+                (ulonglong *)0x0,param_5);
+  return;
+}
+

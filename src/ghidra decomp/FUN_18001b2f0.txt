@@ -1,0 +1,136 @@
+﻿
+int FUN_18001b2f0(uint *param_1,undefined8 param_2,IMAGE_DOS_HEADER *param_3,undefined8 param_4,
+                 uint param_5,longlong *param_6,undefined **param_7)
+
+{
+  ulonglong uVar1;
+  longlong lVar2;
+  int iVar3;
+  uint uVar4;
+  void *pvVar5;
+  char *pcVar6;
+  char cVar7;
+  undefined1 *puVar8;
+  uint uVar9;
+  char *pcVar10;
+  uint uVar11;
+  int iVar12;
+  int iVar13;
+  ulonglong uVar14;
+  undefined8 uVar15;
+  bool bVar16;
+  
+  iVar3 = 0;
+  iVar12 = (int)param_4;
+  iVar13 = 0;
+  if (iVar12 == 2) {
+    uVar15 = 2;
+  }
+  else if (iVar12 == 3) {
+    uVar15 = 1;
+  }
+  else if (iVar12 == 4) {
+    uVar15 = 3;
+  }
+  else {
+    if ((*(int *)&param_3->e_cp != 2) || (iVar12 != 0x15)) {
+      return -0x7fffbffb;
+    }
+    uVar15 = 4;
+  }
+  if (param_5 < 2) goto LAB_18001b3fa;
+  uVar9 = *param_1;
+  pcVar10 = "\n{";
+  if (uVar9 <= uVar9 + 2) {
+    if (param_1[1] < uVar9 + 2) {
+      pvVar5 = (void *)_o_malloc(param_1[1] + 0x802);
+      if (pvVar5 == (void *)0x0) goto LAB_18001b3f4;
+      param_3 = (IMAGE_DOS_HEADER *)(ulonglong)*param_1;
+      memcpy(pvVar5,*(void **)(param_1 + 2),(size_t)param_3);
+      _o_free();
+      param_1[1] = param_1[1] + 0x802;
+      *(void **)(param_1 + 2) = pvVar5;
+      uVar9 = *param_1;
+    }
+    pcVar6 = (char *)((ulonglong)uVar9 + *(longlong *)(param_1 + 2));
+    cVar7 = '\n';
+    do {
+      *pcVar6 = cVar7;
+      pcVar10 = pcVar10 + 1;
+      cVar7 = *pcVar10;
+      pcVar6 = pcVar6 + 1;
+    } while (cVar7 != '\0');
+    *param_1 = *param_1 + 2;
+  }
+LAB_18001b3f4:
+  iVar13 = 1;
+LAB_18001b3fa:
+  FUN_1800ecdb0(param_1,&DAT_180383328,param_3,param_4);
+  uVar9 = 0;
+  if (param_5 != 0) {
+    do {
+      if (uVar9 != 0) {
+        FUN_1800ecdb0(param_1,&DAT_180387ef0,param_3,param_4);
+      }
+      uVar1 = param_6[2];
+      uVar14 = uVar1 + 4;
+      if ((uVar14 < uVar1) || ((ulonglong)param_6[1] <= uVar14 && uVar14 != param_6[1])) {
+        return -0x7fffbffb;
+      }
+      param_6[2] = uVar14;
+      param_3 = (IMAGE_DOS_HEADER *)(ulonglong)*(uint *)(uVar1 + *param_6);
+      param_4 = uVar15;
+      iVar3 = FUN_18001a750(param_1,iVar13,param_3,uVar15,param_6,param_7);
+      if (iVar3 < 0) {
+        return iVar3;
+      }
+      uVar9 = uVar9 + 1;
+    } while (uVar9 < param_5);
+  }
+  if (1 < param_5) {
+    uVar9 = iVar13 * 4 - 4;
+    cVar7 = '\n';
+    pcVar10 = "\n}";
+    uVar11 = iVar13 * 4 - 2;
+    puVar8 = &DAT_180387338;
+    do {
+      if ((cVar7 == '\n') && (bVar16 = uVar9 + uVar11 < uVar11, uVar11 = uVar9 + uVar11, bVar16)) {
+        return iVar3;
+      }
+      cVar7 = puVar8[1];
+      puVar8 = puVar8 + 1;
+    } while (cVar7 != '\0');
+    uVar4 = *param_1;
+    if (uVar4 <= uVar4 + uVar11) {
+      if (param_1[1] < uVar4 + uVar11) {
+        pvVar5 = (void *)_o_malloc(param_1[1] + 0x800 + uVar11);
+        if (pvVar5 == (void *)0x0) {
+          return iVar3;
+        }
+        memcpy(pvVar5,*(void **)(param_1 + 2),(ulonglong)*param_1);
+        _o_free(*(undefined8 *)(param_1 + 2));
+        *(void **)(param_1 + 2) = pvVar5;
+        param_1[1] = param_1[1] + uVar11 + 0x800;
+        uVar4 = *param_1;
+      }
+      lVar2 = *(longlong *)(param_1 + 2);
+      uVar14 = (ulonglong)uVar9;
+      memset((void *)((ulonglong)uVar4 + lVar2),0x20,(ulonglong)uVar9);
+      pcVar6 = (char *)((longlong)(void *)((ulonglong)uVar4 + lVar2) + uVar14);
+      cVar7 = '\n';
+      do {
+        *pcVar6 = cVar7;
+        pcVar6 = pcVar6 + 1;
+        if (*pcVar10 == '\n') {
+          memset(pcVar6,0x20,uVar14);
+          pcVar6 = pcVar6 + uVar14;
+        }
+        cVar7 = pcVar10[1];
+        pcVar10 = pcVar10 + 1;
+      } while (cVar7 != '\0');
+      *param_1 = *param_1 + uVar11;
+    }
+  }
+  return iVar3;
+}
+

@@ -1,0 +1,89 @@
+﻿
+int FUN_180019970(uint *param_1,uint param_2,longlong *param_3,longlong *param_4)
+
+{
+  char cVar1;
+  ulonglong uVar2;
+  ulonglong uVar3;
+  int iVar4;
+  uint uVar5;
+  char *pcVar6;
+  char *pcVar7;
+  
+  pcVar6 = (char *)0x0;
+  uVar2 = param_3[2];
+  uVar3 = uVar2 + 4;
+  if ((uVar2 <= uVar3) && (uVar3 < (ulonglong)param_3[1] || uVar3 == param_3[1])) {
+    param_3[2] = uVar3;
+    if (*(uint *)(uVar2 + *param_3) != 0) {
+      uVar3 = (ulonglong)*(uint *)(uVar2 + *param_3);
+      if (uVar3 < (ulonglong)param_4[1]) {
+        param_4[2] = uVar3;
+        pcVar7 = (char *)(*param_4 + uVar3);
+        cVar1 = *pcVar7;
+        while (cVar1 != '\0') {
+          if ((ulonglong)param_4[1] < uVar3) {
+            iVar4 = -0x7fffbffb;
+            goto LAB_1800199ff;
+          }
+          uVar3 = uVar3 + 1;
+          cVar1 = *(char *)(*param_4 + uVar3);
+        }
+        param_4[2] = uVar3;
+        iVar4 = 0;
+        pcVar6 = pcVar7;
+LAB_1800199ff:
+        if (iVar4 < 0) {
+          return iVar4;
+        }
+        if (param_2 < 2) {
+          FUN_1800ecdb0(param_1," = \"%s\"",pcVar6,pcVar7);
+          return iVar4;
+        }
+        FUN_1800ecdb0(param_1," = { \"%s\"",pcVar6,pcVar7);
+        uVar5 = 1;
+        while( true ) {
+          uVar2 = param_3[2];
+          pcVar6 = (char *)0x0;
+          uVar3 = uVar2 + 4;
+          if ((uVar3 < uVar2) || ((ulonglong)param_3[1] <= uVar3 && uVar3 != param_3[1])) break;
+          param_3[2] = uVar3;
+          if (*(uint *)(uVar2 + *param_3) == 0) {
+            return -0x7fffbffb;
+          }
+          uVar3 = (ulonglong)*(uint *)(uVar2 + *param_3);
+          if ((ulonglong)param_4[1] <= uVar3) {
+            return -0x7fffbffb;
+          }
+          pcVar7 = (char *)(*param_4 + uVar3);
+          param_4[2] = uVar3;
+          cVar1 = *pcVar7;
+          while (cVar1 != '\0') {
+            if ((ulonglong)param_4[1] < uVar3) {
+              iVar4 = -0x7fffbffb;
+              goto LAB_180019a8e;
+            }
+            uVar3 = uVar3 + 1;
+            cVar1 = *(char *)(*param_4 + uVar3);
+          }
+          param_4[2] = uVar3;
+          iVar4 = 0;
+          pcVar6 = pcVar7;
+LAB_180019a8e:
+          if (iVar4 < 0) {
+            return iVar4;
+          }
+          pcVar7 = pcVar6;
+          FUN_1800ecdb0(param_1,", \"%s\"",pcVar6,pcVar6);
+          uVar5 = uVar5 + 1;
+          if (param_2 <= uVar5) {
+            FUN_1800ecdb0(param_1,&DAT_180386bd4,pcVar6,pcVar7);
+            return iVar4;
+          }
+        }
+      }
+    }
+  }
+  return -0x7fffbffb;
+}
+

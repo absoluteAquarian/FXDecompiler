@@ -1,0 +1,38 @@
+﻿
+/* WARNING: Function: _guard_dispatch_icall replaced with injection: guard_dispatch_icall */
+
+int FUN_180010f00(uint *param_1,longlong *param_2,longlong **param_3,undefined8 param_4)
+
+{
+  int iVar1;
+  int iVar2;
+  longlong **pplVar3;
+  int local_res10;
+  longlong *local_res20;
+  
+  local_res20 = (longlong *)0x0;
+  pplVar3 = param_3;
+  iVar1 = (**(code **)(*param_2 + 0x20))();
+  if (-1 < iVar1) {
+    if (local_res10 == 0x11) {
+      iVar2 = (**(code **)(*param_2 + 0x40))();
+      if (iVar2 == 0) {
+        *param_3 = (longlong *)0x0;
+        return iVar1;
+      }
+      FUN_180007890(param_1,"// <internal error> unable to get typedef type from PDB\n",
+                    (char *)pplVar3,param_4);
+      iVar1 = -0x7fffbffb;
+    }
+    else {
+      local_res20 = *param_3;
+      *param_3 = param_2;
+      iVar1 = (**(code **)(*param_2 + 8))();
+    }
+  }
+  if (local_res20 != (longlong *)0x0) {
+    (**(code **)(*local_res20 + 0x10))();
+  }
+  return iVar1;
+}
+

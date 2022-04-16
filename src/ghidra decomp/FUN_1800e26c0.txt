@@ -1,0 +1,36 @@
+﻿
+undefined8 FUN_1800e26c0(longlong param_1,uint param_2,char *param_3,void **param_4)
+
+{
+  longlong lVar1;
+  char *pcVar2;
+  longlong lVar3;
+  void *_Dst;
+  char *_Src;
+  
+  _Src = (char *)((ulonglong)param_2 + param_1);
+  pcVar2 = _Src;
+  while( true ) {
+    if (param_3 <= pcVar2) {
+      return 0x80004005;
+    }
+    if (*pcVar2 == '\0') break;
+    pcVar2 = pcVar2 + 1;
+  }
+  if (param_3 <= pcVar2) {
+    return 0x80004005;
+  }
+  lVar1 = -1;
+  do {
+    lVar3 = lVar1;
+    lVar1 = lVar3 + 1;
+  } while (_Src[lVar3 + 1] != '\0');
+  _Dst = (void *)thunk_FUN_18026dcec(lVar3 + 2U);
+  *param_4 = _Dst;
+  if (_Dst != (void *)0x0) {
+    memcpy(_Dst,_Src,lVar3 + 2U);
+    return 0;
+  }
+  return 0x8007000e;
+}
+

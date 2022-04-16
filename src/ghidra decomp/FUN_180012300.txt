@@ -1,0 +1,34 @@
+﻿
+char * FUN_180012300(undefined4 param_1)
+
+{
+  switch(param_1) {
+  case 1:
+    return "buffer";
+  case 2:
+    return "texture1d";
+  case 3:
+    return "texture2d";
+  case 4:
+    return "texture2dms";
+  case 5:
+    return "texture3d";
+  case 6:
+    return "texturecube";
+  case 7:
+    return "texture1darray";
+  case 8:
+    return "texture2darray";
+  case 9:
+    return "texture2dmsarray";
+  case 10:
+    return "texturecubearray";
+  case 0xb:
+    return "raw_buffer";
+  case 0xc:
+    return "structured_buffer";
+  default:
+    return "<unknown dimension>";
+  }
+}
+

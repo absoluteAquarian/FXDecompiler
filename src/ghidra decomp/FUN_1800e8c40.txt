@@ -1,0 +1,218 @@
+﻿
+char * FUN_1800e8c40(uint param_1)
+
+{
+  uint uVar1;
+  
+  uVar1 = param_1 & 0xfff00000;
+  if (uVar1 < 0x20500001) {
+    if (uVar1 == 0x20500000) {
+      return "mul";
+    }
+    if (uVar1 < 0x13000001) {
+      if (uVar1 == 0x13000000) {
+        return "itof";
+      }
+      if (uVar1 < 0x10800001) {
+        if (uVar1 == 0x10800000) {
+          return "sin";
+        }
+        if (uVar1 == 0x10000000) {
+          return "mov";
+        }
+        if (uVar1 == 0x10100000) {
+          return "neg";
+        }
+        if (uVar1 == 0x10300000) {
+          return "rcp";
+        }
+        if (uVar1 == 0x10400000) {
+          return "frc";
+        }
+        if (uVar1 == 0x10500000) {
+          return "exp";
+        }
+        if (uVar1 == 0x10600000) {
+          return "log";
+        }
+        if (uVar1 == 0x10700000) {
+          return "rsq";
+        }
+      }
+      else {
+        if (uVar1 == 0x10900000) {
+          return "cos";
+        }
+        if (uVar1 == 0x10a00000) {
+          return "asin";
+        }
+        if (uVar1 == 0x10b00000) {
+          return "acos";
+        }
+        if (uVar1 == 0x10c00000) {
+          return "atan";
+        }
+        if (uVar1 == 0x11200000) {
+          return "sqrt";
+        }
+        if (uVar1 == 0x12000000) {
+          return "ineg";
+        }
+        if (uVar1 == 0x12100000) {
+          return "not";
+        }
+      }
+    }
+    else if (uVar1 < 0x13800001) {
+      if (uVar1 == 0x13800000) {
+        return "round";
+      }
+      if (uVar1 == 0x13100000) {
+        return "utof";
+      }
+      if (uVar1 == 0x13200000) {
+        return "ftoi";
+      }
+      if (uVar1 == 0x13300000) {
+        return "ftou";
+      }
+      if (uVar1 == 0x13400000) {
+        return "btof";
+      }
+      if (uVar1 == 0x13500000) {
+        return "btoi";
+      }
+      if (uVar1 == 0x13600000) {
+        return "itob";
+      }
+      if (uVar1 == 0x13700000) {
+        return "ftob";
+      }
+    }
+    else {
+      if (uVar1 == 0x13900000) {
+        return "floor";
+      }
+      if (uVar1 == 0x13a00000) {
+        return "ceil";
+      }
+      if (uVar1 == 0x20000000) {
+        return "min";
+      }
+      if (uVar1 == 0x20100000) {
+        return "max";
+      }
+      if (uVar1 == 0x20200000) {
+        return "lt";
+      }
+      if (uVar1 == 0x20300000) {
+        return "ge";
+      }
+      if (uVar1 == 0x20400000) {
+        return "add";
+      }
+    }
+  }
+  else if (uVar1 < 0x21e00001) {
+    if (uVar1 == 0x21e00000) {
+      return "imax";
+    }
+    if (uVar1 < 0x21500001) {
+      if (uVar1 == 0x21500000) {
+        return "bult";
+      }
+      if (uVar1 == 0x20600000) {
+        return "atan2";
+      }
+      if (uVar1 == 0x20800000) {
+        return "div";
+      }
+      if (uVar1 == 0x21000000) {
+        return "bilt";
+      }
+      if (uVar1 == 0x21100000) {
+        return "bige";
+      }
+      if (uVar1 == 0x21200000) {
+        return "bieq";
+      }
+      if (uVar1 == 0x21300000) {
+        return "bine";
+      }
+      if (uVar1 == 0x21400000) {
+        return "buge";
+      }
+    }
+    else {
+      if (uVar1 == 0x21600000) {
+        return "iadd";
+      }
+      if (uVar1 == 0x21700000) {
+        return "idiv";
+      }
+      if (uVar1 == 0x21900000) {
+        return "imul";
+      }
+      if (uVar1 == 0x21a00000) {
+        return "udiv";
+      }
+      if (uVar1 == 0x21b00000) {
+        return "umod";
+      }
+      if (uVar1 == 0x21c00000) {
+        return "umul";
+      }
+      if (uVar1 == 0x21d00000) {
+        return "imin";
+      }
+    }
+  }
+  else if (uVar1 < 0x23600001) {
+    if (uVar1 == 0x23600000) {
+      return "ushr";
+    }
+    if (uVar1 == 0x21f00000) {
+      return "umin";
+    }
+    if (uVar1 == 0x22000000) {
+      return "umax";
+    }
+    if (uVar1 == 0x23000000) {
+      return "and";
+    }
+    if (uVar1 == 0x23100000) {
+      return "or";
+    }
+    if (uVar1 == 0x23300000) {
+      return "xor";
+    }
+    if (uVar1 == 0x23400000) {
+      return "ishl";
+    }
+    if (uVar1 == 0x23500000) {
+      return "ishr";
+    }
+  }
+  else {
+    if (uVar1 == 0x30000000) {
+      return "cmp";
+    }
+    if (uVar1 == 0x30100000) {
+      return "movc";
+    }
+    if (uVar1 == 0x50000000) {
+      return "dot";
+    }
+    if (uVar1 == 0x50200000) {
+      return "noise";
+    }
+    if (uVar1 == 0x70e00000) {
+      return "d3ds_dotswiz";
+    }
+    if (uVar1 == 0x71100000) {
+      return "d3ds_noiseswiz";
+    }
+  }
+  return "<unknown>";
+}
+

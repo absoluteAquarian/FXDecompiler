@@ -1,0 +1,22 @@
+﻿
+undefined8
+FUN_180018000(longlong param_1,longlong param_2,undefined8 param_3,undefined8 param_4,
+             undefined8 param_5)
+
+{
+  ulonglong uVar1;
+  int iVar2;
+  
+  uVar1 = param_2 - 1;
+  iVar2 = FUN_18026f188(param_1,uVar1,param_4,param_5);
+  if ((-1 < iVar2) && ((ulonglong)(longlong)iVar2 <= uVar1)) {
+    if ((longlong)iVar2 == uVar1) {
+      *(undefined *)(uVar1 + param_1) = 0;
+      return 0;
+    }
+    return 0;
+  }
+  *(undefined *)(uVar1 + param_1) = 0;
+  return 0x8007007a;
+}
+

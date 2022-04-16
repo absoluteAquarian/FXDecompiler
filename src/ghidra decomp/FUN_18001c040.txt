@@ -1,0 +1,167 @@
+﻿
+uint FUN_18001c040(uint *param_1,int param_2,IMAGE_DOS_HEADER *param_3,undefined **param_4,
+                  uint param_5)
+
+{
+  ulonglong uVar1;
+  char cVar2;
+  ulonglong uVar3;
+  longlong lVar4;
+  uint uVar5;
+  undefined *puVar6;
+  char *pcVar7;
+  uint uVar8;
+  uint *puVar9;
+  IMAGE_DOS_HEADER *pIVar10;
+  char *pcVar11;
+  undefined **ppuVar12;
+  uint uVar13;
+  uint local_34;
+  char *local_30;
+  
+  uVar5 = 0;
+  if (param_5 != 0) {
+    uVar8 = param_2 * 4;
+    pIVar10 = param_3;
+    ppuVar12 = param_4;
+    FUN_1800ecc68(param_1,uVar8);
+    FUN_1800ecdb0(param_1,&DAT_1803836f8,pIVar10,ppuVar12);
+    FUN_1800ecc68(param_1,uVar8);
+    pcVar11 = (char *)(ulonglong)param_5;
+    FUN_1800ecdb0(param_1,"// %u technique(s)\n",pcVar11,ppuVar12);
+    FUN_1800ecc68(param_1,uVar8);
+    FUN_1800ecdb0(param_1,&DAT_1803836f8,pcVar11,ppuVar12);
+    local_34 = 0;
+    if (param_5 != 0) {
+      while( true ) {
+        uVar3 = *(ulonglong *)&param_3->e_sp;
+        uVar1 = uVar3 + 8;
+        if ((uVar1 < uVar3) ||
+           (*(ulonglong *)&param_3->e_cparhdr <= uVar1 && uVar1 != *(ulonglong *)&param_3->e_cparhdr
+           )) break;
+        puVar9 = (uint *)(*(longlong *)param_3 + uVar3);
+        *(ulonglong *)&param_3->e_sp = uVar1;
+        if (*(char *)(param_1 + 6) != '\0') {
+          pcVar11 = "ffff40";
+          FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",ppuVar12);
+          param_1[8] = param_1[8] + 1;
+        }
+        FUN_1800ecc68(param_1,uVar8);
+        pcVar7 = "technique10";
+        if (param_2 != 0) {
+          pcVar7 = "technique11";
+        }
+        FUN_1800ecdb0(param_1,pcVar7,pcVar11,ppuVar12);
+        if (*(char *)(param_1 + 6) != '\0') {
+          param_1[8] = param_1[8] - 1;
+          FUN_1800ecdb0(param_1,"</font>",pcVar11,ppuVar12);
+        }
+        puVar6 = (undefined *)(ulonglong)*puVar9;
+        if (*puVar9 != 0) {
+          if (param_4[1] <= puVar6) break;
+          pcVar11 = *param_4 + (longlong)puVar6;
+          param_4[2] = puVar6;
+          cVar2 = *pcVar11;
+          while (cVar2 != '\0') {
+            if (param_4[1] < puVar6) {
+              uVar5 = 0x80004005;
+              goto LAB_18001c1ad;
+            }
+            puVar6 = puVar6 + 1;
+            cVar2 = (*param_4)[(longlong)puVar6];
+          }
+          param_4[2] = puVar6;
+          uVar5 = 0;
+          local_30 = pcVar11;
+LAB_18001c1ad:
+          if ((int)uVar5 < 0) {
+            return uVar5;
+          }
+          FUN_1800ecdb0(param_1,&DAT_180383708,local_30,ppuVar12);
+        }
+        pcVar11 = param_3->e_magic;
+        ppuVar12 = param_4;
+        uVar5 = FUN_180019b10(param_1,param_2,(longlong *)param_3,(longlong *)param_4);
+        if ((int)uVar5 < 0) {
+          return uVar5;
+        }
+        FUN_1800ecdb0(param_1,&DAT_180383328,pcVar11,ppuVar12);
+        FUN_1800ecc68(param_1,uVar8);
+        FUN_1800ecdb0(param_1,&DAT_1803836e0,pcVar11,ppuVar12);
+        uVar13 = 0;
+        if (puVar9[1] != 0) {
+          do {
+            uVar3 = *(ulonglong *)&param_3->e_sp;
+            uVar1 = uVar3 + 8;
+            if ((uVar1 < uVar3) ||
+               (*(ulonglong *)&param_3->e_cparhdr <= uVar1 &&
+                uVar1 != *(ulonglong *)&param_3->e_cparhdr)) goto LAB_18001c3b7;
+            lVar4 = *(longlong *)param_3;
+            *(ulonglong *)&param_3->e_sp = uVar1;
+            FUN_1800ecc68(param_1,uVar8 + 4);
+            if (*(char *)(param_1 + 6) != '\0') {
+              pcVar11 = "ffff40";
+              FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",ppuVar12);
+              param_1[8] = param_1[8] + 1;
+            }
+            FUN_1800ecdb0(param_1,&DAT_180387f5c,pcVar11,ppuVar12);
+            if (*(char *)(param_1 + 6) != '\0') {
+              param_1[8] = param_1[8] - 1;
+              FUN_1800ecdb0(param_1,"</font>",pcVar11,ppuVar12);
+            }
+            uVar5 = *(uint *)(lVar4 + uVar3);
+            puVar6 = (undefined *)(ulonglong)uVar5;
+            if (uVar5 != 0) {
+              if (param_4[1] <= puVar6) goto LAB_18001c3b7;
+              pcVar11 = *param_4 + (longlong)puVar6;
+              param_4[2] = puVar6;
+              cVar2 = *pcVar11;
+              while (cVar2 != '\0') {
+                if (param_4[1] < puVar6) {
+                  uVar5 = 0x80004005;
+                  goto LAB_18001c2db;
+                }
+                puVar6 = puVar6 + 1;
+                cVar2 = (*param_4)[(longlong)puVar6];
+              }
+              param_4[2] = puVar6;
+              uVar5 = 0;
+              local_30 = pcVar11;
+LAB_18001c2db:
+              if ((int)uVar5 < 0) {
+                return uVar5;
+              }
+              FUN_1800ecdb0(param_1,&DAT_180383708,local_30,ppuVar12);
+            }
+            pIVar10 = param_3;
+            ppuVar12 = param_4;
+            uVar5 = FUN_180019b10(param_1,param_2 + 1,(longlong *)param_3,(longlong *)param_4);
+            if ((int)uVar5 < 0) {
+              return uVar5;
+            }
+            FUN_1800ecdb0(param_1,&DAT_180383328,pIVar10,ppuVar12);
+            pcVar11 = (char *)(ulonglong)((uint *)(lVar4 + uVar3))[1];
+            ppuVar12 = (undefined **)0x5;
+            uVar5 = FUN_18001a750(param_1,param_2 + 1,(IMAGE_DOS_HEADER *)pcVar11,5,
+                                  (longlong *)param_3,param_4);
+            if ((int)uVar5 < 0) {
+              return uVar5;
+            }
+            FUN_1800ecdb0(param_1,&DAT_180387f64,pcVar11,ppuVar12);
+            uVar13 = uVar13 + 1;
+          } while (uVar13 < puVar9[1]);
+        }
+        FUN_1800ecc68(param_1,uVar8);
+        FUN_1800ecdb0(param_1,&DAT_180387414,pcVar11,ppuVar12);
+        local_34 = local_34 + 1;
+        if (param_5 <= local_34) {
+          return uVar5;
+        }
+      }
+LAB_18001c3b7:
+      uVar5 = 0x80004005;
+    }
+  }
+  return uVar5;
+}
+

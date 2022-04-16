@@ -1,0 +1,41 @@
+﻿
+int FUN_1800790f0(char *param_1,longlong param_2,longlong param_3)
+
+{
+  char *pcVar1;
+  longlong lVar2;
+  longlong lVar3;
+  int iVar4;
+  
+  iVar4 = 0;
+  if (0x7ffffffe < param_2 - 1U) {
+    iVar4 = -0x7ff8ffa9;
+  }
+  if (iVar4 < 0) {
+    if (param_2 != 0) {
+      *param_1 = '\0';
+    }
+    return iVar4;
+  }
+  if (param_2 != 0) {
+    lVar3 = 0x7ffffffe - param_2;
+    lVar2 = param_3 - (longlong)param_1;
+    do {
+      if ((lVar3 + param_2 == 0) || (param_1[lVar2] == '\0')) break;
+      *param_1 = param_1[lVar2];
+      param_1 = param_1 + 1;
+      param_2 = param_2 + -1;
+    } while (param_2 != 0);
+  }
+  pcVar1 = param_1 + -1;
+  if (param_2 != 0) {
+    pcVar1 = param_1;
+  }
+  *pcVar1 = '\0';
+  iVar4 = -0x7ff8ff86;
+  if (param_2 != 0) {
+    iVar4 = 0;
+  }
+  return iVar4;
+}
+

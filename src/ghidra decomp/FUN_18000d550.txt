@@ -1,0 +1,114 @@
+﻿
+ulonglong FUN_18000d550(uint *param_1,uint *param_2,ulonglong param_3)
+
+{
+  uint uVar1;
+  ulonglong uVar2;
+  ulonglong uVar3;
+  uint *puVar4;
+  ulonglong uVar5;
+  undefined8 uVar6;
+  char *pcVar7;
+  uint uVar8;
+  uint **ppuVar9;
+  uint *local_res10;
+  uint *local_res18;
+  
+  if ((param_2 != (uint *)0x0) && (3 < param_3)) {
+    uVar1 = *param_2 & 0xffff0000;
+    if ((((uVar1 == 0x7ffe0000) ||
+         ((((uVar1 == 0x46580000 || (uVar1 == 0x4c500000)) || (uVar1 == 0x4c560000)) ||
+          ((uVar1 == 0x54580000 || (uVar1 == 0x7fff0000)))))) || (uVar1 == 0xfffe0000)) ||
+       (uVar1 == 0xffff0000)) {
+      puVar4 = param_2 + 1;
+      uVar2 = param_3 - 4;
+      while (3 < uVar2) {
+        uVar1 = *puVar4;
+        uVar3 = uVar2 - 4;
+        if (-1 < (int)uVar1) {
+          uVar8 = uVar1 & 0xffff;
+          if (uVar8 == 0xffff) {
+            return 0;
+          }
+          if (uVar8 == 0xfffe) {
+            uVar1 = uVar1 >> 0x10 & 0x7fff;
+            if (uVar3 >> 2 < (ulonglong)uVar1) {
+              return 0;
+            }
+            if ((1 < uVar1) && (puVar4[1] == 0x53455250)) {
+              uVar1 = uVar1 * 4 - 4;
+              ppuVar9 = &local_res18;
+              pcVar7 = (char *)(puVar4 + 2);
+              uVar6 = 0x434c5846;
+              uVar5 = (ulonglong)uVar1;
+              uVar2 = FUN_18000a3c0((uint *)pcVar7,(ulonglong)uVar1,0x434c5846,ppuVar9,(int *)0x0);
+              uVar3 = uVar2 & 0xffffffff;
+              if (((int)uVar2 < 0) || ((int)uVar2 == 1)) {
+                FUN_1800ecdb0(param_1,"Error: Texture shader assembly not found!",uVar6,ppuVar9);
+                if ((int)uVar3 == 1) {
+                  uVar3 = 0x80004005;
+                }
+              }
+              else {
+                ppuVar9 = &local_res10;
+                uVar6 = 0x54494c43;
+                uVar2 = FUN_18000a3c0((uint *)pcVar7,uVar5,0x54494c43,ppuVar9,(int *)0x0);
+                uVar3 = uVar2 & 0xffffffff;
+                if ((int)uVar2 < 0) {
+                  FUN_1800ecdb0(param_1,"Error: Error getting texture shader literal block.",uVar6,
+                                ppuVar9);
+                }
+                else {
+                  if (*(char *)(param_1 + 6) != '\0') {
+                    FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",ppuVar9);
+                    param_1[8] = param_1[8] + 1;
+                  }
+                  FUN_18000bb70(param_1,(uint *)0x0,(uint *)pcVar7,uVar5);
+                  if (*(char *)(param_1 + 6) != '\0') {
+                    param_1[8] = param_1[8] - 1;
+                    FUN_1800ecdb0(param_1,"</font>",pcVar7,uVar5);
+                    if (*(char *)(param_1 + 6) != '\0') {
+                      pcVar7 = "ffff40";
+                      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",uVar5);
+                      param_1[8] = param_1[8] + 1;
+                    }
+                  }
+                  FUN_1800ecdb0(param_1,"    preshader\n",pcVar7,uVar5);
+                  if (*(char *)(param_1 + 6) != '\0') {
+                    param_1[8] = param_1[8] - 1;
+                    FUN_1800ecdb0(param_1,"</font>",pcVar7,uVar5);
+                  }
+                  uVar3 = FUN_18000aef0(param_1,local_res18,local_res10,(undefined *)0x0);
+                }
+              }
+              return uVar3;
+            }
+            puVar4 = puVar4 + uVar1;
+            uVar3 = uVar3 + (ulonglong)uVar1 * -4;
+          }
+          else if ((ushort)*param_2 < 0x200) {
+            if (uVar8 == 0x51) {
+              if ((uVar3 & 0xfffffffffffffffc) < 0x14) {
+                return 0;
+              }
+              puVar4 = puVar4 + 5;
+              uVar3 = uVar2 - 0x18;
+            }
+          }
+          else {
+            uVar1 = uVar1 >> 0x18 & 0xf;
+            if (uVar3 >> 2 < (ulonglong)uVar1) {
+              return 0;
+            }
+            puVar4 = puVar4 + uVar1;
+            uVar3 = uVar3 + (ulonglong)uVar1 * -4;
+          }
+        }
+        puVar4 = puVar4 + 1;
+        uVar2 = uVar3;
+      }
+    }
+  }
+  return 0;
+}
+

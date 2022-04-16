@@ -1,0 +1,24 @@
+﻿
+void FUN_18000b390(uint *param_1,int param_2,undefined8 param_3,undefined8 param_4)
+
+{
+  if (param_2 == 1) {
+    FUN_1800ecdb0(param_1,&DAT_180384470,param_3,param_4);
+    return;
+  }
+  if (param_2 == 2) {
+    FUN_1800ecdb0(param_1,&DAT_180384468,param_3,param_4);
+    return;
+  }
+  if (param_2 == 4) {
+    FUN_1800ecdb0(param_1,"min16i",param_3,param_4);
+    return;
+  }
+  if (param_2 != 5) {
+    FUN_1800ecdb0(param_1,&DAT_180384860,param_3,param_4);
+    return;
+  }
+  FUN_1800ecdb0(param_1,"min16u",param_3,param_4);
+  return;
+}
+

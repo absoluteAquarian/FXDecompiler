@@ -1,0 +1,37 @@
+﻿
+void FUN_1800ecdb0(uint *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+
+{
+  longlong lVar1;
+  uint uVar2;
+  ulonglong uVar3;
+  undefined8 local_res18;
+  undefined8 local_res20;
+  undefined auStack584 [32];
+  char local_228 [511];
+  undefined local_29;
+  ulonglong local_28;
+  ulonglong uVar4;
+  
+  local_28 = DAT_180426020 ^ (ulonglong)auStack584;
+  local_res18 = param_3;
+  local_res20 = param_4;
+  uVar2 = FUN_18026f188(local_228,0x1ff,param_2,&local_res18);
+  if ((-1 < (int)uVar2) && (uVar2 < 0x200)) {
+    if (uVar2 == 0x1ff) {
+      local_29 = 0;
+    }
+    uVar4 = 0xffffffffffffffff;
+    do {
+      uVar3 = uVar4 + 1;
+      lVar1 = uVar4 + 1;
+      uVar4 = uVar3;
+    } while (local_228[lVar1] != '\0');
+    if (*param_1 <= *param_1 + (int)uVar3) {
+      FUN_1800ecbc4(param_1,local_228,uVar3);
+    }
+  }
+  FUN_18026e150(local_28 ^ (ulonglong)auStack584);
+  return;
+}
+

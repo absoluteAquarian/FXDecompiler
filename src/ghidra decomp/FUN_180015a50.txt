@@ -1,0 +1,65 @@
+﻿
+undefined8
+FUN_180015a50(uint *param_1,undefined8 param_2,char *param_3,ulonglong param_4,uint param_5,
+             uint param_6,undefined8 *param_7)
+
+{
+  int iVar1;
+  longlong lVar2;
+  char *pcVar3;
+  char *pcVar4;
+  
+  if (((param_3 == (char *)0x0) || (0xffffffff < param_4)) || (param_7 == (undefined8 *)0x0)) {
+    return 0x8876086c;
+  }
+  if ((param_5 & ~param_6) != 0) {
+    return 0x8876086c;
+  }
+  *param_7 = 0;
+  lVar2 = _o_getenv("D3DCOMPILER_DISASSEMBLY_FORCE_HEX_LITERALS");
+  if ((lVar2 != 0) || ((char)(byte)param_5 < '\0')) {
+    lVar2 = 1;
+  }
+  DAT_180427990 = (undefined)lVar2;
+  *(byte *)(param_1 + 6) = (byte)param_5 & 1;
+  *(byte *)((longlong)param_1 + 0x19) = (byte)(param_5 >> 1) & 1;
+  *(byte *)((longlong)param_1 + 0x1a) = (byte)(param_5 >> 2) & 1;
+  *(byte *)((longlong)param_1 + 0x1b) = (byte)(param_5 >> 3) & 1;
+  *(byte *)(param_1 + 7) = (byte)(param_5 >> 5) & 1;
+  *(byte *)((longlong)param_1 + 0x1d) = (byte)(param_5 >> 4) & 1;
+  *(byte *)((longlong)param_1 + 0x1e) = (byte)(param_5 >> 6) & 1;
+  pcVar3 = (char *)_o_setlocale(4);
+  if ((*pcVar3 != 'C') || (pcVar3[1] != '\0')) {
+    lVar2 = 0x7fffffff;
+    pcVar4 = pcVar3;
+    do {
+      if (*pcVar4 == '\0') break;
+      pcVar4 = pcVar4 + 1;
+      lVar2 = lVar2 + -1;
+    } while (lVar2 != 0);
+    if (lVar2 == 0) {
+      param_3 = (char *)0x0;
+    }
+    else {
+      param_3 = (char *)(-lVar2 + 0x7fffffff);
+      lVar2 = -lVar2 + 0x80000000;
+      pcVar4 = (char *)_o_malloc(lVar2);
+      *(char **)(param_1 + 4) = pcVar4;
+      if ((pcVar4 != (char *)0x0) &&
+         (iVar1 = FUN_1800790f0(pcVar4,lVar2,(longlong)pcVar3), param_3 = pcVar3, -1 < iVar1)) {
+        _o_setlocale(4,&DAT_1803af518);
+        param_3 = pcVar3;
+        goto LAB_180015bcc;
+      }
+    }
+    _o_free(*(undefined8 *)(param_1 + 4));
+    *(undefined8 *)(param_1 + 4) = 0;
+  }
+LAB_180015bcc:
+  if (*(char *)(param_1 + 6) != '\0') {
+    FUN_1800ecdb0(param_1,"<pre>",param_3,param_4);
+    FUN_1800ecdb0(param_1,"<body bgcolor=\"#000000\">",param_3,param_4);
+  }
+  return 0;
+}
+

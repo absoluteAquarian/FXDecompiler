@@ -1,0 +1,267 @@
+﻿
+void FUN_180010940(uint *param_1,longlong param_2,char *param_3)
+
+{
+  uint uVar1;
+  uint *puVar2;
+  code *pcVar3;
+  uint *puVar4;
+  uint uVar5;
+  uint uVar6;
+  ulonglong uVar7;
+  ulonglong uVar8;
+  char *pcVar9;
+  uint uVar10;
+  char *pcVar11;
+  longlong lVar12;
+  uint *puVar13;
+  uint uVar14;
+  ulonglong uVar15;
+  undefined auStack808 [32];
+  int local_308;
+  uint local_300;
+  char local_2f8;
+  char local_2f7;
+  undefined2 local_2f4;
+  uint local_2f0;
+  uint local_2ec;
+  undefined8 local_2e8;
+  uint *local_2e0;
+  longlong local_2d8;
+  longlong local_2d0;
+  longlong local_2c8;
+  uint *local_2c0;
+  longlong local_2b8;
+  undefined8 local_2b0;
+  undefined8 local_2a8;
+  undefined8 local_2a0;
+  undefined8 local_298;
+  undefined8 local_290;
+  undefined8 local_288;
+  undefined8 local_280;
+  undefined8 local_278;
+  uint auStack624 [10];
+  undefined local_248 [512];
+  ulonglong local_48;
+  
+  local_48 = DAT_180426020 ^ (ulonglong)auStack808;
+  puVar2 = *(uint **)(param_2 + 0x60);
+  uVar14 = (uint)param_3;
+  uVar10 = puVar2[7];
+  uVar1 = *puVar2;
+  lVar12 = (longlong)puVar2 + (ulonglong)puVar2[8] + (ulonglong)uVar1;
+  uVar5 = uVar14 + 1;
+  if (uVar10 <= uVar14 + 1) {
+    uVar5 = uVar10;
+  }
+  uVar7 = (ulonglong)uVar5;
+  do {
+    uVar6 = uVar14;
+    if (uVar5 == 0) break;
+    uVar5 = (int)uVar7 - 1;
+    uVar7 = (ulonglong)uVar5;
+    puVar4 = (uint *)(uVar7 * 0x18c + lVar12);
+    uVar6 = uVar5;
+  } while (uVar14 <= *puVar4 && *puVar4 != uVar14);
+  if ((uVar6 < uVar10) &&
+     (puVar4 = (uint *)((ulonglong)uVar6 * 0x18c + lVar12), local_2e0 = puVar4, *puVar4 == uVar14))
+  {
+    pcVar11 = (char *)((ulonglong)param_3 & 0xffffffffffffff00);
+    local_2d0 = (longlong)puVar2 + (ulonglong)puVar2[0xe] + (ulonglong)uVar1;
+    uVar10 = puVar2[10];
+    local_2d8 = (longlong)puVar2 + (ulonglong)puVar2[0x12] + (ulonglong)uVar1;
+    uVar7 = 0;
+    local_2c8 = (longlong)puVar2 + (ulonglong)puVar2[0x14] + (ulonglong)uVar1;
+    uVar14 = puVar4[2];
+    local_2b8 = (longlong)puVar2 + (ulonglong)puVar2[0x13] + (ulonglong)uVar1;
+    local_290 = 0xffffffffffffffff;
+    local_288 = 0xffffffffffffffff;
+    local_280 = 0xffffffffffffffff;
+    local_278 = 0xffffffffffffffff;
+    local_2b0 = 0xffffffffffffffff;
+    local_2a8 = 0xffffffffffffffff;
+    local_2a0 = 0xffffffffffffffff;
+    local_298 = 0xffffffffffffffff;
+    local_2f4 = 0;
+    local_2e8 = 0;
+    if (uVar14 < 3) {
+      uVar15 = uVar7;
+      if (uVar14 != 0) {
+        do {
+          puVar13 = puVar4 + uVar15 * 0x2d;
+          if (puVar13[4] != 0xffffffff) {
+            uVar5 = puVar13[0x2e];
+            *(bool *)((longlong)&local_2f4 + uVar15) = uVar5 != 0xffffffff;
+            puVar4 = puVar13 + 0x2f;
+            puVar13 = puVar13 + 10;
+            *(uint *)((longlong)&local_2e8 + uVar15 * 4) = *puVar4 + uVar5 * 4;
+            uVar8 = uVar7;
+            do {
+              uVar5 = *puVar13;
+              if (uVar5 != 0xffffffff) {
+                if (puVar2[9] <= uVar5) {
+                  FUN_1800ecdb0(param_1,&DAT_180383328,pcVar11,puVar13);
+                  if (*(char *)(param_1 + 6) != '\0') {
+                    pcVar11 = "a0a0a0";
+                    FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",puVar13);
+                    param_1[8] = param_1[8] + 1;
+                  }
+                  FUN_1800ecdb0(param_1,
+                                "\n// <internal error> incorrect scalar offset in debug info\n",
+                                pcVar11,puVar13);
+                  if (*(char *)(param_1 + 6) != '\0') {
+                    param_1[8] = param_1[8] - 1;
+                    FUN_1800ecdb0(param_1,"</font>",pcVar11,puVar13);
+                  }
+                  goto LAB_180010e37;
+                }
+                uVar6 = *(uint *)((longlong)puVar2 +
+                                 (ulonglong)uVar5 * 0x18 +
+                                 (ulonglong)uVar10 + (ulonglong)uVar1 + 0x10);
+                pcVar9 = (char *)((longlong)puVar2 +
+                                 (ulonglong)uVar5 * 0x18 + (ulonglong)uVar10 + (ulonglong)uVar1);
+                if (puVar2[0x11] <= uVar6) {
+                  FUN_180007890(param_1,
+                                "\n// <internal error> incorrect variable offset in debug info\n",
+                                pcVar9,puVar13);
+                  goto LAB_180010e37;
+                }
+                uVar5 = (int)uVar8 + (int)uVar15 * 4;
+                *(uint *)((longlong)&local_290 + (ulonglong)uVar5 * 4) = uVar6;
+                *(undefined4 *)((longlong)&local_2b0 + (ulonglong)uVar5 * 4) =
+                     *(undefined4 *)(pcVar9 + 0x14);
+                pcVar11 = (char *)CONCAT71((int7)((ulonglong)pcVar9 >> 8),1);
+                auStack624[uVar5] = *(uint *)(pcVar9 + 4);
+              }
+              uVar5 = (int)uVar8 + 1;
+              uVar8 = (ulonglong)uVar5;
+              puVar13 = puVar13 + 9;
+              puVar4 = local_2e0;
+            } while (uVar5 < 4);
+          }
+          uVar5 = (int)uVar15 + 1;
+          uVar15 = (ulonglong)uVar5;
+        } while (uVar5 < uVar14);
+        if ((char)pcVar11 != '\0') {
+          uVar10 = 0xffffffff;
+          local_2ec = 0xffffffff;
+          local_2f0 = 0xffffffff;
+          local_2f8 = '\0';
+          local_2f7 = '\0';
+          if (*(char *)(param_1 + 6) != '\0') {
+            pcVar11 = "a0a0a0";
+            FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",puVar13);
+            param_1[8] = param_1[8] + 1;
+          }
+          FUN_1800ecdb0(param_1,"  // ",pcVar11,puVar13);
+          uVar15 = uVar7;
+          do {
+            uVar1 = *(uint *)((longlong)&local_290 + uVar15);
+            uVar14 = (uint)uVar7;
+            if (uVar1 != 0xffffffff) {
+              if (((uVar10 == uVar1) &&
+                  (local_2f8 == *(char *)((longlong)&local_2f4 + (uVar7 >> 2)))) &&
+                 (local_2f0 == *(uint *)((longlong)&local_2e8 + (uVar7 & 0xfffffffffffffffc)))) {
+                FUN_1800ecdb0(param_1,&DAT_180383dbc,pcVar11,puVar13);
+                lVar12 = (ulonglong)(uVar14 & 3) + (uVar7 >> 2) * 5;
+              }
+              else {
+                if (local_2f7 != '\0') {
+                  FUN_1800ecdb0(param_1,&DAT_1803854a4,pcVar11,puVar13);
+                }
+                local_2ec = uVar1;
+                local_2f8 = *(char *)((longlong)&local_2f4 + (uVar7 >> 2));
+                local_2f0 = *(uint *)((longlong)&local_2e8 + (uVar7 & 0xfffffffffffffffc));
+                local_2c0 = (uint *)(local_2d8 + (ulonglong)uVar1 * 0x2c);
+                local_2f7 = '\x01';
+                uVar10 = *local_2c0;
+                if (puVar2[0xd] <= uVar10) {
+                  FUN_1800ecdb0(param_1,&DAT_180383328,pcVar11,puVar13);
+                  if (*(char *)(param_1 + 6) != '\0') {
+                    pcVar11 = "a0a0a0";
+                    FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",puVar13);
+                    param_1[8] = param_1[8] + 1;
+                  }
+                  pcVar9 = "\n// <internal error> incorrect token offset in debug info\n";
+                  goto LAB_180010def;
+                }
+                uVar1 = *(uint *)(local_2d0 + 0xc + (ulonglong)uVar10 * 0x14);
+                uVar5 = 0x1ff;
+                if (uVar1 < 0x1ff) {
+                  uVar5 = uVar1;
+                }
+                memcpy(local_248,
+                       (void *)((ulonglong)*(uint *)(local_2d0 + 0x10 + (ulonglong)uVar10 * 0x14) +
+                               local_2c8),(ulonglong)uVar5);
+                uVar10 = 0x1ff;
+                if (uVar1 < 0x1ff) {
+                  uVar10 = uVar1;
+                }
+                if (0x1ff < uVar10) {
+                  FUN_18026e2b8();
+                  pcVar3 = (code *)swi(3);
+                  (*pcVar3)();
+                  return;
+                }
+                local_248[uVar10] = 0;
+                if (local_2f8 == '\0') {
+                  FUN_1800ecdb0(param_1,&DAT_180385aa8,local_248,puVar13);
+                }
+                else {
+                  uVar10 = *(uint *)(local_2b8 + (ulonglong)(local_2c0[8] >> 2) * 4);
+                  local_308 = (int)(char)(&DAT_180387418)[local_2f0 & 3];
+                  if (uVar10 < 5) {
+                    FUN_1800ecdb0(param_1,"%s[r%u.%c]<",local_248,(ulonglong)(local_2f0 >> 2));
+                  }
+                  else {
+                    local_300 = uVar10 + 3 >> 2;
+                    FUN_1800ecdb0(param_1,"%s[r%u.%c/%u]<",local_248,(ulonglong)(local_2f0 >> 2));
+                  }
+                }
+                lVar12 = (uVar7 >> 2) * 5 + (ulonglong)(uVar14 & 3);
+              }
+              puVar13 = (uint *)(ulonglong)*(uint *)((longlong)auStack624 + uVar15);
+              pcVar11 = (char *)(local_2e0 + lVar12 * 9 + 10);
+              FUN_180010400(param_1,*(uint *)((longlong)&local_2b0 + uVar15),(longlong)pcVar11,
+                            puVar13);
+              uVar10 = local_2ec;
+            }
+            uVar7 = (ulonglong)(uVar14 + 1);
+            uVar15 = uVar15 + 4;
+          } while (uVar14 + 1 < 8);
+          if (local_2f7 != '\0') {
+            pcVar9 = ">";
+LAB_180010def:
+            FUN_1800ecdb0(param_1,pcVar9,pcVar11,puVar13);
+          }
+          if (*(char *)(param_1 + 6) != '\0') {
+            param_1[8] = param_1[8] - 1;
+            FUN_1800ecdb0(param_1,"</font>",pcVar11,puVar13);
+          }
+        }
+      }
+    }
+    else {
+      FUN_180007890(param_1,"\n// <internal error> too many instruction outputs in debug info\n",
+                    pcVar11,lVar12);
+    }
+  }
+  else {
+    FUN_1800ecdb0(param_1,&DAT_180383328,param_3,lVar12);
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_3 = "a0a0a0";
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",lVar12);
+      param_1[8] = param_1[8] + 1;
+    }
+    FUN_1800ecdb0(param_1,"\n// <internal error> incorrect instruction offset in debug info\n",
+                  param_3,lVar12);
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_1[8] = param_1[8] - 1;
+      FUN_1800ecdb0(param_1,"</font>",param_3,lVar12);
+    }
+  }
+LAB_180010e37:
+  FUN_18026e150(local_48 ^ (ulonglong)auStack808);
+  return;
+}
+

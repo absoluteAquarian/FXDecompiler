@@ -1,0 +1,23 @@
+﻿
+undefined8 FUN_18000b1f0(uint *param_1,int param_2,undefined8 param_3,undefined8 param_4)
+
+{
+  if (param_2 == 0) {
+    FUN_1800ecdb0(param_1,&DAT_180384850,param_3,param_4);
+    return 0;
+  }
+  if (param_2 == 1) {
+    FUN_1800ecdb0(param_1,&DAT_180384854,param_3,param_4);
+    return 0;
+  }
+  if (param_2 == 2) {
+    FUN_1800ecdb0(param_1,&DAT_180384858,param_3,param_4);
+    return 0;
+  }
+  if (param_2 != 3) {
+    return 0x80004005;
+  }
+  FUN_1800ecdb0(param_1,&DAT_18038485c,param_3,param_4);
+  return 0;
+}
+

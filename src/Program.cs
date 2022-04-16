@@ -33,7 +33,7 @@ namespace FXDecompiler {
 
 			unsafe void DecompileEffect() {
 				if (args.Length < 1) {
-					Console.WriteLine("Usage: FXDecompiler.exe <file>");
+					Console.WriteLine("Usage: fxdecompiler.exe <file>");
 					return;
 				}
 

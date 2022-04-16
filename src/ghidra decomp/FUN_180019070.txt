@@ -1,0 +1,115 @@
+﻿
+/* WARNING: Could not reconcile some variable overlaps */
+
+undefined8 FUN_180019070(uint *param_1,int *param_2,int *param_3,ulonglong param_4)
+
+{
+  uint uVar1;
+  int iVar2;
+  undefined8 uVar3;
+  uint uVar4;
+  uint *puVar5;
+  uint *puVar6;
+  char *pcVar7;
+  uint *puVar8;
+  uint uVar9;
+  uint *puVar10;
+  uint *puVar11;
+  undefined local_48 [16];
+  undefined8 local_38;
+  
+  puVar10 = (uint *)0x0;
+  local_38 = 0;
+  local_48 = ZEXT816(0);
+  local_48._0_8_ = param_3;
+  if (param_2 != (int *)0x0) {
+    param_4 = 0;
+    iVar2 = FUN_1800ed1b0((int **)local_48,param_2,(uint)param_3,'\0',(int *)0x0);
+    local_48._0_8_ = param_3;
+    if (-1 < iVar2) {
+      if ((local_48._0_8_ != (int *)0x0) && (local_48._8_8_ != (uint *)0x0)) {
+        uVar1 = local_48._0_8_[7];
+        param_4 = (ulonglong)uVar1;
+        uVar9 = 0;
+        puVar5 = puVar10;
+        puVar6 = local_48._8_8_;
+        if (uVar1 != 0) {
+          do {
+            uVar4 = (uint)puVar5;
+            if (*(int *)((ulonglong)*puVar6 + (longlong)local_48._0_8_) == 0x434c5846) {
+              if (uVar4 != 0xffffffff) {
+                puVar6 = puVar10;
+                puVar8 = local_48._8_8_;
+                puVar11 = puVar10;
+                if (uVar4 < uVar1) {
+                  puVar11 = (uint *)((longlong)local_48._0_8_ +
+                                    (ulonglong)local_48._8_8_[(longlong)puVar5] + 8);
+                }
+                goto LAB_180019124;
+              }
+              break;
+            }
+            puVar5 = (uint *)(ulonglong)(uVar4 + 1);
+            puVar6 = puVar6 + 1;
+          } while (uVar4 + 1 < uVar1);
+        }
+      }
+      pcVar7 = "Error: Effects expression assembly not found!";
+      goto LAB_180019200;
+    }
+  }
+  pcVar7 = "Error: Effects expression assembly in invalid format!";
+  goto LAB_180019200;
+  while( true ) {
+    puVar6 = (uint *)(ulonglong)(uVar4 + 1);
+    puVar8 = puVar8 + 1;
+    if (uVar1 <= uVar4 + 1) break;
+LAB_180019124:
+    uVar4 = (uint)puVar6;
+    if (*(int *)((ulonglong)*puVar8 + (longlong)local_48._0_8_) == 0x42415443) {
+      if (uVar4 == 0xffffffff) {
+        pcVar7 = "Error: Error getting Effects expression constant table.";
+        goto LAB_180019200;
+      }
+      puVar5 = puVar10;
+      if (uVar4 < uVar1) {
+        uVar9 = *(uint *)((ulonglong)local_48._8_8_[(longlong)puVar6] + 4 + (longlong)local_48._0_8_
+                         );
+        puVar5 = (uint *)((longlong)local_48._0_8_ + (ulonglong)local_48._8_8_[(longlong)puVar6] + 8
+                         );
+      }
+      uVar1 = local_48._0_8_[7];
+      param_4 = (ulonglong)uVar1;
+      puVar6 = puVar10;
+      puVar8 = local_48._8_8_;
+      if (uVar1 != 0) goto LAB_1800191a0;
+      goto LAB_1800191b7;
+    }
+  }
+  pcVar7 = "Error: Error getting Effects expression constant table.";
+  goto LAB_180019200;
+  while( true ) {
+    puVar6 = (uint *)(ulonglong)(uVar4 + 1);
+    puVar8 = puVar8 + 1;
+    if (uVar1 <= uVar4 + 1) break;
+LAB_1800191a0:
+    uVar4 = (uint)puVar6;
+    if (*(int *)((ulonglong)*puVar8 + (longlong)local_48._0_8_) == 0x34494c43) {
+      if (uVar4 != 0xffffffff) {
+        if (uVar4 < uVar1) {
+          puVar10 = (uint *)((longlong)local_48._0_8_ +
+                            (ulonglong)local_48._8_8_[(longlong)puVar6] + 8);
+        }
+        uVar3 = FUN_180018e50(param_1,puVar11,puVar10,(ulonglong)puVar5,uVar9);
+        return uVar3;
+      }
+      break;
+    }
+  }
+LAB_1800191b7:
+  pcVar7 = "Error: Error getting Effects expression literal block.";
+LAB_180019200:
+  FUN_1800ecdb0(param_1,pcVar7,local_48._0_8_,param_4);
+  return 1;
+}
+

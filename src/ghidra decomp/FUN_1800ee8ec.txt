@@ -1,0 +1,19 @@
+﻿
+undefined8 FUN_1800ee8ec(int *param_1,int *param_2)
+
+{
+  undefined8 uVar1;
+  undefined local_28 [16];
+  undefined8 local_18;
+  
+  local_18 = 0;
+  local_28 = ZEXT816(0);
+  if (param_1 == (int *)0x0) {
+    uVar1 = 0x80004005;
+  }
+  else {
+    uVar1 = FUN_1800ed1b0((int **)local_28,param_1,param_1[6],'\x01',param_2);
+  }
+  return uVar1;
+}
+

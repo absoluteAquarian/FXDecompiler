@@ -1,0 +1,15 @@
+﻿
+int FUN_18026f188(undefined8 param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)
+
+{
+  int iVar1;
+  ulonglong *puVar2;
+  
+  puVar2 = (ulonglong *)FUN_18026dcdc();
+  iVar1 = _o___stdio_common_vsprintf(*puVar2 | 1,param_1,param_2,param_3,0,param_4);
+  if (iVar1 < 0) {
+    iVar1 = -1;
+  }
+  return iVar1;
+}
+

@@ -1,0 +1,86 @@
+﻿
+/* WARNING: Function: _guard_dispatch_icall replaced with injection: guard_dispatch_icall */
+
+int FUN_18001a2e0(uint *param_1,int param_2,uint param_3,longlong *param_4)
+
+{
+  char *pcVar1;
+  uint uVar2;
+  char cVar3;
+  int iVar4;
+  ulonglong uVar5;
+  char *pcVar6;
+  uint *puVar7;
+  ulonglong uVar8;
+  char *pcVar9;
+  undefined8 uVar10;
+  uint local_res18;
+  longlong *local_res20;
+  
+  pcVar6 = (char *)(ulonglong)param_3;
+  pcVar9 = (char *)param_4[1];
+  local_res20 = (longlong *)0x0;
+  if (pcVar9 <= pcVar6) {
+    return -0x7fffbffb;
+  }
+  pcVar1 = pcVar6 + 4;
+  param_4[2] = (longlong)pcVar6;
+  if ((pcVar1 < pcVar6) || (pcVar9 < pcVar1)) {
+    puVar7 = (uint *)0x0;
+    iVar4 = -0x7fffbffb;
+  }
+  else {
+    puVar7 = (uint *)(pcVar6 + *param_4);
+    param_4[2] = (longlong)pcVar1;
+    pcVar6 = pcVar1;
+    iVar4 = 0;
+  }
+  if (-1 < iVar4) {
+    local_res18 = *puVar7;
+    pcVar1 = pcVar6 + local_res18;
+    if ((pcVar6 <= pcVar1) && (pcVar1 <= pcVar9)) {
+      puVar7 = (uint *)(pcVar6 + *param_4);
+      param_4[2] = (longlong)pcVar1;
+      iVar4 = 0;
+      goto LAB_18001a393;
+    }
+    iVar4 = -0x7fffbffb;
+  }
+  puVar7 = (uint *)0x0;
+LAB_18001a393:
+  if (-1 < iVar4) {
+    uVar2 = param_2 * 4;
+    FUN_1800ecc68(param_1,uVar2);
+    cVar3 = *(char *)(param_1 + 6);
+    if (local_res18 == 0) {
+      if (cVar3 != '\0') {
+        pcVar9 = "00ffff";
+        FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+        param_1[8] = param_1[8] + 1;
+      }
+      FUN_1800ecdb0(param_1,&DAT_18038734c,pcVar9,param_4);
+      if (*(char *)(param_1 + 6) != '\0') {
+        param_1[8] = param_1[8] - 1;
+        FUN_1800ecdb0(param_1,"</font>",pcVar9,param_4);
+      }
+    }
+    else {
+      uVar8 = (ulonglong)(cVar3 != '\0');
+      uVar10 = 0;
+      uVar5 = FUN_180015f80(puVar7,(undefined *)(ulonglong)local_res18,(uint)(cVar3 != '\0'),
+                            (uint *)0x0,0,0xffffffff,0,(ulonglong *)0x0,&local_res20);
+      iVar4 = (int)uVar5;
+      if (-1 < iVar4) {
+        FUN_1800ecdb0(param_1,"asm {\n",uVar8,uVar10);
+        pcVar9 = (char *)(**(code **)(*local_res20 + 0x18))();
+        FUN_1800eca80(param_1,pcVar9,(ulonglong)(uVar2 + 4),'\0');
+        FUN_1800eca80(param_1,"\n}",(ulonglong)uVar2,'\0');
+      }
+    }
+    if (local_res20 != (longlong *)0x0) {
+      (**(code **)(*local_res20 + 0x10))();
+    }
+  }
+  return iVar4;
+}
+

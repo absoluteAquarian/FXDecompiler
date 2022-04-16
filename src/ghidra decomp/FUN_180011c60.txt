@@ -1,0 +1,131 @@
+﻿
+/* WARNING: Function: _guard_dispatch_icall replaced with injection: guard_dispatch_icall */
+
+void FUN_180011c60(uint *param_1,undefined8 param_2,longlong *param_3,uint *param_4)
+
+{
+  int iVar1;
+  undefined8 uVar2;
+  char *pcVar3;
+  char *pcVar4;
+  uint *puVar5;
+  undefined auStackY184 [32];
+  uint local_88;
+  uint local_84;
+  int local_80;
+  longlong *local_78;
+  int local_70;
+  uint local_6c;
+  uint local_68;
+  longlong *local_60;
+  uint local_58;
+  uint local_54;
+  uint local_50;
+  ulonglong local_48;
+  
+  local_48 = DAT_180426020 ^ (ulonglong)auStackY184;
+  local_78 = (longlong *)0x0;
+  local_60 = (longlong *)0x0;
+  pcVar4 = (char *)param_3;
+  puVar5 = param_4;
+  iVar1 = (**(code **)(*param_3 + 0x50))();
+  if (iVar1 < 0) goto LAB_180011f34;
+  if (iVar1 != 0) {
+    FUN_1800ecdb0(param_1,&DAT_180383328,pcVar4,puVar5);
+    if (*(char *)(param_1 + 6) != '\0') {
+      pcVar4 = "a0a0a0";
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",puVar5);
+      param_1[8] = param_1[8] + 1;
+    }
+    FUN_1800ecdb0(param_1,"// <internal error> could not get location type from PDB\n",pcVar4,puVar5
+                 );
+    if (*(char *)(param_1 + 6) != '\0') {
+      param_1[8] = param_1[8] - 1;
+      FUN_1800ecdb0(param_1,"</font>",pcVar4,puVar5);
+    }
+    goto LAB_180011f34;
+  }
+  iVar1 = (**(code **)(*param_3 + 0x3d8))();
+  if (iVar1 != 0) {
+    local_80 = 0;
+  }
+  if (local_70 != 5) {
+    FUN_180007890(param_1,"// <internal error> unexpected location type in PDB\n",pcVar4,puVar5);
+    goto LAB_180011f34;
+  }
+  iVar1 = (**(code **)(*param_3 + 0x538))();
+  if (iVar1 == 0) {
+    pcVar3 = (char *)&local_88;
+    iVar1 = (**(code **)(*param_3 + 0x598))();
+    if ((iVar1 == 0) && (local_88 < 3)) {
+      if (local_88 != 0) {
+        puVar5 = &local_58;
+        pcVar3 = (char *)(ulonglong)local_88;
+        pcVar4 = (char *)&local_6c;
+        iVar1 = (**(code **)(*param_3 + 0x510))();
+        if (iVar1 != 0) {
+          pcVar3 = "// <internal error> could not get register index values from PDB\n";
+          goto LAB_180011f2a;
+        }
+        if (local_6c != local_88) goto LAB_180011f34;
+      }
+      pcVar4 = (char *)(ulonglong)local_84;
+      if ((param_4 != (uint *)0x0) &&
+         ((((*param_4 != local_84 ||
+            ((local_88 != 0 && (((param_4[1] ^ local_58) & 0xfffffff0) != 0)))) ||
+           ((1 < local_88 && (param_4[2] != local_54)))) ||
+          ((2 < local_88 && (param_4[3] != local_50)))))) {
+        pcVar3 = "\n//   ";
+        FUN_1800ecdb0(param_1,"\n//   ",pcVar4,puVar5);
+        pcVar4 = (char *)(ulonglong)local_84;
+        param_4[1] = local_58;
+        param_4[2] = local_54;
+        param_4[3] = local_50;
+        *param_4 = local_84;
+      }
+      puVar5 = (uint *)(ulonglong)local_88;
+      uVar2 = FUN_180011a20(param_1,pcVar3,(int)pcVar4,(ulonglong)puVar5,&local_58);
+      if (((int)uVar2 < 0) || (iVar1 = (**(code **)(*param_3 + 0x28))(), iVar1 < 0))
+      goto LAB_180011f34;
+      if (local_78 == (longlong *)0x0) {
+        pcVar3 = "<internal error> unable to get variable name from PDB\n";
+      }
+      else {
+        FUN_1800ecdb0(param_1,&DAT_1803862e0,pcVar4,puVar5);
+        pcVar4 = (char *)local_78;
+        FUN_1800ecdb0(param_1,&DAT_1803862e8,local_78,puVar5);
+        if (local_80 == 0) goto LAB_180011f34;
+        iVar1 = (**(code **)(*param_3 + 0x4d0))();
+        if (iVar1 == 0) {
+          iVar1 = (**(code **)(*param_3 + 0x40))();
+          if (iVar1 == 0) {
+            FUN_180010fe0(param_1,param_2,local_60,(ulonglong)local_68);
+            goto LAB_180011f34;
+          }
+          pcVar3 = "<internal error> unable to get variable type from PDB\n";
+        }
+        else {
+          pcVar3 = "<internal error> unable to get variable subfield offset from PDB\n";
+        }
+      }
+    }
+    else {
+      pcVar3 = "// <internal error> could not get register index count from PDB\n";
+    }
+  }
+  else {
+    pcVar3 = "// <internal error> could not get register type from PDB\n";
+  }
+LAB_180011f2a:
+  FUN_180007890(param_1,pcVar3,pcVar4,puVar5);
+LAB_180011f34:
+  if (local_78 != (longlong *)0x0) {
+    FUN_18026f760((longlong)local_78);
+  }
+  if (local_60 != (longlong *)0x0) {
+    (**(code **)(*local_60 + 0x10))();
+  }
+  FUN_18026e150(local_48 ^ (ulonglong)auStackY184);
+  return;
+}
+

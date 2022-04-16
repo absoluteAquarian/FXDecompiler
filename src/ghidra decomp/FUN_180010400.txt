@@ -1,0 +1,198 @@
+﻿
+void FUN_180010400(uint *param_1,uint param_2,longlong param_3,undefined8 param_4)
+
+{
+  uint uVar1;
+  int iVar2;
+  undefined *puVar3;
+  char *pcVar4;
+  ulonglong uVar5;
+  char *pcVar6;
+  double dVar7;
+  
+  iVar2 = (int)param_4;
+  pcVar6 = (char *)(ulonglong)param_2;
+  FUN_1800ecdb0(param_1,&DAT_180383b28,pcVar6,param_4);
+  if (iVar2 == 1) {
+    if ((*(int *)(param_3 + 4) == 0) && (*(int *)(param_3 + 8) != 0)) {
+      return;
+    }
+    FUN_1800ecdb0(param_1,&DAT_180385910,pcVar6,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    pcVar6 = "false";
+    if (*(int *)(param_3 + 4) != 0) {
+      pcVar6 = "true";
+    }
+    FUN_1800ecdb0(param_1,&DAT_180383698,pcVar6,param_4);
+  }
+  else if (iVar2 == 2) {
+    if (*(int *)(param_3 + 0x10) != *(int *)(param_3 + 0xc)) {
+      if (*(int *)(param_3 + 0x10) < 0x7fffffff) {
+LAB_1800104c5:
+        FUN_1800ecdb0(param_1,&DAT_180385914,pcVar6,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+          param_1[8] = param_1[8] + 1;
+        }
+        uVar5 = (ulonglong)*(uint *)(param_3 + 0xc);
+        FUN_1800ecdb0(param_1,&DAT_18038475c,uVar5,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          param_1[8] = param_1[8] - 1;
+          FUN_1800ecdb0(param_1,"</font>",uVar5,param_4);
+        }
+        FUN_1800ecdb0(param_1,&DAT_180383dbc,uVar5,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+          param_1[8] = param_1[8] + 1;
+        }
+        uVar1 = *(uint *)(param_3 + 0x10);
+        puVar3 = &DAT_18038475c;
+      }
+      else {
+        if ((*(int *)(param_3 + 4) == 0) && (*(int *)(param_3 + 8) == -1)) {
+          return;
+        }
+LAB_18001055c:
+        FUN_1800ecdb0(param_1,&DAT_180385914,pcVar6,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+          param_1[8] = param_1[8] + 1;
+        }
+        uVar5 = (ulonglong)*(uint *)(param_3 + 4);
+        FUN_1800ecdb0(param_1,&DAT_180385918,uVar5,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          param_1[8] = param_1[8] - 1;
+          FUN_1800ecdb0(param_1,"</font>",uVar5,param_4);
+        }
+        FUN_1800ecdb0(param_1,&DAT_180383dbc,uVar5,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+          param_1[8] = param_1[8] + 1;
+        }
+        uVar1 = *(uint *)(param_3 + 8);
+        puVar3 = &DAT_180385918;
+      }
+      pcVar6 = (char *)(ulonglong)uVar1;
+      FUN_1800ecdb0(param_1,puVar3,pcVar6,param_4);
+      if (*(char *)(param_1 + 6) != '\0') {
+        param_1[8] = param_1[8] - 1;
+        FUN_1800ecdb0(param_1,"</font>",pcVar6,param_4);
+      }
+LAB_18001060e:
+      pcVar4 = "]";
+      goto LAB_18001091c;
+    }
+    FUN_1800ecdb0(param_1,&DAT_180385910,pcVar6,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    pcVar6 = (char *)(ulonglong)*(uint *)(param_3 + 0xc);
+    FUN_1800ecdb0(param_1,&DAT_18038475c,pcVar6,param_4);
+  }
+  else if (iVar2 == 3) {
+    if (*(int *)(param_3 + 8) != *(int *)(param_3 + 4)) {
+      if (*(int *)(param_3 + 0x1c) != 0) {
+        FUN_1800ecdb0(param_1,&DAT_18038591c,pcVar6,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          pcVar6 = "ffff40";
+          FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",param_4);
+          param_1[8] = param_1[8] + 1;
+        }
+        FUN_1800ecdb0(param_1,&DAT_180385920,pcVar6,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          param_1[8] = param_1[8] - 1;
+          FUN_1800ecdb0(param_1,"</font>",pcVar6,param_4);
+        }
+      }
+      if (*(int *)(param_3 + 0x20) != 0) {
+        FUN_1800ecdb0(param_1,&DAT_18038591c,pcVar6,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          pcVar6 = "ffff40";
+          FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",param_4);
+          param_1[8] = param_1[8] + 1;
+        }
+        FUN_1800ecdb0(param_1,&DAT_180385924,pcVar6,param_4);
+        if (*(char *)(param_1 + 6) != '\0') {
+          param_1[8] = param_1[8] - 1;
+          FUN_1800ecdb0(param_1,"</font>",pcVar6,param_4);
+        }
+      }
+    }
+    if (*(int *)(param_3 + 8) != *(int *)(param_3 + 4)) {
+      if (*(int *)(param_3 + 0x1c) != 0) {
+        return;
+      }
+      if ((*(float *)(param_3 + 0x14) <= -3.402823e+38) &&
+         (3.402823e+38 < *(float *)(param_3 + 0x18) || *(float *)(param_3 + 0x18) == 3.402823e+38))
+      {
+        return;
+      }
+      FUN_1800ecdb0(param_1,&DAT_180385914,pcVar6,param_4);
+      if (*(char *)(param_1 + 6) != '\0') {
+        FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+        param_1[8] = param_1[8] + 1;
+      }
+      dVar7 = (double)*(float *)(param_3 + 0x14);
+      FUN_1800ecdb0(param_1,&DAT_180385928,dVar7,param_4);
+      if (*(char *)(param_1 + 6) != '\0') {
+        param_1[8] = param_1[8] - 1;
+        FUN_1800ecdb0(param_1,"</font>",dVar7,param_4);
+      }
+      FUN_1800ecdb0(param_1,&DAT_180383dbc,dVar7,param_4);
+      if (*(char *)(param_1 + 6) != '\0') {
+        FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+        param_1[8] = param_1[8] + 1;
+      }
+      pcVar6 = (char *)(double)*(float *)(param_3 + 0x18);
+      FUN_1800ecdb0(param_1,&DAT_180385928,pcVar6,param_4);
+      if (*(char *)(param_1 + 6) != '\0') {
+        param_1[8] = param_1[8] - 1;
+        FUN_1800ecdb0(param_1,"</font>",pcVar6,param_4);
+        pcVar4 = "]";
+        goto LAB_18001091c;
+      }
+      goto LAB_18001060e;
+    }
+    FUN_1800ecdb0(param_1,&DAT_180385910,pcVar6,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    pcVar6 = (char *)(double)*(float *)(param_3 + 0x14);
+    FUN_1800ecdb0(param_1,&DAT_180385928,pcVar6,param_4);
+  }
+  else {
+    if (1 < iVar2 - 0x13U) {
+      return;
+    }
+    if (*(int *)(param_3 + 8) != *(int *)(param_3 + 4)) {
+      if ((*(int *)(param_3 + 4) == 0) && (*(int *)(param_3 + 8) == -1)) {
+        if ((0x7ffffffe < *(int *)(param_3 + 0x10)) && (*(int *)(param_3 + 0xc) == -0x80000000)) {
+          return;
+        }
+        goto LAB_1800104c5;
+      }
+      goto LAB_18001055c;
+    }
+    FUN_1800ecdb0(param_1,&DAT_180385910,pcVar6,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    pcVar6 = (char *)(ulonglong)*(uint *)(param_3 + 4);
+    FUN_1800ecdb0(param_1,&DAT_180385918,pcVar6,param_4);
+  }
+  if (*(char *)(param_1 + 6) == '\0') {
+    return;
+  }
+  param_1[8] = param_1[8] - 1;
+  pcVar4 = "</font>";
+LAB_18001091c:
+  FUN_1800ecdb0(param_1,pcVar4,pcVar6,param_4);
+  return;
+}
+

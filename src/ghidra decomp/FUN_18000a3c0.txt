@@ -1,0 +1,76 @@
+﻿
+undefined8 FUN_18000a3c0(uint *param_1,ulonglong param_2,uint param_3,uint **param_4,int *param_5)
+
+{
+  ulonglong uVar1;
+  uint uVar2;
+  uint *puVar3;
+  ulonglong uVar4;
+  uint uVar5;
+  
+  if (param_4 != (uint **)0x0) {
+    *param_4 = (uint *)0x0;
+  }
+  if (param_5 != (int *)0x0) {
+    *param_5 = 0;
+  }
+  if ((param_1 != (uint *)0x0) && (3 < param_2)) {
+    uVar2 = *param_1 & 0xffff0000;
+    if ((((uVar2 != 0x7ffe0000) &&
+         ((((uVar2 != 0x46580000 && (uVar2 != 0x4c500000)) && (uVar2 != 0x4c560000)) &&
+          ((uVar2 != 0x54580000 && (uVar2 != 0x7fff0000)))))) && (uVar2 != 0xfffe0000)) &&
+       (uVar2 != 0xffff0000)) {
+      return 0x80004005;
+    }
+    puVar3 = param_1 + 1;
+    uVar1 = param_2 - 4;
+    while (3 < uVar1) {
+      uVar2 = *puVar3;
+      uVar4 = uVar1 - 4;
+      if (-1 < (int)uVar2) {
+        uVar5 = uVar2 & 0xffff;
+        if (uVar5 == 0xffff) {
+          return 1;
+        }
+        if (uVar5 == 0xfffe) {
+          uVar2 = uVar2 >> 0x10 & 0x7fff;
+          if (uVar4 >> 2 < (ulonglong)uVar2) {
+            return 0x8876086c;
+          }
+          if ((1 < uVar2) && (param_3 == puVar3[1])) {
+            if (param_4 != (uint **)0x0) {
+              *param_4 = puVar3 + 2;
+            }
+            if (param_5 != (int *)0x0) {
+              *param_5 = uVar2 * 4 + -4;
+            }
+            return 0;
+          }
+          puVar3 = puVar3 + uVar2;
+          uVar4 = uVar4 + (ulonglong)uVar2 * -4;
+        }
+        else if ((ushort)*param_1 < 0x200) {
+          if (uVar5 == 0x51) {
+            if ((uVar4 & 0xfffffffffffffffc) < 0x14) {
+              return 0x8876086c;
+            }
+            puVar3 = puVar3 + 5;
+            uVar4 = uVar1 - 0x18;
+          }
+        }
+        else {
+          uVar2 = uVar2 >> 0x18 & 0xf;
+          if (uVar4 >> 2 < (ulonglong)uVar2) {
+            return 0x8876086c;
+          }
+          puVar3 = puVar3 + uVar2;
+          uVar4 = uVar4 + (ulonglong)uVar2 * -4;
+        }
+      }
+      puVar3 = puVar3 + 1;
+      uVar1 = uVar4;
+    }
+  }
+  return 0x8876086c;
+}
+

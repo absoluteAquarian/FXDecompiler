@@ -1,0 +1,115 @@
+﻿
+char * FUN_18000c470(longlong param_1,undefined4 param_2)
+
+{
+  char *pcVar1;
+  
+  switch(param_2) {
+  case 0:
+    return "r";
+  case 1:
+    return "v";
+  case 2:
+    return "o";
+  case 3:
+    return "x";
+  case 4:
+    return "l";
+  case 5:
+    return "d";
+  case 6:
+    pcVar1 = "s";
+    if (*(char *)(param_1 + 0x24) != '\0') {
+      pcVar1 = "S";
+    }
+    return pcVar1;
+  case 7:
+    pcVar1 = "t";
+    if (*(char *)(param_1 + 0x24) != '\0') {
+      pcVar1 = "T";
+    }
+    break;
+  case 8:
+    pcVar1 = "cb";
+    if (*(char *)(param_1 + 0x24) != '\0') {
+      pcVar1 = "CB";
+    }
+    return pcVar1;
+  case 9:
+    return "icb";
+  case 10:
+    return "label";
+  case 0xb:
+    return "vPrim";
+  case 0xc:
+    return "oDepth";
+  case 0xd:
+    return "null";
+  case 0xe:
+    return "rasterizer";
+  case 0xf:
+    return "oMask";
+  case 0x10:
+    return "m";
+  case 0x11:
+    return "fb";
+  case 0x12:
+    return "ft";
+  case 0x13:
+    return "fp";
+  case 0x14:
+    return "iv";
+  case 0x15:
+    return "ov";
+  case 0x16:
+    return "vOutputControlPointID";
+  case 0x17:
+    return "vForkInstanceID";
+  case 0x18:
+    return "vJoinInstanceID";
+  case 0x19:
+    return "vicp";
+  case 0x1a:
+    return "vocp";
+  case 0x1b:
+    return "vpc";
+  case 0x1c:
+    return "vDomain";
+  case 0x1d:
+    return "this";
+  case 0x1e:
+    pcVar1 = "u";
+    if (*(char *)(param_1 + 0x24) != '\0') {
+      pcVar1 = "U";
+    }
+    return pcVar1;
+  case 0x1f:
+    return "g";
+  case 0x20:
+    return "vThreadID";
+  case 0x21:
+    return "vThreadGroupID";
+  case 0x22:
+    return "vThreadIDInGroup";
+  case 0x23:
+    return "vCoverage";
+  case 0x24:
+    return "vThreadIDInGroupFlattened";
+  case 0x25:
+    return "vGSInstanceID";
+  case 0x26:
+    return "oDepthGE";
+  case 0x27:
+    return "oDepthLE";
+  case 0x28:
+    return "vCycleCounter";
+  case 0x29:
+    return "oStencilRef";
+  case 0x2a:
+    return "vInnerCoverage";
+  default:
+    return "<unknown register type>";
+  }
+  return pcVar1;
+}
+

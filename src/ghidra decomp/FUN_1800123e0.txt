@@ -1,0 +1,52 @@
+﻿
+undefined8 FUN_1800123e0(uint *param_1,undefined4 *param_2,undefined8 param_3,undefined8 param_4)
+
+{
+  uint uVar1;
+  char *pcVar2;
+  
+  FUN_1800ecdb0(param_1,&DAT_180384c9c,param_3,param_4);
+  uVar1 = 0;
+  do {
+    switch(*param_2) {
+    case 1:
+      pcVar2 = "unorm";
+      break;
+    case 2:
+      pcVar2 = "snorm";
+      break;
+    case 3:
+      pcVar2 = "sint";
+      break;
+    case 4:
+      pcVar2 = "uint";
+      break;
+    case 5:
+      pcVar2 = "float";
+      break;
+    case 6:
+      pcVar2 = "mixed";
+      break;
+    case 7:
+      pcVar2 = "double";
+      break;
+    case 8:
+      pcVar2 = "<continued>";
+      break;
+    case 9:
+      pcVar2 = "<unused>";
+      break;
+    default:
+      pcVar2 = "<unknown resource return type>";
+    }
+    FUN_1800ecdb0(param_1,&DAT_180383698,pcVar2,param_4);
+    if (uVar1 < 3) {
+      FUN_1800ecdb0(param_1,&DAT_180383dbc,pcVar2,param_4);
+    }
+    uVar1 = uVar1 + 1;
+    param_2 = param_2 + 1;
+  } while (uVar1 < 4);
+  FUN_1800ecdb0(param_1,&DAT_18038472c,pcVar2,param_4);
+  return 0;
+}
+

@@ -1,0 +1,80 @@
+﻿
+undefined8
+FUN_1800f5c30(longlong param_1,int *param_2,uint param_3,char param_4,ulonglong *param_5,
+             undefined4 *param_6,undefined4 *param_7)
+
+{
+  uint *puVar1;
+  longlong lVar2;
+  uint uVar3;
+  ulonglong uVar4;
+  undefined8 uVar5;
+  ulonglong uVar6;
+  uint uVar7;
+  undefined4 uVar9;
+  undefined4 uVar10;
+  ulonglong uVar8;
+  
+  uVar6 = 0;
+  uVar9 = 0;
+  uVar10 = 0;
+  if (param_3 != 0) {
+    lVar2 = *(longlong *)(param_1 + 0x20);
+    uVar8 = uVar6;
+    do {
+      if (((lVar2 != 0) && (*(longlong *)(param_1 + 0x28) != 0)) && (*(uint *)(lVar2 + 0x1c) != 0))
+      {
+        uVar4 = uVar6;
+        do {
+          uVar3 = (uint)uVar4;
+          if (*(int *)((ulonglong)*(uint *)(*(longlong *)(param_1 + 0x28) + uVar4 * 4) + lVar2) ==
+              *param_2) {
+            if (uVar3 != 0xffffffff) goto LAB_1800f5cad;
+            goto LAB_1800f5c9a;
+          }
+          uVar4 = (ulonglong)(uVar3 + 1);
+        } while (uVar3 + 1 < *(uint *)(lVar2 + 0x1c));
+      }
+      uVar3 = 0xffffffff;
+LAB_1800f5c9a:
+      uVar7 = (int)uVar8 + 1;
+      uVar8 = (ulonglong)uVar7;
+      param_2 = param_2 + 1;
+    } while (uVar7 < param_3);
+    if (uVar3 != 0xffffffff) {
+LAB_1800f5cad:
+      if (((lVar2 != 0) && (*(longlong *)(param_1 + 0x28) != 0)) &&
+         (uVar3 <= *(uint *)(lVar2 + 0x1c) && *(uint *)(lVar2 + 0x1c) != uVar3)) {
+        uVar6 = lVar2 + 8 +
+                (ulonglong)*(uint *)(*(longlong *)(param_1 + 0x28) + (ulonglong)uVar3 * 4);
+      }
+      *param_5 = uVar6;
+      if (((*(longlong *)(param_1 + 0x20) != 0) && (*(longlong *)(param_1 + 0x28) != 0)) &&
+         (puVar1 = (uint *)(*(longlong *)(param_1 + 0x20) + 0x1c),
+         uVar3 <= *puVar1 && *puVar1 != uVar3)) {
+        uVar10 = *(undefined4 *)
+                  ((ulonglong)*(uint *)(*(longlong *)(param_1 + 0x28) + (ulonglong)uVar3 * 4) + 4 +
+                  *(longlong *)(param_1 + 0x20));
+      }
+      *param_6 = uVar10;
+      if (((*(longlong *)(param_1 + 0x20) != 0) && (*(longlong *)(param_1 + 0x28) != 0)) &&
+         (puVar1 = (uint *)(*(longlong *)(param_1 + 0x20) + 0x1c),
+         uVar3 <= *puVar1 && *puVar1 != uVar3)) {
+        uVar9 = *(undefined4 *)
+                 ((ulonglong)*(uint *)(*(longlong *)(param_1 + 0x28) + (ulonglong)uVar3 * 4) +
+                 *(longlong *)(param_1 + 0x20));
+      }
+      *param_7 = uVar9;
+      return 0;
+    }
+  }
+  *param_5 = 0;
+  *param_6 = 0;
+  *param_7 = 0;
+  uVar5 = 1;
+  if (param_4 != '\0') {
+    uVar5 = 0x80004005;
+  }
+  return uVar5;
+}
+

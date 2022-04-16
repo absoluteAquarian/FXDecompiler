@@ -1,0 +1,36 @@
+﻿
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void FUN_18026e1e0(void)
+
+{
+  code *pcVar1;
+  BOOL BVar2;
+  undefined *puVar3;
+  undefined auStack56 [8];
+  undefined auStack48 [48];
+  
+  puVar3 = auStack56;
+  BVar2 = IsProcessorFeaturePresent(0x17);
+  if (BVar2 != 0) {
+    pcVar1 = (code *)swi(0x29);
+    (*pcVar1)(2);
+    puVar3 = auStack48;
+  }
+  *(undefined8 *)(puVar3 + -8) = 0x18026e20b;
+  FUN_18026e3ec((PCONTEXT)&DAT_180426890);
+  _DAT_180426800 = *(undefined8 *)(puVar3 + 0x38);
+  _DAT_180426928 = puVar3 + 0x40;
+  _DAT_180426910 = *(undefined8 *)(puVar3 + 0x40);
+  _DAT_1804267f0 = 0xc0000409;
+  _DAT_1804267f4 = 1;
+  _DAT_180426808 = 1;
+  DAT_180426810 = 2;
+  *(undefined8 *)(puVar3 + 0x20) = DAT_180426020;
+  *(undefined8 *)(puVar3 + 0x28) = DAT_180426028;
+  *(undefined8 *)(puVar3 + -8) = 0x18026e2ad;
+  DAT_180426988 = _DAT_180426800;
+  FUN_18026e178((_EXCEPTION_POINTERS *)&PTR_DAT_18033f000);
+  return;
+}
+

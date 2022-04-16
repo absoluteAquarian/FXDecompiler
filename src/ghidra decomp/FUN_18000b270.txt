@@ -1,0 +1,46 @@
+﻿
+void FUN_18000b270(uint *param_1,uint param_2,undefined8 param_3,undefined8 param_4)
+
+{
+  uint uVar1;
+  uint uVar2;
+  uint uVar3;
+  undefined auStack88 [32];
+  undefined *local_38 [4];
+  ulonglong local_18;
+  ulonglong uVar4;
+  
+  local_18 = DAT_180426020 ^ (ulonglong)auStack88;
+  if ((param_2 & 0xff0000) != 0xe40000) {
+    local_38[0] = &DAT_180384850;
+    local_38[1] = &DAT_180384854;
+    local_38[2] = &DAT_180384858;
+    local_38[3] = &DAT_18038485c;
+    FUN_1800ecdb0(param_1,&DAT_1803833e0,param_3,param_4);
+    uVar2 = 1;
+    uVar1 = 0x12;
+    uVar3 = param_2 >> 0x10 & 3;
+    uVar4 = (ulonglong)uVar3;
+    do {
+      if (uVar3 != (param_2 >> ((byte)uVar1 & 0x1f) & 3)) {
+        if (uVar2 < 4) {
+          uVar1 = 0;
+          do {
+            FUN_1800ecdb0(param_1,local_38[param_2 >> ((char)uVar1 * '\x02' + 0x10U & 0x3f) & 3],
+                          uVar4,param_4);
+            uVar1 = uVar1 + 1;
+          } while (uVar1 < 4);
+          goto LAB_18000b31d;
+        }
+        break;
+      }
+      uVar2 = uVar2 + 1;
+      uVar1 = uVar1 + 2;
+    } while (uVar1 < 0x18);
+    FUN_1800ecdb0(param_1,local_38[param_2 >> 0x10 & 3],uVar4,param_4);
+  }
+LAB_18000b31d:
+  FUN_18026e150(local_18 ^ (ulonglong)auStack88);
+  return;
+}
+

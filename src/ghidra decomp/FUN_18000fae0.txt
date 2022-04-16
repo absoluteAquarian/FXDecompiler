@@ -1,0 +1,374 @@
+﻿
+/* WARNING: Function: _guard_dispatch_icall replaced with injection: guard_dispatch_icall */
+/* WARNING: Could not reconcile some variable overlaps */
+
+void FUN_18000fae0(uint *param_1,longlong param_2,int *param_3,int *param_4,int *param_5,
+                  uint *param_6,uint *param_7)
+
+{
+  undefined (*pauVar1) [16];
+  char cVar2;
+  uint uVar3;
+  uint uVar4;
+  uint uVar5;
+  bool bVar6;
+  bool bVar7;
+  longlong lVar8;
+  int *piVar9;
+  int iVar10;
+  ulonglong uVar11;
+  LPCWSTR pWVar12;
+  uint uVar13;
+  uint uVar14;
+  ulonglong uVar15;
+  WCHAR *lpWideCharStr;
+  uint *puVar16;
+  char *lpMultiByteStr;
+  CHAR *pCVar17;
+  undefined auStackY1832 [32];
+  longlong *local_6e8;
+  int local_6e0;
+  int local_6dc;
+  LPCWSTR local_6d8;
+  longlong *local_6d0;
+  longlong *local_6c8;
+  undefined local_6c0 [8];
+  int iStack1720;
+  undefined4 local_6a8;
+  int *local_6a0;
+  uint *local_698;
+  int *local_690;
+  undefined local_688 [16];
+  undefined local_678 [8];
+  int iStack1648;
+  undefined4 local_668;
+  WCHAR local_658 [264];
+  CHAR local_448 [1023];
+  undefined local_49;
+  ulonglong local_48;
+  
+  local_48 = DAT_180426020 ^ (ulonglong)auStackY1832;
+  lpWideCharStr = (WCHAR *)0x0;
+  local_6a0 = param_5;
+  lpMultiByteStr = *(char **)(param_2 + 0x60);
+  local_698 = param_7;
+  local_6e8 = (longlong *)0x0;
+  local_6c8 = (longlong *)0x0;
+  local_6d8 = (LPCWSTR)0x0;
+  local_6d0 = (longlong *)0x0;
+  _local_6c0 = ZEXT816(0);
+  local_690 = param_3;
+  if ((longlong **)lpMultiByteStr == (longlong **)0x0) {
+LAB_18000fcba:
+    if (*(longlong *)(param_2 + 0xa8) == 0) {
+      if (*(longlong *)(param_2 + 0x50) == 0) {
+LAB_180010142:
+        piVar9 = local_6a0;
+        if (((*local_690 == 0x2c) && (local_690[3] == 0x11)) || (local_6c0._0_4_ != *local_6a0)) {
+          if (local_6c0._0_4_ != -1) {
+            FUN_1800ecdb0(param_1,&DAT_180383328,lpMultiByteStr,param_4);
+            if (*(char *)(param_1 + 6) != '\0') {
+              lpMultiByteStr = "ffff40";
+              FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",param_4);
+              param_1[8] = param_1[8] + 1;
+            }
+            FUN_1800ecdb0(param_1,"#line ",lpMultiByteStr,param_4);
+            if (*(char *)(param_1 + 6) != '\0') {
+              param_1[8] = param_1[8] - 1;
+              FUN_1800ecdb0(param_1,"</font>",lpMultiByteStr,param_4);
+              if (*(char *)(param_1 + 6) != '\0') {
+                FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+                param_1[8] = param_1[8] + 1;
+              }
+            }
+            WideCharToMultiByte(0xfde9,0,lpWideCharStr,-1,local_448,0x400,(LPCSTR)0x0,(LPBOOL)0x0);
+            pCVar17 = local_448;
+            local_49 = 0;
+            uVar15 = (ulonglong)local_6c0._4_4_;
+            FUN_1800ecdb0(param_1,"%u \"%s\"\n",uVar15,pCVar17);
+            if (*(char *)(param_1 + 6) != '\0') {
+              param_1[8] = param_1[8] - 1;
+              FUN_1800ecdb0(param_1,"</font>",uVar15,pCVar17);
+            }
+            *local_698 = local_6c0._4_4_;
+          }
+          *piVar9 = local_6c0._0_4_;
+        }
+        else {
+          if (local_6c0._4_4_ == *param_6) goto LAB_180010338;
+          FUN_1800ecdb0(param_1,&DAT_180383328,lpMultiByteStr,param_4);
+          if (*(char *)(param_1 + 6) != '\0') {
+            lpMultiByteStr = "ffff40";
+            FUN_1800ecdb0(param_1,"<font color = \"#%s\">","ffff40",param_4);
+            param_1[8] = param_1[8] + 1;
+          }
+          FUN_1800ecdb0(param_1,"#line ",lpMultiByteStr,param_4);
+          if (*(char *)(param_1 + 6) != '\0') {
+            param_1[8] = param_1[8] - 1;
+            FUN_1800ecdb0(param_1,"</font>",lpMultiByteStr,param_4);
+            if (*(char *)(param_1 + 6) != '\0') {
+              FUN_1800ecdb0(param_1,"<font color = \"#%s\">","00ffff",param_4);
+              param_1[8] = param_1[8] + 1;
+            }
+          }
+          uVar15 = (ulonglong)local_6c0._4_4_;
+          FUN_1800ecdb0(param_1,&DAT_1803850a4,uVar15,param_4);
+          if (*(char *)(param_1 + 6) != '\0') {
+            param_1[8] = param_1[8] - 1;
+            FUN_1800ecdb0(param_1,"</font>",uVar15,param_4);
+          }
+          *local_698 = local_6c0._4_4_;
+        }
+        *param_6 = local_6c0._4_4_;
+      }
+      goto LAB_180010338;
+    }
+    _local_678 = ZEXT816(0);
+    local_668 = 0;
+    local_688 = ZEXT816(0);
+    iVar10 = FUN_18000f990(param_2);
+    if (iVar10 < 0) goto LAB_180010338;
+    param_4 = &local_6e0;
+    local_6e0 = 0;
+    lpMultiByteStr = (char *)&local_6e8;
+    bVar6 = false;
+    bVar7 = true;
+    iVar10 = (**(code **)(*local_6d0 + 0x30))();
+    if (-1 < iVar10) {
+      uVar15 = (ulonglong)local_688._4_4_;
+      do {
+        if (local_6e0 == 0) {
+          if (!bVar6) {
+            if (bVar7) {
+              bVar7 = false;
+              (**(code **)(*local_6d0 + 0x40))();
+              goto LAB_18000ff52;
+            }
+            FUN_180007890(param_1,"// <internal error> unable to find instruction in PDB\n",
+                          lpMultiByteStr,param_4);
+            goto LAB_180010338;
+          }
+LAB_18000ffdd:
+          if (*(longlong *)(param_2 + 0x60) == 0) goto LAB_180010084;
+          if (local_6c0._4_4_ == local_678._4_4_) {
+            if (iStack1720 + 1 == iStack1648) {
+              uVar11 = 0xffffffffffffffff;
+              do {
+                uVar11 = uVar11 + 1;
+              } while (lpWideCharStr[uVar11] != L'\0');
+              if ((uVar15 & 0xffffffff) != uVar11) {
+                FUN_180007890(param_1,"// <internal error> filename length mismatch in debug info\n"
+                              ,lpMultiByteStr,param_4);
+                goto LAB_180010338;
+              }
+              uVar11 = 0x103;
+              if ((uint)uVar15 < 0x103) {
+                uVar11 = uVar15 & 0xffffffff;
+              }
+              if (uVar11 != 0) {
+                pWVar12 = local_6d8;
+                do {
+                  if (*(WCHAR *)(((longlong)lpWideCharStr - (longlong)local_6d8) + (longlong)pWVar12
+                                ) != *pWVar12) {
+                    FUN_180007890(param_1,"// <internal error> filename mismatch in debug info\n",
+                                  lpMultiByteStr,param_4);
+                    goto LAB_180010338;
+                  }
+                  pWVar12 = pWVar12 + 1;
+                  uVar11 = uVar11 - 1;
+                } while (uVar11 != 0);
+              }
+LAB_180010084:
+              _local_6c0 = _local_678;
+              lpWideCharStr = local_6d8;
+              goto LAB_180010142;
+            }
+            FUN_180007890(param_1,"// <internal error> column mismatch in debug info\n",
+                          lpMultiByteStr,param_4);
+          }
+          else {
+            FUN_180007890(param_1,"// <internal error> line mismatch in debug info\n",lpMultiByteStr
+                          ,param_4);
+          }
+          goto LAB_180010338;
+        }
+        local_6dc = 0;
+        iVar10 = (**(code **)(*local_6e8 + 0x78))();
+        if (iVar10 < 0) {
+          FUN_180007890(param_1,"// <internal error> unable to get statement flag from PDB\n",
+                        lpMultiByteStr,param_4);
+          goto LAB_180010338;
+        }
+        if ((local_6dc == 0) && (bVar7)) {
+          if (local_6e8 != (longlong *)0x0) {
+            (**(code **)(*local_6e8 + 0x10))();
+            local_6e8 = (longlong *)0x0;
+          }
+        }
+        else {
+          local_6a8 = 0xffffffff;
+          iVar10 = (**(code **)(*local_6e8 + 0x50))();
+          if (iVar10 < 0) {
+            FUN_180007890(param_1,"// <internal error> unable to instruction offset from PDB\n",
+                          lpMultiByteStr,param_4);
+            goto LAB_180010338;
+          }
+          iVar10 = (**(code **)(*local_6e8 + 0x70))();
+          if (iVar10 < 0) {
+            FUN_180007890(param_1,"// <internal error> unable to get file id from PDB\n",
+                          lpMultiByteStr,param_4);
+            goto LAB_180010338;
+          }
+          iVar10 = (**(code **)(*local_6e8 + 0x28))();
+          if (iVar10 < 0) {
+            FUN_180007890(param_1,"// <internal error> unable to get line number from PDB\n",
+                          lpMultiByteStr,param_4);
+            goto LAB_180010338;
+          }
+          iVar10 = (**(code **)(*local_6e8 + 0x38))();
+          if (iVar10 < 0) {
+            FUN_180007890(param_1,"// <internal error> unable to get column number from PDB\n",
+                          lpMultiByteStr,param_4);
+            goto LAB_180010338;
+          }
+          iVar10 = (**(code **)(*local_6e8 + 0x20))();
+          if (iVar10 < 0) {
+            FUN_180007890(param_1,"// <internal error> unable to get source file info from PDB\n",
+                          lpMultiByteStr,param_4);
+            goto LAB_180010338;
+          }
+          FUN_18026f760((longlong)local_6d8);
+          local_6d8 = (LPCWSTR)0x0;
+          iVar10 = (**(code **)(*local_6c8 + 0x20))();
+          if (iVar10 < 0) {
+            FUN_180007890(param_1,"// <internal error> unable to get file name from PDB\n",
+                          lpMultiByteStr,param_4);
+            goto LAB_180010338;
+          }
+          uVar15 = 0xffffffffffffffff;
+          do {
+            uVar15 = uVar15 + 1;
+          } while (local_6d8[uVar15] != L'\0');
+          if (0xfffffffe < uVar15) goto LAB_180010338;
+          if (local_6c8 != (longlong *)0x0) {
+            (**(code **)(*local_6c8 + 0x10))();
+            local_6c8 = (longlong *)0x0;
+          }
+          if (local_6e8 != (longlong *)0x0) {
+            (**(code **)(*local_6e8 + 0x10))();
+            local_6e8 = (longlong *)0x0;
+          }
+          bVar6 = true;
+          if (local_6dc != 0) goto LAB_18000ffdd;
+        }
+LAB_18000ff52:
+        param_4 = &local_6e0;
+        local_6e0 = 0;
+        lpMultiByteStr = (char *)&local_6e8;
+        iVar10 = (**(code **)(*local_6d0 + 0x30))();
+      } while (-1 < iVar10);
+    }
+    FUN_1800ecdb0(param_1,&DAT_180383328,lpMultiByteStr,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      lpMultiByteStr = "a0a0a0";
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    FUN_1800ecdb0(param_1,"// <internal error> unable to iterate instruction in PDB\n",
+                  lpMultiByteStr,param_4);
+    cVar2 = *(char *)(param_1 + 6);
+  }
+  else {
+    uVar3 = *(uint *)((longlong)lpMultiByteStr + 0x1c);
+    uVar5 = (uint)param_4;
+    uVar4 = *(uint *)lpMultiByteStr;
+    lVar8 = (ulonglong)*(uint *)((longlong)lpMultiByteStr + 0x20) + (ulonglong)uVar4;
+    uVar13 = uVar5 + 1;
+    if (uVar3 <= uVar5 + 1) {
+      uVar13 = uVar3;
+    }
+    uVar15 = (ulonglong)uVar13;
+    do {
+      uVar14 = uVar5;
+      if (uVar13 == 0) break;
+      uVar13 = (int)uVar15 - 1;
+      uVar15 = (ulonglong)uVar13;
+      puVar16 = (uint *)((longlong)lpMultiByteStr + uVar15 * 0x18c + lVar8);
+      uVar14 = uVar13;
+    } while (uVar5 <= *puVar16 && *puVar16 != uVar5);
+    if ((uVar14 < uVar3) &&
+       (*(uint *)((longlong)lpMultiByteStr + (ulonglong)uVar14 * 0x18c + lVar8) == uVar5)) {
+      uVar3 = *(uint *)((longlong)lpMultiByteStr + (ulonglong)uVar14 * 0x18c + 0x174 + lVar8);
+      if (*(uint *)((longlong)lpMultiByteStr + 0x34) <= uVar3) {
+        FUN_180007890(param_1,"// <internal error> incorrect token offset in debug info\n",
+                      lpMultiByteStr,param_4);
+        goto LAB_180010338;
+      }
+      uVar5 = *(uint *)((longlong)lpMultiByteStr + 0x50);
+      uVar13 = *(uint *)((longlong)lpMultiByteStr +
+                        (ulonglong)uVar3 * 0x14 +
+                        (ulonglong)*(uint *)((longlong)lpMultiByteStr + 0x38) + (ulonglong)uVar4);
+      pauVar1 = (undefined (*) [16])
+                ((longlong)lpMultiByteStr +
+                (ulonglong)uVar3 * 0x14 +
+                (ulonglong)*(uint *)((longlong)lpMultiByteStr + 0x38) + (ulonglong)uVar4);
+      if (uVar13 != 0xffffffff) {
+        if (*(uint *)((longlong)lpMultiByteStr + 0x14) <= uVar13) {
+          FUN_180007890(param_1,"// <internal error> incorrect file offset in debug info\n",
+                        lpMultiByteStr,param_4);
+          goto LAB_180010338;
+        }
+        puVar16 = (uint *)((longlong)lpMultiByteStr +
+                          (ulonglong)*(uint *)((longlong)lpMultiByteStr + 0x18) +
+                          (ulonglong)uVar13 * 0x10 + (ulonglong)uVar4);
+        if (0x103 < puVar16[1]) {
+          FUN_180007890(param_1,"// <internal error> file name too long in debug info\n",
+                        lpMultiByteStr,param_4);
+          goto LAB_180010338;
+        }
+        memset(local_658,0,0x208);
+        param_4 = (int *)(ulonglong)puVar16[1];
+        lpMultiByteStr =
+             (char *)((longlong)lpMultiByteStr +
+                     (ulonglong)*puVar16 + (ulonglong)uVar5 + (ulonglong)uVar4);
+        iVar10 = MultiByteToWideChar(0xfde9,0,lpMultiByteStr,puVar16[1],local_658,0x104);
+        if (iVar10 == 0) goto LAB_180010338;
+        lpWideCharStr = local_658;
+      }
+      _local_6c0 = *pauVar1;
+      goto LAB_18000fcba;
+    }
+    FUN_1800ecdb0(param_1,&DAT_180383328,lpMultiByteStr,param_4);
+    if (*(char *)(param_1 + 6) != '\0') {
+      lpMultiByteStr = "a0a0a0";
+      FUN_1800ecdb0(param_1,"<font color = \"#%s\">","a0a0a0",param_4);
+      param_1[8] = param_1[8] + 1;
+    }
+    FUN_1800ecdb0(param_1,"// <internal error> incorrect instruction offset in debug info\n",
+                  lpMultiByteStr,param_4);
+    cVar2 = *(char *)(param_1 + 6);
+  }
+  if (cVar2 != '\0') {
+    param_1[8] = param_1[8] - 1;
+    FUN_1800ecdb0(param_1,"</font>",lpMultiByteStr,param_4);
+  }
+LAB_180010338:
+  if (local_6d0 != (longlong *)0x0) {
+    (**(code **)(*local_6d0 + 0x10))();
+    local_6d0 = (longlong *)0x0;
+  }
+  if (local_6e8 != (longlong *)0x0) {
+    (**(code **)(*local_6e8 + 0x10))();
+    local_6e8 = (longlong *)0x0;
+  }
+  if (local_6c8 != (longlong *)0x0) {
+    (**(code **)(*local_6c8 + 0x10))();
+    local_6c8 = (longlong *)0x0;
+  }
+  if (local_6d8 != (LPCWSTR)0x0) {
+    FUN_18026f760((longlong)local_6d8);
+  }
+  FUN_18026e150(local_48 ^ (ulonglong)auStackY1832);
+  return;
+}
+

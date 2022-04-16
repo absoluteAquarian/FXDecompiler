@@ -1,0 +1,33 @@
+﻿
+void FUN_180017e50(int *param_1)
+
+{
+  int iVar1;
+  
+  iVar1 = *param_1;
+  if (iVar1 == 0x35) {
+    _o_free(*(undefined8 *)(param_1 + 0x206));
+    if (param_1[0x204] == 4) {
+                    /* WARNING: Could not recover jumptable at 0x000180017e88. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+      _o_free(*(undefined8 *)(param_1 + 0x20e));
+      return;
+    }
+  }
+  else {
+    if (iVar1 == 0x91) {
+                    /* WARNING: Could not recover jumptable at 0x000180017ea7. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+      _o_free(*(undefined8 *)(param_1 + 0x206));
+      return;
+    }
+    if (iVar1 == 0x92) {
+                    /* WARNING: Could not recover jumptable at 0x000180017ec6. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+      _o_free(*(undefined8 *)(param_1 + 0x208));
+      return;
+    }
+  }
+  return;
+}
+
