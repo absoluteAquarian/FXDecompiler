@@ -1,0 +1,5 @@
+﻿struct s77 {
+    int64_t f0;
+    uint64_t f8;
+    uint64_t f16;
+};

@@ -1,0 +1,4 @@
+﻿struct s66 {
+    int32_t f0;
+    void** f4;
+};

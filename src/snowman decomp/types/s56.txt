@@ -1,0 +1,4 @@
+﻿struct s56 {
+    signed char[28] pad28;
+    void** f28;
+};

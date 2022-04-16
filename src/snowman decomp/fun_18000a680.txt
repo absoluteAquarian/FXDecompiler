@@ -1,0 +1,14 @@
+﻿void** fun_18000a680(uint32_t ecx, ...) {
+    int64_t rcx2;
+    int64_t rcx3;
+
+    *reinterpret_cast<uint32_t*>(&rcx2) = ecx - 1;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx2) + 4) = 0;
+    if (*reinterpret_cast<uint32_t*>(&rcx2) > 8) {
+        return 0;
+    } else {
+        *reinterpret_cast<int32_t*>(&rcx3) = *reinterpret_cast<int32_t*>(0x180000000 + rcx2 * 4 + 0xa704);
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx3) + 4) = 0;
+        goto rcx3 + 0x180000000;
+    }
+}

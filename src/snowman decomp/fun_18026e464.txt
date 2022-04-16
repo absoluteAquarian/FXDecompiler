@@ -1,0 +1,11 @@
+﻿uint64_t fun_18026e464(void** rcx, void** rdx, void** r8, void** r9, void** a5, ...) {
+    uint64_t rax6;
+
+    fun_18026dcdc();
+    rax6 = fun_18026ee9e();
+    if (*reinterpret_cast<int32_t*>(&rax6) < 0) {
+        *reinterpret_cast<int32_t*>(&rax6) = -1;
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax6) + 4) = 0;
+    }
+    return rax6;
+}

@@ -1,0 +1,3 @@
+﻿int32_t fun_18026ee92() {
+    goto _o___stdio_common_vsprintf;
+}

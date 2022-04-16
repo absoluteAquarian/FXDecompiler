@@ -1,0 +1,5 @@
+﻿struct s3132 {
+    void** f0;
+    signed char[7] pad8;
+    uint32_t f8;
+};

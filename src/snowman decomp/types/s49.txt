@@ -1,0 +1,4 @@
+﻿struct s49 {
+    signed char[28] pad28;
+    uint32_t f28;
+};

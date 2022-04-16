@@ -1,0 +1,20 @@
+﻿struct s1035 {
+    void** f0;
+    signed char[3] pad4;
+    void** f4;
+    signed char[3] pad8;
+    void** f8;
+    signed char[3] pad12;
+    void** f12;
+    signed char[3] pad16;
+    void** f16;
+    signed char[3] pad20;
+    void** f20;
+    signed char[3] pad24;
+    void** f24;
+    signed char[3] pad28;
+    int32_t f28;
+    void** f32;
+    signed char[3] pad36;
+    void** f36;
+};

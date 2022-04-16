@@ -1,0 +1,3 @@
+﻿void** fun_18026dd2c() {
+    goto _o_free;
+}

@@ -1,0 +1,4 @@
+﻿struct s29 {
+    signed char[248] pad248;
+    int64_t f248;
+};

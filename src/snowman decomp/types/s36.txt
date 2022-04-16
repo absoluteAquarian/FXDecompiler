@@ -1,0 +1,9 @@
+﻿struct s36 {
+    int32_t f0;
+    signed char[4] pad8;
+    int32_t f8;
+    signed char[12] pad24;
+    int32_t f24;
+    signed char[4] pad32;
+    int32_t f32;
+};

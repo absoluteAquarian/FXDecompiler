@@ -1,0 +1,6 @@
+﻿struct s73 {
+    void* f0;
+    void** f8;
+    signed char[7] pad16;
+    void** f16;
+};

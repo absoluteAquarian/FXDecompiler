@@ -1,0 +1,5 @@
+﻿struct s1038 {
+    void** f0;
+    signed char[3] pad4;
+    void** f4;
+};

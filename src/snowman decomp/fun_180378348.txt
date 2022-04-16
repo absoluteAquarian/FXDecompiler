@@ -1,0 +1,5 @@
+﻿void fun_180338730() {
+    int64_t rax1;
+
+    goto rax1;
+}

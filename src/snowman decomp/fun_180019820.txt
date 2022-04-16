@@ -1,0 +1,59 @@
+﻿void** fun_180019820(void** rcx, void** rdx, void** r8, void** r9) {
+    int64_t v5;
+    int64_t v6;
+    void** r8_7;
+    struct s70* v8;
+    int64_t v9;
+    int64_t v10;
+    uint32_t v11;
+    void** r8_12;
+    uint32_t eax13;
+    int32_t v14;
+    void** r9_15;
+    void** rdx16;
+    int64_t rax17;
+    uint64_t rax18;
+    uint64_t rax19;
+    int64_t rax20;
+    int64_t v21;
+
+    fun_1800ecc68(rcx, static_cast<uint32_t>(reinterpret_cast<unsigned char>(rdx) * 4), r8, r9, v5);
+    fun_1800ecdb0(rcx, "%s", r8, r9, v6);
+    *reinterpret_cast<uint32_t*>(&r8_7) = v8->f8;
+    *reinterpret_cast<int32_t*>(&r8_7 + 4) = 0;
+    if (*reinterpret_cast<uint32_t*>(&r8_7) > 1) {
+        fun_1800ecdb0(rcx, "[%u]", r8_7, r9, v9);
+    }
+    if (r9) {
+        fun_1800ecdb0(rcx, " : %s", r9, r9, v10);
+    }
+    if (v11 != 0xffffffff) {
+        if (v8->f4 == 2) {
+            *reinterpret_cast<uint32_t*>(&r8_12) = 0x78;
+            *reinterpret_cast<int32_t*>(&r8_12 + 4) = 0;
+            eax13 = v14 + 0xfffffff7;
+            if (eax13 > 14) {
+                *reinterpret_cast<uint32_t*>(&r9_15) = v11;
+                *reinterpret_cast<int32_t*>(&r9_15 + 4) = 0;
+                rdx16 = reinterpret_cast<void**>(" : register(%c%u)");
+            } else {
+                *reinterpret_cast<int32_t*>(&rax17) = *reinterpret_cast<int32_t*>(0x180000000 + eax13 * 4 + 0x1992c);
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax17) + 4) = 0;
+                goto rax17 + 0x180000000;
+            }
+        } else {
+            *reinterpret_cast<uint32_t*>(&rax18) = v11;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax18) + 4) = 0;
+            rax19 = rax18 >> 2;
+            *reinterpret_cast<uint32_t*>(&rax20) = *reinterpret_cast<uint32_t*>(&rax19) & 3;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax20) + 4) = 0;
+            *reinterpret_cast<uint32_t*>(&r8_12) = v11 >> 4;
+            *reinterpret_cast<int32_t*>(&r8_12 + 4) = 0;
+            *reinterpret_cast<uint32_t*>(&r9_15) = reinterpret_cast<uint32_t>(static_cast<int32_t>(*reinterpret_cast<signed char*>(rax20 + 0x180000000 + 0x3844a0)));
+            *reinterpret_cast<int32_t*>(&r9_15 + 4) = 0;
+            rdx16 = reinterpret_cast<void**>(" : packoffset(c%u.%c)");
+        }
+        fun_1800ecdb0(rcx, rdx16, r8_12, r9_15, v21);
+    }
+    return 0;
+}

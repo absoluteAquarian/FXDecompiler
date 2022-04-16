@@ -1,0 +1,9 @@
+﻿struct s3137 {
+    int32_t f0;
+    uint16_t f4;
+    uint16_t f6;
+    uint16_t f8;
+    uint16_t f10;
+    uint16_t f12;
+    uint16_t f14;
+};

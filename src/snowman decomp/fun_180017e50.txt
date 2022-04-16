@@ -1,0 +1,20 @@
+﻿void fun_180017e50(void** rcx, ...) {
+    void** rcx2;
+
+    if (!reinterpret_cast<int1_t>(*reinterpret_cast<void***>(rcx) == 53)) {
+        if (!reinterpret_cast<int1_t>(*reinterpret_cast<void***>(rcx) == 0x91)) {
+            if (reinterpret_cast<int1_t>(*reinterpret_cast<void***>(rcx) == 0x92)) {
+                goto _o_free;
+            }
+        } else {
+            goto _o_free;
+        }
+    } else {
+        rcx2 = *reinterpret_cast<void***>(rcx + 0x818);
+        _o_free(rcx2);
+        if (reinterpret_cast<int1_t>(*reinterpret_cast<void***>(rcx + 0x810) == 4)) {
+            goto _o_free;
+        }
+    }
+    return;
+}

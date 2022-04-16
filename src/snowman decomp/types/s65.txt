@@ -1,0 +1,4 @@
+﻿struct s65 {
+    uint16_t f0;
+    uint16_t f2;
+};

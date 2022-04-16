@@ -1,0 +1,4 @@
+﻿void fun_18026ea18(int64_t rcx) {
+    g180426dc4 = 0;
+    return;
+}

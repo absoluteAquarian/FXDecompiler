@@ -1,0 +1,5 @@
+﻿struct s1054 {
+    void** f0;
+    signed char[55] pad56;
+    int32_t f56;
+};

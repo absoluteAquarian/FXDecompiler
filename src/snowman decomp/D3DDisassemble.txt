@@ -1,0 +1,6 @@
+﻿void** D3DDisassemble(void** rcx, void** rdx, void** r8d, void** r9) {
+    void** eax5;
+
+    eax5 = fun_180015f80(rcx, rdx, r8d, r9);
+    return eax5;
+}

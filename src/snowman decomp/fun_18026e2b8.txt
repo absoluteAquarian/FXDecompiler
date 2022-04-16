@@ -1,0 +1,6 @@
+﻿void** fun_18026e2b8() {
+    void** rax1;
+
+    rax1 = fun_18026e2d4(8);
+    return rax1;
+}

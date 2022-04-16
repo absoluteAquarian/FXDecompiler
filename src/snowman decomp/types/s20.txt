@@ -1,0 +1,5 @@
+﻿struct s20 {
+    void** f0;
+    signed char[199] pad200;
+    int32_t f200;
+};

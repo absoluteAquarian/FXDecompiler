@@ -1,0 +1,34 @@
+﻿int64_t fun_1800123e0(void** rcx, uint32_t* rdx, void** r8, void** r9, int64_t a5) {
+    uint32_t* rdi6;
+    void** rsi7;
+    int64_t v8;
+    uint32_t ebx9;
+    uint32_t eax10;
+    int64_t v11;
+    int64_t v12;
+    int64_t rcx13;
+    int64_t v14;
+
+    rdi6 = rdx;
+    rsi7 = rcx;
+    fun_1800ecdb0(rcx, "(", r8, r9, v8);
+    ebx9 = 0;
+    do {
+        eax10 = *rdi6 - 1;
+        if (eax10 <= 8) 
+            break;
+        fun_1800ecdb0(rsi7, "%s", "<unknown resource return type>", r9, v11);
+        if (ebx9 < 3) {
+            fun_1800ecdb0(rsi7, ",", "<unknown resource return type>", r9, v12);
+        }
+        ++ebx9;
+        ++rdi6;
+    } while (ebx9 < 4);
+    goto addr_1800124b5_9;
+    *reinterpret_cast<int32_t*>(&rcx13) = *reinterpret_cast<int32_t*>(0x180000000 + eax10 * 4 + 0x124dc);
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx13) + 4) = 0;
+    goto rcx13 + 0x180000000;
+    addr_1800124b5_9:
+    fun_1800ecdb0(rsi7, ")", "<unknown resource return type>", r9, v14);
+    return 0;
+}

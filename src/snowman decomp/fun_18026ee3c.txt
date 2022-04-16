@@ -1,0 +1,9 @@
+﻿int32_t fun_18026ee3c() {
+    int32_t eax1;
+    int1_t zf2;
+
+    eax1 = 0;
+    zf2 = g1804261f0 == 0;
+    *reinterpret_cast<unsigned char*>(&eax1) = reinterpret_cast<uint1_t>(!zf2);
+    return eax1;
+}

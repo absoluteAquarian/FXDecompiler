@@ -1,0 +1,4 @@
+﻿struct s45 {
+    signed char[124] pad124;
+    void** f124;
+};

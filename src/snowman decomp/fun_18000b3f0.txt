@@ -1,0 +1,57 @@
+﻿void** fun_18000b3f0(void** rcx, void** edx, void** r8d, void** r9, ...) {
+    void** r8_3;
+    void** esi5;
+    int64_t v6;
+    int64_t v7;
+    void** ecx8;
+    void** rdx9;
+    void** ecx10;
+    void** ecx11;
+    int64_t v12;
+    int64_t v13;
+    int64_t v14;
+    void** rax15;
+    int64_t v16;
+
+    r8_3 = r8d;
+    esi5 = r8_3;
+    if (r8_3 != 0xff && edx != r8_3 || edx) {
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            r8_3 = g18035fec0;
+            fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8_3, r9, v6);
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+        }
+        fun_1800ecdb0(rcx, " {", r8_3, r9, v7);
+        ecx8 = edx - 1;
+        if (!ecx8) {
+            rdx9 = reinterpret_cast<void**>("min16f");
+        } else {
+            ecx10 = ecx8 - 1;
+            if (!ecx10) {
+                rdx9 = reinterpret_cast<void**>("min2_8f");
+            } else {
+                ecx11 = ecx10 - 2;
+                if (!ecx11) {
+                    rdx9 = reinterpret_cast<void**>("min16i");
+                } else {
+                    if (ecx11 == 1) {
+                        rdx9 = reinterpret_cast<void**>("min16u");
+                    } else {
+                        rdx9 = reinterpret_cast<void**>("def32");
+                    }
+                }
+            }
+        }
+        fun_1800ecdb0(rcx, rdx9, r8_3, r9, v12);
+        if (esi5 != 0xff && edx != esi5) {
+            fun_1800ecdb0(rcx, " as ", r8_3, r9, v13);
+            fun_18000b390(rcx, esi5, r8_3, r9);
+        }
+        rax15 = fun_1800ecdb0(rcx, "}", r8_3, r9, v14);
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+            rax15 = fun_1800ecdb0(rcx, "</font>", r8_3, r9, v16);
+        }
+    }
+    return rax15;
+}

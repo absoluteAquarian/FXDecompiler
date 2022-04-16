@@ -1,0 +1,191 @@
+﻿void** fun_18000aef0(void** rcx, void** rdx, void** r8, uint32_t r9d) {
+    void** r9_4;
+    void* rsp5;
+    int64_t rsi6;
+    void** v7;
+    void** rbx8;
+    void** ebp9;
+    void** rdi10;
+    void** v11;
+    void** r8_12;
+    int64_t v13;
+    int64_t v14;
+    void** ebp15;
+    void** ecx16;
+    void** v17;
+    uint32_t ebp18;
+    void** rax19;
+    int64_t v20;
+    int64_t v21;
+    void* rsp22;
+    void** r8_23;
+    int64_t v24;
+    int64_t v25;
+    void** r8_26;
+    int64_t v27;
+    int64_t v28;
+    int64_t v29;
+    int64_t v30;
+    void** r8_31;
+    int64_t v32;
+    int64_t v33;
+    void** r8_34;
+    int64_t v35;
+    int64_t v36;
+    void** r8_37;
+    int64_t v38;
+    int64_t v39;
+    int64_t v40;
+    int64_t v41;
+    void* rsp42;
+    int64_t v43;
+    int64_t v44;
+    void** rax45;
+    void* rsp46;
+    void** r9_47;
+    int64_t v48;
+    int64_t v49;
+    void* rsp50;
+    int64_t v51;
+    int64_t v52;
+    int64_t v53;
+    int64_t v54;
+    void** r9_55;
+    void** r8_56;
+    int64_t v57;
+    int64_t v58;
+    int64_t v59;
+    int64_t v60;
+
+    *reinterpret_cast<uint32_t*>(&r9_4) = r9d;
+    rsp5 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 8 - 8 - 8 - 8 - 8 - 0x68);
+    *reinterpret_cast<void***>(&rsi6) = reinterpret_cast<void**>(0);
+    v7 = rdx;
+    rbx8 = rcx;
+    if (!r8) {
+    }
+    ebp9 = *reinterpret_cast<void***>(rdx);
+    rdi10 = rdx + 4;
+    if (!r8) {
+    }
+    v11 = ebp9;
+    if (!ebp9) {
+        addr_18000b167_7:
+        if (*reinterpret_cast<void***>(rbx8 + 24)) {
+            r8_12 = g18035fec0;
+            fun_1800ecdb0(rbx8, "<font color = \"#%s\">", r8_12, r9_4, v13, rbx8, "<font color = \"#%s\">", r8_12, r9_4, v14);
+            *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) + 1;
+        }
+    } else {
+        while (1) {
+            ebp15 = *reinterpret_cast<void***>(rdi10);
+            ecx16 = *reinterpret_cast<void***>(rdi10);
+            v17 = *reinterpret_cast<void***>(rdi10 + 4);
+            __asm__("btr ecx, 0x1f");
+            ebp18 = reinterpret_cast<unsigned char>(ebp15) & 0xfffff;
+            rax19 = fun_1800e8c40(ecx16, rdx, r8, r9_4, ecx16, rdx, r8, r9_4);
+            fun_1800ecdb0(rbx8, "    ", r8, r9_4, v20, rbx8, "    ", r8, r9_4, v21);
+            rsp22 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp5) - 8 + 8 - 8 + 8);
+            if (*reinterpret_cast<void***>(rbx8 + 26)) {
+                if (*reinterpret_cast<void***>(rbx8 + 24)) {
+                    r8_23 = g18035fed0;
+                    fun_1800ecdb0(rbx8, "<font color = \"#%s\">", r8_23, r9_4, v24, rbx8, "<font color = \"#%s\">", r8_23, r9_4, v25);
+                    rsp22 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp22) - 8 + 8);
+                    *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) + 1;
+                }
+                *reinterpret_cast<uint32_t*>(&r9_4) = 58;
+                *reinterpret_cast<int32_t*>(&r9_4 + 4) = 0;
+                if (*reinterpret_cast<void***>(rbx8 + 28)) {
+                    *reinterpret_cast<uint32_t*>(&r9_4) = 32;
+                    *reinterpret_cast<int32_t*>(&r9_4 + 4) = 0;
+                }
+                r8_26 = *reinterpret_cast<void***>(&rsi6);
+                *reinterpret_cast<int32_t*>(&r8_26 + 4) = 0;
+                fun_1800ecdb0(rbx8, "%4u%c ", r8_26, r9_4, v27, rbx8, "%4u%c ", r8_26, r9_4, v28);
+                rsp22 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp22) - 8 + 8);
+                if (*reinterpret_cast<void***>(rbx8 + 24)) {
+                    *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) - 1;
+                    fun_1800ecdb0(rbx8, "</font>", r8_26, r9_4, v29, rbx8, "</font>", r8_26, r9_4, v30);
+                    rsp22 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp22) - 8 + 8);
+                }
+            }
+            if (!*reinterpret_cast<void***>(rbx8 + 28)) {
+                addr_18000b037_17:
+                if (*reinterpret_cast<void***>(rbx8 + 24)) {
+                    r8_31 = g18035fec8;
+                    fun_1800ecdb0(rbx8, "<font color = \"#%s\">", r8_31, r9_4, v32, rbx8, "<font color = \"#%s\">", r8_31, r9_4, v33);
+                    rsp22 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp22) - 8 + 8);
+                    *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) + 1;
+                }
+            } else {
+                if (*reinterpret_cast<void***>(rbx8 + 24)) {
+                    r8_34 = g18035fed0;
+                    fun_1800ecdb0(rbx8, "<font color = \"#%s\">", r8_34, r9_4, v35, rbx8, "<font color = \"#%s\">", r8_34, r9_4, v36);
+                    rsp22 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp22) - 8 + 8);
+                    *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) + 1;
+                }
+                *reinterpret_cast<int32_t*>(&r8_37) = *reinterpret_cast<int32_t*>(&rdi10) - *reinterpret_cast<int32_t*>(&v7);
+                *reinterpret_cast<int32_t*>(&r8_37 + 4) = 0;
+                fun_1800ecdb0(rbx8, "0x%08X: ", r8_37, r9_4, v38, rbx8, "0x%08X: ", r8_37, r9_4, v39);
+                rsp22 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp22) - 8 + 8);
+                if (*reinterpret_cast<void***>(rbx8 + 24)) 
+                    goto addr_18000b025_22;
+            }
+            fun_1800ecdb0(rbx8, "%s", rax19, r9_4, v40, rbx8, "%s", rax19, r9_4, v41);
+            rsp42 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp22) - 8 + 8);
+            if (*reinterpret_cast<void***>(rbx8 + 24)) {
+                *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) - 1;
+                fun_1800ecdb0(rbx8, "</font>", rax19, r9_4, v43, rbx8, "</font>", rax19, r9_4, v44);
+                rsp42 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp42) - 8 + 8);
+            }
+            rax45 = fun_18000a730(0, reinterpret_cast<int64_t>(rsp42) + 0xa8, v17, ebp18);
+            rsp46 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp42) - 8 + 8);
+            if (*reinterpret_cast<int32_t*>(&rax45) < 0) 
+                goto addr_18000b1c7_26;
+            *reinterpret_cast<uint32_t*>(&r9_47) = ebp18;
+            *reinterpret_cast<int32_t*>(&r9_47 + 4) = 0;
+            rax45 = fun_18000a730(rbx8, reinterpret_cast<int64_t>(rsp46) + 0xa8, 1, *reinterpret_cast<uint32_t*>(&r9_47));
+            rsp46 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp46) - 8 + 8);
+            if (*reinterpret_cast<int32_t*>(&rax45) < 0) 
+                goto addr_18000b1c7_26;
+            fun_1800ecdb0(rbx8, ",", 1, r9_47, v48, rbx8, ",", 1, r9_47, v49);
+            rsp50 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp46) - 8 + 8);
+            *reinterpret_cast<uint32_t*>(&r9_4) = ebp18;
+            *reinterpret_cast<int32_t*>(&r9_4 + 4) = 0;
+            r8 = v17;
+            *reinterpret_cast<int32_t*>(&r8 + 4) = 0;
+            rax45 = fun_18000a730(rbx8, reinterpret_cast<int64_t>(rsp50) + 80, r8, *reinterpret_cast<uint32_t*>(&r9_4));
+            if (*reinterpret_cast<int32_t*>(&rax45) < 0) 
+                goto addr_18000b1c7_26;
+            rdx = reinterpret_cast<void**>("\n");
+            fun_1800ecdb0(rbx8, "\n", r8, r9_4, v51, rbx8, "\n", r8, r9_4, v52);
+            rsp5 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp50) - 8 + 8 - 8 + 8);
+            ebp9 = v11;
+            *reinterpret_cast<void***>(&rsi6) = *reinterpret_cast<void***>(&rsi6) + 1;
+            if (reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&rsi6)) >= reinterpret_cast<unsigned char>(ebp9)) 
+                goto addr_18000b167_7;
+            rdi10 = rdi10 + 8;
+            continue;
+            addr_18000b025_22:
+            *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) - 1;
+            fun_1800ecdb0(rbx8, "</font>", r8_37, r9_4, v53, rbx8, "</font>", r8_37, r9_4, v54);
+            rsp22 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp22) - 8 + 8);
+            goto addr_18000b037_17;
+        }
+    }
+    r9_55 = reinterpret_cast<void**>("s");
+    r8_56 = ebp9;
+    *reinterpret_cast<int32_t*>(&r8_56 + 4) = 0;
+    if (ebp9 == 1) {
+        r9_55 = reinterpret_cast<void**>(0x18038741c);
+    }
+    fun_1800ecdb0(rbx8, "\n// approximately %u instruction%s used\n", r8_56, r9_55, v57, rbx8, "\n// approximately %u instruction%s used\n", r8_56, r9_55, v58);
+    if (*reinterpret_cast<void***>(rbx8 + 24)) {
+        *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) - 1;
+        fun_1800ecdb0(rbx8, "</font>", r8_56, r9_55, v59, rbx8, "</font>", r8_56, r9_55, v60);
+    }
+    *reinterpret_cast<int32_t*>(&rax45) = 0;
+    *reinterpret_cast<int32_t*>(&rax45 + 4) = 0;
+    addr_18000b1c7_26:
+    return rax45;
+}

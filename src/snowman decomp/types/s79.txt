@@ -1,0 +1,5 @@
+﻿struct s79 {
+    void* f0;
+    void* f8;
+    void* f16;
+};

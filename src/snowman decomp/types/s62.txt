@@ -1,0 +1,5 @@
+﻿struct s62 {
+    uint32_t f0;
+    signed char[2] pad6;
+    uint16_t f6;
+};

@@ -1,0 +1,97 @@
+﻿void** fun_180015a50(void** rcx) {
+    void** rbx2;
+    int64_t r8_3;
+    uint64_t r9_4;
+    int64_t* v5;
+    uint32_t edi6;
+    uint32_t v7;
+    int32_t v8;
+    int64_t rax9;
+    uint32_t eax10;
+    uint32_t eax11;
+    uint32_t eax12;
+    uint32_t eax13;
+    uint32_t eax14;
+    uint32_t eax15;
+    uint32_t edi16;
+    void** rax17;
+    void** rdi18;
+    void** rcx19;
+    void** rdx20;
+    void** r8_21;
+    void** rsi22;
+    void** rax23;
+    void** r9_24;
+    void** eax25;
+    void** rcx26;
+    void** r9_27;
+    int64_t v28;
+    void** r9_29;
+    int64_t v30;
+
+    rbx2 = rcx;
+    if (!r8_3 || (r9_4 > 0xffffffff || !v5)) {
+        return 0x8876086c;
+    }
+    edi6 = v7;
+    if (edi6 & reinterpret_cast<uint32_t>(~v8)) {
+        return 0x8876086c;
+    }
+    *v5 = 0;
+    rax9 = reinterpret_cast<int64_t>(_o_getenv("D3DCOMPILER_DISASSEMBLY_FORCE_HEX_LITERALS"));
+    if (rax9 || *reinterpret_cast<signed char*>(&edi6) < reinterpret_cast<signed char>(0)) {
+        *reinterpret_cast<unsigned char*>(&rax9) = 1;
+    }
+    g180427990 = *reinterpret_cast<unsigned char*>(&rax9);
+    eax10 = *reinterpret_cast<unsigned char*>(&edi6);
+    *reinterpret_cast<void***>(rbx2 + 24) = reinterpret_cast<void**>(*reinterpret_cast<unsigned char*>(&eax10) & 1);
+    eax11 = edi6 >> 1;
+    *reinterpret_cast<void***>(rbx2 + 25) = reinterpret_cast<void**>(*reinterpret_cast<unsigned char*>(&eax11) & 1);
+    eax12 = edi6 >> 2;
+    *reinterpret_cast<void***>(rbx2 + 26) = reinterpret_cast<void**>(*reinterpret_cast<unsigned char*>(&eax12) & 1);
+    eax13 = edi6 >> 3;
+    *reinterpret_cast<void***>(rbx2 + 27) = reinterpret_cast<void**>(*reinterpret_cast<unsigned char*>(&eax13) & 1);
+    eax14 = edi6 >> 5;
+    *reinterpret_cast<void***>(rbx2 + 28) = reinterpret_cast<void**>(*reinterpret_cast<unsigned char*>(&eax14) & 1);
+    eax15 = edi6 >> 4;
+    edi16 = edi6 >> 6;
+    *reinterpret_cast<unsigned char*>(rbx2 + 29) = reinterpret_cast<unsigned char>(*reinterpret_cast<unsigned char*>(&eax15) & 1);
+    *reinterpret_cast<void***>(rbx2 + 30) = reinterpret_cast<void**>(*reinterpret_cast<unsigned char*>(&edi16) & 1);
+    rax17 = reinterpret_cast<void**>(_o_setlocale(4));
+    rdi18 = rax17;
+    if (!reinterpret_cast<int1_t>(*reinterpret_cast<void***>(rax17) == 67)) 
+        goto addr_180015b36_8;
+    if (!*reinterpret_cast<void***>(rax17 + 1)) 
+        goto addr_180015bcc_10;
+    addr_180015b36_8:
+    rcx19 = rdi18;
+    *reinterpret_cast<int32_t*>(&rdx20) = 0x7fffffff;
+    *reinterpret_cast<int32_t*>(&rdx20 + 4) = 0;
+    do {
+        if (!*reinterpret_cast<void***>(rcx19)) 
+            break;
+        ++rcx19;
+        --rdx20;
+    } while (rdx20);
+    if (rdx20) 
+        goto addr_180015b55_14;
+    *reinterpret_cast<int32_t*>(&r8_21) = 0;
+    *reinterpret_cast<int32_t*>(&r8_21 + 4) = 0;
+    addr_180015b5d_16:
+    if (!rdx20 || ((rsi22 = r8_21 + 1, rax23 = reinterpret_cast<void**>(_o_malloc(rsi22)), *reinterpret_cast<void***>(rbx2 + 16) = rax23, rax23 == 0) || (r8_21 = rdi18, rdx20 = rsi22, eax25 = fun_1800790f0(rax23, rdx20, r8_21, r9_24), reinterpret_cast<signed char>(eax25) < reinterpret_cast<signed char>(0)))) {
+        rcx26 = *reinterpret_cast<void***>(rbx2 + 16);
+        _o_free(rcx26, rdx20, r8_21);
+        *reinterpret_cast<void***>(rbx2 + 16) = reinterpret_cast<void**>(0);
+    } else {
+        _o_setlocale(4, "C", r8_21);
+    }
+    addr_180015bcc_10:
+    if (*reinterpret_cast<void***>(rbx2 + 24)) {
+        fun_1800ecdb0(rbx2, "<pre>", r8_21, r9_27, v28);
+        fun_1800ecdb0(rbx2, "<body bgcolor=\"#000000\">", r8_21, r9_29, v30);
+    }
+    return 0;
+    addr_180015b55_14:
+    r8_21 = reinterpret_cast<void**>(0x7fffffff - reinterpret_cast<unsigned char>(rdx20));
+    goto addr_180015b5d_16;
+}

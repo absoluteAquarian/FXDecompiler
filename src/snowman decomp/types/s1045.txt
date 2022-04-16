@@ -1,0 +1,5 @@
+﻿struct s1045 {
+    void** f0;
+    signed char[15] pad16;
+    void** f16;
+};

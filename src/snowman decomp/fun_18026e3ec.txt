@@ -1,0 +1,21 @@
+﻿void fun_18026e3ec(struct s29* rcx) {
+    void* rsp2;
+    int64_t rsi3;
+    int32_t edi4;
+    int64_t rax5;
+
+    RtlCaptureContext();
+    rsp2 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 8 - 8 - 64 - 8 + 8);
+    rsi3 = rcx->f248;
+    edi4 = 0;
+    do {
+        rax5 = reinterpret_cast<int64_t>(RtlLookupFunctionEntry(rsi3, reinterpret_cast<int64_t>(rsp2) + 96));
+        rsp2 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp2) - 8 + 8);
+        if (!rax5) 
+            break;
+        RtlVirtualUnwind();
+        rsp2 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp2) - 8 + 8);
+        ++edi4;
+    } while (edi4 < 2);
+    return;
+}

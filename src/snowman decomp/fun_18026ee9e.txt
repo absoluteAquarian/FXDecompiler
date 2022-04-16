@@ -1,0 +1,3 @@
+﻿uint64_t fun_18026ee9e() {
+    goto _o___stdio_common_vsprintf_s;
+}

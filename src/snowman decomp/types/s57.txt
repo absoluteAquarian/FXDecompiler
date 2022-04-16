@@ -1,0 +1,4 @@
+﻿struct s57 {
+    signed char f0;
+    signed char f1;
+};

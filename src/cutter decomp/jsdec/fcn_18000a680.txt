@@ -1,8 +1,4 @@
-﻿/* jsdec pseudo code output */
-/* C:\Windows\System32\D3DCompiler_47.dll @ 0x18000a680 */
-#include <stdint.h>
- 
-int64_t fcn_18000a680 (void) {
+﻿int64_t fcn_18000a680 (void) {
     edx = 0;
     ecx--;
     if (ecx <= 8) {

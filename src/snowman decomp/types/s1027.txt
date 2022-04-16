@@ -1,0 +1,5 @@
+﻿struct s1027 {
+    void** f0;
+    signed char[39] pad40;
+    int32_t f40;
+};

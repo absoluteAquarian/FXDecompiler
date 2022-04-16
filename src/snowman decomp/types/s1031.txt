@@ -1,0 +1,5 @@
+﻿struct s1031 {
+    int64_t f0;
+    int64_t f8;
+    int64_t f16;
+};

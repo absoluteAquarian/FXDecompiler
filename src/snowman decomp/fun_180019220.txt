@@ -1,0 +1,88 @@
+﻿void** fun_180019220(void** rcx, struct s66* rdx, void** r8d, void** r9, int64_t a5) {
+    void** r8_3;
+    void** rsi6;
+    struct s66* rdi7;
+    void** rbx8;
+    int64_t v9;
+    signed char r14b10;
+    void** rcx11;
+    signed char v12;
+    int64_t rdx13;
+    int64_t rcx14;
+    int64_t v15;
+    void** edx16;
+    void** rax17;
+    int64_t rax18;
+    int64_t v19;
+    int64_t v20;
+    int64_t v21;
+    uint32_t eax22;
+    int64_t v23;
+    uint32_t eax24;
+    int64_t v25;
+    int64_t v26;
+
+    r8_3 = r8d;
+    rsi6 = r9;
+    rdi7 = rdx;
+    rbx8 = rcx;
+    if (*reinterpret_cast<void***>(rcx + 24)) {
+        r8_3 = g18035fed8;
+        fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8_3, r9, v9);
+        *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) + 1;
+    }
+    r14b10 = 0;
+    if (!rsi6 || (rcx11 = reinterpret_cast<void**>(0), *reinterpret_cast<void***>(rsi6) == 0)) {
+        addr_180019300_4:
+        if (!v12) {
+            rdx13 = rdi7->f0;
+            if (*reinterpret_cast<uint32_t*>(&rdx13) <= 5) {
+                *reinterpret_cast<int32_t*>(&rcx14) = *reinterpret_cast<int32_t*>(0x180000000 + rdx13 * 4 + 0x1948c);
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx14) + 4) = 0;
+                goto rcx14 + 0x180000000;
+            }
+        } else {
+            r8_3 = rdi7->f4;
+            *reinterpret_cast<int32_t*>(&r8_3 + 4) = 0;
+            fun_1800ecdb0(rbx8, "0x%08x", r8_3, r9, v15);
+        }
+    } else {
+        edx16 = rdi7->f4;
+        r8_3 = reinterpret_cast<void**>(0);
+        *reinterpret_cast<int32_t*>(&r8_3 + 4) = 0;
+        rax17 = rsi6;
+        do {
+            if (edx16 == *reinterpret_cast<void***>(rax17 + 8)) 
+                goto addr_18001929d_10;
+            ++rcx11;
+            *reinterpret_cast<void***>(&rax18) = rcx11;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax18) + 4) = 0;
+            rax17 = reinterpret_cast<void**>((rax18 << 4) + reinterpret_cast<unsigned char>(rsi6));
+            r8_3 = rcx11;
+            *reinterpret_cast<int32_t*>(&r8_3 + 4) = 0;
+        } while (*reinterpret_cast<void***>(rax17));
+        goto addr_18001929b_12;
+    }
+    if (r14b10) {
+        fun_1800ecdb0(rbx8, " */", r8_3, r9, v19);
+    }
+    if (*reinterpret_cast<void***>(rbx8 + 24)) {
+        *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) - 1;
+        fun_1800ecdb0(rbx8, "</font>", r8_3, r9, v20);
+    }
+    return 0;
+    addr_18001929d_10:
+    r8_3 = *reinterpret_cast<void***>(rsi6 + (reinterpret_cast<unsigned char>(r8_3) + reinterpret_cast<unsigned char>(r8_3)) * 8);
+    fun_1800ecdb0(rbx8, "%s", r8_3, r9, v21);
+    eax22 = reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rbx8 + 24));
+    r14b10 = 1;
+    if (*reinterpret_cast<signed char*>(&eax22) && (*reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) - 1, fun_1800ecdb0(rbx8, "</font>", r8_3, r9, v23), eax24 = reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rbx8 + 24)), !!*reinterpret_cast<signed char*>(&eax24))) {
+        r8_3 = g18035fec0;
+        fun_1800ecdb0(rbx8, "<font color = \"#%s\">", r8_3, r9, v25);
+        *reinterpret_cast<void***>(rbx8 + 32) = *reinterpret_cast<void***>(rbx8 + 32) + 1;
+    }
+    fun_1800ecdb0(rbx8, " /* ", r8_3, r9, v26);
+    goto addr_180019300_4;
+    addr_18001929b_12:
+    goto addr_180019300_4;
+}

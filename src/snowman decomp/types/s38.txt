@@ -1,0 +1,10 @@
+﻿struct s38 {
+    signed char[12] pad12;
+    uint32_t f12;
+    int32_t f16;
+    int32_t f20;
+    int32_t f24;
+    int32_t f28;
+    int32_t f32;
+    int32_t f36;
+};

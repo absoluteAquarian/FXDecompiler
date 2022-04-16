@@ -1,0 +1,37 @@
+﻿int32_t fun_180010f00(void** rcx, void** rdx, void** r8, void** r9, int64_t a5, int32_t a6) {
+    void* rsp7;
+    void** v8;
+    void* rdx9;
+    int32_t eax10;
+    int32_t ebx11;
+    int32_t eax12;
+    int32_t eax13;
+    int64_t v14;
+
+    rsp7 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 8 - 8 - 32);
+    v8 = reinterpret_cast<void**>(0);
+    rdx9 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp7) + 72);
+    eax10 = reinterpret_cast<int32_t>(g180378348(rdx, rdx9));
+    ebx11 = eax10;
+    if (eax10 >= 0) {
+        if (a6 != 17) {
+            v8 = *reinterpret_cast<void***>(r8);
+            *reinterpret_cast<void***>(r8) = rdx;
+            eax12 = reinterpret_cast<int32_t>(g180378348(rdx, rdx9));
+            ebx11 = eax12;
+        } else {
+            eax13 = reinterpret_cast<int32_t>(g180378348(rdx, reinterpret_cast<int64_t>(rsp7) - 8 + 8 + 88));
+            if (!eax13) {
+                *reinterpret_cast<void***>(r8) = reinterpret_cast<void**>(0);
+                return ebx11;
+            } else {
+                fun_180007890(rcx, "// <internal error> unable to get typedef type from PDB\n", r8, r9, v14);
+                ebx11 = 0x80004005;
+            }
+        }
+    }
+    if (v8) {
+        g180378348();
+    }
+    return ebx11;
+}

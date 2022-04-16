@@ -1,0 +1,43 @@
+﻿void** fun_180007900(void** rcx, void** rdx, void** r8, void** r9) {
+    void** rsi5;
+    void** rdi6;
+    int64_t rbp7;
+    void** rbx8;
+    void** rax9;
+
+    rsi5 = rcx;
+    rdi6 = rcx + 0xb0;
+    *reinterpret_cast<int32_t*>(&rbp7) = 0x607;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbp7) + 4) = 0;
+    do {
+        rbx8 = *reinterpret_cast<void***>(rdi6);
+        if (rbx8) {
+            do {
+                *reinterpret_cast<void***>(rdi6) = *reinterpret_cast<void***>(rbx8 + 24);
+                if (*reinterpret_cast<void***>(rbx8 + 16)) {
+                    g180378348();
+                    *reinterpret_cast<void***>(rbx8 + 16) = reinterpret_cast<void**>(0);
+                }
+                rax9 = fun_18026dd2c();
+                rbx8 = *reinterpret_cast<void***>(rdi6);
+            } while (rbx8);
+        }
+        rdi6 = rdi6 + 8;
+        --rbp7;
+    } while (rbp7);
+    if (*reinterpret_cast<void***>(rsi5 + 0xa8)) {
+        rax9 = reinterpret_cast<void**>(g180378348());
+        *reinterpret_cast<void***>(rsi5 + 0xa8) = reinterpret_cast<void**>(0);
+    }
+    *reinterpret_cast<void***>(rsi5 + 0x30f4) = reinterpret_cast<void**>(0);
+    if (*reinterpret_cast<void***>(rsi5 + 0x30f8)) {
+        rax9 = fun_18026dd2c();
+        *reinterpret_cast<void***>(rsi5 + 0x30f8) = reinterpret_cast<void**>(0);
+    }
+    *reinterpret_cast<void***>(rsi5 + 0x30e8) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rsi5 + 0x30f0) = reinterpret_cast<void**>(0);
+    if (*reinterpret_cast<void***>(rsi5 + 0x70) && *reinterpret_cast<void***>(rsi5 + 0x78)) {
+        rax9 = reinterpret_cast<void**>(g180378348());
+    }
+    return rax9;
+}

@@ -1,0 +1,19 @@
+﻿void** fun_1800e25b0(void** ecx) {
+    int64_t rax2;
+    int64_t rcx3;
+
+    *reinterpret_cast<uint32_t*>(&rax2) = reinterpret_cast<unsigned char>(ecx) >> 16;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax2) + 4) = 0;
+    if (*reinterpret_cast<uint32_t*>(&rax2) <= 0xfff0) {
+        if (*reinterpret_cast<uint32_t*>(&rax2) == 0xfff0) {
+            return (reinterpret_cast<unsigned char>(ecx) & 0xf0 | 0x4c46000) << 4 | reinterpret_cast<unsigned char>(ecx) & 15;
+        } else {
+            if (*reinterpret_cast<uint32_t*>(&rax2) <= 5) {
+                *reinterpret_cast<int32_t*>(&rcx3) = *reinterpret_cast<int32_t*>(0x180000000 + rax2 * 4 + 0xe2688);
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx3) + 4) = 0;
+                goto rcx3 + 0x180000000;
+            }
+        }
+    }
+    return 0;
+}

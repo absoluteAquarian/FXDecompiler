@@ -1,0 +1,328 @@
+﻿int32_t fun_180014930(void** rcx, struct s40* rdx) {
+    void* rsp3;
+    uint64_t rax4;
+    uint64_t v5;
+    void** rdi6;
+    void* rsi7;
+    int32_t* rsi8;
+    int1_t zf9;
+    struct s40* r14_10;
+    struct s40* v11;
+    void** r8_12;
+    void** r9_13;
+    int64_t v14;
+    void** r9_15;
+    int64_t v16;
+    void** r9_17;
+    int64_t v18;
+    void** r9_19;
+    int64_t v20;
+    void** r9_21;
+    int64_t v22;
+    void** r9_23;
+    int64_t v24;
+    void* rsp25;
+    int64_t rbx26;
+    void* r8_27;
+    void** r9_28;
+    int64_t v29;
+    int64_t v30;
+    int1_t zf31;
+    void* rbp32;
+    int32_t* rbp33;
+    int64_t v34;
+    int64_t v35;
+    int64_t v36;
+    int64_t v37;
+    int64_t v38;
+    int64_t v39;
+    int64_t v40;
+    int64_t v41;
+    int64_t v42;
+    int64_t v43;
+    uint32_t esi44;
+    int64_t rbx45;
+    void** rcx46;
+    struct s3137* rbx47;
+    void* r9_48;
+    void** r9_49;
+    void** v50;
+    int64_t v51;
+    void* rsp52;
+    void** v53;
+    int64_t v54;
+    int64_t v55;
+    int64_t v56;
+    void* rsp57;
+    uint32_t eax58;
+    int64_t v59;
+    int64_t v60;
+    void* rsp61;
+    int64_t v62;
+    int64_t v63;
+    uint32_t eax64;
+    int64_t v65;
+    int64_t v66;
+    void* rsp67;
+    int64_t v68;
+    int64_t v69;
+    uint32_t eax70;
+    int64_t v71;
+    int64_t v72;
+    int64_t v73;
+    int64_t v74;
+    void* rbx75;
+    uint32_t* rbx76;
+    uint32_t* v77;
+    uint32_t r13d78;
+    int64_t v79;
+    int64_t v80;
+    void** r8_81;
+    int64_t v82;
+    int64_t v83;
+    int64_t v84;
+    int64_t v85;
+    int64_t v86;
+    int64_t v87;
+    int64_t v88;
+    int64_t v89;
+    void* rsp90;
+    uint32_t eax91;
+    uint32_t v92;
+    int64_t rsi93;
+    uint32_t ebp94;
+    struct s3138* rsi95;
+    void* r15_96;
+    void* r12_97;
+    uint16_t* r15_98;
+    uint32_t* r12_99;
+    int64_t rcx100;
+    int64_t v101;
+    int64_t v102;
+    void* rsp103;
+    int64_t v104;
+    int64_t v105;
+    int64_t v106;
+    int64_t v107;
+    int64_t rbx108;
+    int64_t r14_109;
+    int64_t rax110;
+    int64_t v111;
+    int64_t v112;
+    int64_t v113;
+    int64_t v114;
+    void* rsp115;
+    int64_t rbx116;
+    int64_t rax117;
+    int64_t v118;
+    int64_t v119;
+    int64_t v120;
+    int64_t v121;
+    uint32_t ebp122;
+    int64_t v123;
+    int64_t v124;
+    int64_t v125;
+    int64_t v126;
+    uint64_t rcx127;
+    void** rax128;
+
+    rsp3 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 0x2a0);
+    rax4 = g180426020;
+    v5 = rax4 ^ reinterpret_cast<uint64_t>(rsp3);
+    rdi6 = rcx;
+    *reinterpret_cast<int32_t*>(&rsi7) = rdx->f20;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rsi7) + 4) = 0;
+    rsi8 = reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(rsi7) + reinterpret_cast<uint64_t>(rdx));
+    zf9 = *reinterpret_cast<void***>(rcx + 24) == 0;
+    r14_10 = rdx;
+    v11 = rdx;
+    if (!zf9) {
+        r8_12 = g18035fec0;
+        fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8_12, r9_13, v14);
+        rsp3 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp3) - 8 + 8);
+        *reinterpret_cast<void***>(rdi6 + 32) = *reinterpret_cast<void***>(rdi6 + 32) + 1;
+    }
+    fun_1800ecdb0(rdi6, "//\n", r8_12, r9_15, v16);
+    fun_1800ecdb0(rdi6, "// Available Class Types:\n", r8_12, r9_17, v18);
+    fun_1800ecdb0(rdi6, "//\n", r8_12, r9_19, v20);
+    fun_1800ecdb0(rdi6, "// Name                             ID CB Stride Texture Sampler\n", r8_12, r9_21, v22);
+    fun_1800ecdb0(rdi6, "// ------------------------------ ---- --------- ------- -------\n", r8_12, r9_23, v24);
+    rsp25 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp3) - 8 + 8 - 8 + 8 - 8 + 8 - 8 + 8 - 8 + 8);
+    *reinterpret_cast<uint32_t*>(&rbx26) = 0;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbx26) + 4) = 0;
+    if (r14_10->f4 > 0) {
+        do {
+            *reinterpret_cast<int32_t*>(&r8_27) = rsi8[rbx26 + rbx26 * 2];
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r8_27) + 4) = 0;
+            r8_12 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(r8_27) + reinterpret_cast<uint64_t>(r14_10));
+            *reinterpret_cast<uint32_t*>(&r9_28) = *reinterpret_cast<uint32_t*>(&rbx26);
+            *reinterpret_cast<int32_t*>(&r9_28 + 4) = 0;
+            fun_1800ecdb0(rdi6, "// %-30s %4u %9u %7u %7u\n", r8_12, r9_28, v29, rdi6, "// %-30s %4u %9u %7u %7u\n", r8_12, r9_28, v30);
+            rsp25 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp25) - 8 + 8);
+            *reinterpret_cast<uint32_t*>(&rbx26) = *reinterpret_cast<uint32_t*>(&rbx26) + 1;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbx26) + 4) = 0;
+        } while (*reinterpret_cast<uint32_t*>(&rbx26) < r14_10->f4);
+    }
+    zf31 = r14_10->f0 == 0;
+    if (!zf31 && (*reinterpret_cast<int32_t*>(&rbp32) = r14_10->f16, *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbp32) + 4) = 0, rbp33 = reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(rbp32) + reinterpret_cast<uint64_t>(r14_10)), fun_1800ecdb0(rdi6, "//\n", r8_12, r9_28, v34, rdi6, "//\n", r8_12, r9_28, v35), fun_1800ecdb0(rdi6, "// Available Class Instances:\n", r8_12, r9_28, v36, rdi6, "// Available Class Instances:\n", r8_12, r9_28, v37), fun_1800ecdb0(rdi6, "//\n", r8_12, r9_28, v38, rdi6, "//\n", r8_12, r9_28, v39), fun_1800ecdb0(rdi6, "// Name                        Type CB CB Offset Texture Sampler\n", r8_12, r9_28, v40, rdi6, "// Name                        Type CB CB Offset Texture Sampler\n", r8_12, r9_28, v41), fun_1800ecdb0(rdi6, "// --------------------------- ---- -- --------- ------- -------\n", r8_12, r9_28, v42, rdi6, "// --------------------------- ---- -- --------- ------- -------\n", r8_12, r9_28, v43), rsp25 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp25) - 8 + 8 - 8 + 8 - 8 + 8 - 8 + 8 - 8 + 8), esi44 = 0, r14_10->f0 > 0)) {
+        do {
+            *reinterpret_cast<uint32_t*>(&rbx45) = esi44;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbx45) + 4) = 0;
+            rcx46 = reinterpret_cast<void**>(reinterpret_cast<uint64_t>(rsp25) + 96);
+            rbx47 = reinterpret_cast<struct s3137*>((rbx45 << 4) + reinterpret_cast<uint64_t>(rbp33));
+            *reinterpret_cast<int32_t*>(&r9_48) = rbx47->f0;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r9_48) + 4) = 0;
+            r9_49 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(r9_48) + reinterpret_cast<uint64_t>(r14_10));
+            if (static_cast<uint32_t>(rbx47->f6) == 1) {
+                fun_180017fa0(rcx46, 0x200, "%s", r9_49, v50, rcx46, 0x200, "%s", r9_49, v51);
+                rsp52 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp25) - 8 + 8);
+            } else {
+                fun_180017fa0(rcx46, 0x200, "%s[%u]", r9_49, v53, rcx46, 0x200, "%s[%u]", r9_49, v54);
+                rsp52 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp25) - 8 + 8);
+            }
+            *reinterpret_cast<uint32_t*>(&r9_28) = rbx47->f4;
+            *reinterpret_cast<int32_t*>(&r9_28 + 4) = 0;
+            r8_12 = reinterpret_cast<void**>(reinterpret_cast<uint64_t>(rsp52) + 96);
+            fun_1800ecdb0(rdi6, "// %-27s %4u ", r8_12, r9_28, v55, rdi6, "// %-27s %4u ", r8_12, r9_28, v56);
+            rsp57 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp52) - 8 + 8);
+            eax58 = rbx47->f8;
+            if (*reinterpret_cast<int16_t*>(&eax58) == -1) {
+                fun_1800ecdb0(rdi6, " -         - ", r8_12, r9_28, v59, rdi6, " -         - ", r8_12, r9_28, v60);
+                rsp61 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp57) - 8 + 8);
+            } else {
+                *reinterpret_cast<uint32_t*>(&r9_28) = rbx47->f10;
+                *reinterpret_cast<int32_t*>(&r9_28 + 4) = 0;
+                *reinterpret_cast<uint32_t*>(&r8_12) = eax58;
+                *reinterpret_cast<int32_t*>(&r8_12 + 4) = 0;
+                fun_1800ecdb0(rdi6, "%2u %9u ", r8_12, r9_28, v62, rdi6, "%2u %9u ", r8_12, r9_28, v63);
+                rsp61 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp57) - 8 + 8);
+            }
+            eax64 = rbx47->f12;
+            if (*reinterpret_cast<int16_t*>(&eax64) == -1) {
+                fun_1800ecdb0(rdi6, "      - ", r8_12, r9_28, v65, rdi6, "      - ", r8_12, r9_28, v66);
+                rsp67 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp61) - 8 + 8);
+            } else {
+                *reinterpret_cast<uint32_t*>(&r8_12) = eax64;
+                *reinterpret_cast<int32_t*>(&r8_12 + 4) = 0;
+                fun_1800ecdb0(rdi6, "%7u ", r8_12, r9_28, v68, rdi6, "%7u ", r8_12, r9_28, v69);
+                rsp67 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp61) - 8 + 8);
+            }
+            eax70 = rbx47->f14;
+            if (*reinterpret_cast<int16_t*>(&eax70) == -1) {
+                fun_1800ecdb0(rdi6, "      -\n", r8_12, r9_28, v71, rdi6, "      -\n", r8_12, r9_28, v72);
+                rsp25 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp67) - 8 + 8);
+            } else {
+                *reinterpret_cast<uint32_t*>(&r8_12) = eax70;
+                *reinterpret_cast<int32_t*>(&r8_12 + 4) = 0;
+                fun_1800ecdb0(rdi6, "%7u\n", r8_12, r9_28, v73, rdi6, "%7u\n", r8_12, r9_28, v74);
+                rsp25 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp67) - 8 + 8);
+            }
+            ++esi44;
+        } while (esi44 < r14_10->f0);
+    }
+    *reinterpret_cast<int32_t*>(&rbx75) = r14_10->f24;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbx75) + 4) = 0;
+    rbx76 = reinterpret_cast<uint32_t*>(reinterpret_cast<int64_t>(rbx75) + reinterpret_cast<uint64_t>(r14_10));
+    v77 = rbx76;
+    r13d78 = 0;
+    fun_1800ecdb0(rdi6, "//\n", r8_12, r9_28, v79, rdi6, "//\n", r8_12, r9_28, v80);
+    *reinterpret_cast<uint32_t*>(&r8_81) = r14_10->f12;
+    *reinterpret_cast<int32_t*>(&r8_81 + 4) = 0;
+    fun_1800ecdb0(rdi6, "// Interface slots, %u total:\n", r8_81, r9_28, v82, rdi6, "// Interface slots, %u total:\n", r8_81, r9_28, v83);
+    fun_1800ecdb0(rdi6, "//\n", r8_81, r9_28, v84, rdi6, "//\n", r8_81, r9_28, v85);
+    fun_1800ecdb0(rdi6, "//             Slots\n", r8_81, r9_28, v86, rdi6, "//             Slots\n", r8_81, r9_28, v87);
+    fun_1800ecdb0(rdi6, "// +----------+---------+---------------------------------------\n", r8_81, r9_28, v88, rdi6, "// +----------+---------+---------------------------------------\n", r8_81, r9_28, v89);
+    rsp90 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp25) - 8 + 8 - 8 + 8 - 8 + 8 - 8 + 8 - 8 + 8);
+    eax91 = 0;
+    v92 = 0;
+    if (r14_10->f8 > 0) {
+        do {
+            *reinterpret_cast<uint32_t*>(&rsi93) = eax91;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rsi93) + 4) = 0;
+            ebp94 = 0;
+            rsi95 = reinterpret_cast<struct s3138*>((rsi93 << 4) + reinterpret_cast<uint64_t>(rbx76));
+            *reinterpret_cast<int32_t*>(&r15_96) = rsi95->f8;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r15_96) + 4) = 0;
+            *reinterpret_cast<int32_t*>(&r12_97) = rsi95->f12;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r12_97) + 4) = 0;
+            r15_98 = reinterpret_cast<uint16_t*>(reinterpret_cast<int64_t>(r15_96) + reinterpret_cast<uint64_t>(r14_10));
+            r12_99 = reinterpret_cast<uint32_t*>(reinterpret_cast<int64_t>(r12_97) + reinterpret_cast<uint64_t>(r14_10));
+            if (rsi95->f4 > 0) {
+                *reinterpret_cast<uint32_t*>(&rcx100) = rsi95->f0;
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx100) + 4) = 0;
+                do {
+                    if (ebp94) {
+                        fun_1800ecdb0(rdi6, "// | Type ID  |         |", r8_81, r9_28, v101, rdi6, "// | Type ID  |         |", r8_81, r9_28, v102);
+                        rsp103 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp90) - 8 + 8);
+                    } else {
+                        *reinterpret_cast<uint32_t*>(&r8_81) = r13d78;
+                        *reinterpret_cast<int32_t*>(&r8_81 + 4) = 0;
+                        if (*reinterpret_cast<uint32_t*>(&rcx100) <= 1) {
+                            fun_1800ecdb0(rdi6, "// | Type ID  |%4u     |", r8_81, r9_28, v104, rdi6, "// | Type ID  |%4u     |", r8_81, r9_28, v105);
+                            rsp103 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp90) - 8 + 8);
+                        } else {
+                            *reinterpret_cast<uint32_t*>(&r9_28) = static_cast<int32_t>(rcx100 - 1) + r13d78;
+                            *reinterpret_cast<int32_t*>(&r9_28 + 4) = 0;
+                            fun_1800ecdb0(rdi6, "// | Type ID  |%4u-%-4u|", r8_81, r9_28, v106, rdi6, "// | Type ID  |%4u-%-4u|", r8_81, r9_28, v107);
+                            rsp103 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp90) - 8 + 8);
+                        }
+                    }
+                    *reinterpret_cast<uint32_t*>(&rbx108) = ebp94;
+                    *reinterpret_cast<int32_t*>(&r14_109) = reinterpret_cast<int32_t>(-ebp94);
+                    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r14_109) + 4) = 0;
+                    do {
+                        if (*reinterpret_cast<uint32_t*>(&rbx108) >= rsi95->f4) 
+                            break;
+                        *reinterpret_cast<uint32_t*>(&rax110) = *reinterpret_cast<uint32_t*>(&rbx108);
+                        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax110) + 4) = 0;
+                        *reinterpret_cast<uint32_t*>(&r8_81) = r15_98[rax110];
+                        *reinterpret_cast<int32_t*>(&r8_81 + 4) = 0;
+                        fun_1800ecdb0(rdi6, "%-5u", r8_81, r9_28, v111, rdi6, "%-5u", r8_81, r9_28, v112);
+                        rsp103 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp103) - 8 + 8);
+                        *reinterpret_cast<uint32_t*>(&rbx108) = *reinterpret_cast<uint32_t*>(&rbx108) + 1;
+                        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbx108) + 4) = 0;
+                    } while (static_cast<uint32_t>(r14_109 + rbx108) < 8);
+                    fun_1800ecdb0(rdi6, "\n// | Table ID |         |", r8_81, r9_28, v113, rdi6, "\n// | Table ID |         |", r8_81, r9_28, v114);
+                    rsp115 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp103) - 8 + 8);
+                    *reinterpret_cast<uint32_t*>(&rbx116) = ebp94;
+                    do {
+                        if (*reinterpret_cast<uint32_t*>(&rbx116) >= rsi95->f4) 
+                            break;
+                        *reinterpret_cast<uint32_t*>(&rax117) = *reinterpret_cast<uint32_t*>(&rbx116);
+                        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax117) + 4) = 0;
+                        *reinterpret_cast<uint32_t*>(&r8_81) = r12_99[rax117];
+                        *reinterpret_cast<int32_t*>(&r8_81 + 4) = 0;
+                        fun_1800ecdb0(rdi6, "%-5u", r8_81, r9_28, v118, rdi6, "%-5u", r8_81, r9_28, v119);
+                        rsp115 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp115) - 8 + 8);
+                        *reinterpret_cast<uint32_t*>(&rbx116) = *reinterpret_cast<uint32_t*>(&rbx116) + 1;
+                        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbx116) + 4) = 0;
+                    } while (static_cast<uint32_t>(rbx116 + r14_109) < 8);
+                    fun_1800ecdb0(rdi6, "\n", r8_81, r9_28, v120, rdi6, "\n", r8_81, r9_28, v121);
+                    rsp90 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp115) - 8 + 8);
+                    ebp122 = ebp94 + 8;
+                    *reinterpret_cast<uint32_t*>(&rcx100) = rsi95->f0;
+                    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx100) + 4) = 0;
+                    r13d78 = r13d78 + *reinterpret_cast<uint32_t*>(&rcx100);
+                    if (ebp122 >= rsi95->f4) {
+                        ebp122 = rsi95->f4;
+                    }
+                    ebp94 = ebp122 + 1;
+                } while (ebp94 < rsi95->f4);
+                r14_10 = v11;
+                rbx76 = v77;
+            }
+            fun_1800ecdb0(rdi6, "// +----------+---------+---------------------------------------\n", r8_81, r9_28, v123, rdi6, "// +----------+---------+---------------------------------------\n", r8_81, r9_28, v124);
+            rsp90 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp90) - 8 + 8);
+            eax91 = v92 + 1;
+            v92 = eax91;
+        } while (eax91 < r14_10->f8);
+    }
+    if (*reinterpret_cast<void***>(rdi6 + 24)) {
+        *reinterpret_cast<void***>(rdi6 + 32) = *reinterpret_cast<void***>(rdi6 + 32) - 1;
+        fun_1800ecdb0(rdi6, "</font>", r8_81, r9_28, v125, rdi6, "</font>", r8_81, r9_28, v126);
+        rsp90 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp90) - 8 + 8);
+    }
+    rcx127 = v5 ^ reinterpret_cast<uint64_t>(rsp90);
+    rax128 = fun_18026e150(rcx127, rcx127);
+    return *reinterpret_cast<int32_t*>(&rax128);
+}

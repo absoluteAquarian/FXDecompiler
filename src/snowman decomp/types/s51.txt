@@ -1,0 +1,5 @@
+﻿struct s51 {
+    void** f0;
+    signed char[3] pad4;
+    uint32_t f4;
+};

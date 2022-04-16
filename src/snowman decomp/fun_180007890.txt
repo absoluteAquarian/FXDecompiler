@@ -1,0 +1,20 @@
+﻿void** fun_180007890(void** rcx, void** rdx, void** r8, void** r9, int64_t a5, ...) {
+    int64_t v6;
+    int64_t v7;
+    int64_t v8;
+    void** rax9;
+    int64_t v10;
+
+    fun_1800ecdb0(rcx, "\n", r8, r9, v6);
+    if (*reinterpret_cast<void***>(rcx + 24)) {
+        r8 = g18035fec0;
+        fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8, r9, v7);
+        *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+    }
+    rax9 = fun_1800ecdb0(rcx, rdx, r8, r9, v8);
+    if (*reinterpret_cast<void***>(rcx + 24)) {
+        *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+        rax9 = fun_1800ecdb0(rcx, "</font>", r8, r9, v10);
+    }
+    return rax9;
+}

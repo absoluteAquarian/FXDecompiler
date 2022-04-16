@@ -1,0 +1,8 @@
+﻿struct s39 {
+    void** f0;
+    signed char[3] pad4;
+    uint16_t f4;
+    uint16_t f6;
+    uint16_t f8;
+    uint16_t f10;
+};

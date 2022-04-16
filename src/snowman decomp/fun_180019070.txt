@@ -1,0 +1,148 @@
+﻿int32_t fun_180019070(void** rcx, void** rdx, void** r8d) {
+    void** r8_3;
+    void** rbx4;
+    void** r14_5;
+    void** r9_6;
+    void** eax7;
+    void** rdx8;
+    void** v9;
+    int32_t* r10_10;
+    int32_t* v11;
+    void** rsi12;
+    void** ecx13;
+    int32_t* rdx14;
+    void* rax15;
+    void** rbp16;
+    int64_t rax17;
+    void* rcx18;
+    void** ecx19;
+    int32_t* rdx20;
+    void* rax21;
+    int64_t v22;
+    int64_t v23;
+    int64_t rdx24;
+    void** rdi25;
+    void* rax26;
+    int32_t* v27;
+    void** v28;
+    void** ecx29;
+    int32_t* rdx30;
+    void* rax31;
+    int64_t rax32;
+    void* rcx33;
+    int32_t eax34;
+
+    r8_3 = r8d;
+    rbx4 = reinterpret_cast<void**>(0);
+    *reinterpret_cast<int32_t*>(&rbx4 + 4) = 0;
+    __asm__("xorps xmm0, xmm0");
+    r14_5 = rcx;
+    __asm__("movdqu [rsp+0x30], xmm0");
+    if (!rdx || (r9_6 = reinterpret_cast<void**>(0), *reinterpret_cast<int32_t*>(&r9_6 + 4) = 0, eax7 = fun_1800ed1b0(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 8 - 8 - 8 - 8 - 80 + 48, rdx, r8_3, 0), reinterpret_cast<signed char>(eax7) < reinterpret_cast<signed char>(0))) {
+        rdx8 = reinterpret_cast<void**>("Error: Effects expression assembly in invalid format!");
+    } else {
+        r8_3 = v9;
+        if (!r8_3) 
+            goto addr_1800190f7_4;
+        r10_10 = v11;
+        if (!r10_10) 
+            goto addr_1800190f7_4;
+        r9_6 = *reinterpret_cast<void***>(r8_3 + 28);
+        *reinterpret_cast<int32_t*>(&r9_6 + 4) = 0;
+        rsi12 = r8_3 + 28;
+        ecx13 = reinterpret_cast<void**>(0);
+        if (!r9_6) 
+            goto addr_1800190f7_4;
+        rdx14 = r10_10;
+        do {
+            *reinterpret_cast<int32_t*>(&rax15) = *rdx14;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax15) + 4) = 0;
+            if (*reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(rax15) + reinterpret_cast<unsigned char>(r8_3)) == 0x434c5846) 
+                break;
+            ++ecx13;
+            ++rdx14;
+        } while (reinterpret_cast<unsigned char>(ecx13) < reinterpret_cast<unsigned char>(r9_6));
+        goto addr_1800190f7_4;
+        if (ecx13 == 0xffffffff) {
+            addr_1800190f7_4:
+            rdx8 = reinterpret_cast<void**>("Error: Effects expression assembly not found!");
+        } else {
+            if (reinterpret_cast<unsigned char>(r9_6) <= reinterpret_cast<unsigned char>(ecx13)) {
+                rbp16 = reinterpret_cast<void**>(0);
+            } else {
+                *reinterpret_cast<void***>(&rax17) = ecx13;
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax17) + 4) = 0;
+                *reinterpret_cast<int32_t*>(&rcx18) = r10_10[rax17];
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx18) + 4) = 0;
+                rbp16 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(r8_3 + 8) + reinterpret_cast<uint64_t>(rcx18));
+            }
+            ecx19 = reinterpret_cast<void**>(0);
+            rdx20 = r10_10;
+            do {
+                *reinterpret_cast<int32_t*>(&rax21) = *rdx20;
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax21) + 4) = 0;
+                if (*reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(rax21) + reinterpret_cast<unsigned char>(r8_3)) == 0x42415443) 
+                    goto addr_180019147_16;
+                ++ecx19;
+                ++rdx20;
+            } while (reinterpret_cast<unsigned char>(ecx19) < reinterpret_cast<unsigned char>(r9_6));
+            goto addr_18001913b_18;
+        }
+    }
+    addr_180019200_19:
+    fun_1800ecdb0(r14_5, rdx8, r8_3, r9_6, v22, r14_5, rdx8, r8_3, r9_6, v23);
+    return 1;
+    addr_180019147_16:
+    if (!reinterpret_cast<int1_t>(ecx19 == 0xffffffff)) {
+        *reinterpret_cast<void***>(&rdx24) = ecx19;
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rdx24) + 4) = 0;
+        if (reinterpret_cast<unsigned char>(r9_6) <= reinterpret_cast<unsigned char>(ecx19)) {
+            rdi25 = reinterpret_cast<void**>(0);
+        } else {
+            *reinterpret_cast<int32_t*>(&rax26) = r10_10[rdx24];
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax26) + 4) = 0;
+            rdi25 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(r8_3 + 8) + reinterpret_cast<uint64_t>(rax26));
+        }
+        if (reinterpret_cast<unsigned char>(r9_6) > reinterpret_cast<unsigned char>(ecx19)) {
+            __asm__("lfence ");
+            r10_10 = v27;
+            r8_3 = v28;
+        }
+        r9_6 = *reinterpret_cast<void***>(rsi12);
+        *reinterpret_cast<int32_t*>(&r9_6 + 4) = 0;
+        ecx29 = reinterpret_cast<void**>(0);
+        if (r9_6) 
+            goto addr_180019199_27;
+    } else {
+        rdx8 = reinterpret_cast<void**>("Error: Error getting Effects expression constant table.");
+        goto addr_180019200_19;
+    }
+    addr_1800191b7_29:
+    rdx8 = reinterpret_cast<void**>("Error: Error getting Effects expression literal block.");
+    goto addr_180019200_19;
+    addr_180019199_27:
+    rdx30 = r10_10;
+    do {
+        *reinterpret_cast<int32_t*>(&rax31) = *rdx30;
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax31) + 4) = 0;
+        if (*reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(rax31) + reinterpret_cast<unsigned char>(r8_3)) == 0x34494c43) 
+            break;
+        ++ecx29;
+        ++rdx30;
+    } while (reinterpret_cast<unsigned char>(ecx29) < reinterpret_cast<unsigned char>(r9_6));
+    goto addr_1800191b7_29;
+    if (ecx29 != 0xffffffff) {
+        if (reinterpret_cast<unsigned char>(r9_6) > reinterpret_cast<unsigned char>(ecx29)) {
+            *reinterpret_cast<void***>(&rax32) = ecx29;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax32) + 4) = 0;
+            *reinterpret_cast<int32_t*>(&rcx33) = r10_10[rax32];
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx33) + 4) = 0;
+            rbx4 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(r8_3 + 8) + reinterpret_cast<uint64_t>(rcx33));
+        }
+        eax34 = fun_180018e50(r14_5, rbp16, rbx4, rdi25);
+        return eax34;
+    }
+    addr_18001913b_18:
+    rdx8 = reinterpret_cast<void**>("Error: Error getting Effects expression constant table.");
+    goto addr_180019200_19;
+}

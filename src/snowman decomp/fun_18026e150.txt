@@ -1,0 +1,33 @@
+﻿void** fun_18026e150(uint64_t rcx, ...) {
+    int1_t zf2;
+    void** rax3;
+    int32_t eax4;
+    int64_t rax5;
+    void** rax6;
+
+    zf2 = rcx == g180426020;
+    if (zf2) {
+        __asm__("rol rcx, 0x10");
+        if (*reinterpret_cast<uint16_t*>(&rcx) & 0xffff) {
+            __asm__("ror rcx, 0x10");
+        } else {
+            return rax3;
+        }
+    }
+    eax4 = reinterpret_cast<int32_t>(IsProcessorFeaturePresent(23));
+    if (eax4) {
+        __asm__("int 0x29");
+    }
+    fun_18026e3ec(0x180426890);
+    g180426988 = reinterpret_cast<int64_t>(__return_address());
+    g180426928 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 56 - 8 + 8 - 8 + 8 + 56 + 8);
+    rax5 = g180426988;
+    g180426800 = rax5;
+    g180426910 = rcx;
+    g1804267f0 = 0xc0000409;
+    g1804267f4 = 1;
+    g180426808 = 1;
+    g180426810 = 2;
+    rax6 = fun_18026e178(0x18033f000);
+    return rax6;
+}

@@ -1,0 +1,21 @@
+﻿void** fun_180017fa0(void** rcx, void** rdx, void** r8, void** r9, void** a5, ...) {
+    int32_t r9d6;
+    void** rax7;
+    void** rax8;
+
+    r9d6 = 0;
+    if (reinterpret_cast<unsigned char>(rdx + 0xffffffffffffffff) > reinterpret_cast<unsigned char>(0x7ffffffe)) {
+        r9d6 = 0x80070057;
+    }
+    if (r9d6 < 0) {
+        *reinterpret_cast<int32_t*>(&rax7) = r9d6;
+        *reinterpret_cast<int32_t*>(&rax7 + 4) = 0;
+        if (rdx) {
+            *reinterpret_cast<void***>(rcx) = reinterpret_cast<void**>(0);
+        }
+        return rax7;
+    } else {
+        rax8 = fun_180018000(rcx, rdx);
+        return rax8;
+    }
+}

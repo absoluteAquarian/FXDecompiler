@@ -1,0 +1,28 @@
+﻿int32_t fun_18000f990(void** rcx, void* rdx) {
+    void** rsi3;
+    int32_t eax4;
+    int32_t ebx5;
+    int32_t eax6;
+    int32_t v7;
+    int32_t eax8;
+
+    rsi3 = *reinterpret_cast<void***>(rcx + 0xa8);
+    eax4 = reinterpret_cast<int32_t>(g180378348(rsi3));
+    ebx5 = eax4;
+    if (eax4 >= 0) {
+        eax6 = reinterpret_cast<int32_t>(g180378348());
+        if (eax6 || v7 != 1) {
+            eax8 = reinterpret_cast<int32_t>(g180378348(rsi3, 1));
+        } else {
+            eax8 = reinterpret_cast<int32_t>(g180378348(rsi3, 0, 1));
+        }
+        ebx5 = eax8;
+    }
+    if (!1) {
+        g180378348();
+    }
+    if (!1) {
+        g180378348();
+    }
+    return ebx5;
+}

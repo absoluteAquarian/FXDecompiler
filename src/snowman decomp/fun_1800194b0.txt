@@ -1,0 +1,116 @@
+﻿void** fun_1800194b0(void** rcx, int32_t edx, void** r8, void** r9) {
+    int32_t* r15_5;
+    int32_t* v6;
+    void** r12_7;
+    void** rsi8;
+    void** rbp9;
+    void** rdi10;
+    int64_t rbx11;
+    int64_t v12;
+    void** rcx13;
+    void** rdx14;
+    void** ebx15;
+    struct s67* r14_16;
+    struct s67* v17;
+    void** eax18;
+    void** rax19;
+    void** rdx20;
+    void** r8_21;
+    void** r8_22;
+    int64_t v23;
+    int64_t v24;
+    int64_t v25;
+    struct s67** v26;
+    void** r8_27;
+    void** rax28;
+
+    r15_5 = v6;
+    *reinterpret_cast<int32_t*>(&r12_7) = 0;
+    *reinterpret_cast<int32_t*>(&r12_7 + 4) = 0;
+    rsi8 = r9;
+    *reinterpret_cast<int32_t*>(&rbp9) = *reinterpret_cast<int32_t*>(&r8);
+    *reinterpret_cast<int32_t*>(&rbp9 + 4) = 0;
+    rdi10 = rcx;
+    *r15_5 = 0;
+    if (edx) {
+        *reinterpret_cast<int32_t*>(&rbx11) = edx;
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbx11) + 4) = 0;
+        do {
+            fun_1800ecdb0(rdi10, "    ", r8, r9, v12);
+            --rbx11;
+        } while (rbx11);
+    }
+    rcx13 = *reinterpret_cast<void***>(rsi8 + 8);
+    if (reinterpret_cast<unsigned char>(rbp9) < reinterpret_cast<unsigned char>(rcx13)) {
+        rdx14 = rbp9 + 24;
+        *reinterpret_cast<void***>(rsi8 + 16) = rbp9;
+        ebx15 = reinterpret_cast<void**>(0x80004005);
+        if (reinterpret_cast<unsigned char>(rdx14) < reinterpret_cast<unsigned char>(rbp9) || reinterpret_cast<unsigned char>(rdx14) > reinterpret_cast<unsigned char>(rcx13)) {
+            r14_16 = v17;
+            eax18 = reinterpret_cast<void**>(0x80004005);
+            rdx14 = rbp9;
+        } else {
+            r14_16 = reinterpret_cast<struct s67*>(reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rsi8)) + reinterpret_cast<unsigned char>(rbp9));
+            *reinterpret_cast<void***>(rsi8 + 16) = rdx14;
+            eax18 = reinterpret_cast<void**>(0);
+        }
+        if (reinterpret_cast<signed char>(eax18) >= reinterpret_cast<signed char>(0)) 
+            goto addr_18001955c_9;
+    } else {
+        eax18 = reinterpret_cast<void**>(0x80004005);
+        goto addr_180019619_11;
+    }
+    addr_180019614_12:
+    addr_180019619_11:
+    return eax18;
+    addr_18001955c_9:
+    if (r14_16->f4 != 2) {
+        addr_180019586_13:
+        *reinterpret_cast<int32_t*>(&rax19) = r14_16->f0;
+        *reinterpret_cast<int32_t*>(&rax19 + 4) = 0;
+        if (*reinterpret_cast<int32_t*>(&rax19) && reinterpret_cast<unsigned char>(rax19) < reinterpret_cast<unsigned char>(rcx13)) {
+            rdx20 = *reinterpret_cast<void***>(rsi8);
+            r8_21 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(rdx20) + reinterpret_cast<unsigned char>(rax19));
+            *reinterpret_cast<void***>(rsi8 + 16) = rax19;
+            if (!*reinterpret_cast<void***>(r8_21)) {
+                addr_1800195b4_15:
+                r12_7 = r8_21;
+                *reinterpret_cast<void***>(rsi8 + 16) = rax19;
+                ebx15 = reinterpret_cast<void**>(0);
+            } else {
+                do {
+                    if (reinterpret_cast<unsigned char>(rax19) > reinterpret_cast<unsigned char>(rcx13)) 
+                        break;
+                    ++rax19;
+                } while (*reinterpret_cast<void***>(reinterpret_cast<unsigned char>(rdx20) + reinterpret_cast<unsigned char>(rax19)));
+                goto addr_1800195b4_15;
+            }
+            if (reinterpret_cast<signed char>(ebx15) >= reinterpret_cast<signed char>(0)) {
+                if (*reinterpret_cast<void***>(rdi10 + 24)) {
+                    r8_22 = g18035fec8;
+                    fun_1800ecdb0(rdi10, "<font color = \"#%s\">", r8_22, r9, v23);
+                    *reinterpret_cast<void***>(rdi10 + 32) = *reinterpret_cast<void***>(rdi10 + 32) + 1;
+                }
+                fun_1800ecdb0(rdi10, "%s ", r12_7, r9, v24);
+                if (*reinterpret_cast<void***>(rdi10 + 24)) {
+                    *reinterpret_cast<void***>(rdi10 + 32) = *reinterpret_cast<void***>(rdi10 + 32) - 1;
+                    fun_1800ecdb0(rdi10, "</font>", r12_7, r9, v25);
+                }
+                *v26 = r14_16;
+                goto addr_180019612_24;
+            }
+        }
+    } else {
+        r8_27 = rdx14 + 4;
+        if (reinterpret_cast<unsigned char>(r8_27) < reinterpret_cast<unsigned char>(rdx14) || reinterpret_cast<unsigned char>(r8_27) > reinterpret_cast<unsigned char>(rcx13)) {
+            addr_180019612_24:
+            eax18 = ebx15;
+            goto addr_180019614_12;
+        } else {
+            rax28 = *reinterpret_cast<void***>(rsi8);
+            *reinterpret_cast<void***>(rsi8 + 16) = r8_27;
+            *r15_5 = *reinterpret_cast<int32_t*>(reinterpret_cast<unsigned char>(rdx14) + reinterpret_cast<unsigned char>(rax28));
+            goto addr_180019586_13;
+        }
+    }
+}

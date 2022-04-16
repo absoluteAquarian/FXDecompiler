@@ -1,0 +1,15 @@
+﻿void** fun_1800ed40c(void** rcx, void** edx, ...) {
+    int64_t rcx3;
+    void* rdx4;
+
+    if (!*reinterpret_cast<void***>(rcx) || (!*reinterpret_cast<void***>(rcx + 8) || reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(*reinterpret_cast<void***>(rcx) + 28)) <= reinterpret_cast<unsigned char>(edx))) {
+        return 0;
+    } else {
+        __asm__("lfence ");
+        *reinterpret_cast<void***>(&rcx3) = edx;
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx3) + 4) = 0;
+        *reinterpret_cast<void***>(&rdx4) = *reinterpret_cast<void***>(reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rcx + 8)) + reinterpret_cast<uint64_t>(rcx3 * 4));
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rdx4) + 4) = 0;
+        return *reinterpret_cast<void***>(reinterpret_cast<uint64_t>(reinterpret_cast<int64_t>(rdx4) + reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rcx))) + 4);
+    }
+}

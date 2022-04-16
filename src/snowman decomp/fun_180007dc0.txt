@@ -1,0 +1,249 @@
+﻿void** fun_180007dc0(void** rcx, void** rdx, void** r8, void** r9) {
+    void* rbp5;
+    void** rbx6;
+    void** r14_7;
+    void** rsi8;
+    void** eax9;
+    void** edi10;
+    void** r9d11;
+    void** edx12;
+    void** eax13;
+    void** r9_14;
+    void** r8_15;
+    int32_t eax16;
+    void** rbx17;
+    int64_t r14_18;
+    void** esi19;
+    int32_t v20;
+    int32_t eax21;
+    void** v22;
+    int32_t eax23;
+    int32_t eax24;
+    int32_t eax25;
+    int32_t eax26;
+    int64_t rcx27;
+    int32_t v28;
+    int64_t rax29;
+    void** rdi30;
+    struct s33* rsi31;
+    void** rax32;
+    void** rax33;
+    void** ecx34;
+    void** v35;
+    int64_t v36;
+    int64_t v37;
+    int64_t v38;
+    int64_t v39;
+    void** rdx40;
+    int64_t v41;
+    int64_t v42;
+    int64_t v43;
+    int64_t v44;
+    void** v45;
+    void** v46;
+    void** v47;
+    int64_t v48;
+    int64_t v49;
+    int64_t v50;
+    int64_t v51;
+    void** r11d52;
+    void** v53;
+    void** r8_54;
+    int64_t rcx55;
+    void** rax56;
+    void** eax57;
+    int1_t sf58;
+    void** v59;
+
+    rbp5 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 8 - 8 - 8 - 8);
+    rbx6 = rdx;
+    r14_7 = rcx;
+    rsi8 = r8;
+    eax9 = reinterpret_cast<void**>(g180378348(r8, reinterpret_cast<int64_t>(rbp5) - 44));
+    edi10 = eax9;
+    if (reinterpret_cast<signed char>(eax9) < reinterpret_cast<signed char>(0)) 
+        goto addr_18000811f_2;
+    r9d11 = *reinterpret_cast<void***>(r14_7 + 0x30f4);
+    edx12 = reinterpret_cast<void**>(0);
+    if (!r9d11) {
+        addr_180007e3f_4:
+        eax13 = reinterpret_cast<void**>(g180378348(rsi8, 7));
+        edi10 = eax13;
+        if (reinterpret_cast<signed char>(eax13) < reinterpret_cast<signed char>(0)) {
+            addr_18000811f_2:
+            if (!1) {
+                g180378348();
+            }
+        } else {
+            r9_14 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rbp5) + 0xffffffffffffffd0);
+            r8_15 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rbp5) + 0xffffffffffffffe0);
+            eax16 = reinterpret_cast<int32_t>(g180378348());
+            if (eax16) {
+                addr_180007fb1_7:
+                rbx17 = r14_7 + 0x30e8;
+                *reinterpret_cast<void***>(&r14_18) = *reinterpret_cast<void***>(rbx17 + 12);
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r14_18) + 4) = 0;
+                if (~reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&r14_18)) >= 1) {
+                    esi19 = reinterpret_cast<void**>(static_cast<uint32_t>(r14_18 + 1));
+                    if (reinterpret_cast<unsigned char>(esi19) <= reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rbx17 + 8))) 
+                        goto addr_1800080fd_9;
+                    if (*reinterpret_cast<void***>(rbx17 + 17)) 
+                        goto addr_1800080ed_11; else 
+                        goto addr_1800080e6_12;
+                } else {
+                    edi10 = reinterpret_cast<void**>(0x80070216);
+                    goto addr_180008111_14;
+                }
+            } else {
+                while (v20 == 1) {
+                    eax21 = reinterpret_cast<int32_t>(g180378348());
+                    if (!eax21 && v22 || (eax23 = reinterpret_cast<int32_t>(g180378348()), !!eax23)) {
+                        addr_180007f71_18:
+                        if (1) {
+                            addr_180007f8b_19:
+                            r9_14 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rbp5) + 0xffffffffffffffd0);
+                            r8_15 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rbp5) + 0xffffffffffffffe0);
+                            eax24 = reinterpret_cast<int32_t>(g180378348());
+                            if (!eax24) 
+                                continue; else 
+                                break;
+                        } else {
+                            g180378348();
+                        }
+                    } else {
+                        eax25 = reinterpret_cast<int32_t>(g180378348());
+                        if (!eax25) {
+                            eax26 = reinterpret_cast<int32_t>(g180378348());
+                            if (!eax26) {
+                                *reinterpret_cast<int32_t*>(&rcx27) = v28;
+                                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx27) + 4) = 0;
+                                *reinterpret_cast<int32_t*>(&rax29) = *reinterpret_cast<int32_t*>(&rcx27);
+                                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax29) + 4) = 0;
+                                rdi30 = reinterpret_cast<void**>(0);
+                                rsi31 = reinterpret_cast<struct s33*>(r14_7 + (rcx27 - ((reinterpret_cast<uint64_t>(rax29 - __intrinsic()) >> 1) + __intrinsic() >> 10) * 0x607) * 8);
+                                rax32 = rsi31->f176;
+                                if (!rax32) {
+                                    addr_180008084_24:
+                                    rax33 = fun_18026dcec(32, 32);
+                                    if (!rax33) 
+                                        goto addr_1800080d0_25; else 
+                                        goto addr_180008093_26;
+                                } else {
+                                    ecx34 = v35;
+                                    do {
+                                        if (*reinterpret_cast<void***>(rax32) == ecx34) 
+                                            goto addr_180007f71_18;
+                                        rdi30 = rax32;
+                                        rax32 = *reinterpret_cast<void***>(rax32 + 24);
+                                    } while (rax32);
+                                    goto addr_180008084_24;
+                                }
+                            } else {
+                                fun_1800ecdb0(rbx6, "\n", r8_15, r9_14, v36, rbx6, "\n", r8_15, r9_14, v37);
+                                if (*reinterpret_cast<void***>(rbx6 + 24)) {
+                                    r8_15 = g18035fec0;
+                                    fun_1800ecdb0(rbx6, "<font color = \"#%s\">", r8_15, r9_14, v38, rbx6, "<font color = \"#%s\">", r8_15, r9_14, v39);
+                                    *reinterpret_cast<void***>(rbx6 + 32) = *reinterpret_cast<void***>(rbx6 + 32) + 1;
+                                }
+                                rdx40 = reinterpret_cast<void**>("// <internal error> could not get variable index ID from PDB\n");
+                                goto addr_180007f51_33;
+                            }
+                        } else {
+                            fun_1800ecdb0(rbx6, "\n", r8_15, r9_14, v41, rbx6, "\n", r8_15, r9_14, v42);
+                            if (*reinterpret_cast<void***>(rbx6 + 24)) {
+                                r8_15 = g18035fec0;
+                                fun_1800ecdb0(rbx6, "<font color = \"#%s\">", r8_15, r9_14, v43, rbx6, "<font color = \"#%s\">", r8_15, r9_14, v44);
+                                *reinterpret_cast<void***>(rbx6 + 32) = *reinterpret_cast<void***>(rbx6 + 32) + 1;
+                            }
+                            rdx40 = reinterpret_cast<void**>("// <internal error> could not get live range length for variable from PDB\n");
+                            goto addr_180007f51_33;
+                        }
+                    }
+                    addr_180007f87_37:
+                    goto addr_180007f8b_19;
+                    addr_180008093_26:
+                    *reinterpret_cast<void***>(rax33 + 16) = reinterpret_cast<void**>(0);
+                    *reinterpret_cast<void***>(rax33) = v45;
+                    *reinterpret_cast<void***>(rax33 + 4) = v46;
+                    *reinterpret_cast<void***>(rax33 + 8) = v47;
+                    *reinterpret_cast<void***>(rax33 + 16) = reinterpret_cast<void**>(0);
+                    *reinterpret_cast<void***>(rax33 + 24) = reinterpret_cast<void**>(0);
+                    if (rdi30) {
+                        *reinterpret_cast<void***>(rdi30 + 24) = rax33;
+                        goto addr_180007f87_37;
+                    } else {
+                        rsi31->f176 = rax33;
+                        goto addr_180007f87_37;
+                    }
+                    addr_180007f51_33:
+                    fun_1800ecdb0(rbx6, rdx40, r8_15, r9_14, v48, rbx6, rdx40, r8_15, r9_14, v49);
+                    if (*reinterpret_cast<void***>(rbx6 + 24)) {
+                        *reinterpret_cast<void***>(rbx6 + 32) = *reinterpret_cast<void***>(rbx6 + 32) - 1;
+                        fun_1800ecdb0(rbx6, "</font>", r8_15, r9_14, v50, rbx6, "</font>", r8_15, r9_14, v51);
+                        goto addr_180007f71_18;
+                    }
+                }
+                goto addr_180007fb1_7;
+            }
+        }
+    } else {
+        r11d52 = v53;
+        if (reinterpret_cast<unsigned char>(0) < reinterpret_cast<unsigned char>(r9d11)) 
+            goto addr_180007e1d_42;
+        r8_54 = reinterpret_cast<void**>(0);
+        while (r11d52 != *reinterpret_cast<void***>(r8_54)) {
+            ++edx12;
+            if (reinterpret_cast<unsigned char>(edx12) >= reinterpret_cast<unsigned char>(r9d11)) 
+                goto addr_180007e3f_4;
+            addr_180007e1d_42:
+            *reinterpret_cast<void***>(&rcx55) = edx12;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx55) + 4) = 0;
+            r8_54 = *reinterpret_cast<void***>(r14_7 + 0x30e8) + rcx55 * 4;
+        }
+        goto addr_180007fd8_46;
+    }
+    if (!1) {
+        g180378348();
+    }
+    rax56 = edi10;
+    *reinterpret_cast<int32_t*>(&rax56 + 4) = 0;
+    addr_180008151_50:
+    return rax56;
+    addr_1800080ed_11:
+    eax57 = fun_180017b50(rbx17, esi19, rbx17, esi19);
+    edi10 = eax57;
+    if (eax57) {
+        addr_180008103_51:
+        sf58 = reinterpret_cast<signed char>(edi10) < reinterpret_cast<signed char>(0);
+        if (edi10) {
+            addr_180008113_52:
+            if (!sf58) {
+                edi10 = reinterpret_cast<void**>(0);
+            }
+        } else {
+            edi10 = reinterpret_cast<void**>(0);
+            *reinterpret_cast<void***>(reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rbx17)) + reinterpret_cast<uint64_t>(r14_18 * 4)) = v59;
+            goto addr_180008111_14;
+        }
+    } else {
+        addr_1800080fd_9:
+        *reinterpret_cast<void***>(rbx17 + 12) = esi19;
+        edi10 = reinterpret_cast<void**>(0);
+        goto addr_180008103_51;
+    }
+    addr_180008117_55:
+    goto addr_18000811f_2;
+    addr_180008111_14:
+    sf58 = reinterpret_cast<signed char>(edi10) < reinterpret_cast<signed char>(0);
+    goto addr_180008113_52;
+    addr_1800080e6_12:
+    edi10 = reinterpret_cast<void**>(0x8007000e);
+    goto addr_180008111_14;
+    addr_1800080d0_25:
+    edi10 = reinterpret_cast<void**>(0x8007000e);
+    goto addr_180008117_55;
+    addr_180007fd8_46:
+    rax56 = reinterpret_cast<void**>(0);
+    *reinterpret_cast<int32_t*>(&rax56 + 4) = 0;
+    goto addr_180008151_50;
+}

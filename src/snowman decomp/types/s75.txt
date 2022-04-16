@@ -1,0 +1,5 @@
+﻿struct s75 {
+    void** f0;
+    signed char[19] pad20;
+    uint32_t f20;
+};

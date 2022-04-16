@@ -1,0 +1,9 @@
+﻿struct s40 {
+    uint32_t f0;
+    uint32_t f4;
+    uint32_t f8;
+    uint32_t f12;
+    int32_t f16;
+    int32_t f20;
+    int32_t f24;
+};

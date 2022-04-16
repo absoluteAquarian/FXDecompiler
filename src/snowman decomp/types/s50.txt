@@ -1,0 +1,4 @@
+﻿struct s50 {
+    int64_t f0;
+    int64_t f8;
+};

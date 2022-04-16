@@ -1,0 +1,13 @@
+﻿void** fun_180012300(uint32_t ecx, void** rdx, void** r8, void** r9, int64_t a5) {
+    uint32_t ecx6;
+    int64_t rcx7;
+
+    ecx6 = ecx - 1;
+    if (ecx6 > 11) {
+        return "<unknown dimension>";
+    } else {
+        *reinterpret_cast<int32_t*>(&rcx7) = *reinterpret_cast<int32_t*>(0x180000000 + ecx6 * 4 + 0x1239c);
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx7) + 4) = 0;
+        goto rcx7 + 0x180000000;
+    }
+}

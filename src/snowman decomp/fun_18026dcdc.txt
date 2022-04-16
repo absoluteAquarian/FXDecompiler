@@ -1,0 +1,3 @@
+﻿uint64_t* fun_18026dcdc() {
+    return 0x1804267d0;
+}

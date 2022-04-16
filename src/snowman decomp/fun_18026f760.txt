@@ -1,0 +1,9 @@
+﻿void** fun_18026f760(void** rcx, ...) {
+    void** rax2;
+
+    if (!rcx) {
+        return rax2;
+    } else {
+        goto LocalFree;
+    }
+}

@@ -1,0 +1,11 @@
+﻿void** fun_180008170(uint32_t ecx, ...) {
+    int64_t rcx2;
+
+    if (ecx > 57) {
+        return "UNKNOWN";
+    } else {
+        *reinterpret_cast<int32_t*>(&rcx2) = *reinterpret_cast<int32_t*>(0x180000000 + ecx * 4 + 0x8338);
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx2) + 4) = 0;
+        goto rcx2 + 0x180000000;
+    }
+}

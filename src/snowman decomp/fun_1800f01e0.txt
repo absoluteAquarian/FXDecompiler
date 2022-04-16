@@ -1,0 +1,31 @@
+﻿void** fun_1800f01e0(void* rcx, void** rdx, void** r8, void** r9, void** a5, ...) {
+    void** rax6;
+    void** rbx7;
+    void** eax8;
+    void** eax9;
+
+    rax6 = fun_18026dcec(32);
+    rbx7 = rax6;
+    if (!rax6) {
+        *reinterpret_cast<int32_t*>(&rbx7) = 0;
+        *reinterpret_cast<int32_t*>(&rbx7 + 4) = 0;
+    } else {
+        *reinterpret_cast<void***>(rbx7 + 24) = reinterpret_cast<void**>(0);
+        *reinterpret_cast<void***>(rbx7 + 16) = reinterpret_cast<void**>(0);
+        *reinterpret_cast<void***>(rbx7) = reinterpret_cast<void**>(0x180357378);
+        *reinterpret_cast<void***>(rbx7 + 8) = reinterpret_cast<void**>(1);
+    }
+    if (rbx7) {
+        eax8 = reinterpret_cast<void**>(g180378348(rbx7, rcx));
+        if (reinterpret_cast<signed char>(eax8) >= reinterpret_cast<signed char>(0)) {
+            *reinterpret_cast<void***>(rdx) = rbx7;
+            eax9 = reinterpret_cast<void**>(0);
+        } else {
+            g180378348(rbx7, 1);
+            eax9 = eax8;
+        }
+    } else {
+        eax9 = reinterpret_cast<void**>(0x8007000e);
+    }
+    return eax9;
+}

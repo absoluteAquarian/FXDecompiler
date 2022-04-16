@@ -1,0 +1,7 @@
+﻿struct s1036 {
+    void** f0;
+    signed char[7] pad8;
+    uint32_t f8;
+    uint32_t f12;
+    int32_t f16;
+};

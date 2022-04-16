@@ -1,0 +1,23 @@
+﻿uint64_t fun_180337f00() {
+    void* r10_1;
+    void** r10_2;
+    uint64_t rax3;
+    void* rax4;
+    void** r11_5;
+    uint64_t rax6;
+
+    r10_1 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 16 + 24);
+    r10_2 = reinterpret_cast<void**>(reinterpret_cast<uint64_t>(r10_1) - rax3);
+    if (reinterpret_cast<uint64_t>(r10_1) < reinterpret_cast<uint64_t>(rax4)) {
+        r10_2 = reinterpret_cast<void**>(0);
+    }
+    r11_5 = *reinterpret_cast<void***>(reinterpret_cast<int64_t>(&gffffffffffffffff) + 17);
+    if (reinterpret_cast<unsigned char>(r10_2) < reinterpret_cast<unsigned char>(r11_5)) {
+        *reinterpret_cast<uint16_t*>(&r10_2) = reinterpret_cast<uint16_t>(*reinterpret_cast<uint16_t*>(&r10_2) & 0xf000);
+        do {
+            r11_5 = r11_5 + 0xfffffffffffff000;
+            *reinterpret_cast<void***>(r11_5) = reinterpret_cast<void**>(0);
+        } while (r10_2 != r11_5);
+    }
+    return rax6;
+}

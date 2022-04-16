@@ -1,0 +1,8 @@
+﻿int32_t fun_1800f5da0(struct s23* rcx, unsigned char dl, void* r8, int64_t r9) {
+    uint32_t r9d5;
+    int32_t eax6;
+
+    r9d5 = dl;
+    eax6 = fun_1800f5c30(rcx, reinterpret_cast<int64_t>(__zero_stack_offset()) - 72 + 80, 2, *reinterpret_cast<unsigned char*>(&r9d5));
+    return eax6;
+}

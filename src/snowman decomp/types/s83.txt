@@ -1,0 +1,5 @@
+﻿struct s83 {
+    int32_t f0;
+    int32_t f4;
+    int32_t f8;
+};

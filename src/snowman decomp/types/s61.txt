@@ -1,0 +1,4 @@
+﻿struct s61 {
+    uint16_t f0;
+    uint16_t f2;
+};

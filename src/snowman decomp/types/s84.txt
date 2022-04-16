@@ -1,0 +1,4 @@
+﻿struct s84 {
+    int32_t f0;
+    uint32_t f4;
+};

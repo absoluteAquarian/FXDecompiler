@@ -1,0 +1,14 @@
+﻿void** fun_1800ee8ec(void** rcx, int64_t rdx, int64_t r8) {
+    void** r8d4;
+    void** eax5;
+
+    __asm__("xorps xmm0, xmm0");
+    __asm__("movdqu [rsp+0x30], xmm0");
+    if (rcx) {
+        r8d4 = *reinterpret_cast<void***>(rcx + 24);
+        eax5 = fun_1800ed1b0(reinterpret_cast<int64_t>(__zero_stack_offset()) - 88 + 48, rcx, r8d4, 1);
+    } else {
+        eax5 = reinterpret_cast<void**>(0x80004005);
+    }
+    return eax5;
+}

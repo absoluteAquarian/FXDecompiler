@@ -1,0 +1,4 @@
+﻿struct s1026 {
+    signed char[1] pad1;
+    void** f1;
+};

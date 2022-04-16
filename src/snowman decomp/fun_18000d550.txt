@@ -1,0 +1,157 @@
+﻿void** fun_18000d550(void** rcx, void** rdx, void** r8) {
+    void* rsp4;
+    void** rbx5;
+    void** r10d6;
+    uint32_t eax7;
+    void** rcx8;
+    void** rdx9;
+    void** r8d10;
+    uint32_t r9d11;
+    int64_t r8_12;
+    uint64_t r9_13;
+    void* rax14;
+    int64_t r8_15;
+    uint64_t r9_16;
+    void* rax17;
+    int32_t eax18;
+    void** r9_19;
+    void** rsi20;
+    void** rdx21;
+    void** rbp22;
+    int32_t eax23;
+    int32_t edi24;
+    int64_t v25;
+    int64_t v26;
+    void** r9_27;
+    void** rdx28;
+    int32_t eax29;
+    void** r8_30;
+    int64_t v31;
+    int64_t v32;
+    void** r8_33;
+    uint32_t eax34;
+    int64_t v35;
+    int64_t v36;
+    uint32_t eax37;
+    int64_t v38;
+    int64_t v39;
+    int64_t v40;
+    int64_t v41;
+    int64_t v42;
+    int64_t v43;
+    void** v44;
+    void** v45;
+    void** rax46;
+    int64_t v47;
+    int64_t v48;
+
+    rsp4 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 64);
+    rbx5 = rcx;
+    if (!rdx || (reinterpret_cast<unsigned char>(r8) < reinterpret_cast<unsigned char>(4) || ((r10d6 = *reinterpret_cast<void***>(rdx), eax7 = reinterpret_cast<unsigned char>(r10d6) & 0xffff0000, eax7 != 0x7ffe0000) && (eax7 != 0x46580000 && (eax7 != 0x4c500000 && (eax7 != 0x4c560000 && (eax7 != 0x54580000 && (eax7 != 0x7fff0000 && (eax7 != 0xfffe0000 && eax7 != 0xffff0000)))))) || (rcx8 = r8 + 0xfffffffffffffffc, rdx9 = rdx + 4, reinterpret_cast<unsigned char>(rcx8) < reinterpret_cast<unsigned char>(4))))) {
+        addr_18000d68b_2:
+        return 0;
+    } else {
+        while (1) {
+            r8d10 = *reinterpret_cast<void***>(rdx9);
+            rcx8 = rcx8 - 4;
+            if (reinterpret_cast<signed char>(r8d10) < reinterpret_cast<signed char>(0)) {
+                addr_18000d67d_5:
+                rdx9 = rdx9 + 4;
+                if (reinterpret_cast<unsigned char>(rcx8) >= reinterpret_cast<unsigned char>(4)) 
+                    continue; else 
+                    goto addr_18000d68b_2;
+            } else {
+                r9d11 = *reinterpret_cast<uint16_t*>(&r8d10);
+                if (r9d11 == 0xffff) 
+                    goto addr_18000d68b_2;
+                if (r9d11 == 0xfffe) 
+                    goto addr_18000d5fa_8;
+            }
+            if (*reinterpret_cast<uint16_t*>(&r10d6) < 0x200) {
+                if (r9d11 == 81) {
+                    if ((reinterpret_cast<unsigned char>(rcx8) & 0xfffffffffffffffc) < 20) 
+                        goto addr_18000d68b_2;
+                    rdx9 = rdx9 + 20;
+                    rcx8 = rcx8 - 20;
+                    goto addr_18000d67d_5;
+                }
+            } else {
+                *reinterpret_cast<uint32_t*>(&r8_12) = reinterpret_cast<unsigned char>(r8d10) >> 24 & 15;
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r8_12) + 4) = 0;
+                *reinterpret_cast<uint32_t*>(&r9_13) = *reinterpret_cast<uint32_t*>(&r8_12);
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r9_13) + 4) = 0;
+                if (reinterpret_cast<uint64_t>(reinterpret_cast<unsigned char>(rcx8) >> 2) < r9_13) 
+                    goto addr_18000d68b_2;
+                rax14 = reinterpret_cast<void*>(r8_12 * 4);
+                rdx9 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(rdx9) + reinterpret_cast<uint64_t>(rax14));
+                rcx8 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(rcx8) - reinterpret_cast<uint64_t>(rax14));
+                goto addr_18000d67d_5;
+            }
+            addr_18000d5fa_8:
+            *reinterpret_cast<uint32_t*>(&r8_15) = reinterpret_cast<unsigned char>(r8d10) >> 16 & 0x7fff;
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r8_15) + 4) = 0;
+            *reinterpret_cast<uint32_t*>(&r9_16) = *reinterpret_cast<uint32_t*>(&r8_15);
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r9_16) + 4) = 0;
+            if (reinterpret_cast<uint64_t>(reinterpret_cast<unsigned char>(rcx8) >> 2) < r9_16) 
+                goto addr_18000d68b_2;
+            if (*reinterpret_cast<uint32_t*>(&r8_15) <= 1) 
+                goto addr_18000d623_16;
+            if (*reinterpret_cast<void***>(rdx9 + 4) == 0x53455250) 
+                break;
+            addr_18000d623_16:
+            rax17 = reinterpret_cast<void*>(r8_15 * 4);
+            rdx9 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(rdx9) + reinterpret_cast<uint64_t>(rax17));
+            rcx8 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(rcx8) - reinterpret_cast<uint64_t>(rax17));
+            goto addr_18000d67d_5;
+        }
+    }
+    eax18 = static_cast<int32_t>(r8_15 * 4 - 4);
+    r9_19 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rsp4) + 96);
+    rsi20 = rdx9 + 8;
+    *reinterpret_cast<int32_t*>(&rdx21) = eax18;
+    *reinterpret_cast<int32_t*>(&rdx21 + 4) = 0;
+    *reinterpret_cast<int32_t*>(&rbp22) = eax18;
+    *reinterpret_cast<int32_t*>(&rbp22 + 4) = 0;
+    eax23 = fun_18000a3c0(rsi20, rdx21, 0x434c5846, r9_19);
+    edi24 = eax23;
+    if (eax23 < 0 || eax23 == 1) {
+        fun_1800ecdb0(rbx5, "Error: Texture shader assembly not found!", 0x434c5846, r9_19, v25, rbx5, "Error: Texture shader assembly not found!", 0x434c5846, r9_19, v26);
+        if (edi24 == 1) {
+            edi24 = 0x80004005;
+        }
+    } else {
+        r9_27 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rsp4) - 8 + 8 + 88);
+        *reinterpret_cast<int32_t*>(&rdx28) = *reinterpret_cast<int32_t*>(&rbp22);
+        *reinterpret_cast<int32_t*>(&rdx28 + 4) = 0;
+        eax29 = fun_18000a3c0(rsi20, rdx28, 0x54494c43, r9_27);
+        edi24 = eax29;
+        if (eax29 >= 0) {
+            if (*reinterpret_cast<void***>(rbx5 + 24)) {
+                r8_30 = g18035fec0;
+                fun_1800ecdb0(rbx5, "<font color = \"#%s\">", r8_30, r9_27, v31, rbx5, "<font color = \"#%s\">", r8_30, r9_27, v32);
+                *reinterpret_cast<void***>(rbx5 + 32) = *reinterpret_cast<void***>(rbx5 + 32) + 1;
+            }
+            r8_33 = rsi20;
+            fun_18000bb70(rbx5, 0, r8_33, rbp22);
+            eax34 = reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rbx5 + 24));
+            if (*reinterpret_cast<signed char*>(&eax34) && (*reinterpret_cast<void***>(rbx5 + 32) = *reinterpret_cast<void***>(rbx5 + 32) - 1, fun_1800ecdb0(rbx5, "</font>", r8_33, rbp22, v35, rbx5, "</font>", r8_33, rbp22, v36), eax37 = reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rbx5 + 24)), !!*reinterpret_cast<signed char*>(&eax37))) {
+                r8_33 = g18035fec8;
+                fun_1800ecdb0(rbx5, "<font color = \"#%s\">", r8_33, rbp22, v38, rbx5, "<font color = \"#%s\">", r8_33, rbp22, v39);
+                *reinterpret_cast<void***>(rbx5 + 32) = *reinterpret_cast<void***>(rbx5 + 32) + 1;
+            }
+            fun_1800ecdb0(rbx5, "    preshader\n", r8_33, rbp22, v40, rbx5, "    preshader\n", r8_33, rbp22, v41);
+            if (*reinterpret_cast<void***>(rbx5 + 24)) {
+                *reinterpret_cast<void***>(rbx5 + 32) = *reinterpret_cast<void***>(rbx5 + 32) - 1;
+                fun_1800ecdb0(rbx5, "</font>", r8_33, rbp22, v42, rbx5, "</font>", r8_33, rbp22, v43);
+            }
+            rax46 = fun_18000aef0(rbx5, v44, v45, 0);
+            goto addr_18000d717_30;
+        } else {
+            fun_1800ecdb0(rbx5, "Error: Error getting texture shader literal block.", 0x54494c43, r9_27, v47, rbx5, "Error: Error getting texture shader literal block.", 0x54494c43, r9_27, v48);
+        }
+    }
+    *reinterpret_cast<int32_t*>(&rax46) = edi24;
+    *reinterpret_cast<int32_t*>(&rax46 + 4) = 0;
+    addr_18000d717_30:
+    return rax46;
+}

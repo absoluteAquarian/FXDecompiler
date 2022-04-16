@@ -1,0 +1,10 @@
+﻿int32_t fun_18026f188(void** rcx, void** rdx, void** r8, void** r9) {
+    int32_t eax5;
+
+    fun_18026dcdc();
+    eax5 = fun_18026ee92();
+    if (eax5 < 0) {
+        eax5 = -1;
+    }
+    return eax5;
+}

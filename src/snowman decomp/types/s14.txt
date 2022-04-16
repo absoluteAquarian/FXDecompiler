@@ -1,0 +1,8 @@
+﻿struct s14 {
+    unsigned char f0;
+    signed char[1] pad2;
+    uint16_t f2;
+    void** f4;
+    signed char[3] pad8;
+    unsigned char f8;
+};

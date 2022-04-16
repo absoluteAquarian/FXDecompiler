@@ -1,0 +1,49 @@
+﻿int64_t fun_180012510(void** rcx, uint32_t edx, void** r8, void** r9, int64_t a5) {
+    int64_t v6;
+    int64_t v7;
+    int64_t v8;
+    int64_t v9;
+    int64_t v10;
+    int64_t v11;
+    int64_t v12;
+    int64_t v13;
+    int64_t v14;
+
+    if (static_cast<int1_t>(edx >> 16)) {
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            r8 = g18035fec8;
+            fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8, r9, v6);
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+        }
+        fun_1800ecdb0(rcx, "_glc", r8, r9, v7);
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+            fun_1800ecdb0(rcx, "</font>", r8, r9, v8);
+        }
+    }
+    if (static_cast<int1_t>(edx >> 23)) {
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            r8 = g18035fec8;
+            fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8, r9, v9);
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+        }
+        fun_1800ecdb0(rcx, "_opc", r8, r9, v10);
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+            fun_1800ecdb0(rcx, "</font>", r8, r9, v11);
+        }
+    }
+    if (static_cast<int1_t>(edx >> 17)) {
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            r8 = g18035fec8;
+            fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8, r9, v12);
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+        }
+        fun_1800ecdb0(rcx, "_rov", r8, r9, v13);
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+            fun_1800ecdb0(rcx, "</font>", r8, r9, v14);
+        }
+    }
+    return 0;
+}

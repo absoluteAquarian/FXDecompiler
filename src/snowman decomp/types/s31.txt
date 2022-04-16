@@ -1,0 +1,4 @@
+﻿struct s31 {
+    signed char[180] pad180;
+    int32_t f180;
+};

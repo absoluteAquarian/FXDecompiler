@@ -1,0 +1,14 @@
+﻿struct s48 {
+    int64_t f0;
+    signed char[24] pad32;
+    void*** f32;
+    signed char[40] pad80;
+    void** f80;
+    signed char[7] pad88;
+    int32_t f88;
+    signed char[12] pad104;
+    unsigned char f104;
+    signed char[7] pad112;
+    struct s49* f112;
+    void** f120;
+};

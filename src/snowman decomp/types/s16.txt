@@ -1,0 +1,4 @@
+﻿struct s16 {
+    struct s17* f0;
+    int32_t* f8;
+};

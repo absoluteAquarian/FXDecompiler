@@ -1,0 +1,19 @@
+﻿struct s1029 {
+    void** f0;
+    signed char[7] pad8;
+    void** f8;
+    signed char[7] pad16;
+    void** f16;
+    signed char[3] pad20;
+    void** f20;
+    signed char[3] pad24;
+    void** f24;
+    signed char[3] pad28;
+    void** f28;
+    signed char[3] pad32;
+    void** f32;
+    signed char[7] pad40;
+    uint32_t f40;
+    uint32_t f44;
+    int32_t f48;
+};

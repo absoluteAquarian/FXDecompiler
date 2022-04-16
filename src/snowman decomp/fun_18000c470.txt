@@ -1,0 +1,11 @@
+﻿void** fun_18000c470(void** rcx, void** edx, void** r8) {
+    int64_t rdx4;
+
+    if (reinterpret_cast<unsigned char>(edx) > reinterpret_cast<unsigned char>(42)) {
+        return "<unknown register type>";
+    } else {
+        *reinterpret_cast<int32_t*>(&rdx4) = *reinterpret_cast<int32_t*>(0x180000000 + reinterpret_cast<int32_t>(edx) * 4 + 0xc65c);
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rdx4) + 4) = 0;
+        goto rdx4 + 0x180000000;
+    }
+}

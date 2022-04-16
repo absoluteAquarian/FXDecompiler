@@ -1,0 +1,267 @@
+﻿void** fun_1800e8c40(void** ecx, void** rdx, void** r8, void** r9, ...) {
+    uint32_t ecx5;
+
+    ecx5 = reinterpret_cast<unsigned char>(ecx) & 0xfff00000;
+    if (ecx5 > 0x20500000) {
+        if (ecx5 > 0x21e00000) {
+            if (ecx5 > 0x23600000) {
+                if (ecx5 == 0x30000000) {
+                    return "cmp";
+                } else {
+                    if (ecx5 == 0x30100000) {
+                        return "movc";
+                    } else {
+                        if (ecx5 == 0x50000000) {
+                            return "dot";
+                        } else {
+                            if (ecx5 == 0x50200000) {
+                                return "noise";
+                            } else {
+                                if (ecx5 == 0x70e00000) {
+                                    return "d3ds_dotswiz";
+                                } else {
+                                    if (ecx5 == 0x71100000) {
+                                        return "d3ds_noiseswiz";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } else {
+                if (ecx5 == 0x23600000) {
+                    return "ushr";
+                } else {
+                    if (ecx5 == 0x21f00000) {
+                        return "umin";
+                    } else {
+                        if (ecx5 == 0x22000000) {
+                            return "umax";
+                        } else {
+                            if (ecx5 == 0x23000000) {
+                                return "and";
+                            } else {
+                                if (ecx5 == 0x23100000) {
+                                    return "or";
+                                } else {
+                                    if (ecx5 == 0x23300000) {
+                                        return "xor";
+                                    } else {
+                                        if (ecx5 == 0x23400000) {
+                                            return "ishl";
+                                        } else {
+                                            if (ecx5 == 0x23500000) {
+                                                return "ishr";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } else {
+            if (ecx5 == 0x21e00000) {
+                return "imax";
+            } else {
+                if (ecx5 > 0x21500000) {
+                    if (ecx5 == 0x21600000) {
+                        return "iadd";
+                    } else {
+                        if (ecx5 == 0x21700000) {
+                            return "idiv";
+                        } else {
+                            if (ecx5 == 0x21900000) {
+                                return "imul";
+                            } else {
+                                if (ecx5 == 0x21a00000) {
+                                    return "udiv";
+                                } else {
+                                    if (ecx5 == 0x21b00000) {
+                                        return "umod";
+                                    } else {
+                                        if (ecx5 == 0x21c00000) {
+                                            return "umul";
+                                        } else {
+                                            if (ecx5 == 0x21d00000) {
+                                                return "imin";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    if (ecx5 == 0x21500000) {
+                        return "bult";
+                    } else {
+                        if (ecx5 == 0x20600000) {
+                            return "atan2";
+                        } else {
+                            if (ecx5 == 0x20800000) {
+                                return "div";
+                            } else {
+                                if (ecx5 == 0x21000000) {
+                                    return "bilt";
+                                } else {
+                                    if (ecx5 == 0x21100000) {
+                                        return "bige";
+                                    } else {
+                                        if (ecx5 == 0x21200000) {
+                                            return "bieq";
+                                        } else {
+                                            if (ecx5 == 0x21300000) {
+                                                return "bine";
+                                            } else {
+                                                if (ecx5 == 0x21400000) {
+                                                    return "buge";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        if (ecx5 == 0x20500000) {
+            return "mul";
+        } else {
+            if (ecx5 > 0x13000000) {
+                if (ecx5 > 0x13800000) {
+                    if (ecx5 == 0x13900000) {
+                        return "floor";
+                    } else {
+                        if (ecx5 == 0x13a00000) {
+                            return "ceil";
+                        } else {
+                            if (ecx5 == 0x20000000) {
+                                return "min";
+                            } else {
+                                if (ecx5 == 0x20100000) {
+                                    return "max";
+                                } else {
+                                    if (ecx5 == 0x20200000) {
+                                        return "lt";
+                                    } else {
+                                        if (ecx5 == 0x20300000) {
+                                            return "ge";
+                                        } else {
+                                            if (ecx5 == 0x20400000) {
+                                                return "add";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    if (ecx5 == 0x13800000) {
+                        return "round";
+                    } else {
+                        if (ecx5 == 0x13100000) {
+                            return "utof";
+                        } else {
+                            if (ecx5 == 0x13200000) {
+                                return "ftoi";
+                            } else {
+                                if (ecx5 == 0x13300000) {
+                                    return "ftou";
+                                } else {
+                                    if (ecx5 == 0x13400000) {
+                                        return "btof";
+                                    } else {
+                                        if (ecx5 == 0x13500000) {
+                                            return "btoi";
+                                        } else {
+                                            if (ecx5 == 0x13600000) {
+                                                return "itob";
+                                            } else {
+                                                if (ecx5 == 0x13700000) {
+                                                    return "ftob";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } else {
+                if (ecx5 == 0x13000000) {
+                    return "itof";
+                } else {
+                    if (ecx5 > 0x10800000) {
+                        if (ecx5 == 0x10900000) {
+                            return "cos";
+                        } else {
+                            if (ecx5 == 0x10a00000) {
+                                return "asin";
+                            } else {
+                                if (ecx5 == 0x10b00000) {
+                                    return "acos";
+                                } else {
+                                    if (ecx5 == 0x10c00000) {
+                                        return "atan";
+                                    } else {
+                                        if (ecx5 == 0x11200000) {
+                                            return "sqrt";
+                                        } else {
+                                            if (ecx5 == 0x12000000) {
+                                                return "ineg";
+                                            } else {
+                                                if (ecx5 == 0x12100000) {
+                                                    return "not";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        if (ecx5 == 0x10800000) {
+                            return "sin";
+                        } else {
+                            if (ecx5 == 0x10000000) {
+                                return "mov";
+                            } else {
+                                if (ecx5 == 0x10100000) {
+                                    return "neg";
+                                } else {
+                                    if (ecx5 == 0x10300000) {
+                                        return "rcp";
+                                    } else {
+                                        if (ecx5 == 0x10400000) {
+                                            return "frc";
+                                        } else {
+                                            if (ecx5 == 0x10500000) {
+                                                return "exp";
+                                            } else {
+                                                if (ecx5 == 0x10600000) {
+                                                    return "log";
+                                                } else {
+                                                    if (ecx5 == 0x10700000) {
+                                                        return "rsq";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return "<unknown>";
+}

@@ -1,0 +1,9 @@
+﻿void fun_18026e6d0(int64_t rcx, int32_t edx, int64_t r8, int64_t r9) {
+    int32_t eax5;
+
+    eax5 = fun_18026ee3c();
+    if (!eax5 && edx == 1) {
+        g180378348(rcx);
+    }
+    goto _o__seh_filter_dll;
+}

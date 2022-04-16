@@ -1,0 +1,6 @@
+﻿struct s30 {
+    uint16_t f0;
+    uint16_t f2;
+    signed char[4] pad8;
+    uint16_t f8;
+};

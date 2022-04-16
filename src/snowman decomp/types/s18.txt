@@ -1,0 +1,9 @@
+﻿struct s18 {
+    signed char f0;
+    signed char[3] pad4;
+    int32_t f4;
+    signed char[4] pad12;
+    void** f12;
+    signed char[3] pad16;
+    int32_t f16;
+};

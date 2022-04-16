@@ -1,0 +1,21 @@
+﻿void** fun_180018000(void** rcx, void** rdx) {
+    void** rbx3;
+    void** r9_4;
+    void** v5;
+    int32_t eax6;
+    void** rdx7;
+
+    rbx3 = rdx + 0xffffffffffffffff;
+    eax6 = fun_18026f188(rcx, rbx3, r9_4, v5);
+    if (eax6 < 0 || (rdx7 = reinterpret_cast<void**>(static_cast<int64_t>(eax6)), reinterpret_cast<unsigned char>(rdx7) > reinterpret_cast<unsigned char>(rbx3))) {
+        *reinterpret_cast<signed char*>(reinterpret_cast<unsigned char>(rbx3) + reinterpret_cast<unsigned char>(rcx)) = 0;
+        return 0x8007007a;
+    } else {
+        if (rdx7 != rbx3) {
+            return 0;
+        } else {
+            *reinterpret_cast<signed char*>(reinterpret_cast<unsigned char>(rbx3) + reinterpret_cast<unsigned char>(rcx)) = 0;
+            return 0;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+﻿struct s35 {
+    signed char[4] pad4;
+    void** f4;
+    signed char[11] pad16;
+    void** f16;
+    signed char[7] pad24;
+    struct s35* f24;
+};

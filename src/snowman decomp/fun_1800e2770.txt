@@ -1,0 +1,34 @@
+﻿void** fun_1800e2770(void** rcx, ...) {
+    *reinterpret_cast<void***>(rcx + 8) = reinterpret_cast<void**>(1);
+    *reinterpret_cast<void***>(rcx) = reinterpret_cast<void**>(0x1803571c0);
+    *reinterpret_cast<void***>(rcx + 0x104) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xf8) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x100) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x11c) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x110) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x118) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x134) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x128) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x130) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x14c) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x140) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x148) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x164) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x158) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x160) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x17c) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x170) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0x178) = reinterpret_cast<void**>(0);
+    fun_18026f05c();
+    *reinterpret_cast<void***>(rcx + 0xbc) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xc4) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xcc) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xb8) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xd4) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xdc) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xe0) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xe8) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 0xf0) = reinterpret_cast<void**>(0);
+    *reinterpret_cast<void***>(rcx + 12) = reinterpret_cast<void**>(0);
+    return rcx;
+}

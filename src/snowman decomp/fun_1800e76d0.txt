@@ -1,0 +1,105 @@
+﻿struct s20* fun_1800e76d0(void** rcx, void** edx, int64_t r8) {
+    int64_t rax4;
+    void** rbx5;
+    int64_t rsi6;
+    void** ecx7;
+    int64_t rdx8;
+    int64_t rcx9;
+    struct s20* rax10;
+    struct s1042* rcx11;
+    int64_t rdx12;
+    void** edi13;
+    int64_t rax14;
+    void** rax15;
+
+    *reinterpret_cast<void***>(&rax4) = *reinterpret_cast<void***>(rcx + 12);
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax4) + 4) = 0;
+    rbx5 = rcx;
+    *reinterpret_cast<void***>(&rsi6) = edx;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rsi6) + 4) = 0;
+    ecx7 = reinterpret_cast<void**>(static_cast<uint32_t>(rax4 + rsi6));
+    if (reinterpret_cast<unsigned char>(ecx7) < reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&rax4))) {
+        *reinterpret_cast<void***>(rbx5 + 16) = reinterpret_cast<void**>(0x8007000e);
+        return 0;
+    }
+    *reinterpret_cast<void***>(&rdx8) = *reinterpret_cast<void***>(rbx5 + 8);
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rdx8) + 4) = 0;
+    if (reinterpret_cast<unsigned char>(ecx7) <= reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&rdx8))) {
+        addr_1800e7782_4:
+        *reinterpret_cast<void***>(&rcx9) = *reinterpret_cast<void***>(&rax4);
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx9) + 4) = 0;
+        rax10 = reinterpret_cast<struct s20*>(*reinterpret_cast<void***>(rbx5) + rcx9 * 0x118);
+        if (*reinterpret_cast<void***>(&rsi6)) {
+            rcx11 = reinterpret_cast<struct s1042*>(&rax10->f200);
+            rdx12 = rsi6;
+            do {
+                *reinterpret_cast<int64_t*>(reinterpret_cast<uint64_t>(rcx11) - 0xc8) = 0x180357160;
+                __asm__("xorps xmm0, xmm0");
+                rcx11->f4 = 0;
+                *reinterpret_cast<int64_t*>(reinterpret_cast<uint64_t>(rcx11) - 8) = 0;
+                rcx11->f0 = 0;
+                rcx11->f28 = 0;
+                rcx11->f16 = 0;
+                rcx11->f24 = 0;
+                rcx11->f52 = 0;
+                rcx11->f40 = 0;
+                rcx11->f48 = 0;
+                rcx11->f64 = 0;
+                rcx11->f72 = 0;
+                __asm__("movups [rcx-0xb0], xmm0");
+                __asm__("movups [rcx-0xa0], xmm0");
+                __asm__("movups [rcx-0x90], xmm0");
+                __asm__("movups [rcx-0x80], xmm0");
+                __asm__("movups [rcx-0x70], xmm0");
+                __asm__("movups [rcx-0x60], xmm0");
+                __asm__("movups [rcx-0x50], xmm0");
+                __asm__("movups [rcx-0x40], xmm0");
+                __asm__("movups [rcx-0x30], xmm0");
+                *reinterpret_cast<int64_t*>(reinterpret_cast<uint64_t>(rcx11) - 32) = 0;
+                *reinterpret_cast<int64_t*>(reinterpret_cast<uint64_t>(rcx11) - 24) = 0;
+                *reinterpret_cast<int32_t*>(reinterpret_cast<uint64_t>(rcx11) - 16) = 0;
+                *reinterpret_cast<int64_t*>(reinterpret_cast<uint64_t>(rcx11) - 0xc0) = 0;
+                rcx11 = reinterpret_cast<struct s1042*>(reinterpret_cast<uint64_t>(rcx11) + 0x118);
+                --rdx12;
+            } while (rdx12);
+            *reinterpret_cast<void***>(&rcx9) = *reinterpret_cast<void***>(rbx5 + 12);
+        }
+    } else {
+        edi13 = reinterpret_cast<void**>(static_cast<uint32_t>(rdx8 + rdx8));
+        if (reinterpret_cast<unsigned char>(edi13) <= reinterpret_cast<unsigned char>(ecx7)) {
+            edi13 = ecx7;
+        }
+        if (reinterpret_cast<unsigned char>(edi13) < reinterpret_cast<unsigned char>(16)) {
+            edi13 = reinterpret_cast<void**>(16);
+        }
+        if (reinterpret_cast<unsigned char>(edi13) < reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&rdx8))) 
+            goto addr_1800e7857_13;
+        if (reinterpret_cast<unsigned char>(edi13) < reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&rax4))) 
+            goto addr_1800e7857_13;
+        if (reinterpret_cast<unsigned char>(edi13) >= reinterpret_cast<unsigned char>(0xea0ea0)) 
+            goto addr_1800e7857_13;
+        *reinterpret_cast<void***>(&rax14) = edi13;
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax14) + 4) = 0;
+        rax15 = fun_18026dd38(rax14 * 0x118);
+        if (!rax15) 
+            goto addr_1800e7857_13; else 
+            goto addr_1800e7757_17;
+    }
+    *reinterpret_cast<void***>(rbx5 + 12) = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&rcx9)) + reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&rsi6)));
+    addr_1800e7841_19:
+    return rax10;
+    addr_1800e7857_13:
+    *reinterpret_cast<void***>(rbx5 + 16) = reinterpret_cast<void**>(0x8007000e);
+    *reinterpret_cast<int32_t*>(&rax10) = 0;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax10) + 4) = 0;
+    goto addr_1800e7841_19;
+    addr_1800e7757_17:
+    if (*reinterpret_cast<void***>(rbx5)) {
+        fun_1803380c2();
+        fun_18026dd2c();
+    }
+    *reinterpret_cast<void***>(&rax4) = *reinterpret_cast<void***>(rbx5 + 12);
+    *reinterpret_cast<void***>(rbx5) = rax15;
+    *reinterpret_cast<void***>(rbx5 + 8) = edi13;
+    goto addr_1800e7782_4;
+}

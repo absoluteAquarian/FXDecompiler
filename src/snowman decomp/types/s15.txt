@@ -1,0 +1,12 @@
+﻿struct s15 {
+    struct s16* f0;
+    void** f8;
+    signed char[7] pad16;
+    void** f16;
+    signed char[3] pad20;
+    void** f20;
+    signed char[4] pad25;
+    signed char f25;
+    signed char[6] pad32;
+    struct s18* f32;
+};

@@ -1,0 +1,32 @@
+﻿int64_t fun_18000b1f0(void** rcx, void** edx, void** r8, void** r9, ...) {
+    int64_t v5;
+    void** edx6;
+    int64_t v7;
+    void** edx8;
+    int64_t v9;
+    int64_t v10;
+
+    if (!edx) {
+        fun_1800ecdb0(rcx, "x", r8, r9, v5);
+        return 0;
+    } else {
+        edx6 = edx - 1;
+        if (!edx6) {
+            fun_1800ecdb0(rcx, "y", r8, r9, v7);
+            return 0;
+        } else {
+            edx8 = edx6 - 1;
+            if (!edx8) {
+                fun_1800ecdb0(rcx, "z", r8, r9, v9);
+                return 0;
+            } else {
+                if (edx8 == 1) {
+                    fun_1800ecdb0(rcx, "w", r8, r9, v10);
+                    return 0;
+                } else {
+                    return 0x80004005;
+                }
+            }
+        }
+    }
+}

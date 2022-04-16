@@ -1,0 +1,204 @@
+﻿void** fun_180011c60(void** rcx, void** rdx, void** r8, void** r9) {
+    void* rsp5;
+    void* rsp6;
+    uint64_t rax7;
+    void** r14_8;
+    void** rsi9;
+    int32_t eax10;
+    void* rsp11;
+    int64_t v12;
+    void* rsp13;
+    int64_t v14;
+    int64_t v15;
+    int64_t v16;
+    int32_t eax17;
+    void* rsp18;
+    int32_t ecx19;
+    int32_t v20;
+    int32_t v21;
+    int32_t eax22;
+    void** rdx23;
+    int32_t eax24;
+    uint32_t ecx25;
+    uint32_t v26;
+    void** rdx27;
+    int32_t eax28;
+    void** rcx29;
+    int64_t v30;
+    uint32_t v31;
+    uint32_t v32;
+    void** v33;
+    uint32_t v34;
+    void** v35;
+    void** v36;
+    int64_t v37;
+    void** v38;
+    uint32_t v39;
+    void** v40;
+    void** v41;
+    void** v42;
+    int32_t eax43;
+    int32_t eax44;
+    int64_t v45;
+    int64_t v46;
+    int64_t v47;
+    int64_t v48;
+    int32_t eax49;
+    int32_t eax50;
+    void** r9_51;
+    int32_t v52;
+    int64_t v53;
+    uint64_t rcx54;
+    void** rax55;
+    int64_t v56;
+
+    rsp5 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 8 - 8 - 8 - 8 - 8 - 8);
+    rsp6 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp5) - 0x80);
+    rax7 = g180426020;
+    r14_8 = r9;
+    rsi9 = r8;
+    eax10 = reinterpret_cast<int32_t>(g180378348(r8, reinterpret_cast<int64_t>(rsp5) - 56));
+    rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp6) - 8 + 8);
+    if (eax10 < 0) 
+        goto addr_180011f34_2;
+    if (eax10) {
+        fun_1800ecdb0(rcx, "\n", r8, r9, v12);
+        rsp13 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            r8 = g18035fec0;
+            fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8, r9, v14);
+            rsp13 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp13) - 8 + 8);
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+        }
+        fun_1800ecdb0(rcx, "// <internal error> could not get location type from PDB\n", r8, r9, v15);
+        rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp13) - 8 + 8);
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+            fun_1800ecdb0(rcx, "</font>", r8, r9, v16);
+            rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+            goto addr_180011f34_2;
+        }
+    }
+    eax17 = reinterpret_cast<int32_t>(g180378348(rsi9, reinterpret_cast<int64_t>(rsp5) - 72));
+    rsp18 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+    ecx19 = v20;
+    if (eax17) {
+        ecx19 = 0;
+    }
+    if (v21 != 5) 
+        goto addr_180011d41_11;
+    eax22 = reinterpret_cast<int32_t>(g180378348(rsi9, reinterpret_cast<int64_t>(rsp5) - 76));
+    rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp18) - 8 + 8);
+    if (!eax22) {
+        rdx23 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rsp5) + 0xffffffffffffffb0);
+        eax24 = reinterpret_cast<int32_t>(g180378348(rsi9, rdx23));
+        rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+        if (eax24 || (ecx25 = v26, ecx25 > 2)) {
+            rdx27 = reinterpret_cast<void**>("// <internal error> could not get register index count from PDB\n");
+        } else {
+            if (!ecx25) 
+                goto addr_180011de4_16;
+            r9 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rsp5) + 0xffffffffffffffe0);
+            *reinterpret_cast<uint32_t*>(&rdx23) = ecx25;
+            *reinterpret_cast<int32_t*>(&rdx23 + 4) = 0;
+            r8 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rsp5) + 0xffffffffffffffcc);
+            eax28 = reinterpret_cast<int32_t>(g180378348(rsi9, rdx23, r8, r9));
+            rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+            if (!eax28) 
+                goto addr_180011dd8_18; else 
+                goto addr_180011dcc_19;
+        }
+    } else {
+        rdx27 = reinterpret_cast<void**>("// <internal error> could not get register type from PDB\n");
+    }
+    addr_180011f27_21:
+    rcx29 = rcx;
+    addr_180011f2a_22:
+    fun_180007890(rcx29, rdx27, r8, r9, v30, rcx29, rdx27);
+    rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+    goto addr_180011f2f_23;
+    addr_180011dd8_18:
+    ecx25 = v31;
+    if (v32 != ecx25) {
+        addr_180011f2f_23:
+        goto addr_180011f34_2;
+    } else {
+        addr_180011de4_16:
+        r8 = v33;
+        *reinterpret_cast<int32_t*>(&r8 + 4) = 0;
+        if (r14_8 && (*reinterpret_cast<void***>(r14_8) != r8 || (ecx25 && (reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(r14_8 + 4)) ^ v34) & 0xfffffff0 || (ecx25 > 1 && *reinterpret_cast<void***>(r14_8 + 8) != v35 || ecx25 > 2 && *reinterpret_cast<void***>(r14_8 + 12) != v36)))) {
+            rdx23 = reinterpret_cast<void**>("\n//   ");
+            fun_1800ecdb0(rcx, "\n//   ", r8, r9, v37);
+            rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+            r8 = v38;
+            *reinterpret_cast<int32_t*>(&r8 + 4) = 0;
+            ecx25 = v39;
+            *reinterpret_cast<void***>(r14_8 + 4) = v40;
+            *reinterpret_cast<void***>(r14_8 + 8) = v41;
+            *reinterpret_cast<void***>(r14_8 + 12) = v42;
+            *reinterpret_cast<void***>(r14_8) = r8;
+        }
+    }
+    *reinterpret_cast<uint32_t*>(&r9) = ecx25;
+    *reinterpret_cast<int32_t*>(&r9 + 4) = 0;
+    eax43 = fun_180011a20(rcx, rdx23, r8, r9);
+    rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+    if (eax43 < 0) 
+        goto addr_180011f34_2;
+    eax44 = reinterpret_cast<int32_t>(g180378348(rsi9, reinterpret_cast<int64_t>(rsp5) - 64));
+    rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+    if (eax44 < 0) 
+        goto addr_180011f34_2;
+    rcx29 = rcx;
+    if (0) {
+        fun_1800ecdb0(rcx29, " <- ", r8, r9, v45, rcx29, " <- ", r8, r9, v46);
+        r8 = reinterpret_cast<void**>(0);
+        fun_1800ecdb0(rcx, "%S", 0, r9, v47, rcx, "%S", 0, r9, v48);
+        rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8 - 8 + 8);
+        if (!ecx19) {
+            addr_180011f34_2:
+            if (!1) {
+                fun_18026f760(0, 0);
+                rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+            }
+        } else {
+            eax49 = reinterpret_cast<int32_t>(g180378348(rsi9, reinterpret_cast<int64_t>(rsp5) - 48, 0, r9));
+            rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+            if (!eax49) {
+                eax50 = reinterpret_cast<int32_t>(g180378348(rsi9, reinterpret_cast<int64_t>(rsp5) - 40, 0, r9));
+                rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+                rcx29 = rcx;
+                if (!eax50) {
+                    *reinterpret_cast<int32_t*>(&r9_51) = v52;
+                    *reinterpret_cast<int32_t*>(&r9_51 + 4) = 0;
+                    fun_180010fe0(rcx29, rdx, 0, r9_51, v53);
+                    rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+                    goto addr_180011f34_2;
+                } else {
+                    rdx27 = reinterpret_cast<void**>("<internal error> unable to get variable type from PDB\n");
+                    goto addr_180011f2a_22;
+                }
+            } else {
+                rdx27 = reinterpret_cast<void**>("<internal error> unable to get variable subfield offset from PDB\n");
+                goto addr_180011f27_21;
+            }
+        }
+    } else {
+        rdx27 = reinterpret_cast<void**>("<internal error> unable to get variable name from PDB\n");
+        goto addr_180011f2a_22;
+    }
+    if (!1) {
+        g180378348();
+        rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp11) - 8 + 8);
+    }
+    rcx54 = rax7 ^ reinterpret_cast<uint64_t>(rsp6) ^ reinterpret_cast<uint64_t>(rsp11);
+    rax55 = fun_18026e150(rcx54, rcx54);
+    return rax55;
+    addr_180011dcc_19:
+    rdx27 = reinterpret_cast<void**>("// <internal error> could not get register index values from PDB\n");
+    goto addr_180011f27_21;
+    addr_180011d41_11:
+    fun_180007890(rcx, "// <internal error> unexpected location type in PDB\n", r8, r9, v56);
+    rsp11 = reinterpret_cast<void*>(reinterpret_cast<uint64_t>(rsp18) - 8 + 8);
+    goto addr_180011f34_2;
+}

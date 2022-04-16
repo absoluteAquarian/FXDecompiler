@@ -1,0 +1,32 @@
+﻿void** fun_1800ecbc4(void** rcx, void* rdx, void* r8d, void** r9) {
+    int64_t rdi5;
+    int64_t rcx6;
+    void** rax7;
+    int64_t r8_8;
+    void** rdx9;
+    void** rcx10;
+
+    *reinterpret_cast<void**>(&rdi5) = r8d;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rdi5) + 4) = 0;
+    *reinterpret_cast<void***>(&rcx6) = *reinterpret_cast<void***>(rcx);
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx6) + 4) = 0;
+    if (reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rcx + 4)) < reinterpret_cast<unsigned char>(static_cast<uint32_t>(rcx6 + rdi5))) {
+        rax7 = reinterpret_cast<void**>(_o_malloc());
+        if (!rax7) {
+            addr_1800ecc4b_3:
+            return rax7;
+        } else {
+            *reinterpret_cast<void***>(&r8_8) = *reinterpret_cast<void***>(rcx);
+            *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r8_8) + 4) = 0;
+            rdx9 = *reinterpret_cast<void***>(rcx + 8);
+            fun_1803380c2();
+            rcx10 = *reinterpret_cast<void***>(rcx + 8);
+            _o_free(rcx10, rdx9, r8_8);
+            *reinterpret_cast<void***>(rcx + 4) = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rcx + 4)) + static_cast<uint32_t>(rdi5 + 0x800));
+            *reinterpret_cast<void***>(rcx + 8) = rax7;
+        }
+    }
+    rax7 = fun_1803380c2();
+    *reinterpret_cast<void***>(rcx) = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rcx)) + reinterpret_cast<uint32_t>(*reinterpret_cast<void**>(&rdi5)));
+    goto addr_1800ecc4b_3;
+}

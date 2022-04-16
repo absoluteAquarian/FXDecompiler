@@ -1,0 +1,48 @@
+﻿void** fun_1800e6ae0(void** rcx, int64_t rdx, void** r8d, int64_t r9) {
+    void* rsp5;
+    void*** v6;
+    void** eax7;
+    void** ebx8;
+    void** rax9;
+    void** rax10;
+    void** rdx11;
+    int64_t r8_12;
+    void** v13;
+    int32_t eax14;
+    signed char v15;
+
+    rsp5 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 8 - 0xc0);
+    __asm__("xorps xmm0, xmm0");
+    __asm__("movdqa [rax-0x68], xmm0");
+    if (v6) {
+        *v6 = reinterpret_cast<void**>(0);
+        eax7 = fun_1800f59d0(reinterpret_cast<int64_t>(rsp5) + 64);
+        rsp5 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp5) - 8 + 8);
+        ebx8 = eax7;
+        if (reinterpret_cast<signed char>(eax7) >= reinterpret_cast<signed char>(0)) {
+            rax9 = fun_18026dcec(0x188, 0x188);
+            rsp5 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp5) - 8 + 8);
+            if (!rax9 || (rax10 = fun_1800e2770(rax9, rax9), rsp5 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(rsp5) - 8 + 8), rax10 == 0)) {
+                ebx8 = reinterpret_cast<void**>(0x8007000e);
+            } else {
+                rdx11 = reinterpret_cast<void**>(reinterpret_cast<int64_t>(rsp5) + 64);
+                *reinterpret_cast<void***>(&r8_12) = r8d;
+                *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r8_12) + 4) = 0;
+                eax14 = fun_1800e3350(rax10, rdx11, *reinterpret_cast<void***>(&r8_12), v13, rax10, rdx11, *reinterpret_cast<void***>(&r8_12), v13);
+                if (eax14 >= 0) {
+                    *v6 = rax10;
+                    g180378348(rax10, rdx11, r8_12, v13);
+                } else {
+                    ebx8 = reinterpret_cast<void**>(0x80070057);
+                }
+                g180378348(rax10, rdx11, r8_12, v13);
+            }
+        }
+    } else {
+        ebx8 = reinterpret_cast<void**>(0x8876086c);
+    }
+    if (v15 && !1) {
+        g180378348();
+    }
+    return ebx8;
+}

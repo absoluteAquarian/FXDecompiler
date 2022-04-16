@@ -1,0 +1,8 @@
+﻿struct s41 {
+    signed char[132] pad132;
+    void** f132;
+    signed char[3] pad136;
+    int32_t f136;
+    uint32_t f140;
+    int32_t f144;
+};

@@ -1,0 +1,101 @@
+﻿void** fun_18001a2e0(void** rcx, int32_t edx, void** r8d, void** r9, int64_t a5) {
+    void** r10_6;
+    void** r8_7;
+    int64_t r14_8;
+    void** rcx9;
+    void** rdx10;
+    void** edi11;
+    void* rbx12;
+    void** v13;
+    void** rbp14;
+    int64_t r14_15;
+    int64_t v16;
+    uint32_t eax17;
+    int64_t v18;
+    int64_t v19;
+    int64_t v20;
+    void** rdx21;
+    void** r8_22;
+    void** eax23;
+    int64_t v24;
+    int64_t v25;
+    struct s57* rax26;
+    int64_t v27;
+    int64_t v28;
+    void** rdx29;
+
+    r10_6 = r8d;
+    *reinterpret_cast<int32_t*>(&r10_6 + 4) = 0;
+    r8_7 = *reinterpret_cast<void***>(r9 + 8);
+    *reinterpret_cast<int32_t*>(&r14_8) = edx;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r14_8) + 4) = 0;
+    if (reinterpret_cast<unsigned char>(r10_6) >= reinterpret_cast<unsigned char>(r8_7)) {
+        return 0x80004005;
+    }
+    rcx9 = r10_6 + 4;
+    *reinterpret_cast<void***>(r9 + 16) = r10_6;
+    if (reinterpret_cast<unsigned char>(rcx9) < reinterpret_cast<unsigned char>(r10_6) || reinterpret_cast<unsigned char>(rcx9) > reinterpret_cast<unsigned char>(r8_7)) {
+        rdx10 = reinterpret_cast<void**>(0);
+        edi11 = reinterpret_cast<void**>(0x80004005);
+        rcx9 = r10_6;
+    } else {
+        edi11 = reinterpret_cast<void**>(0);
+        rdx10 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(r9)) + reinterpret_cast<unsigned char>(r10_6));
+        *reinterpret_cast<void***>(r9 + 16) = rcx9;
+    }
+    if (reinterpret_cast<signed char>(edi11) >= reinterpret_cast<signed char>(0)) 
+        goto addr_18001a35e_7;
+    *reinterpret_cast<void***>(&rbx12) = v13;
+    addr_18001a38b_9:
+    rbp14 = reinterpret_cast<void**>(0);
+    addr_18001a393_10:
+    if (reinterpret_cast<signed char>(edi11) >= reinterpret_cast<signed char>(0)) {
+        *reinterpret_cast<void***>(&r14_15) = reinterpret_cast<void**>(static_cast<uint32_t>(r14_8 * 4));
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r14_15) + 4) = 0;
+        fun_1800ecc68(rcx, *reinterpret_cast<void***>(&r14_15), r8_7, r9, v16);
+        eax17 = reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(rcx + 24));
+        if (!*reinterpret_cast<void***>(&rbx12)) {
+            if (*reinterpret_cast<signed char*>(&eax17)) {
+                r8_7 = g18035fed8;
+                fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8_7, r9, v18);
+                *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+            }
+            fun_1800ecdb0(rcx, "NULL", r8_7, r9, v19);
+            if (*reinterpret_cast<void***>(rcx + 24)) {
+                *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+                fun_1800ecdb0(rcx, "</font>", r8_7, r9, v20);
+            }
+        } else {
+            rdx21 = *reinterpret_cast<void***>(&rbx12);
+            *reinterpret_cast<int32_t*>(&rdx21 + 4) = 0;
+            r8_22 = reinterpret_cast<void**>(0);
+            *reinterpret_cast<int32_t*>(&r8_22 + 4) = 0;
+            *reinterpret_cast<unsigned char*>(&r8_22) = reinterpret_cast<uint1_t>(!!*reinterpret_cast<signed char*>(&eax17));
+            eax23 = fun_180015f80(rbp14, rdx21, r8_22, 0);
+            edi11 = eax23;
+            if (reinterpret_cast<signed char>(eax23) >= reinterpret_cast<signed char>(0)) {
+                fun_1800ecdb0(rcx, "asm {\n", r8_22, 0, v24, rcx, "asm {\n", r8_22, 0, v25);
+                rax26 = reinterpret_cast<struct s57*>(g180378348());
+                fun_1800eca80(rcx, rax26, static_cast<uint32_t>(r14_15 + 4), 0, v27);
+                fun_1800eca80(rcx, "\n}", *reinterpret_cast<void***>(&r14_15), 0, v28);
+            }
+        }
+        if (!1) {
+            g180378348();
+        }
+    }
+    return edi11;
+    addr_18001a35e_7:
+    *reinterpret_cast<void***>(&rbx12) = *reinterpret_cast<void***>(rdx10);
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rbx12) + 4) = 0;
+    rdx29 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(rcx9) + reinterpret_cast<uint64_t>(rbx12));
+    if (reinterpret_cast<unsigned char>(rdx29) < reinterpret_cast<unsigned char>(rcx9) || reinterpret_cast<unsigned char>(rdx29) > reinterpret_cast<unsigned char>(r8_7)) {
+        edi11 = reinterpret_cast<void**>(0x80004005);
+        goto addr_18001a38b_9;
+    } else {
+        edi11 = reinterpret_cast<void**>(0);
+        rbp14 = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(r9)) + reinterpret_cast<unsigned char>(rcx9));
+        *reinterpret_cast<void***>(r9 + 16) = rdx29;
+        goto addr_18001a393_10;
+    }
+}

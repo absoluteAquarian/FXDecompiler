@@ -1,0 +1,205 @@
+﻿void** fun_18000b500(void** rcx, void** edx, void** r8, void** r9) {
+    int64_t rdi5;
+    uint32_t eax6;
+    uint32_t ebp7;
+    void** r15d8;
+    void** rdx9;
+    int64_t v10;
+    void** rax11;
+    int64_t v12;
+    void** eax13;
+    int64_t v14;
+    int64_t v15;
+    uint32_t eax16;
+    int64_t v17;
+    int64_t v18;
+    int64_t v19;
+    void*** v20;
+    int64_t v21;
+    int64_t v22;
+    int64_t v23;
+    void** r9_24;
+    int64_t v25;
+    int64_t v26;
+
+    *reinterpret_cast<void***>(&rdi5) = reinterpret_cast<void**>(reinterpret_cast<unsigned char>(edx) & 0x7ff);
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rdi5) + 4) = 0;
+    eax6 = reinterpret_cast<unsigned char>(edx) & 0xf0001800;
+    ebp7 = *reinterpret_cast<uint32_t*>(&r9);
+    r15d8 = r8;
+    if (eax6 > 0xb0000800) {
+        if (eax6 > 0xd0000800) {
+            if (eax6 == 0xe0000000) {
+                rdx9 = reinterpret_cast<void**>("oT%u");
+                if (*reinterpret_cast<uint16_t*>(&ebp7) >= 0x300) {
+                    rdx9 = reinterpret_cast<void**>("o%u");
+                }
+            } else {
+                if (eax6 == 0xe0000800) {
+                    rdx9 = reinterpret_cast<void**>("b%u");
+                } else {
+                    if (eax6 == 0xf0000000) {
+                        rdx9 = reinterpret_cast<void**>("i%u");
+                    } else {
+                        if (eax6 == 0xf0000800) {
+                            rax11 = fun_1800ecdb0(rcx, "aL", r8, r9, v10);
+                            goto addr_18000b794_12;
+                        } else {
+                            addr_18000b74e_13:
+                            rdx9 = reinterpret_cast<void**>("x%u");
+                        }
+                    }
+                }
+            }
+        } else {
+            if (eax6 == 0xd0000800) {
+                r8 = reinterpret_cast<void**>(static_cast<uint32_t>(rdi5 + 0x1800));
+                *reinterpret_cast<int32_t*>(&r8 + 4) = 0;
+                rdx9 = reinterpret_cast<void**>("c%u");
+                goto addr_18000b78f_16;
+            } else {
+                if (eax6 == 0xb0001000) {
+                    rdx9 = reinterpret_cast<void**>("p%u");
+                } else {
+                    if (eax6 == 0xc0000000) {
+                        if (!*reinterpret_cast<void***>(&rdi5)) {
+                            rax11 = fun_1800ecdb0(rcx, "oPos", r8, r9, v12);
+                            goto addr_18000b794_12;
+                        } else {
+                            eax13 = *reinterpret_cast<void***>(&rdi5) - 1;
+                            if (!eax13) {
+                                rax11 = fun_1800ecdb0(rcx, "oFog", r8, r9, v14);
+                                goto addr_18000b794_12;
+                            } else {
+                                if (eax13 == 1) {
+                                    rax11 = fun_1800ecdb0(rcx, "oPts", r8, r9, v15);
+                                    goto addr_18000b794_12;
+                                } else {
+                                    rdx9 = reinterpret_cast<void**>("oX%u");
+                                }
+                            }
+                        }
+                    } else {
+                        if (eax6 == 0xc0000800) {
+                            r8 = reinterpret_cast<void**>(static_cast<uint32_t>(rdi5 + 0x1000));
+                            *reinterpret_cast<int32_t*>(&r8 + 4) = 0;
+                            rdx9 = reinterpret_cast<void**>("c%u");
+                            goto addr_18000b78f_16;
+                        } else {
+                            if (eax6 != 0xd0000000) 
+                                goto addr_18000b74e_13;
+                            rdx9 = reinterpret_cast<void**>("oD%u");
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        if (eax6 == 0xb0000800) {
+            r8 = reinterpret_cast<void**>(static_cast<uint32_t>(rdi5 + 0x800));
+            *reinterpret_cast<int32_t*>(&r8 + 4) = 0;
+            rdx9 = reinterpret_cast<void**>("c%u");
+            goto addr_18000b78f_16;
+        } else {
+            if (eax6 > 0x90001000) {
+                if (eax6 == 0xa0000000) {
+                    rdx9 = reinterpret_cast<void**>("c%u");
+                } else {
+                    if (eax6 == 0xa0000800) {
+                        rdx9 = reinterpret_cast<void**>("s%u");
+                    } else {
+                        if (eax6 == 0xa0001000) {
+                            rdx9 = reinterpret_cast<void**>("l%u");
+                        } else {
+                            if (eax6 != 0xb0000000) 
+                                goto addr_18000b74e_13;
+                            eax16 = ebp7 & 0xffff0000;
+                            if (eax16 == 0xfffe0000 || (rdx9 = reinterpret_cast<void**>("t%u"), eax16 == 0x4c560000)) {
+                                rdx9 = reinterpret_cast<void**>("a%u");
+                            }
+                        }
+                    }
+                }
+            } else {
+                if (eax6 == 0x90001000) {
+                    if (!*reinterpret_cast<void***>(&rdi5)) {
+                        rax11 = fun_1800ecdb0(rcx, "vPos", r8, r9, v17);
+                        goto addr_18000b794_12;
+                    } else {
+                        if (*reinterpret_cast<void***>(&rdi5) == 1) {
+                            rax11 = fun_1800ecdb0(rcx, "vFace", r8, r9, v18);
+                            goto addr_18000b794_12;
+                        } else {
+                            rdx9 = reinterpret_cast<void**>("m%u");
+                        }
+                    }
+                } else {
+                    if (eax6 == 0x80000000) {
+                        r8 = *reinterpret_cast<void***>(&rdi5);
+                        *reinterpret_cast<int32_t*>(&r8 + 4) = 0;
+                        rax11 = fun_1800ecdb0(rcx, "r%u", r8, r9, v19);
+                        if (reinterpret_cast<unsigned char>(*v20) < reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&rdi5))) {
+                            *v20 = *reinterpret_cast<void***>(&rdi5);
+                            goto addr_18000b794_12;
+                        }
+                    } else {
+                        if (eax6 == 0x80000800) {
+                            rdx9 = reinterpret_cast<void**>("oC%u");
+                        } else {
+                            if (eax6 == 0x90000000) {
+                                rdx9 = reinterpret_cast<void**>("v%u");
+                            } else {
+                                if (eax6 != 0x90000800) 
+                                    goto addr_18000b74e_13;
+                                rax11 = fun_1800ecdb0(rcx, "oDepth", r8, r9, v21);
+                                goto addr_18000b794_12;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    r8 = *reinterpret_cast<void***>(&rdi5);
+    *reinterpret_cast<int32_t*>(&r8 + 4) = 0;
+    addr_18000b78f_16:
+    rax11 = fun_1800ecdb0(rcx, rdx9, r8, r9, v22);
+    addr_18000b794_12:
+    if (static_cast<int1_t>(reinterpret_cast<unsigned char>(edx) >> 13)) {
+        fun_1800ecdb0(rcx, "[", r8, r9, v23);
+        *reinterpret_cast<uint32_t*>(&r9_24) = ebp7;
+        *reinterpret_cast<int32_t*>(&r9_24 + 4) = 0;
+        fun_18000b500(rcx, r15d8, 0, r9_24);
+        fun_18000b270(rcx, r15d8, 0, r9_24);
+        rax11 = fun_1800ecdb0(rcx, "]", 0, r9_24, v25, rcx, "]", 0, r9_24, v26);
+    }
+    return rax11;
+}
+            r8d = edi;
+        }
+label_3:
+        fcn_1800ecdb0 ();
+label_1:
+        if (((r14d >> 0xd) & 1) >= 0) {
+            goto label_8;
+        }
+        rdx = 0x180384910;
+        rcx = rbx;
+        fcn_1800ecdb0 ();
+        r9d = ebp;
+        var_20h = rsi;
+        r8d = 0;
+        edx = r15d;
+        fcn_18000b500 (rbx);
+    } while (1);
+    edx = r15d;
+    rcx = rbx;
+    fcn_18000b270 ();
+    rdx = 0x180384914;
+    rcx = rbx;
+    fcn_1800ecdb0 ();
+label_8:
+    rbx = var_8h;
+    rsi = var_18h;
+    return eax;
+}

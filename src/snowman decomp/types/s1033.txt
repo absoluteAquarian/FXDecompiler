@@ -1,0 +1,4 @@
+﻿struct s1033 {
+    signed char[4] pad4;
+    int32_t f4;
+};

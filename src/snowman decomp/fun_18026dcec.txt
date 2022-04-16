@@ -1,0 +1,10 @@
+﻿void** fun_18026dcec(void** rcx, ...) {
+    void** rdi2;
+    void** rax3;
+    int32_t eax4;
+
+    rdi2 = rcx;
+    while ((rax3 = fun_18026efe4(), rax3 == 0) && (eax4 = fun_18026eece(rdi2), !!eax4)) {
+    }
+    return rax3;
+}

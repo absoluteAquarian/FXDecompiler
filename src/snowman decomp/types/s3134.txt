@@ -1,0 +1,5 @@
+﻿struct s3134 {
+    void** f0;
+    signed char[31] pad32;
+    int32_t f32;
+};

@@ -1,0 +1,51 @@
+﻿int32_t fun_180011a20(void** rcx, void** rdx, void** r8d, void** r9) {
+    void** r8_3;
+    int64_t r14_5;
+    int64_t v6;
+    void** rax7;
+    void** r8_8;
+    int64_t v9;
+    int64_t v10;
+    int64_t v11;
+    int64_t v12;
+    int64_t v13;
+    int64_t rax14;
+    int64_t rcx15;
+
+    r8_3 = r8d;
+    *reinterpret_cast<void***>(&r14_5) = r8_3;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&r14_5) + 4) = 0;
+    if (*reinterpret_cast<void***>(rcx + 24)) {
+        r8_3 = g18035fed0;
+        fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8_3, r9, v6);
+        *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+    }
+    rax7 = fun_18000c470(rcx, *reinterpret_cast<void***>(&r14_5), r8_3);
+    r8_8 = rax7;
+    if (*reinterpret_cast<int32_t*>(&r9)) {
+    }
+    if (reinterpret_cast<unsigned char>(*reinterpret_cast<void***>(&r14_5)) > reinterpret_cast<unsigned char>(42)) {
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+            fun_1800ecdb0(rcx, "</font>", r8_8, r9, v9);
+        }
+        fun_1800ecdb0(rcx, "\n", r8_8, r9, v10);
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            r8_8 = g18035fec0;
+            fun_1800ecdb0(rcx, "<font color = \"#%s\">", r8_8, r9, v11);
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) + 1;
+        }
+        fun_1800ecdb0(rcx, "// <internal error> unexpected register type in PDB\n", r8_8, r9, v12);
+        if (*reinterpret_cast<void***>(rcx + 24)) {
+            *reinterpret_cast<void***>(rcx + 32) = *reinterpret_cast<void***>(rcx + 32) - 1;
+            fun_1800ecdb0(rcx, "</font>", r8_8, r9, v13);
+        }
+        return 0x80004005;
+    } else {
+        *reinterpret_cast<uint32_t*>(&rax14) = *reinterpret_cast<unsigned char*>(0x180000000 + r14_5 + 0x11c28);
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rax14) + 4) = 0;
+        *reinterpret_cast<int32_t*>(&rcx15) = *reinterpret_cast<int32_t*>(0x180000000 + rax14 * 4 + 0x11c14);
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx15) + 4) = 0;
+        goto rcx15 + 0x180000000;
+    }
+}

@@ -1,0 +1,4 @@
+﻿struct s42 {
+    signed char[4] pad4;
+    void** f4;
+};

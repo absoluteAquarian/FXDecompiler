@@ -1,0 +1,4 @@
+﻿struct s85 {
+    int32_t f0;
+    int32_t f4;
+};

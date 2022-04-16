@@ -1,0 +1,7 @@
+﻿struct s80 {
+    int32_t f0;
+    signed char[4] pad8;
+    unsigned char f8;
+    signed char[3] pad12;
+    uint32_t f12;
+};

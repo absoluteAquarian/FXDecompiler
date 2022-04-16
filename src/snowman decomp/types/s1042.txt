@@ -1,0 +1,15 @@
+﻿struct s1042 {
+    int32_t f0;
+    int64_t f4;
+    signed char[4] pad16;
+    int64_t f16;
+    int32_t f24;
+    int64_t f28;
+    signed char[4] pad40;
+    int64_t f40;
+    int32_t f48;
+    int64_t f52;
+    signed char[4] pad64;
+    int64_t f64;
+    int32_t f72;
+};

@@ -1,0 +1,4 @@
+﻿struct s78 {
+    signed char f0;
+    unsigned char f1;
+};

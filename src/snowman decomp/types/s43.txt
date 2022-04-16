@@ -1,0 +1,4 @@
+﻿struct s43 {
+    signed char[32] pad32;
+    int32_t f32;
+};

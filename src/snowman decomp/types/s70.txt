@@ -1,0 +1,5 @@
+﻿struct s70 {
+    signed char[4] pad4;
+    int32_t f4;
+    uint32_t f8;
+};

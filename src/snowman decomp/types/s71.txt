@@ -1,0 +1,8 @@
+﻿struct s71 {
+    int32_t f0;
+    void* f4;
+    int32_t f8;
+    void* f12;
+    int32_t f16;
+    unsigned char f20;
+};

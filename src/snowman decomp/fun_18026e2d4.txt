@@ -1,0 +1,24 @@
+﻿void** fun_18026e2d4(int32_t ecx) {
+    int32_t eax2;
+    int64_t rax3;
+    int64_t rdx4;
+    void** rax5;
+
+    eax2 = reinterpret_cast<int32_t>(IsProcessorFeaturePresent(23));
+    if (eax2) {
+        __asm__("int 0x29");
+    }
+    fun_18026e378(0x180426890);
+    g180426988 = reinterpret_cast<int64_t>(__return_address());
+    g180426928 = reinterpret_cast<void*>(reinterpret_cast<int64_t>(__zero_stack_offset()) - 40 - 8 + 8 - 8 + 8 + 40 + 8);
+    rax3 = g180426988;
+    g180426800 = rax3;
+    g1804267f0 = 0xc0000409;
+    g1804267f4 = 1;
+    g180426808 = 1;
+    *reinterpret_cast<int32_t*>(&rdx4) = ecx;
+    *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rdx4) + 4) = 0;
+    g180426810 = rdx4;
+    rax5 = fun_18026e178(0x18033f000);
+    return rax5;
+}

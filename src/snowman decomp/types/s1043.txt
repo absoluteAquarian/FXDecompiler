@@ -1,0 +1,5 @@
+﻿struct s1043 {
+    signed char[8] pad8;
+    uint32_t f8;
+    int32_t f12;
+};

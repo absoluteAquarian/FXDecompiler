@@ -1,0 +1,41 @@
+﻿void** fun_1800790f0(void** rcx, void** rdx, void** r8, void** r9, ...) {
+    void** r10d5;
+    void* r9_6;
+    void* r8_7;
+    uint32_t eax8;
+    int1_t zf9;
+    void** rax10;
+    void** eax11;
+
+    r10d5 = reinterpret_cast<void**>(0);
+    if (reinterpret_cast<unsigned char>(rdx + 0xffffffffffffffff) > reinterpret_cast<unsigned char>(0x7ffffffe)) {
+        r10d5 = reinterpret_cast<void**>(0x80070057);
+    }
+    if (reinterpret_cast<signed char>(r10d5) < reinterpret_cast<signed char>(0)) {
+        if (rdx) {
+            *reinterpret_cast<void***>(rcx) = reinterpret_cast<void**>(0);
+        }
+        return r10d5;
+    } else {
+        if (rdx) {
+            r9_6 = reinterpret_cast<void*>(reinterpret_cast<unsigned char>(0x7ffffffe) - reinterpret_cast<unsigned char>(rdx));
+            r8_7 = reinterpret_cast<void*>(reinterpret_cast<unsigned char>(r8) - reinterpret_cast<unsigned char>(rcx));
+            do {
+                if (!(reinterpret_cast<uint64_t>(r9_6) + reinterpret_cast<unsigned char>(rdx))) 
+                    break;
+                eax8 = *reinterpret_cast<unsigned char*>(reinterpret_cast<uint64_t>(r8_7) + reinterpret_cast<unsigned char>(rcx));
+            } while (*reinterpret_cast<void***>(&eax8) && (*reinterpret_cast<void***>(rcx) = *reinterpret_cast<void***>(&eax8), ++rcx, --rdx, !!rdx));
+        }
+        zf9 = rdx == 0;
+        rax10 = rcx + 0xffffffffffffffff;
+        if (!zf9) {
+            rax10 = rcx;
+        }
+        *reinterpret_cast<void***>(rax10) = reinterpret_cast<void**>(0);
+        eax11 = reinterpret_cast<void**>(0x8007007a);
+        if (!zf9) {
+            eax11 = reinterpret_cast<void**>(0);
+        }
+        return eax11;
+    }
+}

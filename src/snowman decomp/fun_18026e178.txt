@@ -1,0 +1,20 @@
+﻿void** fun_18026e178(int64_t rcx) {
+    int32_t eax2;
+    int64_t rcx3;
+    int1_t zf4;
+
+    eax2 = reinterpret_cast<int32_t>(IsDebuggerPresent());
+    g180426d60 = eax2;
+    fun_18026ea18(1);
+    SetUnhandledExceptionFilter();
+    rcx3 = rcx;
+    UnhandledExceptionFilter(rcx3);
+    zf4 = g180426d60 == 0;
+    if (zf4) {
+        *reinterpret_cast<int32_t*>(&rcx3) = 1;
+        *reinterpret_cast<int32_t*>(reinterpret_cast<int64_t>(&rcx3) + 4) = 0;
+        fun_18026ea18(1);
+    }
+    GetCurrentProcess(rcx3);
+    goto TerminateProcess;
+}
