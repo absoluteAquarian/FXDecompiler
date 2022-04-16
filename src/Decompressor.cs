@@ -82,7 +82,7 @@ namespace FXDecompiler {
 			{
 				// This string tells us what reader we need to decode the following data
 				// string readerTypeString = reader.ReadString();
-				string originalReaderTypeString = reader.ReadString();
+				reader.ReadString();
 
 
 				//A lot of code was deleted here.  All that matters is that the same amount of "stuff" is being read from the file
